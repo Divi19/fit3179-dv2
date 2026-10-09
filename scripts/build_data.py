@@ -222,6 +222,28 @@ print("nnpas_activity_screens.csv")
 for sex,_ in SEXES:
     print("  ",sex,"activity",[x['activity_min'] for x in acts if x['sex']==sex],"screens",[x['screen_min'] for x in acts if x['sex']==sex])
 
+# ---------- 6b. A child's day: sleep, activity, screens and the rest of 24 hours (day clock) ----------
+mins=lambda v: round(v.total_seconds()/60)
+t4=rows("CPASSDC04–05.xlsx","Table 4.1_Means")
+assert str(t4[5][3]).startswith('Total 2–5')
+_,sl4=find(t4,'Total sleep(d)(e)'); _,ac4=find(t4,'Total physical activity')
+h4,_=findp(t4,'Average sedentary screen time per day'); _,sc4=find(t4,'All days',h4)
+day_in=[('2–5',mins(sl4[3]),mins(ac4[3]),mins(sc4[3]),
+         'Ages 2–5: activity includes light play and sleep includes naps (measured differently from older ages)')]
+bi=[i for i,r in enumerate(t5) if r[1]==SEXES[0][1]][0]
+_,sl5=find(t5,'Total sleep on night before interview(f)',bi)
+_,ac5=find(t5,'Total moderate or vigorous physical activity (incl. active transport)',bi)
+h5,_=findp(t5,'Average sedentary screen time per day',bi); _,sc5=find(t5,'All days',h5)
+day_in+=[(a,mins(sl5[1+k]),mins(ac5[1+k]),mins(sc5[1+k]),'') for k,a in enumerate(AGES)]
+day=[]
+for k,(a,sl,ac,sc,note) in enumerate(day_in):
+    for o,(act,m) in enumerate((('Sleep',sl),('Active',ac),('Screens',sc),('Everything else',1440-sl-ac-sc))):
+        day.append(dict(age_group=a,age_order=k,activity=act,activity_order=o,minutes=m,label=f"{m//60}h {m%60:02d}m",note=note))
+with open(OUT+"nnpas_day.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(day[0])); w.writeheader(); w.writerows(day)
+print("nnpas_day.csv (sleep, active, screens, everything else):")
+for a,*_ in day_in: print("  ",a,[x['minutes'] for x in day if x['age_group']==a])
+
 # ---------- 7. Screen devices in the bedroom + sleep quality, by age (charts 10, 10b) ----------
 AGES5=['2–5']+AGES
 col12={str(h).replace('(c)','').replace('(b)',''):i for i,h in enumerate(t12[5]) if h}
