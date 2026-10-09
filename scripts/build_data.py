@@ -154,18 +154,7 @@ AGES=['5–8','9–11','12–14','15–17']
 
 t5=rows("CPASSDC04–05.xlsx","Table 5.1_Means")
 
-# ---------- 6. NNPAS sleep vs screens before bed (chart 10) ----------
 t12=rows("CPASSDC12.xlsx","Table 12.3_Proportions")
-hdr=t12[5]; col={str(h).replace('(c)','').replace('(b)',''):i for i,h in enumerate(hdr) if h}
-_,scr=find(t12,'Undertook sedentary screen activity'); _,bed=find(t12,'Total with screen-based device located in bedroom')
-_,slp=find(t5,'Total sleep on night before interview(f)')
-sl=[]
-for k,a in enumerate(AGES):
-    m=round(slp[1+k].total_seconds()/60)
-    sl.append(dict(age_group=a,order=k,screens_before_bed_pct=scr[col[a]],screen_in_bedroom_pct=bed[col[a]],sleep_min=m,sleep_label=f"{m//60}h {m%60:02d}m"))
-with open(OUT+"nnpas_sleep_screens.csv","w",newline="") as f:
-    w=csv.DictWriter(f,fieldnames=list(sl[0])); w.writeheader(); w.writerows(sl)
-print("sleep:", sl)
 
 # ---------- 7. NNPAS free sugars (chart 11) ----------
 n2=rows("NNPASDC02.xlsx","Table 2.1_Means Persons"); m2=rows("NNPASDC02.xlsx","Table 2.2_MoEs Persons")

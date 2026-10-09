@@ -196,9 +196,14 @@
     <div class="viz"><div id="vis9"></div></div>
     <div class="grid-2" style="margin-top:28px">
       <div>
-        <p class="lead">At the same time, screens move into the bedroom and the last hour before sleep. Teenagers
-          sleep about an hour and a half less than younger children.</p>
-        <div class="viz"><div id="vis10"></div></div>
+        <p class="lead">Screens also move into the bedroom. Fewer than 3 in 100 children aged 5–8 have a phone in
+          their room; by 15–17, more than 8 in 10 do.</p>
+        <div class="viz scroll-x"><div id="vis10"></div></div>
+      </div>
+      <div>
+        <p class="lead">And sleep gets worse, not just shorter. Nearly half of 2–5 year olds slept 'very well';
+          by 15–17, only about 1 in 5 did.</p>
+        <div class="viz"><div id="vis10b"></div></div>
       </div>
     </div>
   </section>
@@ -272,7 +277,8 @@
     ["#vis8",  "js/8_isotype.vg.json"],
     ["#vis8b", "js/8b_guidelines.vg.json"],
     ["#vis9",  "js/9_butterfly.vg.json"],
-    ["#vis10", "js/10_connected_scatter.vg.json"],
+    ["#vis10", "js/10_bedroom_devices.vg.json"],
+    ["#vis10b","js/10b_sleep_quality.vg.json"],
     ["#vis11", "js/11_bullet.vg.json"]
   ];
   charts.forEach(([el, url]) => vegaEmbed(el, url, opts).catch(console.error));
