@@ -1,4 +1,4 @@
-import openpyxl, csv, collections, json
+import openpyxl, csv, collections, json, math
 import sys
 SRC=(sys.argv[1] if len(sys.argv)>1 else "raw")+"/"   # folder holding the original .xlsx files (run from repo root)
 OUT="data/"
@@ -38,6 +38,36 @@ for r in rows("lga-2009-24.xlsx","LGA One or more")[6:]:
                             vulnerable_n=int(n) if n is not None else '',
                             vulnerable_pct=round(pct,1) if pct is not None else '',
                             lon=lon,lat=lat))
+# Hexagon bins (chart 3): pointy-top hexes, 100 km flat-to-flat, built in the same Albers projection as the maps.
+# The grid origin is shifted 40 km east / 20 km north so Sydney, Melbourne and Brisbane each split across 3+ hexes.
+from pyproj import Transformer
+AEA="+proj=aea +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=133.5 +datum=WGS84 +units=m"
+fwd=Transformer.from_crs("EPSG:4326",AEA,always_xy=True); inv=Transformer.from_crs(AEA,"EPSG:4326",always_xy=True)
+HEX_W=100_000; HEX_S=HEX_W/3**.5; HEX_OX,HEX_OY=40_000,20_000
+def hex_of(lon,lat):
+    x,y=fwd.transform(lon,lat); x-=HEX_OX; y-=HEX_OY
+    q=(3**.5/3*x-y/3)/HEX_S; r=(2/3*y)/HEX_S; z=-q-r
+    rq,rr,rz=round(q),round(r),round(z)                           # cube rounding
+    dq,dr,dz=abs(rq-q),abs(rr-r),abs(rz-z)
+    if dq>dr and dq>dz: rq=-rr-rz
+    elif dr>dz: rr=-rq-rz
+    return rq,rr
+def hex_center(q,r): return HEX_S*3**.5*(q+r/2)+HEX_OX, HEX_S*1.5*r+HEX_OY
+hexes={}
+for o in out:
+    q,r=hex_of(o['lon'],o['lat']); o['hex_id']=f"{q}_{r}"; hexes[o['hex_id']]=(q,r)
+feats=[]
+for hid,(q,r) in sorted(hexes.items()):
+    cx,cy=hex_center(q,r)
+    ring=[inv.transform(cx+HEX_S*math.cos(math.radians(30+60*i)),cy+HEX_S*math.sin(math.radians(30+60*i))) for i in range(6)]
+    ring=[[round(a,5),round(b,5)] for a,b in ring][::-1]            # clockwise in lon/lat, the winding d3-geo needs
+    ring.append(ring[0])
+    clon,clat=inv.transform(cx,cy)
+    feats.append(dict(type="Feature",properties=dict(hex_id=hid,cx=round(clon,4),cy=round(clat,4)),
+                      geometry=dict(type="Polygon",coordinates=[ring])))
+with open(OUT+"hex_grid.geojson","w") as f: json.dump(dict(type="FeatureCollection",features=feats),f,separators=(',',':'))
+print("hex_grid.geojson", len(feats), "hexes")
+
 with open(OUT+"aedc_lga.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(out[0])); w.writeheader(); w.writerows(out)
 print("aedc_lga.csv", len(out), "rows,", len({o['lga_code'] for o in out}), "councils")
