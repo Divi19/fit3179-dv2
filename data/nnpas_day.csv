@@ -1,0 +1,21 @@
+age_group,age_order,activity,activity_order,minutes,label,note
+2–5,0,Sleep,0,687,11h 27m,Ages 2–5: activity includes light play and sleep includes naps (measured differently from older ages)
+2–5,0,Active,1,363,6h 03m,Ages 2–5: activity includes light play and sleep includes naps (measured differently from older ages)
+2–5,0,Screens,2,84,1h 24m,Ages 2–5: activity includes light play and sleep includes naps (measured differently from older ages)
+2–5,0,Everything else,3,306,5h 06m,Ages 2–5: activity includes light play and sleep includes naps (measured differently from older ages)
+5–8,1,Sleep,0,625,10h 25m,
+5–8,1,Active,1,105,1h 45m,
+5–8,1,Screens,2,111,1h 51m,
+5–8,1,Everything else,3,599,9h 59m,
+9–11,2,Sleep,0,598,9h 58m,
+9–11,2,Active,1,93,1h 33m,
+9–11,2,Screens,2,133,2h 13m,
+9–11,2,Everything else,3,616,10h 16m,
+12–14,3,Sleep,0,563,9h 23m,
+12–14,3,Active,1,72,1h 12m,
+12–14,3,Screens,2,208,3h 28m,
+12–14,3,Everything else,3,597,9h 57m,
+15–17,4,Sleep,0,530,8h 50m,
+15–17,4,Active,1,65,1h 05m,
+15–17,4,Screens,2,249,4h 09m,
+15–17,4,Everything else,3,596,9h 56m,

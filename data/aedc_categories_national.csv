@@ -1,0 +1,31 @@
+domain,domain_order,year,category,category_order,n,total,pct
+Physical health,0,2009,Vulnerable,0,23041,247203,9.3
+Physical health,0,2009,At risk,1,32154,247203,13.0
+Physical health,0,2009,On track,2,192008,247203,77.7
+Physical health,0,2024,Vulnerable,0,26890,267862,10.0
+Physical health,0,2024,At risk,1,31505,267862,11.8
+Physical health,0,2024,On track,2,209467,267862,78.2
+Social competence,1,2009,Vulnerable,0,23419,247161,9.5
+Social competence,1,2009,At risk,1,37496,247161,15.2
+Social competence,1,2009,On track,2,186246,247161,75.4
+Social competence,1,2024,Vulnerable,0,28704,267774,10.7
+Social competence,1,2024,At risk,1,40859,267774,15.3
+Social competence,1,2024,On track,2,198211,267774,74.0
+Emotional maturity,2,2009,Vulnerable,0,21822,246171,8.9
+Emotional maturity,2,2009,At risk,1,38157,246171,15.5
+Emotional maturity,2,2009,On track,2,186192,246171,75.6
+Emotional maturity,2,2024,Vulnerable,0,26563,266364,10.0
+Emotional maturity,2,2024,At risk,1,40483,266364,15.2
+Emotional maturity,2,2024,On track,2,199318,266364,74.8
+Language & thinking,3,2009,Vulnerable,0,21930,246779,8.9
+Language & thinking,3,2009,At risk,1,34574,246779,14.0
+Language & thinking,3,2009,On track,2,190275,246779,77.1
+Language & thinking,3,2024,Vulnerable,0,20698,267351,7.7
+Language & thinking,3,2024,At risk,1,28298,267351,10.6
+Language & thinking,3,2024,On track,2,218355,267351,81.7
+Communication,4,2009,Vulnerable,0,22699,247178,9.2
+Communication,4,2009,At risk,1,39020,247178,15.8
+Communication,4,2009,On track,2,185459,247178,75.0
+Communication,4,2024,Vulnerable,0,23743,267833,8.9
+Communication,4,2024,At risk,1,40744,267833,15.2
+Communication,4,2024,On track,2,203346,267833,75.9

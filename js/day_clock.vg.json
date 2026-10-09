@@ -1,0 +1,389 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Screens fill the time that sleep and activity lose",
+    "subtitle": "How an average day is spent, by age, 2023 · hours of 24"
+  },
+  "spacing": 10,
+  "vconcat": [
+    {
+      "data": {
+        "url": "data/nnpas_day.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "age_order": "number",
+            "activity_order": "number",
+            "minutes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "100 * datum.minutes / 1440",
+          "as": "pct_day"
+        },
+        {
+          "calculate": "'Ages ' + datum.age_group",
+          "as": "age_head"
+        }
+      ],
+      "facet": {
+        "column": {
+          "field": "age_head",
+          "type": "nominal",
+          "sort": {
+            "field": "age_order",
+            "op": "min"
+          },
+          "header": {
+            "labels": false,
+            "title": null
+          }
+        }
+      },
+      "spacing": 24,
+      "spec": {
+        "width": 176,
+        "height": 194,
+        "layer": [
+          {
+            "params": [
+              {
+                "name": "pick",
+                "select": {
+                  "type": "point",
+                  "fields": [
+                    "activity"
+                  ]
+                },
+                "bind": "legend"
+              }
+            ],
+            "mark": {
+              "type": "arc",
+              "innerRadius": 50,
+              "outerRadius": 74,
+              "stroke": "#ffffff",
+              "strokeWidth": 1.5,
+              "y": 88.0
+            },
+            "encoding": {
+              "theta": {
+                "field": "minutes",
+                "type": "quantitative",
+                "stack": true,
+                "scale": {
+                  "domain": [
+                    0,
+                    1440
+                  ]
+                }
+              },
+              "order": {
+                "field": "activity_order"
+              },
+              "color": {
+                "field": "activity",
+                "type": "nominal",
+                "title": "Click to highlight",
+                "scale": {
+                  "domain": [
+                    "Sleep",
+                    "Active",
+                    "Screens",
+                    "Everything else"
+                  ],
+                  "range": [
+                    "#1d2a35",
+                    "#007c9e",
+                    "#cf6a12",
+                    "#dfe3e4"
+                  ]
+                },
+                "legend": {
+                  "orient": "top",
+                  "direction": "horizontal",
+                  "symbolType": "circle",
+                  "symbolStrokeWidth": 0
+                }
+              },
+              "opacity": {
+                "condition": {
+                  "param": "pick",
+                  "value": 1
+                },
+                "value": 0.18
+              },
+              "tooltip": [
+                {
+                  "field": "age_group",
+                  "title": "Age"
+                },
+                {
+                  "field": "activity",
+                  "title": "Activity"
+                },
+                {
+                  "field": "label",
+                  "title": "Time per day"
+                },
+                {
+                  "field": "pct_day",
+                  "title": "% of the day",
+                  "format": ".1f"
+                },
+                {
+                  "field": "note",
+                  "title": "Note"
+                }
+              ]
+            }
+          },
+          {
+            "transform": [
+              {
+                "filter": "datum.activity == 'Sleep'"
+              },
+              {
+                "calculate": "[0, 6, 12, 18]",
+                "as": "h"
+              },
+              {
+                "flatten": [
+                  "h"
+                ]
+              },
+              {
+                "calculate": "datum.h * 60",
+                "as": "hm"
+              },
+              {
+                "calculate": "datum.h + 'h'",
+                "as": "ht"
+              }
+            ],
+            "mark": {
+              "type": "text",
+              "fontSize": 9,
+              "color": "#8a949b",
+              "radius": 83,
+              "y": 88.0
+            },
+            "encoding": {
+              "theta": {
+                "field": "hm",
+                "type": "quantitative",
+                "stack": null,
+                "scale": {
+                  "domain": [
+                    0,
+                    1440
+                  ]
+                }
+              },
+              "text": {
+                "field": "ht"
+              }
+            }
+          },
+          {
+            "transform": [
+              {
+                "filter": "datum.activity == 'Screens'"
+              }
+            ],
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "bottom",
+              "fontSize": 13,
+              "fontWeight": "bold",
+              "color": "#1d2a35",
+              "x": 88.0,
+              "y": 89.0
+            },
+            "encoding": {
+              "text": {
+                "field": "age_head"
+              }
+            }
+          },
+          {
+            "transform": [
+              {
+                "filter": "datum.activity == 'Screens'"
+              },
+              {
+                "calculate": "datum.label + ' screens'",
+                "as": "t"
+              }
+            ],
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "fontSize": 10,
+              "fontWeight": "bold",
+              "color": "#cf6a12",
+              "x": 88.0,
+              "y": 92.0
+            },
+            "encoding": {
+              "text": {
+                "field": "t"
+              }
+            }
+          },
+          {
+            "transform": [
+              {
+                "filter": "datum.activity == 'Active' && datum.note != ''"
+              },
+              {
+                "calculate": "'Activity includes light play'",
+                "as": "t"
+              }
+            ],
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "bottom",
+              "fontSize": 10,
+              "fontStyle": "italic",
+              "color": "#007c9e",
+              "x": 88.0,
+              "y": 194
+            },
+            "encoding": {
+              "text": {
+                "field": "t"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/nnpas_day.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "age_order": "number",
+            "activity_order": "number",
+            "minutes": "number"
+          }
+        }
+      },
+      "width": 976,
+      "height": 34,
+      "transform": [
+        {
+          "filter": "datum.age_group == '5–8' || datum.age_group == '15–17'"
+        },
+        {
+          "calculate": "datum.age_group == '5–8' ? -datum.minutes : datum.minutes",
+          "as": "signed"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "signed",
+              "as": "change"
+            }
+          ],
+          "groupby": [
+            "activity"
+          ]
+        },
+        {
+          "pivot": "activity",
+          "value": "change"
+        },
+        {
+          "calculate": "['Between ages 5–8 and 15–17, sleep falls ' + abs(datum.Sleep) + ' min a day and activity ' + abs(datum.Active) + ' min, while screens rise ' + datum.Screens + ' min.', 'Screens take almost exactly the time the other two lose (' + (abs(datum.Sleep) + abs(datum.Active)) + ' min).']",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1d2a35",
+        "lineHeight": 16,
+        "x": 0,
+        "y": 0
+      },
+      "encoding": {
+        "text": {
+          "field": "t"
+        },
+        "tooltip": [
+          {
+            "field": "Sleep",
+            "title": "Change in sleep (min)"
+          },
+          {
+            "field": "Active",
+            "title": "Change in activity (min)"
+          },
+          {
+            "field": "Screens",
+            "title": "Change in screens (min)"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

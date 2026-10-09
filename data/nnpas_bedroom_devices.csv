@@ -1,31 +1,31 @@
-age_group,age_order,device,device_order,pct
-2–5,0,Smartphone/watch,0,2.5
-5–8,1,Smartphone/watch,0,2.7
-9–11,2,Smartphone/watch,0,16
-12–14,3,Smartphone/watch,0,54.9
-15–17,4,Smartphone/watch,0,82.9
-2–5,0,Computer,1,0.5
-5–8,1,Computer,1,1.5
-9–11,2,Computer,1,9
-12–14,3,Computer,1,35
-15–17,4,Computer,1,51.5
-2–5,0,Television,2,5.8
-5–8,1,Television,2,12.7
-9–11,2,Television,2,11.8
-12–14,3,Television,2,18.9
-15–17,4,Television,2,28.3
-2–5,0,Tablet,3,5.8
-5–8,1,Tablet,3,15
-9–11,2,Tablet,3,19.3
-12–14,3,Tablet,3,18.1
-15–17,4,Tablet,3,20.2
-2–5,0,Gaming console,4,0.4
-5–8,1,Gaming console,4,4
-9–11,2,Gaming console,4,6.5
-12–14,3,Gaming console,4,13.3
-15–17,4,Gaming console,4,18.3
-2–5,0,Any screen device,5,13.8
-5–8,1,Any screen device,5,29.1
-9–11,2,Any screen device,5,40.4
-12–14,3,Any screen device,5,74.7
-15–17,4,Any screen device,5,94.2
+age_group,age_order,device,device_order,pct,moe
+2–5,0,Smartphone/watch,0,2.5,1.8
+5–8,1,Smartphone/watch,0,2.7,1.5
+9–11,2,Smartphone/watch,0,16,5.3
+12–14,3,Smartphone/watch,0,54.9,5.7
+15–17,4,Smartphone/watch,0,82.9,4.5
+2–5,0,Computer,1,0.5,
+5–8,1,Computer,1,1.5,
+9–11,2,Computer,1,9,4.5
+12–14,3,Computer,1,35,6.4
+15–17,4,Computer,1,51.5,6.8
+2–5,0,Television,2,5.8,3.2
+5–8,1,Television,2,12.7,3.9
+9–11,2,Television,2,11.8,4
+12–14,3,Television,2,18.9,6
+15–17,4,Television,2,28.3,7
+2–5,0,Tablet,3,5.8,2.6
+5–8,1,Tablet,3,15,3.8
+9–11,2,Tablet,3,19.3,5.3
+12–14,3,Tablet,3,18.1,4.6
+15–17,4,Tablet,3,20.2,5.1
+2–5,0,Gaming console,4,0.4,
+5–8,1,Gaming console,4,4,2.5
+9–11,2,Gaming console,4,6.5,2.9
+12–14,3,Gaming console,4,13.3,4.6
+15–17,4,Gaming console,4,18.3,4.2
+2–5,0,Any screen device,5,13.8,3.9
+5–8,1,Any screen device,5,29.1,4.2
+9–11,2,Any screen device,5,40.4,5.5
+12–14,3,Any screen device,5,74.7,4.3
+15–17,4,Any screen device,5,94.2,2

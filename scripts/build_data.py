@@ -127,6 +127,30 @@ with open(OUT+"aedc_domains_national.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(domrows[0])); w.writeheader(); w.writerows(domrows)
 print("domains 2021/2024:", [(d['domain'],d['year'],d['vulnerable_pct']) for d in domrows if d['year'] in (2021,2024)])
 
+# National on track / at risk / vulnerable per domain, 2009 and 2024 (chart 0), summed over the 8 "all domains" sheets.
+# r[0] = domain (first row of each block only), r[1] = year, r[2] on track n, r[4] at risk n, r[6] vulnerable n, r[8] total.
+cat=collections.defaultdict(lambda:[0,0,0,0])
+for sn in wb.sheetnames[1:]:
+    if 'summary' in sn.lower(): continue
+    ws=wb[sn]; ws.reset_dimensions(); label=None
+    for r in ws.iter_rows(values_only=True):
+        r=list(r)+[None]*20
+        if r[0] not in (None,''): label=r[0]
+        if r[1] in (2009,2024) and all(isinstance(r[i],(int,float)) for i in (2,4,6,8)):
+            for j,i in enumerate((6,4,2,8)): cat[(label,r[1])][j]+=r[i]
+DORDER=['Physical health','Social competence','Emotional maturity','Language & thinking','Communication']
+CATS=['Vulnerable','At risk','On track']
+catrows=[]
+for (l,y),(v,ar,ot,t) in sorted(cat.items(),key=lambda kv:(DORDER.index(DSHORT[kv[0][0]]),kv[0][1])):
+    for co,(c,n) in enumerate(zip(CATS,(v,ar,ot))):
+        catrows.append(dict(domain=DSHORT[l],domain_order=DORDER.index(DSHORT[l]),year=y,category=c,category_order=co,n=n,total=t,pct=round(100*n/t,1)))
+with open(OUT+"aedc_categories_national.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(catrows[0])); w.writeheader(); w.writerows(catrows)
+natv={(d['domain'],d['year']):d['vulnerable_pct'] for d in domrows}
+assert all(c['pct']==natv[(c['domain'],c['year'])] for c in catrows if c['category']=='Vulnerable'), "vulnerable % differs from aedc_domains_national.csv"
+print("aedc_categories_national.csv 2024 (vulnerable / at risk / on track):")
+for d in DORDER: print("  ",d,[c['pct'] for c in catrows if c['domain']==d and c['year']==2024])
+
 # ---------- 4. SEIFA: most vs least disadvantaged, on track on five (chart 7) ----------
 seifa=[]; nat=collections.defaultdict(lambda:[0,0]); state=None
 for r in rows("seifa-2009-24.xlsx","SEIFA On track five"):
@@ -184,19 +208,47 @@ for sex in ('All','Boys','Girls'):
             print("  ",sex,g,[x['pct'] for x in gl if x['sex']==sex and x['guideline']==g],"moe",[x['moe'] for x in gl if x['sex']==sex and x['guideline']==g])
 
 # ---------- 6. Activity vs sedentary screen minutes per day, by age and sex (chart 9) ----------
+t5r=rows("CPASSDC04–05.xlsx","Table 5.2_RSEs")                  # same layout as Table 5.1, values are RSE %
+def act_screen_rows(tab,block):
+    bi=[i for i,r in enumerate(tab) if r[1]==block][0]
+    _,a=find(tab,'Total moderate or vigorous physical activity (incl. active transport)',bi)
+    hi,_=findp(tab,'Average sedentary screen time per day',bi)
+    _,s=find(tab,'All days',hi)                                  # the "All days" row inside the screen-time block
+    return a,s
 acts=[]
 for sex,block in SEXES:
-    bi=[i for i,r in enumerate(t5) if r[1]==block][0]
-    _,a=find(t5,'Total moderate or vigorous physical activity (incl. active transport)',bi)
-    hi,_=findp(t5,'Average sedentary screen time per day',bi)
-    _,s=find(t5,'All days',hi)                                   # the "All days" row inside the screen-time block
+    a,s=act_screen_rows(t5,block); ar,sr=act_screen_rows(t5r,block)
     for k,ag in enumerate(AGES):
-        acts.append(dict(sex=sex,age_group=ag,age_order=k,activity_min=round(a[1+k].total_seconds()/60),screen_min=round(s[1+k].total_seconds()/60)))
+        acts.append(dict(sex=sex,age_group=ag,age_order=k,activity_min=round(a[1+k].total_seconds()/60),screen_min=round(s[1+k].total_seconds()/60),
+                         activity_rse=pnum(ar[1+k]) if pnum(ar[1+k]) is not None else '',screen_rse=pnum(sr[1+k]) if pnum(sr[1+k]) is not None else ''))
 with open(OUT+"nnpas_activity_screens.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(acts[0])); w.writeheader(); w.writerows(acts)
 print("nnpas_activity_screens.csv")
 for sex,_ in SEXES:
-    print("  ",sex,"activity",[x['activity_min'] for x in acts if x['sex']==sex],"screens",[x['screen_min'] for x in acts if x['sex']==sex])
+    print("  ",sex,"activity",[x['activity_min'] for x in acts if x['sex']==sex],"screens",[x['screen_min'] for x in acts if x['sex']==sex],
+          "RSE activity",[x['activity_rse'] for x in acts if x['sex']==sex],"screens",[x['screen_rse'] for x in acts if x['sex']==sex])
+
+# ---------- 6b. A child's day: sleep, activity, screens and the rest of 24 hours (day clock) ----------
+mins=lambda v: round(v.total_seconds()/60)
+t4=rows("CPASSDC04–05.xlsx","Table 4.1_Means")
+assert str(t4[5][3]).startswith('Total 2–5')
+_,sl4=find(t4,'Total sleep(d)(e)'); _,ac4=find(t4,'Total physical activity')
+h4,_=findp(t4,'Average sedentary screen time per day'); _,sc4=find(t4,'All days',h4)
+day_in=[('2–5',mins(sl4[3]),mins(ac4[3]),mins(sc4[3]),
+         'Ages 2–5: activity includes light play and sleep includes naps (measured differently from older ages)')]
+bi=[i for i,r in enumerate(t5) if r[1]==SEXES[0][1]][0]
+_,sl5=find(t5,'Total sleep on night before interview(f)',bi)
+_,ac5=find(t5,'Total moderate or vigorous physical activity (incl. active transport)',bi)
+h5,_=findp(t5,'Average sedentary screen time per day',bi); _,sc5=find(t5,'All days',h5)
+day_in+=[(a,mins(sl5[1+k]),mins(ac5[1+k]),mins(sc5[1+k]),'') for k,a in enumerate(AGES)]
+day=[]
+for k,(a,sl,ac,sc,note) in enumerate(day_in):
+    for o,(act,m) in enumerate((('Sleep',sl),('Active',ac),('Screens',sc),('Everything else',1440-sl-ac-sc))):
+        day.append(dict(age_group=a,age_order=k,activity=act,activity_order=o,minutes=m,label=f"{m//60}h {m%60:02d}m",note=note))
+with open(OUT+"nnpas_day.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(day[0])); w.writeheader(); w.writerows(day)
+print("nnpas_day.csv (sleep, active, screens, everything else):")
+for a,*_ in day_in: print("  ",a,[x['minutes'] for x in day if x['age_group']==a])
 
 # ---------- 7. Screen devices in the bedroom + sleep quality, by age (charts 10, 10b) ----------
 AGES5=['2–5']+AGES
@@ -204,26 +256,31 @@ col12={str(h).replace('(c)','').replace('(b)',''):i for i,h in enumerate(t12[5])
 DEV=(('Smartphone/watch','Smart phone or smart watch'),('Computer','Computer (including desktop or laptop)'),
      ('Television','Television (including DVDs, streaming services, free-to-air)'),('Tablet','Tablet'),
      ('Gaming console','Gaming console'))
+t12m=rows("CPASSDC12.xlsx","Table 12.4_MoEs")                    # same rows and columns as Table 12.3
+assert [str(x) for x in t12m[5][1:6]]==[str(x) for x in t12[5][1:6]]
+moe12=lambda label:[(lambda v:'' if v is None else v)(pnum(findp(t12m,label)[1][col12[a]])) for a in AGES5]   # "np" -> blank
 devs=[]
 for d,label in DEV:
-    _,r=findp(t12,label); devs.append((d,[r[col12[a]] for a in AGES5]))
+    _,r=findp(t12,label); devs.append((d,[r[col12[a]] for a in AGES5],moe12(label)))
 devs.sort(key=lambda t:-t[1][-1])                                  # single devices ordered by the 15–17 value
-_,r=findp(t12,'Total with screen-based device located in bedroom'); devs.append(('Any screen device',[r[col12[a]] for a in AGES5]))
-bed=[dict(age_group=a,age_order=k,device=d,device_order=o,pct=v[k]) for o,(d,v) in enumerate(devs) for k,a in enumerate(AGES5)]
+TOT='Total with screen-based device located in bedroom'
+_,r=findp(t12,TOT); devs.append(('Any screen device',[r[col12[a]] for a in AGES5],moe12(TOT)))
+bed=[dict(age_group=a,age_order=k,device=d,device_order=o,pct=v[k],moe=m[k]) for o,(d,v,m) in enumerate(devs) for k,a in enumerate(AGES5)]
 with open(OUT+"nnpas_bedroom_devices.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(bed[0])); w.writeheader(); w.writerows(bed)
-print("nnpas_bedroom_devices.csv"); [print("  ",d,v) for d,v in devs]
+print("nnpas_bedroom_devices.csv"); [print("  ",d,v,"moe",m) for d,v,m in devs]
 RATE=(('Very good','Very good'),('Good','Good'),('Fair','Fair'),('Poor / very poor','Poor / Very poor'))
 raw={rt:[findp(t12,label)[1][col12[a]] for a in AGES5] for rt,label in RATE}
+rmoe={rt:moe12(label) for rt,label in RATE}
 sq=[]
 for k,a in enumerate(AGES5):
     tot=sum(raw[rt][k] for rt,_ in RATE)                           # "not known" sits in the published total; drop it
     for o,(rt,_) in enumerate(RATE):
-        sq.append(dict(age_group=a,age_order=k,rating=rt,rating_order=o,pct_raw=raw[rt][k],pct=round(100*raw[rt][k]/tot,1)))
+        sq.append(dict(age_group=a,age_order=k,rating=rt,rating_order=o,pct_raw=raw[rt][k],pct=round(100*raw[rt][k]/tot,1),moe=rmoe[rt][k]))
 with open(OUT+"nnpas_sleep_quality.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(sq[0])); w.writeheader(); w.writerows(sq)
 print("nnpas_sleep_quality.csv")
-for rt,_ in RATE: print("  ",rt,"raw",raw[rt],"normalised",[x['pct'] for x in sq if x['rating']==rt])
+for rt,_ in RATE: print("  ",rt,"raw",raw[rt],"normalised",[x['pct'] for x in sq if x['rating']==rt],"moe",rmoe[rt])
 
 # ---------- 8. Saturated fat and free sugars vs dietary limits (chart 11) ----------
 # Limits are fixed reference values: NHMRC Nutrient Reference Values (saturated + trans fat, no more than 10% of energy)

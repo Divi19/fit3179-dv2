@@ -29,7 +29,7 @@
       "as": "big"
     },
     {
-      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') : 'not published'",
+      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' pts' : 'margin not published'",
       "as": "moe_label"
     },
     {

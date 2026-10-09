@@ -1,82 +1,89 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Teenagers sleep worse, not just less",
-    "subtitle": "Quality of sleep on the night before the interview, 2023 · % of children with a known rating"
+    "text": "Beyond the vulnerable 1 in 10, another 1 in 7 children is at risk",
+    "subtitle": "% of children starting school in each category, by area of development, Australia"
   },
   "width": "container",
-  "height": 250,
+  "height": 230,
+  "params": [
+    {
+      "name": "year",
+      "value": 2024,
+      "bind": {
+        "input": "radio",
+        "options": [
+          2009,
+          2024
+        ],
+        "name": "Year: "
+      }
+    }
+  ],
   "data": {
-    "url": "data/nnpas_sleep_quality.csv",
+    "url": "data/aedc_categories_national.csv",
     "format": {
       "type": "csv",
       "parse": {
-        "age_order": "number",
-        "rating_order": "number",
-        "pct_raw": "number",
-        "pct": "number",
-        "moe": "number"
+        "domain_order": "number",
+        "year": "number",
+        "category_order": "number",
+        "n": "number",
+        "total": "number",
+        "pct": "number"
       }
     }
   },
   "transform": [
     {
-      "calculate": "datum.rating == 'Good' ? datum.pct : 0",
-      "as": "g"
+      "filter": "datum.year == year"
     },
     {
-      "calculate": "datum.rating == 'Fair' ? datum.pct : 0",
-      "as": "f"
+      "calculate": "100 * datum.n / datum.total",
+      "as": "share"
     },
     {
-      "joinaggregate": [
+      "window": [
         {
           "op": "sum",
-          "field": "g",
-          "as": "good"
-        },
+          "field": "share",
+          "as": "x1"
+        }
+      ],
+      "sort": [
         {
-          "op": "sum",
-          "field": "f",
-          "as": "fair"
+          "field": "category_order"
         }
       ],
       "groupby": [
-        "age_group"
+        "domain"
+      ],
+      "frame": [
+        null,
+        0
       ]
     },
     {
-      "calculate": "datum.rating == 'Very good' ? datum.good : datum.rating == 'Good' ? 0 : datum.rating == 'Fair' ? -datum.pct : -datum.fair - datum.pct",
+      "calculate": "datum.x1 - datum.share",
       "as": "x0"
-    },
-    {
-      "calculate": "datum.rating == 'Very good' ? datum.good + datum.pct : datum.rating == 'Good' ? datum.pct : datum.rating == 'Fair' ? 0 : -datum.fair",
-      "as": "x1"
     },
     {
       "calculate": "(datum.x0 + datum.x1) / 2",
       "as": "mid"
-    },
-    {
-      "calculate": "format(datum.pct_raw, '.1f') + '% ' + (isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' pts' : '(margin not published)')",
-      "as": "raw_label"
     }
   ],
   "encoding": {
     "y": {
-      "field": "age_group",
-      "type": "ordinal",
+      "field": "domain",
+      "type": "nominal",
       "title": null,
       "sort": [
-        "2–5",
-        "5–8",
-        "9–11",
-        "12–14",
-        "15–17"
+        "Physical health",
+        "Social competence",
+        "Emotional maturity",
+        "Language & thinking",
+        "Communication"
       ],
-      "scale": {
-        "paddingOuter": 0.5
-      },
       "axis": {
         "domain": false,
         "ticks": false,
@@ -99,71 +106,76 @@
         "x": {
           "field": "x0",
           "type": "quantitative",
-          "title": "% of children with a known rating",
+          "title": "% of children starting school",
           "scale": {
             "domain": [
-              -30,
+              0,
               100
-            ]
+            ],
+            "nice": false
           },
           "axis": {
             "values": [
-              -20,
               0,
-              20,
-              40,
-              60,
-              80,
+              10,
+              25,
+              50,
+              75,
               100
             ],
-            "labelExpr": "abs(datum.value) + '%'"
+            "labelExpr": "datum.value + '%'",
+            "grid": false
           }
         },
         "x2": {
           "field": "x1"
         },
         "color": {
-          "field": "rating",
+          "field": "category",
           "type": "nominal",
           "title": null,
           "scale": {
             "domain": [
-              "Poor / very poor",
-              "Fair",
-              "Good",
-              "Very good"
+              "Vulnerable",
+              "At risk",
+              "On track"
             ],
             "range": [
               "#b3561a",
               "#eda96a",
-              "#7fbcd0",
-              "#16739a"
+              "#e6e7e4"
             ]
           },
           "legend": {
-            "orient": "top",
+            "orient": "bottom",
             "direction": "horizontal",
             "symbolType": "square",
-            "symbolStrokeWidth": 0
+            "symbolStrokeWidth": 0,
+            "offset": 12
           }
         },
         "tooltip": [
           {
-            "field": "age_group",
-            "title": "Age"
+            "field": "domain",
+            "title": "Area"
           },
           {
-            "field": "rating",
-            "title": "Sleep quality"
+            "field": "category",
+            "title": "Category"
+          },
+          {
+            "field": "year",
+            "title": "Year"
           },
           {
             "field": "pct",
-            "title": "% of known ratings",
+            "title": "% of children",
             "format": ".1f"
           },
           {
-            "field": "raw_label",
-            "title": "% published (incl. not known), 95% margin"
+            "field": "n",
+            "title": "Children",
+            "format": ","
           }
         ]
       }
@@ -171,10 +183,10 @@
     {
       "transform": [
         {
-          "filter": "datum.rating == 'Very good'"
+          "filter": "datum.category != 'On track'"
         },
         {
-          "calculate": "format(datum.pct, '.0f') + '%'",
+          "calculate": "format(datum.pct, '.1f')",
           "as": "t"
         }
       ],
@@ -183,35 +195,42 @@
         "align": "center",
         "baseline": "middle",
         "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#ffffff"
+        "fontWeight": "bold"
       },
       "encoding": {
         "x": {
           "field": "mid",
           "type": "quantitative",
-          "title": "% of children with a known rating",
+          "title": "% of children starting school",
           "scale": {
             "domain": [
-              -30,
+              0,
               100
-            ]
+            ],
+            "nice": false
           },
           "axis": {
             "values": [
-              -20,
               0,
-              20,
-              40,
-              60,
-              80,
+              10,
+              25,
+              50,
+              75,
               100
             ],
-            "labelExpr": "abs(datum.value) + '%'"
+            "labelExpr": "datum.value + '%'",
+            "grid": false
           }
         },
         "text": {
           "field": "t"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.category == 'Vulnerable'",
+            "value": "#ffffff"
+          },
+          "value": "#1d2a35"
         }
       }
     },
@@ -219,41 +238,49 @@
       "data": {
         "values": [
           {
-            "x": 0
+            "x": 10
+          },
+          {
+            "x": 25
           }
         ]
       },
       "mark": {
         "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
         "color": "#1d2a35",
-        "strokeWidth": 1.2
+        "opacity": 0.75
       },
       "encoding": {
         "x": {
           "field": "x",
           "type": "quantitative",
-          "title": "% of children with a known rating",
+          "title": "% of children starting school",
           "scale": {
             "domain": [
-              -30,
+              0,
               100
-            ]
+            ],
+            "nice": false
           },
           "axis": {
             "values": [
-              -20,
               0,
-              20,
-              40,
-              60,
-              80,
+              10,
+              25,
+              50,
+              75,
               100
             ],
-            "labelExpr": "abs(datum.value) + '%'"
+            "labelExpr": "datum.value + '%'",
+            "grid": false
           }
         },
         "y": {
-          "value": 0
+          "value": -22
         },
         "y2": {
           "value": {
@@ -266,94 +293,55 @@
       "data": {
         "values": [
           {
-            "x": -1.5,
-            "t": "← Fair or poor"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "top",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#b3561a"
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative",
-          "title": "% of children with a known rating",
-          "scale": {
-            "domain": [
-              -30,
-              100
-            ]
+            "x": 10,
+            "t": "2009 cut-off: bottom 10%",
+            "y": -22
           },
-          "axis": {
-            "values": [
-              -20,
-              0,
-              20,
-              40,
-              60,
-              80,
-              100
-            ],
-            "labelExpr": "abs(datum.value) + '%'"
-          }
-        },
-        "y": {
-          "value": 0
-        },
-        "text": {
-          "field": "t"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
           {
-            "x": 1.5,
-            "t": "Good or very good →"
+            "x": 25,
+            "t": "next 15% = at risk",
+            "y": -8
           }
         ]
       },
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "top",
-        "fontSize": 11,
+        "baseline": "middle",
+        "dx": 4,
+        "fontSize": 10,
         "fontWeight": "bold",
-        "color": "#16739a"
+        "color": "#1d2a35"
       },
       "encoding": {
         "x": {
           "field": "x",
           "type": "quantitative",
-          "title": "% of children with a known rating",
+          "title": "% of children starting school",
           "scale": {
             "domain": [
-              -30,
+              0,
               100
-            ]
+            ],
+            "nice": false
           },
           "axis": {
             "values": [
-              -20,
               0,
-              20,
-              40,
-              60,
-              80,
+              10,
+              25,
+              50,
+              75,
               100
             ],
-            "labelExpr": "abs(datum.value) + '%'"
+            "labelExpr": "datum.value + '%'",
+            "grid": false
           }
         },
         "y": {
-          "value": 0
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
         },
         "text": {
           "field": "t"
@@ -363,54 +351,128 @@
     {
       "transform": [
         {
-          "filter": "datum.rating == 'Very good'"
+          "filter": "datum.category == 'Vulnerable'"
         },
         {
           "window": [
             {
-              "op": "first_value",
-              "field": "pct",
-              "as": "first"
-            },
-            {
-              "op": "last_value",
-              "field": "pct",
-              "as": "last"
-            },
-            {
-              "op": "last_value",
-              "field": "x1",
-              "as": "last_end"
+              "op": "row_number",
+              "as": "rank"
             }
           ],
           "sort": [
             {
-              "field": "age_order"
+              "field": "share",
+              "order": "descending"
             }
-          ],
-          "frame": [
-            null,
-            null
           ]
         },
         {
-          "filter": "datum.age_order == 4"
+          "filter": "datum.rank == 1"
         },
         {
-          "calculate": "\"'Very good' sleep halves: \" + format(datum.first, '.0f') + '% → ' + format(datum.last, '.0f') + '%'",
+          "calculate": "'← Largest vulnerable share: ' + format(datum.pct, '.1f') + '%'",
+          "as": "t"
+        },
+        {
+          "calculate": "datum.x1 + 17",
+          "as": "lx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#7a3510"
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "% of children starting school",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              10,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + '%'",
+            "grid": false
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.category != 'On track'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "n",
+              "as": "n_behind"
+            },
+            {
+              "op": "max",
+              "field": "total",
+              "as": "total"
+            }
+          ],
+          "groupby": [
+            "domain"
+          ]
+        },
+        {
+          "calculate": "100 * datum.n_behind / datum.total",
+          "as": "behind"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "behind",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rank == 1"
+        },
+        {
+          "calculate": "format(datum.behind, '.1f') + '% vulnerable or at risk: ' + format(datum.n_behind, ',') + ' children, about 1 in ' + format(round(100 / datum.behind), 'd')",
           "as": "t"
         }
       ],
       "mark": {
         "type": "text",
         "align": "right",
-        "baseline": "top",
+        "baseline": "middle",
+        "dx": -8,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#16739a",
-        "dy": {
-          "expr": "height / 13"
-        }
+        "color": "#1d2a35"
       },
       "encoding": {
         "x": {
