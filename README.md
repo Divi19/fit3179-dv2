@@ -10,7 +10,7 @@ movement, screen time, sleep and diet change as they grow (ABS National Nutritio
 | Path | What it is |
 |---|---|
 | `index.html` | The web page |
-| `js/*.vg.json` | One Vega-Lite specification per chart (13) |
+| `js/*.vg.json` | One Vega-Lite specification per chart (15) |
 | `data/*.csv` | Cleaned data, one file per chart group |
 | `data/aus_lga.topojson` | Council boundaries (objects: `lga`, `states`; key: `properties.LGA_CODE24`) |
 | `data/hex_grid.geojson` | ~100 km hexagons used by the bin map (key: `properties.hex_id`) |
@@ -22,6 +22,7 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 
 ## Charts
 
+0. 100% stacked bar with year toggle: vulnerable, at risk and on track in each area of development, 2009 vs 2024
 1. Choropleth map with city zoom panels and an area menu: % vulnerable by council, 2024
 2. Proportional symbol map with year slider: number of vulnerable children, 2009–2024
 3. Hexagon bin map: change in % vulnerable 2021 → 2024, ~100 km hexagons
@@ -29,6 +30,7 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 5. Heatmap: % on track on all five domains, state × year
 6. Small multiples (line charts): % vulnerable in each area of development, 2009–2024
 7. Dumbbell chart: most vs least disadvantaged areas, by state, 2024
+Bridge. Donut rings (small multiples) with legend highlight: how a 24-hour day is split, by age
 8. Isotype (pictogram grids): children meeting all 24-hour movement guidelines, by age
 8b. Arrow chart with sex toggle: % meeting each guideline, ages 5–8 to 15–17
 9. Butterfly chart with sex toggle: daily activity vs screen time, by age
@@ -40,14 +42,16 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 
 | File | Source | Charts |
 |---|---|---|
+| `aedc_categories_national.csv` | AEDC national on track / at risk / vulnerable, 2009 and 2024 | 0 |
 | `aedc_lga.csv` | AEDC by council, 2009–2024 (with `hex_id`) | 2, 3, 4 |
 | `aedc_lga_domains.csv` | AEDC by council, 2024, each area of development | 1 |
 | `aedc_states.csv` | AEDC state summary indicators | 5 |
 | `aedc_domains_national.csv` | AEDC national % vulnerable per area | 6 |
 | `aedc_seifa.csv` | AEDC by socio-economic quintile | 7 |
+| `nnpas_day.csv` | ABS NNPAS tables 4.1 and 5.1 | Day rings |
 | `nnpas_guidelines.csv` | ABS NNPAS tables 2.3–2.4 | 8, 8b |
-| `nnpas_activity_screens.csv` | ABS NNPAS table 5.1 | 9 |
-| `nnpas_bedroom_devices.csv`, `nnpas_sleep_quality.csv` | ABS NNPAS table 12.3 | 10, 10b |
+| `nnpas_activity_screens.csv` | ABS NNPAS tables 5.1–5.2 (with RSEs) | 9 |
+| `nnpas_bedroom_devices.csv`, `nnpas_sleep_quality.csv` | ABS NNPAS tables 12.3–12.4 (with margins of error) | 10, 10b |
 | `nnpas_nutrients.csv` | ABS NNPAS food and nutrients tables 2.1–2.2 | 11 |
 
 ## Sources (CC BY 4.0)
