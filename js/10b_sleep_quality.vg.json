@@ -14,7 +14,8 @@
         "age_order": "number",
         "rating_order": "number",
         "pct_raw": "number",
-        "pct": "number"
+        "pct": "number",
+        "moe": "number"
       }
     }
   },
@@ -55,6 +56,10 @@
     {
       "calculate": "(datum.x0 + datum.x1) / 2",
       "as": "mid"
+    },
+    {
+      "calculate": "format(datum.pct_raw, '.1f') + '% ' + (isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' pts' : '(margin not published)')",
+      "as": "raw_label"
     }
   ],
   "encoding": {
@@ -157,9 +162,8 @@
             "format": ".1f"
           },
           {
-            "field": "pct_raw",
-            "title": "% published (incl. not known)",
-            "format": ".1f"
+            "field": "raw_label",
+            "title": "% published (incl. not known), 95% margin"
           }
         ]
       }

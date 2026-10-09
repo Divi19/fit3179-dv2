@@ -13,7 +13,8 @@
       "parse": {
         "age_order": "number",
         "device_order": "number",
-        "pct": "number"
+        "pct": "number",
+        "moe": "number"
       }
     }
   },
@@ -29,6 +30,10 @@
     {
       "calculate": "format(datum.pct, datum.pct < 10 ? '.1f' : '.0f') + '%'",
       "as": "label"
+    },
+    {
+      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' pts' : 'margin not published'",
+      "as": "moe_label"
     }
   ],
   "encoding": {
@@ -141,6 +146,10 @@
             "field": "pct",
             "title": "% of children",
             "format": ".1f"
+          },
+          {
+            "field": "moe_label",
+            "title": "95% margin of error"
           }
         ]
       }
@@ -209,6 +218,10 @@
             "field": "pct",
             "title": "% of children",
             "format": ".1f"
+          },
+          {
+            "field": "moe_label",
+            "title": "95% margin of error"
           }
         ]
       }
@@ -380,6 +393,10 @@
             "field": "pct",
             "title": "% of children",
             "format": ".1f"
+          },
+          {
+            "field": "moe_label",
+            "title": "95% margin of error"
           }
         ]
       }

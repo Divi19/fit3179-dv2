@@ -28,7 +28,9 @@
       "parse": {
         "age_order": "number",
         "activity_min": "number",
-        "screen_min": "number"
+        "screen_min": "number",
+        "activity_rse": "number",
+        "screen_rse": "number"
       }
     }
   },
@@ -61,6 +63,14 @@
     {
       "calculate": "(datum.minutes >= 60 ? floor(datum.minutes / 60) + 'h' + (datum.minutes % 60 == 0 ? '' : ' ' + (datum.minutes % 60) + 'm') : datum.minutes + 'm')",
       "as": "hm"
+    },
+    {
+      "calculate": "datum.key == 'activity_min' ? datum.activity_rse : datum.screen_rse",
+      "as": "rse"
+    },
+    {
+      "calculate": "isValid(datum.rse) ? 'RSE ' + format(datum.rse, '.1f') + '%' : 'not published'",
+      "as": "rse_label"
     }
   ],
   "encoding": {
@@ -156,6 +166,10 @@
           {
             "field": "minutes",
             "title": "Minutes per day"
+          },
+          {
+            "field": "rse_label",
+            "title": "Relative standard error"
           }
         ]
       }
