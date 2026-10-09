@@ -1,0 +1,303 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where it got worse since 2021",
+    "subtitle": "Change in share vulnerable on 1+ domains, 2021 → 2024, councils grouped into 2° grid squares"
+  },
+  "width": "container",
+  "height": 400,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -133.5,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/aus_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eef0ee",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/aedc_lga.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lga_code": "string",
+            "year": "number",
+            "children_assessed": "number",
+            "vulnerable_n": "number",
+            "vulnerable_pct": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "(datum.year == 2021 || datum.year == 2024) && isValid(datum.vulnerable_n) && isValid(datum.children_assessed)"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "count",
+              "as": "years_present"
+            }
+          ],
+          "groupby": [
+            "lga_code"
+          ]
+        },
+        {
+          "filter": "datum.years_present == 2"
+        },
+        {
+          "bin": {
+            "step": 2
+          },
+          "field": "lon",
+          "as": [
+            "lon_bin",
+            "lon_bin_end"
+          ]
+        },
+        {
+          "bin": {
+            "step": 2
+          },
+          "field": "lat",
+          "as": [
+            "lat_bin",
+            "lat_bin_end"
+          ]
+        },
+        {
+          "calculate": "datum.year == 2021 ? datum.vulnerable_n : 0",
+          "as": "n21"
+        },
+        {
+          "calculate": "datum.year == 2021 ? datum.children_assessed : 0",
+          "as": "c21"
+        },
+        {
+          "calculate": "datum.year == 2024 ? datum.vulnerable_n : 0",
+          "as": "n24"
+        },
+        {
+          "calculate": "datum.year == 2024 ? datum.children_assessed : 0",
+          "as": "c24"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "n21",
+              "as": "n21"
+            },
+            {
+              "op": "sum",
+              "field": "c21",
+              "as": "c21"
+            },
+            {
+              "op": "sum",
+              "field": "n24",
+              "as": "n24"
+            },
+            {
+              "op": "sum",
+              "field": "c24",
+              "as": "c24"
+            },
+            {
+              "op": "distinct",
+              "field": "lga_code",
+              "as": "councils"
+            }
+          ],
+          "groupby": [
+            "lon_bin",
+            "lon_bin_end",
+            "lat_bin",
+            "lat_bin_end"
+          ]
+        },
+        {
+          "filter": "datum.c24 >= 30"
+        },
+        {
+          "calculate": "(datum.lon_bin + datum.lon_bin_end) / 2",
+          "as": "lon_c"
+        },
+        {
+          "calculate": "(datum.lat_bin + datum.lat_bin_end) / 2",
+          "as": "lat_c"
+        },
+        {
+          "calculate": "100 * datum.n21 / datum.c21",
+          "as": "pct21"
+        },
+        {
+          "calculate": "100 * datum.n24 / datum.c24",
+          "as": "pct24"
+        },
+        {
+          "calculate": "datum.pct24 - datum.pct21",
+          "as": "change"
+        },
+        {
+          "calculate": "(datum.change > 0 ? '+' : '') + format(datum.change,'.1f') + ' points'",
+          "as": "change_label"
+        }
+      ],
+      "mark": {
+        "type": "square",
+        "opacity": 1,
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon_c",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat_c",
+          "type": "quantitative"
+        },
+        "size": {
+          "value": 560
+        },
+        "color": {
+          "field": "change",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              -4,
+              -1,
+              1,
+              4
+            ],
+            "range": [
+              "#007c9e",
+              "#9cc9d6",
+              "#e6e7e4",
+              "#eda96a",
+              "#b3561a"
+            ]
+          },
+          "legend": {
+            "title": "Change since 2021 (points)",
+            "orient": "top-left",
+            "direction": "vertical",
+            "labelExpr": "datum.index == 0 ? 'Better by 4+' : datum.index == 1 ? 'Better by 1–4' : datum.index == 2 ? 'Little change' : datum.index == 3 ? 'Worse by 1–4' : 'Worse by 4+'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "change_label",
+            "title": "Change since 2021"
+          },
+          {
+            "field": "pct21",
+            "title": "2021 share (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "pct24",
+            "title": "2024 share (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "councils",
+            "title": "Councils in square"
+          },
+          {
+            "field": "c24",
+            "title": "Children assessed 2024",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/aus_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#5b6670",
+        "strokeWidth": 0.9
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

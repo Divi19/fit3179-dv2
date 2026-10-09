@@ -1,0 +1,176 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Out of every 100 children, how many move enough?",
+    "subtitle": "Children who met the physical activity recommendation every day of the week, 2023 · ages 2–5 have a different guideline (3+ hours of play)"
+  },
+  "data": {
+    "url": "data/nnpas_activity_guideline.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "sequence(0,100)",
+      "as": "cell"
+    },
+    {
+      "flatten": [
+        "cell"
+      ]
+    },
+    {
+      "calculate": "datum.cell % 10",
+      "as": "col"
+    },
+    {
+      "calculate": "floor(datum.cell / 10)",
+      "as": "row"
+    },
+    {
+      "calculate": "datum.cell < round(datum.pct)",
+      "as": "met"
+    },
+    {
+      "calculate": "datum.age_group + ' yrs · ' + format(datum.pct,'.0f') + ' in 100'",
+      "as": "head"
+    },
+    {
+      "calculate": "indexof(['2–5','5–8','9–11','12–14','15–17'], datum.age_group)",
+      "as": "ord"
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "head",
+      "type": "nominal",
+      "sort": {
+        "field": "ord",
+        "op": "min"
+      },
+      "title": null,
+      "header": {
+        "labelFontSize": 13,
+        "labelFontWeight": "bold",
+        "labelColor": "#1d2a35",
+        "labelOrient": "bottom",
+        "labelPadding": 8
+      }
+    }
+  },
+  "spacing": 18,
+  "spec": {
+    "width": 118,
+    "height": 118,
+    "mark": {
+      "type": "square",
+      "size": 88,
+      "opacity": 1
+    },
+    "encoding": {
+      "x": {
+        "field": "col",
+        "type": "ordinal",
+        "axis": null
+      },
+      "y": {
+        "field": "row",
+        "type": "ordinal",
+        "axis": null,
+        "sort": "descending"
+      },
+      "color": {
+        "field": "met",
+        "type": "nominal",
+        "scale": {
+          "domain": [
+            true,
+            false
+          ],
+          "range": [
+            "#007c9e",
+            "#e3e7e6"
+          ]
+        },
+        "legend": {
+          "title": null,
+          "orient": "top",
+          "labelExpr": "datum.label == 'true' ? 'Met the guideline' : 'Did not meet it'",
+          "symbolType": "square"
+        }
+      },
+      "tooltip": [
+        {
+          "field": "age_group",
+          "title": "Age"
+        },
+        {
+          "field": "pct",
+          "title": "% meeting guideline",
+          "format": ".1f"
+        },
+        {
+          "field": "guideline",
+          "title": "Guideline"
+        }
+      ]
+    }
+  },
+  "resolve": {
+    "scale": {
+      "x": "independent",
+      "y": "independent"
+    }
+  },
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

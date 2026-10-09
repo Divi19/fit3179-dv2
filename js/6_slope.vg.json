@@ -1,0 +1,259 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Emotional and social skills fell furthest",
+    "subtitle": "% of children vulnerable on each domain, Australia, 2021 → 2024"
+  },
+  "width": "container",
+  "height": 300,
+  "padding": {
+    "left": 5,
+    "top": 5,
+    "bottom": 5,
+    "right": 165
+  },
+  "data": {
+    "url": "data/aedc_domains_national.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "vulnerable_pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year == 2021 || datum.year == 2024"
+    },
+    {
+      "calculate": "datum.domain == 'Emotional maturity' || datum.domain == 'Social competence'",
+      "as": "highlight"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "scale": {
+        "padding": 0.5
+      },
+      "axis": {
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false,
+        "labelFontWeight": "bold",
+        "labelColor": "#1d2a35",
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "field": "vulnerable_pct",
+      "type": "quantitative",
+      "title": "% vulnerable",
+      "scale": {
+        "domain": [
+          7,
+          11
+        ]
+      },
+      "axis": {
+        "grid": true,
+        "tickCount": 5
+      }
+    },
+    "detail": {
+      "field": "domain"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.highlight",
+            "value": "#b3561a"
+          },
+          "value": "#b8bec2"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.highlight",
+            "value": "#b3561a"
+          },
+          "value": "#9aa1a6"
+        },
+        "tooltip": [
+          {
+            "field": "domain_full",
+            "title": "Domain"
+          },
+          {
+            "field": "year"
+          },
+          {
+            "field": "vulnerable_pct",
+            "title": "% vulnerable",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2024"
+        },
+        {
+          "calculate": "datum.domain + '  ' + format(datum.vulnerable_pct,'.1f') + '%'",
+          "as": "lab"
+        },
+        {
+          "calculate": "datum.vulnerable_pct + (datum.domain == 'Emotional maturity' ? 0.1 : datum.domain == 'Physical health' ? -0.1 : 0)",
+          "as": "ypos"
+        }
+      ],
+      "layer": [
+        {
+          "transform": [
+            {
+              "filter": "datum.highlight"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 9,
+            "fontSize": 11.5,
+            "fontWeight": "bold",
+            "color": "#7a3510"
+          },
+          "encoding": {
+            "y": {
+              "field": "ypos",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "lab"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "!datum.highlight"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 9,
+            "fontSize": 11.5,
+            "color": "#5b6670"
+          },
+          "encoding": {
+            "y": {
+              "field": "ypos",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "lab"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2021"
+        },
+        {
+          "calculate": "datum.vulnerable_pct + (datum.domain == 'Emotional maturity' ? 0.08 : datum.domain == 'Communication' ? -0.08 : datum.domain == 'Physical health' ? 0.07 : datum.domain == 'Social competence' ? -0.07 : 0)",
+          "as": "ypos"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -9,
+        "fontSize": 11,
+        "color": "#5b6670"
+      },
+      "encoding": {
+        "y": {
+          "field": "ypos",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "vulnerable_pct",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

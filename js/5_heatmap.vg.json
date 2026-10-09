@@ -1,0 +1,185 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Seven of eight states slipped in 2024",
+    "subtitle": "% of children on track on all five domains, by state and collection year"
+  },
+  "width": "container",
+  "height": 290,
+  "data": {
+    "url": "data/aedc_states.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "pct": "number",
+        "n": "number",
+        "children": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.indicator == 'On track on all 5 domains'"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false,
+        "labelFontWeight": "bold"
+      }
+    },
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "NSW",
+        "VIC",
+        "WA",
+        "SA",
+        "QLD",
+        "TAS",
+        "ACT",
+        "NT"
+      ],
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontWeight": "bold",
+        "labelColor": "#1d2a35",
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#ffffff",
+        "strokeWidth": 2,
+        "cornerRadius": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              45,
+              50,
+              53,
+              56
+            ],
+            "range": [
+              "#e2f0f4",
+              "#b4d8e4",
+              "#7fbcd0",
+              "#4598b4",
+              "#16739a"
+            ]
+          },
+          "legend": {
+            "title": "% on track",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "labelExpr": "datum.label"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state"
+          },
+          {
+            "field": "year"
+          },
+          {
+            "field": "pct",
+            "title": "% on track on all 5",
+            "format": ".1f"
+          },
+          {
+            "field": "children",
+            "title": "Children assessed",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "pct",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.pct >= 53",
+            "value": "#ffffff"
+          },
+          "value": "#1d2a35"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

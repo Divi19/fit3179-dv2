@@ -1,0 +1,240 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where most affected children live",
+    "subtitle": "Number of children vulnerable on 1+ domains, by council · drag the slider to replay 2009–2024"
+  },
+  "width": "container",
+  "height": 400,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -133.5,
+      0
+    ]
+  },
+  "params": [
+    {
+      "name": "year",
+      "value": 2024,
+      "bind": {
+        "input": "range",
+        "min": 2009,
+        "max": 2024,
+        "step": 3,
+        "name": "Collection year "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/aus_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eef0ee",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/aedc_lga.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lga_code": "string",
+            "year": "number",
+            "children_assessed": "number",
+            "vulnerable_n": "number",
+            "vulnerable_pct": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year && isValid(datum.vulnerable_n) && datum.vulnerable_n > 0"
+        },
+        {
+          "calculate": "datum.vulnerable_pct >= 90 ? '90% or more' : format(datum.vulnerable_pct,'.1f') + '%'",
+          "as": "pct_label"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "fill": "#b3561a",
+        "fillOpacity": 0.55,
+        "stroke": "#ffffff",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "vulnerable_n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              3200
+            ],
+            "range": [
+              0,
+              1400
+            ]
+          },
+          "legend": {
+            "title": "Vulnerable children",
+            "orient": "top-left",
+            "values": [
+              250,
+              1000,
+              3000
+            ],
+            "symbolFillColor": "#b3561a",
+            "symbolOpacity": 0.55,
+            "symbolStrokeColor": "#ffffff"
+          }
+        },
+        "order": {
+          "field": "vulnerable_n",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "lga_name",
+            "title": "Council"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "vulnerable_n",
+            "title": "Vulnerable children",
+            "format": ","
+          },
+          {
+            "field": "pct_label",
+            "title": "Share of children"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/aus_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#5b6670",
+        "strokeWidth": 0.9
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 149.2,
+            "lat": -21.6,
+            "t": "Brisbane alone: 2,756 children,"
+          },
+          {
+            "lon": 149.2,
+            "lat": -22.7,
+            "t": "2.5× the whole of the NT ↘"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#7a3510"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

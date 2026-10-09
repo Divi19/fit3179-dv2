@@ -1,0 +1,292 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where children start school behind",
+    "subtitle": "Share of children developmentally vulnerable on one or more domains, by council, 2024"
+  },
+  "width": "container",
+  "height": 500,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -133.5,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/aus_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "lga"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#dfe2e3",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.25
+      }
+    },
+    {
+      "data": {
+        "url": "data/aedc_lga.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lga_code": "string",
+            "year": "number",
+            "children_assessed": "number",
+            "vulnerable_n": "number",
+            "vulnerable_pct": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == 2024 && isValid(datum.vulnerable_pct)"
+        },
+        {
+          "lookup": "lga_code",
+          "from": {
+            "data": {
+              "url": "data/aus_lga.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "lga"
+              }
+            },
+            "key": "properties.LGA_CODE24"
+          },
+          "as": "geo"
+        },
+        {
+          "calculate": "datum.vulnerable_pct >= 90 ? '90% or more' : format(datum.vulnerable_pct,'.1f') + '%'",
+          "as": "pct_label"
+        }
+      ],
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "lga_code"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.25
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "vulnerable_pct",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              15,
+              20,
+              25,
+              30,
+              40
+            ],
+            "range": [
+              "#fbeedd",
+              "#f6d2a9",
+              "#eda96a",
+              "#d97d33",
+              "#b3561a",
+              "#7a3510"
+            ]
+          },
+          "legend": {
+            "title": "% vulnerable on 1+ domains",
+            "orient": "bottom-left",
+            "type": "symbol",
+            "symbolType": "square",
+            "symbolSize": 180,
+            "symbolStrokeWidth": 0,
+            "labelExpr": "datum.label"
+          }
+        },
+        "strokeWidth": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 2
+          },
+          "value": 0.25
+        },
+        "stroke": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": "#1d2a35"
+          },
+          "value": "#ffffff"
+        },
+        "tooltip": [
+          {
+            "field": "lga_name",
+            "title": "Council"
+          },
+          {
+            "field": "state",
+            "title": "State"
+          },
+          {
+            "field": "pct_label",
+            "title": "Vulnerable on 1+ domains"
+          },
+          {
+            "field": "children_assessed",
+            "title": "Children assessed",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/aus_lga.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#5b6670",
+        "strokeWidth": 0.9
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 129.5,
+            "lat": -11.4,
+            "t": "Remote NT councils: more than half"
+          },
+          {
+            "lon": 129.5,
+            "lat": -12.4,
+            "t": "of children start school vulnerable"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#7a3510"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Grey = result suppressed (too few children to report)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "fontSize": 10,
+        "color": "#5b6670",
+        "x": {
+          "expr": "width"
+        },
+        "y": {
+          "expr": "height"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

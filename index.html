@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starting Behind, Slowing Down · Australian children's development and wellbeing</title>
+  <meta name="description" content="How Australian children arrive at school, and how their movement, sleep and diet change as they grow. Data: AEDC 2009–2024 and ABS NNPAS 2023.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:opsz,wght,SOFT@9..144,600..900,50..100&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    :root{
+      --ink:#1d2a35; --muted:#5b6670; --rule:#dfe3e4; --wash:#f4f6f5;
+      --teal:#007c9e; --amber:#cf6a12; --rust:#b3561a; --rust-deep:#7a3510;
+      --page:1160px;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;background:#fff;color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:17px;line-height:1.6}
+    a{color:var(--teal)}
+    .wrap{max-width:var(--page);margin:0 auto;padding:0 28px}
+
+    /* hero */
+    .hero{padding:72px 0 40px;border-bottom:1px solid var(--rule)}
+    .hero h1{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100;font-weight:800;
+      font-size:clamp(40px,6.4vw,76px);line-height:.98;letter-spacing:-.02em;margin:0 0 22px;max-width:14ch}
+    .hero h1 .slow{color:var(--rust)}
+    .standfirst{font-size:21px;line-height:1.45;max-width:58ch;margin:0 0 34px;color:#2b3944}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+    .stat{padding:18px 22px 4px 0}
+    .stat + .stat{padding-left:22px;border-left:1px solid var(--rule)}
+    .stat b{display:block;font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:44px;line-height:1;letter-spacing:-.02em}
+    .stat span{display:block;font-size:15px;color:var(--muted);margin-top:8px;max-width:28ch}
+    .stat b.warn{color:var(--rust)}
+
+    /* chapters */
+    section.chapter{padding:64px 0 8px}
+    .chapter-head{display:grid;grid-template-columns:72px 1fr;gap:0 18px;align-items:start;margin-bottom:22px}
+    .chapter-num{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:56px;line-height:.9;color:var(--rule)}
+    .chapter h2{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:clamp(28px,3.2vw,38px);line-height:1.1;margin:4px 0 12px;letter-spacing:-.01em}
+    .chapter p.lead{margin:0;max-width:66ch;color:#2b3944}
+    .viz{width:100%;margin:26px 0 8px}
+    .viz > div{width:100%}
+    #vis8{overflow-x:auto}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .note{font-size:14px;color:var(--muted);max-width:70ch;margin:6px 0 0}
+    .aside{border-left:3px solid var(--rust);padding:2px 0 2px 16px;margin:28px 0 0;max-width:62ch}
+    .aside strong{color:var(--rust-deep)}
+
+    /* bridge between the two halves */
+    .bridge{margin:72px 0 0;padding:44px 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+    .bridge p{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);line-height:1.3;margin:0;max-width:40ch}
+
+    /* conclusion + about */
+    .conclusion{padding:64px 0 30px}
+    .conclusion h2{font-family:"Fraunces",Georgia,serif;font-size:clamp(28px,3.2vw,38px);margin:0 0 14px}
+    .conclusion p{max-width:66ch}
+    footer{background:var(--wash);margin-top:40px;padding:44px 0 56px;font-size:15px;color:#33414c}
+    footer h3{font-family:"Fraunces",Georgia,serif;font-size:20px;margin:0 0 10px;color:var(--ink)}
+    .foot-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:44px}
+    footer ul{padding-left:18px;margin:0}
+    footer li{margin-bottom:8px}
+    .byline{margin-top:28px;padding-top:18px;border-top:1px solid var(--rule);color:var(--muted)}
+
+    /* vega-embed bind controls (year slider) */
+    .vega-bindings{font-size:14px;color:var(--muted);margin-top:6px}
+    .vega-bind-name{font-weight:700;color:var(--ink);margin-right:6px}
+    .vega-bindings input[type=range]{accent-color:var(--rust);vertical-align:middle;width:220px}
+
+    @media (max-width: 900px){
+      .grid-2,.foot-grid{grid-template-columns:1fr;gap:20px}
+      .stats{grid-template-columns:1fr}
+      .stat + .stat{border-left:none;padding-left:0;border-top:1px solid var(--rule)}
+      .chapter-head{grid-template-columns:1fr}
+      .chapter-num{font-size:40px}
+      .wrap{padding:0 16px}
+    }
+    @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Starting behind, <span class="slow">slowing down</span></h1>
+    <p class="standfirst">In 2024, more Australian children arrived at school developmentally vulnerable than at any
+      point in six national collections. And the everyday habits that support a growing child — moving, sleeping,
+      eating well — fade the older they get.</p>
+    <div class="stats">
+      <div class="stat"><b>288,483</b><span>children in their first year of school assessed by their teachers in 2024</span></div>
+      <div class="stat"><b class="warn">12.5%</b><span>vulnerable on two or more areas of development — the highest since records began in 2009</span></div>
+      <div class="stat"><b>7.6%</b><span>of 15–17 year olds get an hour of activity every day, down from 30.8% at ages 5–8</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ───────── Part 1: school entry ───────── -->
+  <section class="chapter" id="where">
+    <div class="chapter-head">
+      <div class="chapter-num">1</div>
+      <div>
+        <h2>Where children start behind</h2>
+        <p class="lead">Every three years, teachers score each child in their first year of school across five areas
+          of development: physical health, social skills, emotional maturity, language and thinking, and communication.
+          A child in the bottom tenth of the 2009 national benchmark on an area is called
+          <em>developmentally vulnerable</em>. Nationally, 23.5% of children were vulnerable on at least one area in 2024
+          — but your council shapes the odds far more than that average suggests.</p>
+      </div>
+    </div>
+    <div class="viz"><div id="vis1"></div></div>
+  </section>
+
+  <section class="chapter" id="who-where">
+    <div class="grid-2">
+      <div>
+        <p class="lead">The map above is dominated by vast remote councils with few children. Counting
+          <strong>children</strong> rather than <strong>rates</strong> flips the picture: the largest numbers of
+          vulnerable children live in fast-growing outer-suburban councils such as Brisbane, Moreton Bay and Logan.</p>
+        <div class="viz"><div id="vis2"></div></div>
+      </div>
+      <div>
+        <p class="lead">Grouping councils into equal-sized grid squares removes the size bias and shows where things
+          changed between 2021 and 2024. Orange squares got worse, blue squares improved. 58 of 92 squares got worse,
+          and those squares are home to 9 in 10 of the children assessed.</p>
+        <div class="viz"><div id="vis3"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="spread">
+    <div class="viz"><div id="vis4"></div></div>
+    <p class="note">The Australian Capital Territory is reported as a single council, so it is not shown here.</p>
+  </section>
+
+  <!-- ───────── Part 2: change over time ───────── -->
+  <section class="chapter" id="when">
+    <div class="chapter-head">
+      <div class="chapter-num">2</div>
+      <div>
+        <h2>A decade of progress, reversed</h2>
+        <p class="lead">The share of children on track on all five areas rose steadily to a peak of 55.4% in 2018.
+          By 2024 it had fallen to 52.9%. Seven of the eight states and territories went backwards; only Queensland held steady. The sharpest falls were
+          in emotional maturity and social competence — the skills children need to settle into a classroom.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="viz"><div id="vis5"></div></div>
+      <div class="viz"><div id="vis6"></div></div>
+    </div>
+  </section>
+
+  <!-- ───────── Part 3: disadvantage ───────── -->
+  <section class="chapter" id="who">
+    <div class="chapter-head">
+      <div class="chapter-num">3</div>
+      <div>
+        <h2>The postcode gap</h2>
+        <p class="lead">Children growing up in Australia's most disadvantaged fifth of areas are about 20 points less
+          likely to be on track than children in the least disadvantaged fifth. The gap exists in every state, and is
+          widest in the Northern Territory.</p>
+      </div>
+    </div>
+    <div class="viz"><div id="vis7"></div></div>
+    <p class="aside"><strong>Why the gap narrowed slightly in 2024:</strong> children in the least disadvantaged areas
+      fell further (63.7% → 61.1%) than those in the most disadvantaged (42.5% → 41.2%). Nobody improved.</p>
+  </section>
+
+  <div class="bridge">
+    <p>The census stops at school entry. To see what happens next, we follow a national survey of children's
+      movement, screen time, sleep and diet from age 2 to 17.</p>
+  </div>
+
+  <!-- ───────── Part 4: growing up ───────── -->
+  <section class="chapter" id="move">
+    <div class="chapter-head">
+      <div class="chapter-num">4</div>
+      <div>
+        <h2>The older they get, the less they move</h2>
+        <p class="lead">Australia's 24-Hour Movement Guidelines ask school-age children for at least 60 minutes of
+          moderate-to-vigorous activity <em>every</em> day. Among 5–8 year olds, about 3 in 10 manage it.
+          By 15–17, fewer than 1 in 10 do.</p>
+      </div>
+    </div>
+    <div class="viz"><div id="vis8"></div></div>
+    <div class="grid-2" style="margin-top:28px">
+      <div>
+        <p class="lead">Boys and girls start out equally active. By the late teens, girls average 55 minutes a day,
+          19 fewer than boys.</p>
+        <div class="viz"><div id="vis9"></div></div>
+      </div>
+      <div>
+        <p class="lead">At the same time, screens move into the bedroom and the last hour before sleep. Teenagers
+          sleep about an hour and a half less than younger children.</p>
+        <div class="viz"><div id="vis10"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Part 5: diet ───────── -->
+  <section class="chapter" id="eat">
+    <div class="chapter-head">
+      <div class="chapter-num">5</div>
+      <div>
+        <h2>And what they eat</h2>
+        <p class="lead">Free sugars — those added to food and drinks, plus honey and juice — climb with age.
+          Teenagers get 10.1% of their daily energy from them, just over the World Health Organization's limit and
+          higher than adults.</p>
+      </div>
+    </div>
+    <div class="viz"><div id="vis11"></div></div>
+  </section>
+
+  <section class="conclusion">
+    <h2>Place shows where to act. Age shows when.</h2>
+    <p>One in four children starts school already behind, and that share is rising. The children most affected are
+      concentrated in remote communities and disadvantaged suburbs. As they grow, fewer of them move, sleep or eat the
+      way the guidelines recommend. Support that reaches families before school, and keeps teenagers active and
+      rested, addresses both halves of the same story.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>About the data</h3>
+        <ul>
+          <li><strong>Australian Early Development Census (AEDC) 2009–2024</strong>, Australian Government Department of
+            Education. Public time-series tables by local government area, socio-economic quintile and state.
+            <a href="https://www.aedc.gov.au/data-hub/public-data/additional-data">aedc.gov.au</a></li>
+          <li><strong>National Nutrition and Physical Activity Survey 2023</strong>, Australian Bureau of Statistics.
+            Children's physical activity, screen time and sleep (tables 1–2, 4–5, 12) and food and nutrients (table 2).
+            <a href="https://www.abs.gov.au/statistics/health/food-and-nutrition/national-nutrition-and-physical-activity-survey/latest-release">abs.gov.au</a></li>
+          <li><strong>Local Government Area boundaries 2024</strong>, ABS Australian Statistical Geography Standard
+            Edition 3, simplified with mapshaper.
+            <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files">abs.gov.au</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Notes</h3>
+        <ul>
+          <li>AEDC results are suppressed where fewer than 15 children were assessed; these councils appear grey.
+            Results reported as "90% or more" are shown at 90%.</li>
+          <li>The two datasets are not linked: the AEDC covers children starting school, the ABS survey a
+            national sample aged 2–17. Very remote areas are excluded from the ABS survey.</li>
+          <li>All content licensed CC BY 4.0 by the original publishers.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="byline">Divieleisch Ranjan · 35213949 · FIT3179 Data Visualisation 2 · Monash University · October 2026<br>
+      Built with Vega-Lite. AI acknowledgement: [describe how you used AI tools here].</p>
+  </div>
+</footer>
+
+<script>
+  const opts = { actions: false, renderer: "svg" };
+  const charts = [
+    ["#vis1",  "js/1_choropleth.vg.json"],
+    ["#vis2",  "js/2_symbols.vg.json"],
+    ["#vis3",  "js/3_bins.vg.json"],
+    ["#vis4",  "js/4_boxplot.vg.json"],
+    ["#vis5",  "js/5_heatmap.vg.json"],
+    ["#vis6",  "js/6_slope.vg.json"],
+    ["#vis7",  "js/7_dumbbell.vg.json"],
+    ["#vis8",  "js/8_waffle.vg.json"],
+    ["#vis9",  "js/9_butterfly.vg.json"],
+    ["#vis10", "js/10_connected_scatter.vg.json"],
+    ["#vis11", "js/11_bullet.vg.json"]
+  ];
+  charts.forEach(([el, url]) => vegaEmbed(el, url, opts).catch(console.error));
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "A 20-point gap between rich and poor areas",
+    "subtitle": "% of children on track on all five domains, most vs least disadvantaged fifth of areas, 2024"
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/aedc_seifa.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "on_track_pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year == 2024"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "area",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Australia",
+        "NT",
+        "WA",
+        "VIC",
+        "QLD",
+        "TAS",
+        "SA",
+        "NSW",
+        "ACT"
+      ],
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelColor": "#1d2a35",
+        "labelFontWeight": {
+          "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
+        }
+      }
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "min",
+              "field": "on_track_pct",
+              "as": "lo"
+            },
+            {
+              "op": "max",
+              "field": "on_track_pct",
+              "as": "hi"
+            }
+          ],
+          "groupby": [
+            "area"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#d5d9db"
+      },
+      "encoding": {
+        "x": {
+          "field": "lo",
+          "type": "quantitative",
+          "title": "% on track on all five domains",
+          "scale": {
+            "domain": [
+              10,
+              70
+            ]
+          },
+          "axis": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          }
+        },
+        "x2": {
+          "field": "hi"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 130,
+        "opacity": 1,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "on_track_pct",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Most disadvantaged",
+              "Least disadvantaged"
+            ],
+            "range": [
+              "#cf6a12",
+              "#007c9e"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolType": "circle"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "area"
+          },
+          {
+            "field": "group"
+          },
+          {
+            "field": "on_track_pct",
+            "title": "% on track",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "pivot": "group",
+          "value": "on_track_pct",
+          "groupby": [
+            "area"
+          ]
+        },
+        {
+          "calculate": "datum['Least disadvantaged'] - datum['Most disadvantaged']",
+          "as": "gap"
+        },
+        {
+          "calculate": "format(datum.gap,'.1f') + ' pt gap'",
+          "as": "gap_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 10.5,
+        "color": "#5b6670"
+      },
+      "encoding": {
+        "x": {
+          "field": "Least disadvantaged",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "gap_label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 17.8,
+            "area": "NT",
+            "t": "only 17.8% on track"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -13,
+        "fontSize": 10.5,
+        "fontWeight": "bold",
+        "color": "#8a4a0c"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "area",
+          "type": "nominal",
+          "sort": [
+            "Australia",
+            "NT",
+            "WA",
+            "VIC",
+            "QLD",
+            "TAS",
+            "SA",
+            "NSW",
+            "ACT"
+          ]
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

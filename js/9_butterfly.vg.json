@@ -1,0 +1,271 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Girls fall away faster than boys",
+    "subtitle": "Average minutes of moderate-to-vigorous activity a day, 2023 · dashed = 60 min"
+  },
+  "width": "container",
+  "height": 240,
+  "data": {
+    "url": "data/nnpas_activity_minutes.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "activity_min": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.sex == 'Boys' ? -datum.activity_min : datum.activity_min",
+      "as": "signed"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "age_group",
+      "type": "ordinal",
+      "title": "Age",
+      "sort": [
+        "5–8",
+        "9–11",
+        "12–14",
+        "15–17"
+      ],
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontWeight": "bold",
+        "labelColor": "#1d2a35",
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.62
+        },
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "signed",
+          "type": "quantitative",
+          "title": "minutes per day",
+          "scale": {
+            "domain": [
+              -130,
+              130
+            ]
+          },
+          "axis": {
+            "labelExpr": "abs(datum.value)",
+            "values": [
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120
+            ]
+          }
+        },
+        "color": {
+          "field": "sex",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Boys",
+              "Girls"
+            ],
+            "range": [
+              "#007c9e",
+              "#cf6a12"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "sex"
+          },
+          {
+            "field": "age_group",
+            "title": "Age"
+          },
+          {
+            "field": "activity_min",
+            "title": "Minutes per day"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sex == 'Boys'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -5,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "x": {
+          "field": "signed",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "activity_min"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sex == 'Girls'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "x": {
+          "field": "signed",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "activity_min"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": -60
+          },
+          {
+            "x": 60
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "color": "#1d2a35",
+        "opacity": 0.7
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#8f979c"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}
