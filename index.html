@@ -45,6 +45,7 @@
     .viz{width:100%;margin:26px 0 8px}
     .viz > div{width:100%}
     #vis8{overflow-x:auto}
+    .scroll-x{overflow-x:auto}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
     .note{font-size:14px;color:var(--muted);max-width:70ch;margin:6px 0 0}
     .aside{border-left:3px solid var(--rust);padding:2px 0 2px 16px;margin:28px 0 0;max-width:62ch}
@@ -69,6 +70,7 @@
     .vega-bindings{font-size:14px;color:var(--muted);margin-top:6px}
     .vega-bind-name{font-weight:700;color:var(--ink);margin-right:6px}
     .vega-bindings input[type=range]{accent-color:var(--rust);vertical-align:middle;width:220px}
+    .vega-bindings select{font:inherit;color:var(--ink);padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:#fff}
 
     @media (max-width: 900px){
       .grid-2,.foot-grid{grid-template-columns:1fr;gap:20px}
@@ -112,7 +114,8 @@
           — but your council shapes the odds far more than that average suggests.</p>
       </div>
     </div>
-    <div class="viz"><div id="vis1"></div></div>
+    <div class="viz scroll-x"><div id="vis1"></div></div>
+    <p class="note">Panels zoom into the five largest cities, where most children live. Grey = result suppressed.</p>
   </section>
 
   <section class="chapter" id="who-where">
