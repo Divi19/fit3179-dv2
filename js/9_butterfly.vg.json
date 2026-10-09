@@ -1,43 +1,89 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Girls fall away faster than boys",
-    "subtitle": "Average minutes of moderate-to-vigorous activity a day, 2023 · dashed = 60 min"
+    "text": "By the late teens, screens take nearly four times as long as activity",
+    "subtitle": "Average minutes per day, 2023 · ages 5–17"
   },
   "width": "container",
-  "height": 240,
+  "height": 270,
+  "params": [
+    {
+      "name": "sex",
+      "value": "All",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "All",
+          "Boys",
+          "Girls"
+        ],
+        "name": "Show: "
+      }
+    }
+  ],
   "data": {
-    "url": "data/nnpas_activity_minutes.csv",
+    "url": "data/nnpas_activity_screens.csv",
     "format": {
       "type": "csv",
       "parse": {
-        "activity_min": "number"
+        "age_order": "number",
+        "activity_min": "number",
+        "screen_min": "number"
       }
     }
   },
   "transform": [
     {
-      "calculate": "datum.sex == 'Boys' ? -datum.activity_min : datum.activity_min",
+      "filter": "datum.sex == sex"
+    },
+    {
+      "calculate": "datum.screen_min / datum.activity_min",
+      "as": "ratio"
+    },
+    {
+      "fold": [
+        "activity_min",
+        "screen_min"
+      ],
+      "as": [
+        "key",
+        "minutes"
+      ]
+    },
+    {
+      "calculate": "datum.key == 'activity_min' ? 'Active (moderate–vigorous)' : 'Sedentary screen time'",
+      "as": "measure"
+    },
+    {
+      "calculate": "datum.key == 'activity_min' ? -datum.minutes : datum.minutes",
       "as": "signed"
+    },
+    {
+      "calculate": "(datum.minutes >= 60 ? floor(datum.minutes / 60) + 'h' + (datum.minutes % 60 == 0 ? '' : ' ' + (datum.minutes % 60) + 'm') : datum.minutes + 'm')",
+      "as": "hm"
     }
   ],
   "encoding": {
     "y": {
       "field": "age_group",
       "type": "ordinal",
-      "title": "Age",
+      "title": null,
       "sort": [
         "5–8",
         "9–11",
         "12–14",
         "15–17"
       ],
+      "scale": {
+        "paddingOuter": 0.45
+      },
       "axis": {
         "domain": false,
         "ticks": false,
         "labelFontWeight": "bold",
         "labelColor": "#1d2a35",
-        "labelFontSize": 12
+        "labelFontSize": 12,
+        "labelPadding": 8
       }
     }
   },
@@ -54,57 +100,61 @@
         "x": {
           "field": "signed",
           "type": "quantitative",
-          "title": "minutes per day",
+          "title": "hours per day",
           "scale": {
             "domain": [
-              -130,
-              130
+              -170,
+              290
             ]
           },
           "axis": {
-            "labelExpr": "abs(datum.value)",
             "values": [
               -120,
-              -90,
               -60,
-              -30,
               0,
-              30,
               60,
-              90,
-              120
-            ]
+              120,
+              180,
+              240
+            ],
+            "labelExpr": "datum.value == 0 ? '0' : abs(datum.value) / 60 + 'h'",
+            "grid": true
           }
         },
         "color": {
-          "field": "sex",
+          "field": "measure",
           "type": "nominal",
           "scale": {
             "domain": [
-              "Boys",
-              "Girls"
+              "Active (moderate–vigorous)",
+              "Sedentary screen time"
             ],
             "range": [
               "#007c9e",
               "#cf6a12"
             ]
           },
-          "legend": {
-            "title": null,
-            "orient": "top",
-            "direction": "horizontal"
-          }
+          "legend": null
         },
         "tooltip": [
           {
-            "field": "sex"
+            "field": "sex",
+            "title": "Group"
           },
           {
             "field": "age_group",
             "title": "Age"
           },
           {
-            "field": "activity_min",
+            "field": "measure",
+            "title": "Measure"
+          },
+          {
+            "field": "hm",
+            "title": "Time per day"
+          },
+          {
+            "field": "minutes",
             "title": "Minutes per day"
           }
         ]
@@ -113,7 +163,7 @@
     {
       "transform": [
         {
-          "filter": "datum.sex == 'Boys'"
+          "filter": "datum.key == 'activity_min'"
         }
       ],
       "mark": {
@@ -130,14 +180,14 @@
           "type": "quantitative"
         },
         "text": {
-          "field": "activity_min"
+          "field": "hm"
         }
       }
     },
     {
       "transform": [
         {
-          "filter": "datum.sex == 'Girls'"
+          "filter": "datum.key == 'screen_min'"
         }
       ],
       "mark": {
@@ -154,7 +204,7 @@
           "type": "quantitative"
         },
         "text": {
-          "field": "activity_min"
+          "field": "hm"
         }
       }
     },
@@ -165,7 +215,7 @@
             "x": -60
           },
           {
-            "x": 60
+            "x": 120
           }
         ]
       },
@@ -197,6 +247,66 @@
       "data": {
         "values": [
           {
+            "x": -60,
+            "t": "Guideline: 60+ min"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": -4,
+        "fontSize": 10,
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "y": {
+          "value": 3
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 120,
+            "t": "Limit: 2 h"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 4,
+        "fontSize": 10,
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "y": {
+          "value": 3
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
             "x": 0
           }
         ]
@@ -217,6 +327,128 @@
           "value": {
             "expr": "height"
           }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": -6,
+            "t": "← Active (moderate–vigorous)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#007c9e"
+      },
+      "encoding": {
+        "y": {
+          "value": -6
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 6,
+            "t": "Sedentary screen time →"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#cf6a12"
+      },
+      "encoding": {
+        "y": {
+          "value": -6
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.key == 'screen_min' && datum.age_order == 0"
+        },
+        {
+          "calculate": "datum.minutes + 48",
+          "as": "lx"
+        },
+        {
+          "calculate": "'About even at ' + datum.age_group",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#5b6670"
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.key == 'screen_min' && datum.age_order == 3"
+        },
+        {
+          "calculate": "'Screens ≈ ' + format(datum.ratio, '.1f') + '× activity'",
+          "as": "t"
+        },
+        {
+          "calculate": "8",
+          "as": "lx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
         }
       }
     }

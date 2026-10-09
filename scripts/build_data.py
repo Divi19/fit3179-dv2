@@ -152,18 +152,7 @@ def find(rs,label,start=0):
     raise KeyError(label)
 AGES=['5–8','9–11','12–14','15–17']
 
-# ---------- 5. NNPAS minutes of activity by sex (chart 9) ----------
 t5=rows("CPASSDC04–05.xlsx","Table 5.1_Means")
-mins=[]
-for sex,block in (('Boys','Males aged 5–17 years'),('Girls','Females aged 5–17 years')):
-    bi=[i for i,r in enumerate(t5) if r[1]==block][0]
-    _,r=find(t5,'Total moderate or vigorous physical activity (incl. active transport)',bi)
-    _,s=find(t5,'All days',bi+15)   # screen time "All days" row sits in the screen block
-    for k,a in enumerate(AGES):
-        mins.append(dict(sex=sex,age_group=a,activity_min=round(r[1+k].total_seconds()/60)))
-with open(OUT+"nnpas_activity_minutes.csv","w",newline="") as f:
-    w=csv.DictWriter(f,fieldnames=list(mins[0])); w.writeheader(); w.writerows(mins)
-print("minutes:", [(m['sex'],m['age_group'],m['activity_min']) for m in mins])
 
 # ---------- 6. NNPAS sleep vs screens before bed (chart 10) ----------
 t12=rows("CPASSDC12.xlsx","Table 12.3_Proportions")
