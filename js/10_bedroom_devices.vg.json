@@ -4,7 +4,7 @@
     "text": "Phones move into the bedroom in the early teens",
     "subtitle": "% of children with each type of screen device in their bedroom, 2023"
   },
-  "width": 420,
+  "width": 380,
   "height": 300,
   "data": {
     "url": "data/nnpas_bedroom_devices.csv",
@@ -73,7 +73,7 @@
           "value": 0
         },
         "x2": {
-          "value": 420
+          "value": 380
         }
       }
     },
@@ -99,7 +99,7 @@
           "scale": {
             "domain": [
               -0.5,
-              6.9
+              7.2
             ],
             "nice": false
           },
@@ -167,7 +167,7 @@
           "scale": {
             "domain": [
               -0.5,
-              6.9
+              7.2
             ],
             "nice": false
           },
@@ -235,7 +235,7 @@
           "scale": {
             "domain": [
               -0.5,
-              6.9
+              7.2
             ],
             "nice": false
           },
@@ -286,7 +286,7 @@
           "scale": {
             "domain": [
               -0.5,
-              6.9
+              7.2
             ],
             "nice": false
           },
@@ -321,7 +321,7 @@
           "filter": "datum.pct < 40"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 3) / 56.76",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 3) / 49.35",
           "as": "lx"
         }
       ],
@@ -340,7 +340,7 @@
           "scale": {
             "domain": [
               -0.5,
-              6.9
+              7.2
             ],
             "nice": false
           },
@@ -394,7 +394,7 @@
           "as": "t"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 56.76",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
           "as": "lx"
         }
       ],
@@ -416,7 +416,7 @@
           "scale": {
             "domain": [
               -0.5,
-              6.9
+              7.2
             ],
             "nice": false
           },
@@ -455,7 +455,7 @@
           "as": "t"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 56.76",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
           "as": "lx"
         }
       ],
@@ -477,7 +477,7 @@
           "scale": {
             "domain": [
               -0.5,
-              6.9
+              7.2
             ],
             "nice": false
           },
