@@ -46,7 +46,10 @@
     .viz > div{width:100%}
     #vis8{overflow-x:auto}
     .scroll-x{overflow-x:auto}
+    .scroll-x > .min-520{min-width:520px}
+    .scroll-x > .min-680{min-width:680px}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .grid-2 > *{min-width:0}
     .note{font-size:14px;color:var(--muted);max-width:70ch;margin:6px 0 0}
     .aside{border-left:3px solid var(--rust);padding:2px 0 2px 16px;margin:28px 0 0;max-width:62ch}
     .aside strong{color:var(--rust-deep)}
@@ -130,7 +133,7 @@
         <p class="lead">Grouping councils into equal-sized hexagons removes the size bias and shows where things
           changed between 2021 and 2024. Orange hexagons got worse, blue hexagons improved. 83 of 125 hexagons got worse,
           and those hexagons are home to 9 in 10 (89.7%) of the children assessed.</p>
-        <div class="viz"><div id="vis3"></div></div>
+        <div class="viz scroll-x"><div id="vis3" class="min-520"></div></div>
       </div>
     </div>
   </section>
@@ -190,10 +193,10 @@
     <div class="viz"><div id="vis8"></div></div>
     <p class="lead" style="margin-top:28px">Sleep holds up reasonably well. Activity and screen time are where the
       guidelines break: by 15–17, fewer than 1 in 10 meet either.</p>
-    <div class="viz"><div id="vis8b"></div></div>
+    <div class="viz scroll-x"><div id="vis8b" class="min-680"></div></div>
     <p class="lead" style="margin-top:28px">At 5–8, children spend about as long being active as on screens. By 15–17,
       screens take nearly four times as long, and girls are the least active of all, at 55 minutes a day.</p>
-    <div class="viz"><div id="vis9"></div></div>
+    <div class="viz scroll-x"><div id="vis9" class="min-680"></div></div>
     <div class="grid-2" style="margin-top:28px">
       <div>
         <p class="lead">Screens also move into the bedroom. Fewer than 3 in 100 children aged 5–8 have a phone in
@@ -203,7 +206,7 @@
       <div>
         <p class="lead">And sleep gets worse, not just shorter. Nearly half of 2–5 year olds slept 'very well';
           by 15–17, only about 1 in 5 did.</p>
-        <div class="viz"><div id="vis10b"></div></div>
+        <div class="viz scroll-x"><div id="vis10b" class="min-520"></div></div>
       </div>
     </div>
   </section>
