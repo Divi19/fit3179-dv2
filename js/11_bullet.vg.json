@@ -1,248 +1,1095 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Teenagers tip over the sugar limit",
-    "subtitle": "Average % of daily energy from free sugars, 2023 · WHO advises under 10%, ideally under 5%"
+    "text": "Saturated fat is over the limit at every age; sugar climbs to the limit by the teens",
+    "subtitle": "Average % of daily energy, 2023 · bars show 95% margin of error"
   },
-  "width": "container",
-  "height": 210,
   "data": {
-    "url": "data/nnpas_free_sugars.csv",
+    "url": "data/nnpas_nutrients.csv",
     "format": {
       "type": "csv",
       "parse": {
-        "free_sugars_pct": "number",
-        "moe": "number"
+        "age_order": "number",
+        "pct_energy": "number",
+        "moe": "number",
+        "limit": "number",
+        "ideal": "number"
       }
     }
   },
-  "encoding": {
-    "y": {
-      "field": "age_group",
-      "type": "nominal",
-      "title": null,
-      "sort": [
-        "2–4 yrs",
-        "5–11 yrs",
-        "12–17 yrs",
-        "Adults 18+"
-      ],
-      "axis": {
-        "domain": false,
-        "ticks": false,
-        "labelFontWeight": "bold",
-        "labelColor": "#1d2a35",
-        "labelFontSize": 12
-      }
-    }
-  },
-  "layer": [
+  "transform": [
     {
-      "data": {
-        "values": [
-          {
-            "a": 0,
-            "b": 5,
-            "band": "Ideal (under 5%)"
-          },
-          {
-            "a": 5,
-            "b": 10,
-            "band": "Within limit"
-          },
-          {
-            "a": 10,
-            "b": 14,
-            "band": "Over limit"
-          }
-        ]
-      },
-      "mark": {
-        "type": "rect",
-        "opacity": 1
-      },
-      "encoding": {
-        "x": {
-          "field": "a",
-          "type": "quantitative",
-          "title": "% of daily energy from free sugars",
-          "scale": {
-            "domain": [
-              0,
-              14
-            ]
-          },
-          "axis": {
-            "values": [
-              0,
-              2,
-              4,
-              5,
-              6,
-              8,
-              10,
-              12,
-              14
-            ],
-            "format": "d"
-          }
-        },
-        "x2": {
-          "field": "b"
-        },
-        "y": {
-          "value": 0
-        },
-        "y2": {
-          "value": {
-            "expr": "height"
-          }
-        },
-        "color": {
-          "field": "band",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "Ideal (under 5%)",
-              "Within limit",
-              "Over limit"
-            ],
-            "range": [
-              "#f3f5f4",
-              "#e6eae8",
-              "#f7e3d6"
-            ]
-          },
-          "legend": {
-            "title": null,
-            "orient": "top",
-            "direction": "horizontal",
-            "symbolType": "square"
-          }
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "bar",
-        "height": {
-          "band": 0.42
-        },
-        "cornerRadiusEnd": 3
-      },
-      "encoding": {
-        "x": {
-          "field": "free_sugars_pct",
-          "type": "quantitative"
-        },
-        "color": {
-          "condition": {
-            "test": "datum.free_sugars_pct >= 10",
-            "value": "#b3561a"
-          },
-          "value": {
-            "expr": "datum.group == 'Adults' ? '#9aa1a6' : '#007c9e'"
-          }
-        },
-        "tooltip": [
-          {
-            "field": "age_group",
-            "title": "Age"
-          },
-          {
-            "field": "free_sugars_pct",
-            "title": "% of energy",
-            "format": ".1f"
-          },
-          {
-            "field": "moe",
-            "title": "± margin of error"
-          }
-        ]
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 6,
-        "fontSize": 11.5,
-        "fontWeight": "bold",
-        "color": "#1d2a35"
-      },
-      "encoding": {
-        "x": {
-          "field": "free_sugars_pct",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "free_sugars_pct",
-          "type": "quantitative",
-          "format": ".1f"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "x": 10
-          }
-        ]
-      },
-      "mark": {
-        "type": "rule",
-        "strokeWidth": 2.5,
-        "color": "#1d2a35"
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative"
-        },
-        "y": {
-          "value": 0
-        },
-        "y2": {
-          "value": {
-            "expr": "height"
-          }
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "x": 10,
-            "t": "WHO limit"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 4,
-        "dy": -4,
-        "fontSize": 10.5,
-        "fontWeight": "bold",
-        "color": "#1d2a35",
-        "baseline": "bottom"
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative"
-        },
-        "y": {
-          "value": 0
-        },
-        "text": {
-          "field": "t"
-        }
-      }
+      "calculate": "datum.nutrient == 'Free sugars' ? 'Under 10% (ideally under 5%), WHO' : 'No more than 10%, NHMRC'",
+      "as": "limit_label"
     }
   ],
+  "spacing": 40,
+  "hconcat": [
+    {
+      "title": {
+        "text": "Saturated + trans fat",
+        "subtitle": "NHMRC target: no more than 10% of energy",
+        "fontSize": 13,
+        "subtitleFontSize": 11
+      },
+      "width": 410,
+      "height": 210,
+      "transform": [
+        {
+          "filter": "datum.nutrient == 'Saturated + trans fat'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "age_group",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "2–4",
+            "5–11",
+            "12–17",
+            "Adults 18+"
+          ],
+          "scale": {
+            "paddingOuter": 0.55,
+            "paddingInner": 0.35
+          },
+          "axis": {
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 12,
+            "labelPadding": 8,
+            "minExtent": 76
+          }
+        }
+      },
+      "layer": [
+        {
+          "data": {
+            "values": [
+              {
+                "x": 0,
+                "x2": 10,
+                "band": "Within limit",
+                "fill": "#eef0ee"
+              },
+              {
+                "x": 10,
+                "x2": 16,
+                "band": "Over the limit",
+                "fill": "#f8e2d1"
+              }
+            ]
+          },
+          "mark": {
+            "type": "rect",
+            "opacity": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "x2": {
+              "field": "x2"
+            },
+            "fill": {
+              "field": "fill",
+              "type": "nominal",
+              "scale": null
+            },
+            "tooltip": [
+              {
+                "field": "band",
+                "title": "Band"
+              }
+            ],
+            "y": {
+              "value": 0
+            },
+            "y2": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 0,
+                "x2": 10,
+                "band": "Within limit",
+                "fill": "#eef0ee"
+              },
+              {
+                "x": 10,
+                "x2": 16,
+                "band": "Over the limit",
+                "fill": "#f8e2d1"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "calculate": "(datum.x + datum.x2) / 2",
+              "as": "mid"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "top",
+            "fontSize": 10,
+            "color": "#5b6670"
+          },
+          "encoding": {
+            "x": {
+              "field": "mid",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "y": {
+              "value": 4
+            },
+            "text": {
+              "field": "band"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "bar",
+            "height": {
+              "band": 0.45
+            },
+            "cornerRadiusEnd": 2
+          },
+          "encoding": {
+            "x": {
+              "field": "pct_energy",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "color": {
+              "field": "group",
+              "type": "nominal",
+              "title": null,
+              "scale": {
+                "domain": [
+                  "Children",
+                  "Adults"
+                ],
+                "range": [
+                  "#b3561a",
+                  "#8a949b"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "symbolType": "square",
+                "symbolStrokeWidth": 0
+              }
+            },
+            "tooltip": [
+              {
+                "field": "nutrient",
+                "title": "Nutrient"
+              },
+              {
+                "field": "age_group",
+                "title": "Age"
+              },
+              {
+                "field": "pct_energy",
+                "title": "Mean % of energy",
+                "format": ".1f"
+              },
+              {
+                "field": "moe",
+                "title": "95% margin of error (±)",
+                "format": ".1f"
+              },
+              {
+                "field": "limit_label",
+                "title": "Recommended"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "calculate": "datum.pct_energy - datum.moe",
+              "as": "lo"
+            },
+            {
+              "calculate": "datum.pct_energy + datum.moe",
+              "as": "hi"
+            }
+          ],
+          "mark": {
+            "type": "errorbar",
+            "ticks": {
+              "size": 12,
+              "color": "#1d2a35"
+            },
+            "rule": {
+              "color": "#1d2a35",
+              "strokeWidth": 1.4
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "lo",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "x2": {
+              "field": "hi"
+            },
+            "tooltip": [
+              {
+                "field": "nutrient",
+                "title": "Nutrient"
+              },
+              {
+                "field": "age_group",
+                "title": "Age"
+              },
+              {
+                "field": "pct_energy",
+                "title": "Mean % of energy",
+                "format": ".1f"
+              },
+              {
+                "field": "moe",
+                "title": "95% margin of error (±)",
+                "format": ".1f"
+              },
+              {
+                "field": "limit_label",
+                "title": "Recommended"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "calculate": "format(datum.pct_energy, '.1f') + '%'",
+              "as": "t"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 5,
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#ffffff"
+          },
+          "encoding": {
+            "x": {
+              "datum": 0,
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 10,
+                "t": "Target 10%"
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "color": "#1d2a35",
+            "strokeWidth": 2
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "y": {
+              "value": 0
+            },
+            "y2": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 10,
+                "t": "Target 10%"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "bottom",
+            "fontSize": 10,
+            "fontWeight": "bold",
+            "color": "#1d2a35"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "y": {
+              "value": -3
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.group == 'Children'"
+            },
+            {
+              "joinaggregate": [
+                {
+                  "op": "min",
+                  "field": "pct_energy",
+                  "as": "lowest"
+                },
+                {
+                  "op": "max",
+                  "field": "pct_energy",
+                  "as": "highest"
+                }
+              ]
+            },
+            {
+              "filter": "datum.lowest > datum.limit && datum.age_order == 0"
+            },
+            {
+              "calculate": "['Over the limit at every age:', format(datum.lowest, '.0f') + '–' + format(datum.highest, '.0f') + '% of energy']",
+              "as": "t"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "bottom",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#7a3510",
+            "lineHeight": 13
+          },
+          "encoding": {
+            "x": {
+              "datum": 15.8,
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 206
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": "Free sugars",
+        "subtitle": "WHO: under 10% of energy, ideally under 5%",
+        "fontSize": 13,
+        "subtitleFontSize": 11
+      },
+      "width": 410,
+      "height": 210,
+      "transform": [
+        {
+          "filter": "datum.nutrient == 'Free sugars'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "age_group",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "2–4",
+            "5–11",
+            "12–17",
+            "Adults 18+"
+          ],
+          "scale": {
+            "paddingOuter": 0.55,
+            "paddingInner": 0.35
+          },
+          "axis": {
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 12,
+            "labelPadding": 8,
+            "minExtent": 76
+          }
+        }
+      },
+      "layer": [
+        {
+          "data": {
+            "values": [
+              {
+                "x": 0,
+                "x2": 5,
+                "band": "WHO ideal",
+                "fill": "#fbfbfa"
+              },
+              {
+                "x": 5,
+                "x2": 10,
+                "band": "Within limit",
+                "fill": "#eef0ee"
+              },
+              {
+                "x": 10,
+                "x2": 16,
+                "band": "Over the limit",
+                "fill": "#f8e2d1"
+              }
+            ]
+          },
+          "mark": {
+            "type": "rect",
+            "opacity": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "x2": {
+              "field": "x2"
+            },
+            "fill": {
+              "field": "fill",
+              "type": "nominal",
+              "scale": null
+            },
+            "tooltip": [
+              {
+                "field": "band",
+                "title": "Band"
+              }
+            ],
+            "y": {
+              "value": 0
+            },
+            "y2": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 0,
+                "x2": 5,
+                "band": "WHO ideal",
+                "fill": "#fbfbfa"
+              },
+              {
+                "x": 5,
+                "x2": 10,
+                "band": "Within limit",
+                "fill": "#eef0ee"
+              },
+              {
+                "x": 10,
+                "x2": 16,
+                "band": "Over the limit",
+                "fill": "#f8e2d1"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "calculate": "(datum.x + datum.x2) / 2",
+              "as": "mid"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "top",
+            "fontSize": 10,
+            "color": "#5b6670"
+          },
+          "encoding": {
+            "x": {
+              "field": "mid",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "y": {
+              "value": 4
+            },
+            "text": {
+              "field": "band"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "bar",
+            "height": {
+              "band": 0.45
+            },
+            "cornerRadiusEnd": 2
+          },
+          "encoding": {
+            "x": {
+              "field": "pct_energy",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "color": {
+              "field": "group",
+              "type": "nominal",
+              "title": null,
+              "scale": {
+                "domain": [
+                  "Children",
+                  "Adults"
+                ],
+                "range": [
+                  "#b3561a",
+                  "#8a949b"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "symbolType": "square",
+                "symbolStrokeWidth": 0
+              }
+            },
+            "tooltip": [
+              {
+                "field": "nutrient",
+                "title": "Nutrient"
+              },
+              {
+                "field": "age_group",
+                "title": "Age"
+              },
+              {
+                "field": "pct_energy",
+                "title": "Mean % of energy",
+                "format": ".1f"
+              },
+              {
+                "field": "moe",
+                "title": "95% margin of error (±)",
+                "format": ".1f"
+              },
+              {
+                "field": "limit_label",
+                "title": "Recommended"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "calculate": "datum.pct_energy - datum.moe",
+              "as": "lo"
+            },
+            {
+              "calculate": "datum.pct_energy + datum.moe",
+              "as": "hi"
+            }
+          ],
+          "mark": {
+            "type": "errorbar",
+            "ticks": {
+              "size": 12,
+              "color": "#1d2a35"
+            },
+            "rule": {
+              "color": "#1d2a35",
+              "strokeWidth": 1.4
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "lo",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "x2": {
+              "field": "hi"
+            },
+            "tooltip": [
+              {
+                "field": "nutrient",
+                "title": "Nutrient"
+              },
+              {
+                "field": "age_group",
+                "title": "Age"
+              },
+              {
+                "field": "pct_energy",
+                "title": "Mean % of energy",
+                "format": ".1f"
+              },
+              {
+                "field": "moe",
+                "title": "95% margin of error (±)",
+                "format": ".1f"
+              },
+              {
+                "field": "limit_label",
+                "title": "Recommended"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "calculate": "format(datum.pct_energy, '.1f') + '%'",
+              "as": "t"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 5,
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#ffffff"
+          },
+          "encoding": {
+            "x": {
+              "datum": 0,
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 10,
+                "t": "WHO limit 10%"
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "color": "#1d2a35",
+            "strokeWidth": 2
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "y": {
+              "value": 0
+            },
+            "y2": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 10,
+                "t": "WHO limit 10%"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "bottom",
+            "fontSize": 10,
+            "fontWeight": "bold",
+            "color": "#1d2a35"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "y": {
+              "value": -3
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.age_group == '12–17' && datum.pct_energy + datum.moe >= datum.limit"
+            },
+            {
+              "calculate": "datum.pct_energy + datum.moe + 0.35",
+              "as": "lx"
+            },
+            {
+              "calculate": "['Teens reach the limit', '(' + format(datum.pct_energy, '.1f') + '% ± ' + format(datum.moe, '.1f') + ')']",
+              "as": "t"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#7a3510",
+            "lineHeight": 13
+          },
+          "encoding": {
+            "x": {
+              "field": "lx",
+              "type": "quantitative",
+              "title": "% of daily energy",
+              "scale": {
+                "domain": [
+                  0,
+                  16
+                ],
+                "nice": false
+              },
+              "axis": {
+                "values": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16
+                ],
+                "labelExpr": "datum.value + '%'",
+                "grid": false
+              }
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "shared"
+    }
+  },
   "config": {
     "font": "Atkinson Hyperlegible",
     "background": null,

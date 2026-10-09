@@ -1,0 +1,677 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Three of five areas hit their worst level on record in 2024",
+    "subtitle": "% of children developmentally vulnerable in each area, Australia, 2009–2024 · dashed line = 2009 level"
+  },
+  "data": {
+    "url": "data/aedc_domains_national.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "vulnerable_pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "window": [
+        {
+          "op": "first_value",
+          "field": "vulnerable_pct",
+          "as": "base"
+        }
+      ],
+      "sort": [
+        {
+          "field": "year"
+        }
+      ],
+      "groupby": [
+        "domain"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "vulnerable_pct",
+          "as": "max_pct"
+        },
+        {
+          "op": "min",
+          "field": "vulnerable_pct",
+          "as": "min_pct"
+        }
+      ],
+      "groupby": [
+        "domain"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "count",
+          "as": "n_at_max"
+        }
+      ],
+      "groupby": [
+        "domain",
+        "vulnerable_pct"
+      ],
+      "frame": [
+        null,
+        null
+      ]
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "domain",
+      "type": "nominal",
+      "sort": [
+        "Physical health",
+        "Social competence",
+        "Emotional maturity",
+        "Language & thinking",
+        "Communication"
+      ],
+      "title": null,
+      "header": {
+        "labelFontSize": 13,
+        "labelFontWeight": "bold",
+        "labelColor": "#1d2a35",
+        "labelAnchor": "start",
+        "labelPadding": 6
+      }
+    }
+  },
+  "spacing": 18,
+  "spec": {
+    "width": 186,
+    "height": 220,
+    "layer": [
+      {
+        "mark": {
+          "type": "rule",
+          "strokeDash": [
+            4,
+            3
+          ],
+          "color": "#8a949b",
+          "strokeWidth": 1
+        },
+        "transform": [
+          {
+            "filter": "datum.year == 2009"
+          }
+        ],
+        "encoding": {
+          "y": {
+            "field": "base",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          },
+          "tooltip": [
+            {
+              "field": "domain_full",
+              "title": "Area"
+            },
+            {
+              "field": "base",
+              "title": "2009 level (%)",
+              "format": ".1f"
+            }
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "top",
+          "dy": 4,
+          "fontSize": 10,
+          "color": "#5b6670"
+        },
+        "transform": [
+          {
+            "filter": "datum.year == 2024 && datum.domain == 'Physical health'"
+          },
+          {
+            "calculate": "'2009 level'",
+            "as": "t"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ]
+            },
+            "axis": {
+              "values": [
+                2009,
+                2015,
+                2021,
+                2024
+              ],
+              "format": "d",
+              "grid": false,
+              "labelFontSize": 10
+            }
+          },
+          "y": {
+            "field": "base",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          },
+          "text": {
+            "field": "t"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "#b3561a",
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ]
+            },
+            "axis": {
+              "values": [
+                2009,
+                2015,
+                2021,
+                2024
+              ],
+              "format": "d",
+              "grid": false,
+              "labelFontSize": 10
+            }
+          },
+          "y": {
+            "field": "vulnerable_pct",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "color": "#b3561a",
+          "size": 36,
+          "opacity": 1
+        },
+        "transform": [
+          {
+            "filter": "datum.year < 2024"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ]
+            },
+            "axis": {
+              "values": [
+                2009,
+                2015,
+                2021,
+                2024
+              ],
+              "format": "d",
+              "grid": false,
+              "labelFontSize": 10
+            }
+          },
+          "y": {
+            "field": "vulnerable_pct",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          },
+          "tooltip": [
+            {
+              "field": "domain_full",
+              "title": "Area"
+            },
+            {
+              "field": "year",
+              "title": "Year"
+            },
+            {
+              "field": "vulnerable_pct",
+              "title": "% vulnerable",
+              "format": ".1f"
+            }
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "color": "#7a3510",
+          "size": 110,
+          "opacity": 1,
+          "stroke": "#ffffff",
+          "strokeWidth": 1.5
+        },
+        "transform": [
+          {
+            "filter": "datum.year == 2024"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ]
+            },
+            "axis": {
+              "values": [
+                2009,
+                2015,
+                2021,
+                2024
+              ],
+              "format": "d",
+              "grid": false,
+              "labelFontSize": 10
+            }
+          },
+          "y": {
+            "field": "vulnerable_pct",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          },
+          "tooltip": [
+            {
+              "field": "domain_full",
+              "title": "Area"
+            },
+            {
+              "field": "year",
+              "title": "Year"
+            },
+            {
+              "field": "vulnerable_pct",
+              "title": "% vulnerable",
+              "format": ".1f"
+            }
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "bottom",
+          "dx": 6,
+          "dy": -9,
+          "fontSize": 12,
+          "fontWeight": "bold",
+          "color": "#7a3510"
+        },
+        "transform": [
+          {
+            "filter": "datum.year == 2024"
+          },
+          {
+            "calculate": "format(datum.vulnerable_pct, '.1f') + '%'",
+            "as": "t"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ]
+            },
+            "axis": {
+              "values": [
+                2009,
+                2015,
+                2021,
+                2024
+              ],
+              "format": "d",
+              "grid": false,
+              "labelFontSize": 10
+            }
+          },
+          "y": {
+            "field": "vulnerable_pct",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          },
+          "text": {
+            "field": "t"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "bottom",
+          "dx": 6,
+          "dy": -24,
+          "fontSize": 11,
+          "fontWeight": "bold",
+          "color": "#1d2a35"
+        },
+        "transform": [
+          {
+            "filter": "datum.year == 2024 && datum.vulnerable_pct == datum.max_pct && datum.n_at_max == 1"
+          },
+          {
+            "calculate": "'Record high'",
+            "as": "t"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ]
+            },
+            "axis": {
+              "values": [
+                2009,
+                2015,
+                2021,
+                2024
+              ],
+              "format": "d",
+              "grid": false,
+              "labelFontSize": 10
+            }
+          },
+          "y": {
+            "field": "vulnerable_pct",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          },
+          "text": {
+            "field": "t"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "top",
+          "dx": -8,
+          "dy": 10,
+          "fontSize": 11,
+          "color": "#1d2a35"
+        },
+        "transform": [
+          {
+            "filter": "(datum.domain == 'Emotional maturity' || datum.domain == 'Language & thinking') && datum.vulnerable_pct == datum.min_pct"
+          },
+          {
+            "calculate": "'Low point ' + format(datum.vulnerable_pct, '.1f') + '% (' + datum.year + ')'",
+            "as": "t"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ]
+            },
+            "axis": {
+              "values": [
+                2009,
+                2015,
+                2021,
+                2024
+              ],
+              "format": "d",
+              "grid": false,
+              "labelFontSize": 10
+            }
+          },
+          "y": {
+            "field": "vulnerable_pct",
+            "type": "quantitative",
+            "title": "% vulnerable",
+            "scale": {
+              "domain": [
+                5,
+                12
+              ],
+              "zero": false
+            },
+            "axis": {
+              "values": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "labelExpr": "datum.value + '%'",
+              "tickCount": 4
+            }
+          },
+          "text": {
+            "field": "t"
+          }
+        }
+      }
+    ]
+  },
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

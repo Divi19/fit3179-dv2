@@ -1,0 +1,3277 @@
+lga_code,lga_name,state,measure,children_assessed,vulnerable_n,vulnerable_pct
+10050,Albury,NSW,One or more domains,640,151,23.6
+10180,Armidale,NSW,One or more domains,287,110,38.3
+10250,Ballina,NSW,One or more domains,406,76,18.7
+10300,Balranald,NSW,One or more domains,27,10,37.0
+10470,Bathurst,NSW,One or more domains,498,118,23.7
+10500,Bayside (NSW),NSW,One or more domains,1495,304,20.3
+10550,Bega Valley,NSW,One or more domains,288,81,28.1
+10600,Bellingen,NSW,One or more domains,92,20,21.7
+10650,Berrigan,NSW,One or more domains,72,14,19.4
+10750,Blacktown,NSW,One or more domains,5478,1454,26.5
+10800,Bland,NSW,One or more domains,66,12,18.2
+10850,Blayney,NSW,One or more domains,97,25,25.8
+10900,Blue Mountains,NSW,One or more domains,663,102,15.4
+10950,Bogan,NSW,One or more domains,41,4,9.8
+11150,Bourke,NSW,One or more domains,31,14,45.2
+11200,Brewarrina,NSW,One or more domains,21,12,57.1
+11250,Broken Hill,NSW,One or more domains,179,54,30.2
+11300,Burwood,NSW,One or more domains,274,61,22.3
+11350,Byron,NSW,One or more domains,322,57,17.7
+11400,Cabonne,NSW,One or more domains,161,35,21.7
+11450,Camden,NSW,One or more domains,2112,427,20.2
+11500,Campbelltown (NSW),NSW,One or more domains,2347,609,25.9
+11520,Canada Bay,NSW,One or more domains,744,142,19.1
+11570,Canterbury-Bankstown,NSW,One or more domains,4225,980,23.2
+11600,Carrathool,NSW,One or more domains,38,4,10.5
+11650,Central Coast (NSW),NSW,One or more domains,3647,743,20.4
+11700,Central Darling,NSW,One or more domains,21,9,42.9
+11720,Cessnock,NSW,One or more domains,780,218,27.9
+11730,Clarence Valley,NSW,One or more domains,553,117,21.2
+11750,Cobar,NSW,One or more domains,51,19,37.3
+11800,Coffs Harbour,NSW,One or more domains,729,192,26.3
+12000,Coolamon,NSW,One or more domains,64,12,18.8
+12150,Coonamble,NSW,One or more domains,68,28,41.2
+12160,Cootamundra-Gundagai,NSW,One or more domains,108,18,16.7
+12350,Cowra,NSW,One or more domains,126,36,28.6
+12380,Cumberland,NSW,One or more domains,2964,793,26.8
+12390,Dubbo,NSW,One or more domains,611,147,24.1
+12700,Dungog,NSW,One or more domains,106,30,28.3
+12730,Edward River,NSW,One or more domains,94,21,22.3
+12750,Eurobodalla,NSW,One or more domains,301,78,25.9
+12850,Fairfield,NSW,One or more domains,1997,618,30.9
+12870,Federation,NSW,One or more domains,121,38,31.4
+12900,Forbes,NSW,One or more domains,111,26,23.4
+12930,Georges River,NSW,One or more domains,1323,271,20.5
+12950,Gilgandra,NSW,One or more domains,46,12,26.1
+13010,Glen Innes Severn,NSW,One or more domains,65,22,33.8
+13310,Goulburn Mulwaree,NSW,One or more domains,341,70,20.5
+13340,Greater Hume,NSW,One or more domains,103,31,30.1
+13450,Griffith,NSW,One or more domains,303,86,28.4
+13550,Gunnedah,NSW,One or more domains,142,36,25.4
+13660,Gwydir,NSW,One or more domains,43,25,58.1
+13800,Hawkesbury,NSW,One or more domains,714,115,16.1
+13850,Hay,NSW,One or more domains,23,11,47.8
+13910,Hilltops,NSW,One or more domains,192,41,21.4
+14000,Hornsby,NSW,One or more domains,1554,290,18.7
+14100,Hunters Hill,NSW,One or more domains,127,15,11.8
+14170,Inner West,NSW,One or more domains,1431,220,15.4
+14220,Inverell,NSW,One or more domains,178,52,29.2
+14300,Junee,NSW,One or more domains,52,13,25
+14350,Kempsey,NSW,One or more domains,262,78,29.8
+14400,Kiama,NSW,One or more domains,215,23,10.7
+14500,Ku-ring-gai,NSW,One or more domains,1141,209,18.3
+14550,Kyogle,NSW,One or more domains,99,33,33.3
+14600,Lachlan,NSW,One or more domains,74,20,27.0
+14650,Lake Macquarie,NSW,One or more domains,2148,426,19.8
+14700,Lane Cove,NSW,One or more domains,418,64,15.3
+14750,Leeton,NSW,One or more domains,137,33,24.1
+14850,Lismore,NSW,One or more domains,348,82,23.6
+14870,Lithgow,NSW,One or more domains,160,35,21.9
+14900,Liverpool,NSW,One or more domains,3103,809,26.1
+14920,Liverpool Plains,NSW,One or more domains,65,20,30.8
+14950,Lockhart,NSW,One or more domains,37,4,10.8
+15050,Maitland,NSW,One or more domains,1144,264,23.1
+15240,Mid-Coast,NSW,One or more domains,785,180,22.9
+15270,Mid-Western,NSW,One or more domains,314,93,29.6
+15300,Moree Plains,NSW,One or more domains,127,42,33.1
+15350,Mosman,NSW,One or more domains,216,19,8.8
+15520,Murray River,NSW,One or more domains,126,18,14.3
+15560,Murrumbidgee,NSW,One or more domains,26,11,42.3
+15650,Muswellbrook,NSW,One or more domains,183,60,32.8
+15700,Nambucca Valley,NSW,One or more domains,175,61,34.9
+15750,Narrabri,NSW,One or more domains,137,27,19.7
+15800,Narrandera,NSW,One or more domains,76,21,27.6
+15850,Narromine,NSW,One or more domains,57,9,15.8
+15900,Newcastle,NSW,One or more domains,1609,320,19.9
+15950,North Sydney,NSW,One or more domains,478,81,16.9
+15990,Northern Beaches,NSW,One or more domains,2564,332,12.9
+16100,Oberon,NSW,One or more domains,50,13,26
+16150,Orange,NSW,One or more domains,471,123,26.1
+16200,Parkes,NSW,One or more domains,181,45,24.9
+16260,Parramatta,NSW,One or more domains,2800,606,21.6
+16350,Penrith,NSW,One or more domains,2618,638,24.4
+16380,Port Macquarie-Hastings,NSW,One or more domains,747,180,24.1
+16400,Port Stephens,NSW,One or more domains,678,162,23.9
+16490,Queanbeyan-Palerang,NSW,One or more domains,746,175,23.5
+16550,Randwick,NSW,One or more domains,1065,181,17.0
+16610,Richmond Valley,NSW,One or more domains,214,37,17.3
+16700,Ryde,NSW,One or more domains,1274,251,19.7
+16900,Shellharbour,NSW,One or more domains,909,221,24.3
+16950,Shoalhaven,NSW,One or more domains,1091,268,24.6
+17000,Singleton,NSW,One or more domains,261,58,22.2
+17040,Snowy Monaro,NSW,One or more domains,192,41,21.4
+17080,Snowy Valleys,NSW,One or more domains,162,47,29.0
+17100,Strathfield,NSW,One or more domains,350,79,22.6
+17150,Sutherland,NSW,One or more domains,2527,351,13.9
+17200,Sydney,NSW,One or more domains,856,130,15.2
+17310,Tamworth,NSW,One or more domains,744,212,28.5
+17350,Temora,NSW,One or more domains,54,10,18.5
+17400,Tenterfield,NSW,One or more domains,63,16,25.4
+17420,The Hills,NSW,One or more domains,2333,363,15.6
+17550,Tweed,NSW,One or more domains,973,162,16.6
+17620,Upper Hunter,NSW,One or more domains,146,29,19.9
+17640,Upper Lachlan,NSW,One or more domains,77,16,20.8
+17650,Uralla,NSW,One or more domains,63,25,39.7
+17750,Wagga Wagga,NSW,One or more domains,768,206,26.8
+17850,Walcha,NSW,One or more domains,39,6,15.4
+17900,Walgett,NSW,One or more domains,81,33,40.7
+17950,Warren,NSW,One or more domains,25,1,4
+18020,Warrumbungle,NSW,One or more domains,109,28,25.7
+18050,Waverley,NSW,One or more domains,551,43,7.8
+18100,Weddin,NSW,One or more domains,36,2,5.6
+18200,Wentworth,NSW,One or more domains,92,18,19.6
+18250,Willoughby,NSW,One or more domains,737,116,15.7
+18350,Wingecarribee,NSW,One or more domains,487,67,13.8
+18400,Wollondilly,NSW,One or more domains,709,126,17.8
+18450,Wollongong,NSW,One or more domains,2210,472,21.4
+18500,Woollahra,NSW,One or more domains,405,38,9.4
+18710,Yass Valley,NSW,One or more domains,133,25,18.8
+19399,Unincorporated NSW,NSW,One or more domains,,,
+20110,Alpine,VIC,One or more domains,114,20,17.5
+20260,Ararat,VIC,One or more domains,107,41,38.3
+20570,Ballarat,VIC,One or more domains,1119,303,27.1
+20660,Banyule,VIC,One or more domains,1152,190,16.5
+20740,Bass Coast,VIC,One or more domains,300,72,24
+20830,Baw Baw,VIC,One or more domains,644,164,25.5
+20910,Bayside (Vic.),VIC,One or more domains,776,78,10.1
+21010,Benalla,VIC,One or more domains,126,38,30.2
+21110,Boroondara,VIC,One or more domains,1074,182,16.9
+21180,Brimbank,VIC,One or more domains,1771,493,27.8
+21270,Buloke,VIC,One or more domains,48,18,37.5
+21370,Campaspe,VIC,One or more domains,320,73,22.8
+21450,Cardinia,VIC,One or more domains,1607,376,23.4
+21610,Casey,VIC,One or more domains,5268,1336,25.4
+21670,Central Goldfields,VIC,One or more domains,82,33,40.2
+21750,Colac Otway,VIC,One or more domains,183,66,36.1
+21830,Corangamite,VIC,One or more domains,119,21,17.6
+21890,Darebin,VIC,One or more domains,1153,182,15.8
+22110,East Gippsland,VIC,One or more domains,285,85,29.8
+22170,Frankston,VIC,One or more domains,1212,284,23.4
+22250,Gannawarra,VIC,One or more domains,104,25,24.0
+22310,Glen Eira,VIC,One or more domains,1163,218,18.7
+22410,Glenelg,VIC,One or more domains,146,34,23.3
+22490,Golden Plains,VIC,One or more domains,268,75,28.0
+22620,Greater Bendigo,VIC,One or more domains,1318,326,24.7
+22670,Greater Dandenong,VIC,One or more domains,1526,440,28.8
+22750,Greater Geelong,VIC,One or more domains,2543,569,22.4
+22830,Greater Shepparton,VIC,One or more domains,740,256,34.6
+22910,Hepburn,VIC,One or more domains,131,26,19.8
+22980,Hindmarsh,VIC,One or more domains,41,7,17.1
+23110,Hobsons Bay,VIC,One or more domains,721,153,21.2
+23190,Horsham,VIC,One or more domains,198,54,27.3
+23270,Hume,VIC,One or more domains,3070,943,30.7
+23350,Indigo,VIC,One or more domains,143,36,25.2
+23430,Kingston (Vic.),VIC,One or more domains,1432,234,16.3
+23670,Knox,VIC,One or more domains,1244,221,17.8
+23810,Latrobe (Vic.),VIC,One or more domains,698,202,28.9
+23940,Loddon,VIC,One or more domains,69,17,24.6
+24130,Macedon Ranges,VIC,One or more domains,523,53,10.1
+24210,Manningham,VIC,One or more domains,1103,171,15.5
+24250,Mansfield,VIC,One or more domains,68,11,16.2
+24330,Maribyrnong,VIC,One or more domains,767,169,22.0
+24410,Maroondah,VIC,One or more domains,1123,164,14.6
+24600,Melbourne,VIC,One or more domains,615,147,23.9
+24650,Melton,VIC,One or more domains,2470,727,29.4
+24780,Mildura,VIC,One or more domains,419,117,27.9
+24850,Mitchell,VIC,One or more domains,583,140,24.0
+24900,Moira,VIC,One or more domains,285,70,24.6
+24970,Monash,VIC,One or more domains,1553,276,17.8
+25060,Moonee Valley,VIC,One or more domains,855,125,14.6
+25150,Moorabool,VIC,One or more domains,406,86,21.2
+24700,Moreland,VIC,One or more domains,1396,268,19.2
+25340,Mornington Peninsula,VIC,One or more domains,1355,216,15.9
+25430,Mount Alexander,VIC,One or more domains,151,34,22.5
+25490,Moyne,VIC,One or more domains,178,33,18.5
+25620,Murrindindi,VIC,One or more domains,122,22,18.0
+25710,Nillumbik,VIC,One or more domains,630,83,13.2
+25810,Northern Grampians,VIC,One or more domains,81,22,27.2
+25900,Port Phillip,VIC,One or more domains,526,90,17.1
+25990,Pyrenees,VIC,One or more domains,46,6,13.0
+26080,Queenscliffe,VIC,One or more domains,22,,
+26170,South Gippsland,VIC,One or more domains,267,76,28.5
+26260,Southern Grampians,VIC,One or more domains,146,35,24.0
+26350,Stonnington,VIC,One or more domains,509,64,12.6
+26430,Strathbogie,VIC,One or more domains,81,15,18.5
+26490,Surf Coast,VIC,One or more domains,356,26,7.3
+26610,Swan Hill,VIC,One or more domains,211,45,21.3
+26670,Towong,VIC,One or more domains,55,13,23.6
+26700,Wangaratta,VIC,One or more domains,241,34,14.1
+26730,Warrnambool,VIC,One or more domains,365,80,21.9
+26810,Wellington,VIC,One or more domains,429,116,27.0
+26890,West Wimmera,VIC,One or more domains,43,3,7.0
+26980,Whitehorse,VIC,One or more domains,1423,212,14.9
+27070,Whittlesea,VIC,One or more domains,2583,549,21.3
+27170,Wodonga,VIC,One or more domains,505,139,27.5
+27260,Wyndham,VIC,One or more domains,4470,1133,25.3
+27350,Yarra,VIC,One or more domains,558,98,17.6
+27450,Yarra Ranges,VIC,One or more domains,1543,285,18.5
+27630,Yarriambiack,VIC,One or more domains,44,11,25
+29399,Unincorporated Vic,VIC,One or more domains,0,,
+30250,Aurukun,QLD,One or more domains,12,,
+30300,Balonne,QLD,One or more domains,62,21,33.9
+30370,Banana,QLD,One or more domains,171,45,26.3
+30410,Barcaldine,QLD,One or more domains,29,11,37.9
+30450,Barcoo,QLD,One or more domains,6,,
+30760,Blackall Tambo,QLD,One or more domains,22,7,31.8
+30900,Boulia,QLD,One or more domains,4,,
+31000,Brisbane,QLD,One or more domains,12887,2756,21.4
+31750,Bulloo,QLD,One or more domains,4,,
+31820,Bundaberg,QLD,One or more domains,966,289,29.9
+31900,Burdekin,QLD,One or more domains,200,65,32.5
+31950,Burke,QLD,One or more domains,,,
+32080,Cairns,QLD,One or more domains,1814,455,25.1
+32250,Carpentaria,QLD,One or more domains,24,17,70.8
+32260,Cassowary Coast,QLD,One or more domains,344,134,39.0
+32270,Central Highlands (Qld),QLD,One or more domains,406,121,29.8
+32310,Charters Towers,QLD,One or more domains,111,33,29.7
+32330,Cherbourg,QLD,One or more domains,23,19,82.6
+32450,Cloncurry,QLD,One or more domains,46,11,23.9
+32500,Cook,QLD,One or more domains,45,13,28.9
+32600,Croydon,QLD,One or more domains,,,
+32750,Diamantina,QLD,One or more domains,,,
+32770,Doomadgee,QLD,One or more domains,30,19,63.3
+32810,Douglas,QLD,One or more domains,103,19,18.4
+33100,Etheridge,QLD,One or more domains,13,,
+33200,Flinders (Qld),QLD,One or more domains,23,6,26.1
+33220,Fraser Coast,QLD,One or more domains,972,311,32.0
+33360,Gladstone,QLD,One or more domains,857,247,28.8
+33430,Gold Coast,QLD,One or more domains,6166,1285,20.8
+33610,Goondiwindi,QLD,One or more domains,133,37,27.8
+33620,Gympie,QLD,One or more domains,524,121,23.1
+33800,Hinchinbrook,QLD,One or more domains,95,21,22.1
+33830,Hope Vale,QLD,One or more domains,18,9,50
+33960,Ipswich,QLD,One or more domains,3634,1025,28.2
+33980,Isaac,QLD,One or more domains,306,77,25.2
+34420,Kowanyama,QLD,One or more domains,10,,
+34530,Livingstone,QLD,One or more domains,405,100,24.7
+34570,Lockhart River,QLD,One or more domains,8,,
+34580,Lockyer Valley,QLD,One or more domains,467,122,26.1
+34590,Logan,QLD,One or more domains,5039,1465,29.1
+34710,Longreach,QLD,One or more domains,39,4,10.3
+34770,Mackay,QLD,One or more domains,1557,442,28.4
+34800,McKinlay,QLD,One or more domains,6,,
+34830,Mapoon,QLD,One or more domains,7,,
+34860,Maranoa,QLD,One or more domains,155,45,29.0
+34880,Mareeba,QLD,One or more domains,216,60,27.8
+35010,Moreton Bay,QLD,One or more domains,5672,1587,28.0
+35250,Mornington,QLD,One or more domains,18,,
+35300,Mount Isa,QLD,One or more domains,292,103,35.3
+35600,Murweh,QLD,One or more domains,40,18,45
+35670,Napranum,QLD,One or more domains,16,10,62.5
+35740,Noosa,QLD,One or more domains,411,60,14.6
+35760,North Burnett,QLD,One or more domains,96,34,35.4
+35780,Northern Peninsula Area,QLD,One or more domains,55,19,34.5
+35790,Palm Island,QLD,One or more domains,31,14,45.2
+35800,Paroo,QLD,One or more domains,28,18,64.3
+36070,Pormpuraaw,QLD,One or more domains,9,,
+36150,Quilpie,QLD,One or more domains,14,,
+36250,Redland,QLD,One or more domains,1632,333,20.4
+36300,Richmond,QLD,One or more domains,11,,
+36370,Rockhampton,QLD,One or more domains,972,302,31.1
+36510,Scenic Rim,QLD,One or more domains,410,96,23.4
+36580,Somerset,QLD,One or more domains,284,81,28.5
+36630,South Burnett,QLD,One or more domains,312,96,30.8
+36660,Southern Downs,QLD,One or more domains,360,110,30.6
+36720,Sunshine Coast,QLD,One or more domains,3607,703,19.5
+36820,Tablelands,QLD,One or more domains,263,68,25.9
+36910,Toowoomba,QLD,One or more domains,2021,600,29.7
+36950,Torres,QLD,One or more domains,55,17,30.9
+36960,Torres Strait Island,QLD,One or more domains,90,44,48.9
+37010,Townsville,QLD,One or more domains,2214,635,28.7
+37300,Weipa,QLD,One or more domains,65,2,3.1
+37310,Western Downs,QLD,One or more domains,470,124,26.4
+37340,Whitsunday,QLD,One or more domains,370,85,23.0
+37400,Winton,QLD,One or more domains,5,,
+37550,Woorabinda,QLD,One or more domains,23,15,65.2
+37570,Wujal Wujal,QLD,One or more domains,4,,
+37600,Yarrabah,QLD,One or more domains,46,23,50
+40070,Adelaide,SA,One or more domains,66,13,19.7
+40120,Adelaide Hills,SA,One or more domains,389,68,17.5
+40150,Adelaide Plains,SA,One or more domains,105,29,27.6
+40220,Alexandrina,SA,One or more domains,212,37,17.5
+40250,Anangu Pitjantjatjara Yunkunyt,SA,One or more domains,29,25,86.2
+40310,Barossa,SA,One or more domains,230,45,19.6
+40430,Barunga West,SA,One or more domains,24,5,20.8
+40520,Berri Barmera,SA,One or more domains,89,24,27.0
+40700,Burnside,SA,One or more domains,421,68,16.2
+40910,Campbelltown (SA),SA,One or more domains,522,111,21.3
+41010,Ceduna,SA,One or more domains,54,22,40.7
+41060,Charles Sturt,SA,One or more domains,1063,235,22.1
+41140,Clare and Gilbert Valleys,SA,One or more domains,79,23,29.1
+41190,Cleve,SA,One or more domains,22,5,22.7
+41330,Coober Pedy,SA,One or more domains,6,,
+41560,Copper Coast,SA,One or more domains,128,38,29.7
+41750,Elliston,SA,One or more domains,10,,
+41830,Flinders Ranges,SA,One or more domains,17,7,41.2
+41960,Franklin Harbour,SA,One or more domains,,,
+42030,Gawler,SA,One or more domains,250,52,20.8
+42110,Goyder,SA,One or more domains,20,8,40
+42250,Grant,SA,One or more domains,72,8,11.1
+42600,Holdfast Bay,SA,One or more domains,273,41,15.0
+42750,Kangaroo Island,SA,One or more domains,47,7,14.9
+43080,Karoonda East Murray,SA,One or more domains,15,4,26.7
+43220,Kimba,SA,One or more domains,11,,
+43360,Kingston (SA),SA,One or more domains,12,,
+43650,Light,SA,One or more domains,185,41,22.2
+43710,Lower Eyre Peninsula,SA,One or more domains,66,16,24.2
+43790,Loxton Waikerie,SA,One or more domains,117,33,28.2
+44000,Maralinga Tjarutja,SA,One or more domains,,,
+44060,Marion,SA,One or more domains,971,193,19.9
+44210,Mid Murray,SA,One or more domains,68,15,22.1
+44340,Mitcham,SA,One or more domains,706,104,14.7
+44550,Mount Barker,SA,One or more domains,472,102,21.6
+44620,Mount Gambier,SA,One or more domains,281,63,22.4
+44830,Mount Remarkable,SA,One or more domains,25,7,28
+45040,Murray Bridge,SA,One or more domains,173,78,45.1
+45090,Naracoorte Lucindale,SA,One or more domains,102,28,27.5
+45120,Northern Areas,SA,One or more domains,43,9,20.9
+45290,Norwood Payneham and St Peters,SA,One or more domains,314,55,17.5
+45340,Onkaparinga,SA,One or more domains,1782,490,27.5
+45400,Orroroo Carrieton,SA,One or more domains,14,,
+45540,Peterborough,SA,One or more domains,10,,
+45680,Playford,SA,One or more domains,1469,530,36.1
+45890,Port Adelaide Enfield,SA,One or more domains,1317,294,22.3
+46090,Port Augusta,SA,One or more domains,163,66,40.5
+46300,Port Lincoln,SA,One or more domains,154,30,19.5
+46450,Port Pirie,SA,One or more domains,190,68,35.8
+46510,Prospect,SA,One or more domains,221,28,12.7
+46670,Renmark Paringa,SA,One or more domains,104,22,21.2
+46860,Robe,SA,One or more domains,13,,
+46970,Roxby Downs,SA,One or more domains,57,15,26.3
+47140,Salisbury,SA,One or more domains,1623,497,30.6
+47290,Southern Mallee,SA,One or more domains,19,3,15.8
+47490,Streaky Bay,SA,One or more domains,21,3,14.3
+47630,Tatiara,SA,One or more domains,57,6,10.5
+47700,Tea Tree Gully,SA,One or more domains,981,219,22.3
+47800,Coorong,SA,One or more domains,54,14,25.9
+47910,Tumby Bay,SA,One or more domains,34,7,20.6
+47980,Unley,SA,One or more domains,334,51,15.3
+48050,Victor Harbor,SA,One or more domains,80,30,37.5
+48130,Wakefield,SA,One or more domains,75,21,28
+48260,Walkerville,SA,One or more domains,63,6,9.5
+48340,Wattle Range,SA,One or more domains,115,33,28.7
+48410,West Torrens,SA,One or more domains,529,107,20.2
+48540,Whyalla,SA,One or more domains,224,80,35.7
+48640,Wudinna,SA,One or more domains,11,,
+48750,Yankalilla,SA,One or more domains,52,13,25
+48830,Yorke Peninsula,SA,One or more domains,93,16,17.2
+49399,Unincorporated SA,SA,One or more domains,29,12,41.4
+50080,Albany,WA,One or more domains,415,106,25.5
+50210,Armadale,WA,One or more domains,1601,494,30.9
+50250,Ashburton,WA,One or more domains,117,34,29.1
+50280,Augusta Margaret River,WA,One or more domains,226,52,23.0
+50350,Bassendean,WA,One or more domains,179,44,24.6
+50420,Bayswater,WA,One or more domains,706,146,20.7
+50490,Belmont,WA,One or more domains,413,99,24.0
+50560,Beverley,WA,One or more domains,14,,
+50630,Boddington,WA,One or more domains,17,,
+50770,Boyup Brook,WA,One or more domains,23,9,39.1
+50840,Bridgetown-Greenbushes,WA,One or more domains,48,6,12.5
+50910,Brookton,WA,One or more domains,11,,
+50980,Broome,WA,One or more domains,199,61,30.7
+51080,Broomehill-Tambellup,WA,One or more domains,20,5,25
+51120,Bruce Rock,WA,One or more domains,15,2,13.3
+51190,Bunbury,WA,One or more domains,317,72,22.7
+51260,Busselton,WA,One or more domains,498,66,13.3
+51310,Cambridge,WA,One or more domains,290,41,14.1
+51330,Canning,WA,One or more domains,1047,224,21.4
+51400,Capel,WA,One or more domains,242,57,23.6
+51470,Carnamah,WA,One or more domains,8,,
+51540,Carnarvon,WA,One or more domains,63,28,44.4
+51610,Chapman Valley,WA,One or more domains,12,,
+51680,Chittering,WA,One or more domains,73,12,16.4
+51710,Christmas Island,WA,One or more domains,20,,
+51750,Claremont,WA,One or more domains,135,17,12.6
+51820,Cockburn,WA,One or more domains,1479,308,20.8
+51860,Cocos Islands,WA,One or more domains,11,,
+51890,Collie,WA,One or more domains,115,30,26.1
+51960,Coolgardie,WA,One or more domains,44,15,34.1
+52030,Coorow,WA,One or more domains,9,,
+52100,Corrigin,WA,One or more domains,10,,
+52170,Cottesloe,WA,One or more domains,82,11,13.4
+52240,Cranbrook,WA,One or more domains,9,,
+52310,Cuballing,WA,One or more domains,,,
+52380,Cue,WA,One or more domains,,,
+52450,Cunderdin,WA,One or more domains,14,,
+52520,Dalwallinu,WA,One or more domains,19,3,15.8
+52590,Dandaragan,WA,One or more domains,32,4,12.5
+52660,Dardanup,WA,One or more domains,202,43,21.3
+52730,Denmark,WA,One or more domains,64,10,15.6
+52800,Derby-West Kimberley,WA,One or more domains,96,53,55.2
+52870,Donnybrook-Balingup,WA,One or more domains,73,17,23.3
+52940,Dowerin,WA,One or more domains,11,,
+53010,Dumbleyung,WA,One or more domains,8,,
+53080,Dundas,WA,One or more domains,6,,
+53150,East Fremantle,WA,One or more domains,73,15,20.5
+53220,East Pilbara,WA,One or more domains,82,19,23.2
+53290,Esperance,WA,One or more domains,176,42,23.9
+53360,Exmouth,WA,One or more domains,40,4,10
+53430,Fremantle,WA,One or more domains,314,57,18.2
+53570,Gingin,WA,One or more domains,54,6,11.1
+53640,Gnowangerup,WA,One or more domains,21,1,4.8
+53710,Goomalling,WA,One or more domains,12,,
+53780,Gosnells,WA,One or more domains,1679,575,34.2
+53800,Greater Geraldton,WA,One or more domains,508,177,34.8
+53920,Halls Creek,WA,One or more domains,35,22,62.9
+53990,Harvey,WA,One or more domains,358,90,25.1
+54060,Irwin,WA,One or more domains,25,4,16
+54130,Jerramungup,WA,One or more domains,12,,
+54170,Joondalup,WA,One or more domains,1769,297,16.8
+54200,Kalamunda,WA,One or more domains,706,166,23.5
+54280,Kalgoorlie-Boulder,WA,One or more domains,452,101,22.3
+54310,Karratha,WA,One or more domains,389,80,20.6
+54340,Katanning,WA,One or more domains,58,8,13.8
+54410,Kellerberrin,WA,One or more domains,14,,
+54480,Kent,WA,One or more domains,6,,
+54550,Kojonup,WA,One or more domains,22,5,22.7
+54620,Kondinin,WA,One or more domains,8,,
+54690,Koorda,WA,One or more domains,,,
+54760,Kulin,WA,One or more domains,9,,
+54830,Kwinana,WA,One or more domains,767,208,27.1
+54900,Lake Grace,WA,One or more domains,17,5,29.4
+54970,Laverton,WA,One or more domains,7,,
+55040,Leonora,WA,One or more domains,28,13,46.4
+55110,Mandurah,WA,One or more domains,996,274,27.5
+55180,Manjimup,WA,One or more domains,99,21,21.2
+55250,Meekatharra,WA,One or more domains,12,,
+55320,Melville,WA,One or more domains,1081,153,14.2
+55390,Menzies,WA,One or more domains,6,,
+55460,Merredin,WA,One or more domains,34,8,23.5
+55530,Mingenew,WA,One or more domains,5,,
+55600,Moora,WA,One or more domains,36,6,16.7
+55670,Morawa,WA,One or more domains,7,,
+55740,Mosman Park,WA,One or more domains,87,13,14.9
+55810,Mount Magnet,WA,One or more domains,10,,
+55880,Mount Marshall,WA,One or more domains,6,,
+55950,Mukinbudin,WA,One or more domains,8,,
+56090,Mundaring,WA,One or more domains,449,96,21.4
+56160,Murchison,WA,One or more domains,,,
+56230,Murray,WA,One or more domains,224,65,29.0
+56300,Nannup,WA,One or more domains,6,,
+56370,Narembeen,WA,One or more domains,15,,
+56460,Narrogin,WA,One or more domains,46,13,28.3
+56580,Nedlands,WA,One or more domains,214,30,14.0
+56620,Ngaanyatjarraku,WA,One or more domains,,,
+56730,Northam,WA,One or more domains,107,30,28.0
+56790,Northampton,WA,One or more domains,25,4,16
+56860,Nungarin,WA,One or more domains,4,,
+56930,Peppermint Grove,WA,One or more domains,9,,
+57000,Perenjori,WA,One or more domains,,,
+57080,Perth,WA,One or more domains,162,36,22.2
+57140,Pingelly,WA,One or more domains,19,3,15.8
+57210,Plantagenet,WA,One or more domains,41,15,36.6
+57280,Port Hedland,WA,One or more domains,226,53,23.5
+57350,Quairading,WA,One or more domains,16,,
+57420,Ravensthorpe,WA,One or more domains,21,8,38.1
+57490,Rockingham,WA,One or more domains,1832,470,25.7
+57630,Sandstone,WA,One or more domains,0,,
+57700,Serpentine-Jarrahdale,WA,One or more domains,589,165,28.0
+57770,Shark Bay,WA,One or more domains,6,,
+57840,South Perth,WA,One or more domains,388,90,23.2
+57910,Stirling,WA,One or more domains,2453,530,21.6
+57980,Subiaco,WA,One or more domains,138,14,10.1
+58050,Swan,WA,One or more domains,2266,632,27.9
+58190,Tammin,WA,One or more domains,,,
+58260,Three Springs,WA,One or more domains,12,,
+58330,Toodyay,WA,One or more domains,29,8,27.6
+58400,Trayning,WA,One or more domains,,,
+58470,Upper Gascoyne,WA,One or more domains,5,,
+58510,Victoria Park,WA,One or more domains,368,81,22.0
+58540,Victoria Plains,WA,One or more domains,7,,
+58570,Vincent,WA,One or more domains,356,45,12.6
+58610,Wagin,WA,One or more domains,12,,
+58680,Wandering,WA,One or more domains,,,
+58760,Wanneroo,WA,One or more domains,3044,758,24.9
+58820,Waroona,WA,One or more domains,38,6,15.8
+58890,West Arthur,WA,One or more domains,5,,
+59030,Westonia,WA,One or more domains,0,,
+59100,Wickepin,WA,One or more domains,5,,
+59170,Williams,WA,One or more domains,18,4,22.2
+59250,Wiluna,WA,One or more domains,5,,
+59310,Wongan-Ballidu,WA,One or more domains,12,,
+59320,Woodanilling,WA,One or more domains,6,,
+59330,Wyalkatchem,WA,One or more domains,4,,
+59340,Wyndham-East Kimberley,WA,One or more domains,117,63,53.8
+59350,Yalgoo,WA,One or more domains,,,
+59360,Yilgarn,WA,One or more domains,14,,
+59370,York,WA,One or more domains,28,3,10.7
+60210,Break O'Day,TAS,One or more domains,32,12,37.5
+60410,Brighton,TAS,One or more domains,252,86,34.1
+60610,Burnie,TAS,One or more domains,201,67,33.3
+60810,Central Coast (Tas.),TAS,One or more domains,194,60,30.9
+61010,Central Highlands (Tas.),TAS,One or more domains,27,8,29.6
+61210,Circular Head,TAS,One or more domains,81,14,17.3
+61410,Clarence,TAS,One or more domains,623,128,20.5
+61510,Derwent Valley,TAS,One or more domains,121,49,40.5
+61610,Devonport,TAS,One or more domains,225,55,24.4
+61810,Dorset,TAS,One or more domains,52,9,17.3
+62010,Flinders (Tas.),TAS,One or more domains,6,,
+62210,George Town,TAS,One or more domains,60,19,31.7
+62410,Glamorgan-Spring Bay,TAS,One or more domains,31,13,41.9
+62610,Glenorchy,TAS,One or more domains,433,156,36.0
+62810,Hobart,TAS,One or more domains,404,66,16.3
+63010,Huon Valley,TAS,One or more domains,171,35,20.5
+63210,Kentish,TAS,One or more domains,59,14,23.7
+63410,King Island,TAS,One or more domains,16,,
+63610,Kingborough,TAS,One or more domains,408,71,17.4
+63810,Latrobe (Tas.),TAS,One or more domains,118,18,15.3
+64010,Launceston,TAS,One or more domains,714,192,26.9
+64210,Meander Valley,TAS,One or more domains,197,54,27.4
+64610,Northern Midlands,TAS,One or more domains,148,28,18.9
+64810,Sorell,TAS,One or more domains,178,72,40.4
+65010,Southern Midlands,TAS,One or more domains,71,23,32.4
+65210,Tasman,TAS,One or more domains,12,,
+65410,Waratah-Wynyard,TAS,One or more domains,149,21,14.1
+65610,West Coast,TAS,One or more domains,37,16,43.2
+65810,West Tamar,TAS,One or more domains,214,62,29.0
+70200,Alice Springs,NT,One or more domains,309,112,36.2
+70420,Barkly,NT,One or more domains,69,42,60.9
+70540,Belyuen,NT,One or more domains,,,
+70620,Central Desert,NT,One or more domains,72,60,83.3
+70700,Coomalie,NT,One or more domains,16,7,43.8
+71000,Darwin,NT,One or more domains,856,271,31.7
+71150,Darwin Waterfront Precinct,NT,One or more domains,,,
+71300,East Arnhem,NT,One or more domains,97,64,66.0
+72200,Katherine,NT,One or more domains,134,68,50.7
+72300,Litchfield,NT,One or more domains,238,80,33.6
+72330,MacDonnell,NT,One or more domains,62,48,77.4
+72800,Palmerston,NT,One or more domains,530,161,30.4
+73600,Roper Gulf,NT,One or more domains,73,48,65.8
+74050,Tiwi Islands,NT,One or more domains,22,20,90.0
+74550,Victoria Daly,NT,One or more domains,34,20,58.8
+74560,Wagait,NT,One or more domains,4,,
+74660,West Arnhem,NT,One or more domains,53,37,69.8
+74680,West Daly,NT,One or more domains,21,19,90.0
+79399,Unincorporated NT,NT,One or more domains,88,31,35.2
+89399,Unincorporated ACT,ACT,One or more domains,4876,1368,28.1
+10050,Albury,NSW,Physical health,643,80,12.4
+10180,Armidale,NSW,Physical health,288,57,19.8
+10250,Ballina,NSW,Physical health,408,25,6.1
+10300,Balranald,NSW,Physical health,27,7,25.9
+10470,Bathurst,NSW,Physical health,501,50,10.0
+10500,Bayside (NSW),NSW,Physical health,1512,108,7.1
+10550,Bega Valley,NSW,Physical health,296,40,13.5
+10600,Bellingen,NSW,Physical health,92,7,7.6
+10650,Berrigan,NSW,Physical health,72,10,13.9
+10750,Blacktown,NSW,Physical health,5508,554,10.1
+10800,Bland,NSW,Physical health,66,6,9.1
+10850,Blayney,NSW,Physical health,97,9,9.3
+10900,Blue Mountains,NSW,Physical health,666,38,5.7
+10950,Bogan,NSW,Physical health,41,2,4.9
+11150,Bourke,NSW,Physical health,31,8,25.8
+11200,Brewarrina,NSW,Physical health,23,8,34.8
+11250,Broken Hill,NSW,Physical health,179,34,19.0
+11300,Burwood,NSW,Physical health,274,21,7.7
+11350,Byron,NSW,Physical health,325,25,7.7
+11400,Cabonne,NSW,Physical health,161,15,9.3
+11450,Camden,NSW,Physical health,2118,197,9.3
+11500,Campbelltown (NSW),NSW,Physical health,2353,236,10.0
+11520,Canada Bay,NSW,Physical health,751,45,6.0
+11570,Canterbury-Bankstown,NSW,Physical health,4261,335,7.9
+11600,Carrathool,NSW,Physical health,38,3,7.9
+11650,Central Coast (NSW),NSW,Physical health,3660,348,9.5
+11700,Central Darling,NSW,Physical health,24,7,29.2
+11720,Cessnock,NSW,Physical health,780,117,15
+11730,Clarence Valley,NSW,Physical health,553,55,9.9
+11750,Cobar,NSW,Physical health,51,15,29.4
+11800,Coffs Harbour,NSW,Physical health,731,107,14.6
+12000,Coolamon,NSW,Physical health,64,7,10.9
+12150,Coonamble,NSW,Physical health,75,13,17.3
+12160,Cootamundra-Gundagai,NSW,Physical health,108,12,11.1
+12350,Cowra,NSW,Physical health,126,16,12.7
+12380,Cumberland,NSW,Physical health,2983,263,8.8
+12390,Dubbo,NSW,Physical health,612,58,9.5
+12700,Dungog,NSW,Physical health,106,14,13.2
+12730,Edward River,NSW,Physical health,94,10,10.6
+12750,Eurobodalla,NSW,Physical health,302,47,15.6
+12850,Fairfield,NSW,Physical health,2007,238,11.9
+12870,Federation,NSW,Physical health,121,21,17.4
+12900,Forbes,NSW,Physical health,111,18,16.2
+12930,Georges River,NSW,Physical health,1327,129,9.7
+12950,Gilgandra,NSW,Physical health,46,4,8.7
+13010,Glen Innes Severn,NSW,Physical health,65,12,18.5
+13310,Goulburn Mulwaree,NSW,Physical health,341,35,10.3
+13340,Greater Hume,NSW,Physical health,103,13,12.6
+13450,Griffith,NSW,Physical health,319,42,13.2
+13550,Gunnedah,NSW,Physical health,142,13,9.2
+13660,Gwydir,NSW,Physical health,44,19,43.2
+13800,Hawkesbury,NSW,Physical health,718,46,6.4
+13850,Hay,NSW,Physical health,24,4,16.7
+13910,Hilltops,NSW,Physical health,192,23,12.0
+14000,Hornsby,NSW,Physical health,1557,125,8.0
+14100,Hunters Hill,NSW,Physical health,127,3,2.4
+14170,Inner West,NSW,Physical health,1444,97,6.7
+14220,Inverell,NSW,Physical health,190,30,15.8
+14300,Junee,NSW,Physical health,52,7,13.5
+14350,Kempsey,NSW,Physical health,262,43,16.4
+14400,Kiama,NSW,Physical health,216,13,6.0
+14500,Ku-ring-gai,NSW,Physical health,1155,77,6.7
+14550,Kyogle,NSW,Physical health,99,22,22.2
+14600,Lachlan,NSW,Physical health,74,10,13.5
+14650,Lake Macquarie,NSW,Physical health,2149,207,9.6
+14700,Lane Cove,NSW,Physical health,420,30,7.1
+14750,Leeton,NSW,Physical health,137,12,8.8
+14850,Lismore,NSW,Physical health,349,40,11.5
+14870,Lithgow,NSW,Physical health,160,8,5
+14900,Liverpool,NSW,Physical health,3151,312,9.9
+14920,Liverpool Plains,NSW,Physical health,65,12,18.5
+14950,Lockhart,NSW,Physical health,37,2,5.4
+15050,Maitland,NSW,Physical health,1145,112,9.8
+15240,Mid-Coast,NSW,Physical health,790,91,11.5
+15270,Mid-Western,NSW,Physical health,315,38,12.1
+15300,Moree Plains,NSW,Physical health,127,18,14.2
+15350,Mosman,NSW,Physical health,217,7,3.2
+15520,Murray River,NSW,Physical health,126,5,4.0
+15560,Murrumbidgee,NSW,Physical health,26,5,19.2
+15650,Muswellbrook,NSW,Physical health,183,30,16.4
+15700,Nambucca Valley,NSW,Physical health,176,33,18.8
+15750,Narrabri,NSW,Physical health,137,14,10.2
+15800,Narrandera,NSW,Physical health,76,10,13.2
+15850,Narromine,NSW,Physical health,57,4,7.0
+15900,Newcastle,NSW,Physical health,1611,130,8.1
+15950,North Sydney,NSW,Physical health,479,33,6.9
+15990,Northern Beaches,NSW,Physical health,2569,122,4.7
+16100,Oberon,NSW,Physical health,51,8,15.7
+16150,Orange,NSW,Physical health,471,58,12.3
+16200,Parkes,NSW,Physical health,184,28,15.2
+16260,Parramatta,NSW,Physical health,2807,222,7.9
+16350,Penrith,NSW,Physical health,2624,289,11.0
+16380,Port Macquarie-Hastings,NSW,Physical health,750,89,11.9
+16400,Port Stephens,NSW,Physical health,685,72,10.5
+16490,Queanbeyan-Palerang,NSW,Physical health,759,82,10.8
+16550,Randwick,NSW,Physical health,1075,58,5.4
+16610,Richmond Valley,NSW,Physical health,215,15,7.0
+16700,Ryde,NSW,Physical health,1278,97,7.6
+16900,Shellharbour,NSW,Physical health,913,101,11.1
+16950,Shoalhaven,NSW,Physical health,1094,133,12.2
+17000,Singleton,NSW,Physical health,261,28,10.7
+17040,Snowy Monaro,NSW,Physical health,192,15,7.8
+17080,Snowy Valleys,NSW,Physical health,161,20,12.4
+17100,Strathfield,NSW,Physical health,350,36,10.3
+17150,Sutherland,NSW,Physical health,2534,164,6.5
+17200,Sydney,NSW,Physical health,866,56,6.5
+17310,Tamworth,NSW,Physical health,754,98,13.0
+17350,Temora,NSW,Physical health,54,6,11.1
+17400,Tenterfield,NSW,Physical health,63,9,14.3
+17420,The Hills,NSW,Physical health,2348,125,5.3
+17550,Tweed,NSW,Physical health,973,56,5.8
+17620,Upper Hunter,NSW,Physical health,146,14,9.6
+17640,Upper Lachlan,NSW,Physical health,77,9,11.7
+17650,Uralla,NSW,Physical health,63,12,19.0
+17750,Wagga Wagga,NSW,Physical health,771,102,13.2
+17850,Walcha,NSW,Physical health,39,1,2.6
+17900,Walgett,NSW,Physical health,83,25,30.1
+17950,Warren,NSW,Physical health,25,1,4
+18020,Warrumbungle,NSW,Physical health,109,20,18.3
+18050,Waverley,NSW,Physical health,551,19,3.4
+18100,Weddin,NSW,Physical health,36,1,2.8
+18200,Wentworth,NSW,Physical health,94,11,11.7
+18250,Willoughby,NSW,Physical health,745,46,6.2
+18350,Wingecarribee,NSW,Physical health,488,26,5.3
+18400,Wollondilly,NSW,Physical health,712,50,7.0
+18450,Wollongong,NSW,Physical health,2216,207,9.3
+18500,Woollahra,NSW,Physical health,405,22,5.4
+18710,Yass Valley,NSW,Physical health,133,12,9.0
+19399,Unincorporated NSW,NSW,Physical health,,,
+20110,Alpine,VIC,Physical health,114,10,8.8
+20260,Ararat,VIC,Physical health,107,17,15.9
+20570,Ballarat,VIC,Physical health,1121,163,14.5
+20660,Banyule,VIC,Physical health,1162,74,6.4
+20740,Bass Coast,VIC,Physical health,300,35,11.7
+20830,Baw Baw,VIC,Physical health,644,62,9.6
+20910,Bayside (Vic.),VIC,Physical health,779,17,2.2
+21010,Benalla,VIC,Physical health,126,13,10.3
+21110,Boroondara,VIC,Physical health,1078,68,6.3
+21180,Brimbank,VIC,Physical health,1777,194,10.9
+21270,Buloke,VIC,Physical health,48,10,20.8
+21370,Campaspe,VIC,Physical health,320,35,10.9
+21450,Cardinia,VIC,Physical health,1611,138,8.6
+21610,Casey,VIC,Physical health,5287,439,8.3
+21670,Central Goldfields,VIC,Physical health,82,20,24.4
+21750,Colac Otway,VIC,Physical health,185,30,16.2
+21830,Corangamite,VIC,Physical health,119,11,9.2
+21890,Darebin,VIC,Physical health,1166,61,5.2
+22110,East Gippsland,VIC,Physical health,285,33,11.6
+22170,Frankston,VIC,Physical health,1221,100,8.2
+22250,Gannawarra,VIC,Physical health,104,10,9.6
+22310,Glen Eira,VIC,Physical health,1167,81,6.9
+22410,Glenelg,VIC,Physical health,146,20,13.7
+22490,Golden Plains,VIC,Physical health,270,23,8.5
+22620,Greater Bendigo,VIC,Physical health,1323,143,10.8
+22670,Greater Dandenong,VIC,Physical health,1533,151,9.8
+22750,Greater Geelong,VIC,Physical health,2548,272,10.7
+22830,Greater Shepparton,VIC,Physical health,740,114,15.4
+22910,Hepburn,VIC,Physical health,131,16,12.2
+22980,Hindmarsh,VIC,Physical health,41,2,4.9
+23110,Hobsons Bay,VIC,Physical health,737,56,7.6
+23190,Horsham,VIC,Physical health,198,17,8.6
+23270,Hume,VIC,Physical health,3097,335,10.8
+23350,Indigo,VIC,Physical health,143,8,5.6
+23430,Kingston (Vic.),VIC,Physical health,1436,89,6.2
+23670,Knox,VIC,Physical health,1251,82,6.6
+23810,Latrobe (Vic.),VIC,Physical health,697,94,13.5
+23940,Loddon,VIC,Physical health,69,7,10.1
+24130,Macedon Ranges,VIC,Physical health,526,21,4.0
+24210,Manningham,VIC,Physical health,1106,66,6.0
+24250,Mansfield,VIC,Physical health,69,3,4.3
+24330,Maribyrnong,VIC,Physical health,770,67,8.7
+24410,Maroondah,VIC,Physical health,1127,64,5.7
+24600,Melbourne,VIC,Physical health,616,70,11.4
+24650,Melton,VIC,Physical health,2482,243,9.8
+24780,Mildura,VIC,Physical health,419,41,9.8
+24850,Mitchell,VIC,Physical health,585,43,7.4
+24900,Moira,VIC,Physical health,284,38,13.4
+24970,Monash,VIC,Physical health,1556,110,7.1
+25060,Moonee Valley,VIC,Physical health,856,46,5.4
+25150,Moorabool,VIC,Physical health,414,32,7.7
+24700,Moreland,VIC,Physical health,1417,95,6.7
+25340,Mornington Peninsula,VIC,Physical health,1357,83,6.1
+25430,Mount Alexander,VIC,Physical health,152,17,11.2
+25490,Moyne,VIC,Physical health,179,17,9.5
+25620,Murrindindi,VIC,Physical health,122,8,6.6
+25710,Nillumbik,VIC,Physical health,632,41,6.5
+25810,Northern Grampians,VIC,Physical health,81,15,18.5
+25900,Port Phillip,VIC,Physical health,526,26,4.9
+25990,Pyrenees,VIC,Physical health,46,3,6.5
+26080,Queenscliffe,VIC,Physical health,22,,
+26170,South Gippsland,VIC,Physical health,268,41,15.3
+26260,Southern Grampians,VIC,Physical health,147,13,8.8
+26350,Stonnington,VIC,Physical health,509,22,4.3
+26430,Strathbogie,VIC,Physical health,81,3,3.7
+26490,Surf Coast,VIC,Physical health,356,10,2.8
+26610,Swan Hill,VIC,Physical health,211,21,10.0
+26670,Towong,VIC,Physical health,55,6,10.9
+26700,Wangaratta,VIC,Physical health,242,9,3.7
+26730,Warrnambool,VIC,Physical health,365,29,7.9
+26810,Wellington,VIC,Physical health,429,61,14.2
+26890,West Wimmera,VIC,Physical health,43,2,4.7
+26980,Whitehorse,VIC,Physical health,1429,66,4.6
+27070,Whittlesea,VIC,Physical health,2594,201,7.7
+27170,Wodonga,VIC,Physical health,505,61,12.1
+27260,Wyndham,VIC,Physical health,4495,398,8.9
+27350,Yarra,VIC,Physical health,559,43,7.7
+27450,Yarra Ranges,VIC,Physical health,1547,112,7.2
+27630,Yarriambiack,VIC,Physical health,44,4,9.1
+29399,Unincorporated Vic,VIC,Physical health,0,,
+30250,Aurukun,QLD,Physical health,16,,
+30300,Balonne,QLD,Physical health,62,6,9.7
+30370,Banana,QLD,Physical health,171,13,7.6
+30410,Barcaldine,QLD,Physical health,29,3,10.3
+30450,Barcoo,QLD,Physical health,6,,
+30760,Blackall Tambo,QLD,Physical health,22,4,18.2
+30900,Boulia,QLD,Physical health,4,,
+31000,Brisbane,QLD,Physical health,12931,1175,9.1
+31750,Bulloo,QLD,Physical health,4,,
+31820,Bundaberg,QLD,Physical health,971,134,13.8
+31900,Burdekin,QLD,Physical health,201,37,18.4
+31950,Burke,QLD,Physical health,,,
+32080,Cairns,QLD,Physical health,1819,216,11.9
+32250,Carpentaria,QLD,Physical health,24,11,45.8
+32260,Cassowary Coast,QLD,Physical health,346,73,21.1
+32270,Central Highlands (Qld),QLD,Physical health,407,71,17.4
+32310,Charters Towers,QLD,Physical health,111,15,13.5
+32330,Cherbourg,QLD,Physical health,23,8,34.8
+32450,Cloncurry,QLD,Physical health,46,4,8.7
+32500,Cook,QLD,Physical health,45,7,15.6
+32600,Croydon,QLD,Physical health,,,
+32750,Diamantina,QLD,Physical health,,,
+32770,Doomadgee,QLD,Physical health,30,13,43.3
+32810,Douglas,QLD,Physical health,103,10,9.7
+33100,Etheridge,QLD,Physical health,12,,
+33200,Flinders (Qld),QLD,Physical health,23,3,13.0
+33220,Fraser Coast,QLD,Physical health,974,170,17.5
+33360,Gladstone,QLD,Physical health,859,118,13.7
+33430,Gold Coast,QLD,Physical health,6183,500,8.1
+33610,Goondiwindi,QLD,Physical health,133,24,18.0
+33620,Gympie,QLD,Physical health,527,51,9.7
+33800,Hinchinbrook,QLD,Physical health,95,12,12.6
+33830,Hope Vale,QLD,Physical health,18,4,22.2
+33960,Ipswich,QLD,Physical health,3649,477,13.1
+33980,Isaac,QLD,Physical health,307,34,11.1
+34420,Kowanyama,QLD,Physical health,10,,
+34530,Livingstone,QLD,Physical health,405,44,10.9
+34570,Lockhart River,QLD,Physical health,8,,
+34580,Lockyer Valley,QLD,Physical health,480,53,11.0
+34590,Logan,QLD,Physical health,5043,698,13.8
+34710,Longreach,QLD,Physical health,39,3,7.7
+34770,Mackay,QLD,Physical health,1558,181,11.6
+34800,McKinlay,QLD,Physical health,6,,
+34830,Mapoon,QLD,Physical health,7,,
+34860,Maranoa,QLD,Physical health,155,29,18.7
+34880,Mareeba,QLD,Physical health,216,31,14.4
+35010,Moreton Bay,QLD,Physical health,5682,703,12.4
+35250,Mornington,QLD,Physical health,18,,
+35300,Mount Isa,QLD,Physical health,292,53,18.2
+35600,Murweh,QLD,Physical health,40,13,32.5
+35670,Napranum,QLD,Physical health,17,5,29.4
+35740,Noosa,QLD,Physical health,415,23,5.5
+35760,North Burnett,QLD,Physical health,96,20,20.8
+35780,Northern Peninsula Area,QLD,Physical health,55,7,12.7
+35790,Palm Island,QLD,Physical health,31,7,22.6
+35800,Paroo,QLD,Physical health,27,16,59.3
+36070,Pormpuraaw,QLD,Physical health,9,,
+36150,Quilpie,QLD,Physical health,15,1,6.7
+36250,Redland,QLD,Physical health,1640,117,7.1
+36300,Richmond,QLD,Physical health,11,,
+36370,Rockhampton,QLD,Physical health,972,143,14.7
+36510,Scenic Rim,QLD,Physical health,412,37,9.0
+36580,Somerset,QLD,Physical health,285,51,17.9
+36630,South Burnett,QLD,Physical health,312,50,16.0
+36660,Southern Downs,QLD,Physical health,361,59,16.3
+36720,Sunshine Coast,QLD,Physical health,3615,254,7.0
+36820,Tablelands,QLD,Physical health,264,36,13.6
+36910,Toowoomba,QLD,Physical health,2022,291,14.4
+36950,Torres,QLD,Physical health,55,3,5.5
+36960,Torres Strait Island,QLD,Physical health,90,19,21.1
+37010,Townsville,QLD,Physical health,2221,313,14.1
+37300,Weipa,QLD,Physical health,65,2,3.1
+37310,Western Downs,QLD,Physical health,471,65,13.8
+37340,Whitsunday,QLD,Physical health,372,36,9.7
+37400,Winton,QLD,Physical health,5,,
+37550,Woorabinda,QLD,Physical health,24,11,45.8
+37570,Wujal Wujal,QLD,Physical health,4,,
+37600,Yarrabah,QLD,Physical health,46,8,17.4
+40070,Adelaide,SA,Physical health,67,2,3.0
+40120,Adelaide Hills,SA,Physical health,390,29,7.4
+40150,Adelaide Plains,SA,Physical health,106,10,9.4
+40220,Alexandrina,SA,Physical health,213,17,8.0
+40250,Anangu Pitjantjatjara Yunkunyt,SA,Physical health,30,23,76.7
+40310,Barossa,SA,Physical health,230,22,9.6
+40430,Barunga West,SA,Physical health,24,1,4.2
+40520,Berri Barmera,SA,Physical health,89,15,16.9
+40700,Burnside,SA,Physical health,426,23,5.4
+40910,Campbelltown (SA),SA,Physical health,524,48,9.2
+41010,Ceduna,SA,Physical health,54,13,24.1
+41060,Charles Sturt,SA,Physical health,1065,109,10.2
+41140,Clare and Gilbert Valleys,SA,Physical health,79,10,12.7
+41190,Cleve,SA,Physical health,22,1,4.5
+41330,Coober Pedy,SA,Physical health,6,,
+41560,Copper Coast,SA,Physical health,128,21,16.4
+41750,Elliston,SA,Physical health,10,,
+41830,Flinders Ranges,SA,Physical health,17,2,11.8
+41960,Franklin Harbour,SA,Physical health,,,
+42030,Gawler,SA,Physical health,250,18,7.2
+42110,Goyder,SA,Physical health,20,3,15
+42250,Grant,SA,Physical health,72,2,2.8
+42600,Holdfast Bay,SA,Physical health,273,16,5.9
+42750,Kangaroo Island,SA,Physical health,47,3,6.4
+43080,Karoonda East Murray,SA,Physical health,15,1,6.7
+43220,Kimba,SA,Physical health,11,,
+43360,Kingston (SA),SA,Physical health,12,,
+43650,Light,SA,Physical health,185,14,7.6
+43710,Lower Eyre Peninsula,SA,Physical health,67,7,10.4
+43790,Loxton Waikerie,SA,Physical health,118,18,15.3
+44000,Maralinga Tjarutja,SA,Physical health,,,
+44060,Marion,SA,Physical health,974,80,8.2
+44210,Mid Murray,SA,Physical health,69,5,7.2
+44340,Mitcham,SA,Physical health,713,35,4.9
+44550,Mount Barker,SA,Physical health,477,37,7.8
+44620,Mount Gambier,SA,Physical health,281,24,8.5
+44830,Mount Remarkable,SA,Physical health,25,3,12
+45040,Murray Bridge,SA,Physical health,173,35,20.2
+45090,Naracoorte Lucindale,SA,Physical health,102,11,10.8
+45120,Northern Areas,SA,Physical health,43,2,4.7
+45290,Norwood Payneham and St Peters,SA,Physical health,315,20,6.3
+45340,Onkaparinga,SA,Physical health,1792,251,14.0
+45400,Orroroo Carrieton,SA,Physical health,14,,
+45540,Peterborough,SA,Physical health,10,,
+45680,Playford,SA,Physical health,1469,248,16.9
+45890,Port Adelaide Enfield,SA,Physical health,1326,127,9.6
+46090,Port Augusta,SA,Physical health,163,30,18.4
+46300,Port Lincoln,SA,Physical health,155,12,7.7
+46450,Port Pirie,SA,Physical health,190,33,17.4
+46510,Prospect,SA,Physical health,221,9,4.1
+46670,Renmark Paringa,SA,Physical health,104,11,10.6
+46860,Robe,SA,Physical health,13,,
+46970,Roxby Downs,SA,Physical health,57,9,15.8
+47140,Salisbury,SA,Physical health,1626,232,14.3
+47290,Southern Mallee,SA,Physical health,19,1,5.3
+47490,Streaky Bay,SA,Physical health,21,1,4.8
+47630,Tatiara,SA,Physical health,57,4,7.0
+47700,Tea Tree Gully,SA,Physical health,983,83,8.4
+47800,Coorong,SA,Physical health,54,4,7.4
+47910,Tumby Bay,SA,Physical health,34,5,14.7
+47980,Unley,SA,Physical health,334,17,5.1
+48050,Victor Harbor,SA,Physical health,80,14,17.5
+48130,Wakefield,SA,Physical health,75,16,21.3
+48260,Walkerville,SA,Physical health,63,5,7.9
+48340,Wattle Range,SA,Physical health,115,18,15.7
+48410,West Torrens,SA,Physical health,529,45,8.5
+48540,Whyalla,SA,Physical health,224,38,17.0
+48640,Wudinna,SA,Physical health,11,,
+48750,Yankalilla,SA,Physical health,52,6,11.5
+48830,Yorke Peninsula,SA,Physical health,93,4,4.3
+49399,Unincorporated SA,SA,Physical health,30,7,23.3
+50080,Albany,WA,Physical health,416,47,11.3
+50210,Armadale,WA,Physical health,1603,210,13.1
+50250,Ashburton,WA,Physical health,117,16,13.7
+50280,Augusta Margaret River,WA,Physical health,227,21,9.3
+50350,Bassendean,WA,Physical health,181,24,13.3
+50420,Bayswater,WA,Physical health,722,58,8.0
+50490,Belmont,WA,Physical health,413,31,7.5
+50560,Beverley,WA,Physical health,14,,
+50630,Boddington,WA,Physical health,17,,
+50770,Boyup Brook,WA,Physical health,23,4,17.4
+50840,Bridgetown-Greenbushes,WA,Physical health,48,5,10.4
+50910,Brookton,WA,Physical health,11,,
+50980,Broome,WA,Physical health,200,32,16
+51080,Broomehill-Tambellup,WA,Physical health,20,1,5
+51120,Bruce Rock,WA,Physical health,15,2,13.3
+51190,Bunbury,WA,Physical health,317,33,10.4
+51260,Busselton,WA,Physical health,502,24,4.8
+51310,Cambridge,WA,Physical health,290,18,6.2
+51330,Canning,WA,Physical health,1052,62,5.9
+51400,Capel,WA,Physical health,242,25,10.3
+51470,Carnamah,WA,Physical health,8,,
+51540,Carnarvon,WA,Physical health,63,9,14.3
+51610,Chapman Valley,WA,Physical health,12,,
+51680,Chittering,WA,Physical health,73,6,8.2
+51710,Christmas Island,WA,Physical health,20,,
+51750,Claremont,WA,Physical health,135,6,4.4
+51820,Cockburn,WA,Physical health,1502,122,8.1
+51860,Cocos Islands,WA,Physical health,11,,
+51890,Collie,WA,Physical health,115,9,7.8
+51960,Coolgardie,WA,Physical health,44,2,4.5
+52030,Coorow,WA,Physical health,9,,
+52100,Corrigin,WA,Physical health,10,,
+52170,Cottesloe,WA,Physical health,82,4,4.9
+52240,Cranbrook,WA,Physical health,9,,
+52310,Cuballing,WA,Physical health,,,
+52380,Cue,WA,Physical health,,,
+52450,Cunderdin,WA,Physical health,14,,
+52520,Dalwallinu,WA,Physical health,19,1,5.3
+52590,Dandaragan,WA,Physical health,33,2,6.1
+52660,Dardanup,WA,Physical health,203,27,13.3
+52730,Denmark,WA,Physical health,64,3,4.7
+52800,Derby-West Kimberley,WA,Physical health,96,29,30.2
+52870,Donnybrook-Balingup,WA,Physical health,73,8,11.0
+52940,Dowerin,WA,Physical health,11,,
+53010,Dumbleyung,WA,Physical health,8,,
+53080,Dundas,WA,Physical health,6,,
+53150,East Fremantle,WA,Physical health,73,10,13.7
+53220,East Pilbara,WA,Physical health,83,7,8.4
+53290,Esperance,WA,Physical health,176,18,10.2
+53360,Exmouth,WA,Physical health,40,3,7.5
+53430,Fremantle,WA,Physical health,315,27,8.6
+53570,Gingin,WA,Physical health,54,3,5.6
+53640,Gnowangerup,WA,Physical health,21,1,4.8
+53710,Goomalling,WA,Physical health,12,,
+53780,Gosnells,WA,Physical health,1693,254,15.0
+53800,Greater Geraldton,WA,Physical health,512,87,17.0
+53920,Halls Creek,WA,Physical health,35,16,45.7
+53990,Harvey,WA,Physical health,358,38,10.6
+54060,Irwin,WA,Physical health,25,1,4
+54130,Jerramungup,WA,Physical health,12,,
+54170,Joondalup,WA,Physical health,1771,139,7.8
+54200,Kalamunda,WA,Physical health,707,84,11.9
+54280,Kalgoorlie-Boulder,WA,Physical health,456,49,10.7
+54310,Karratha,WA,Physical health,391,35,9.0
+54340,Katanning,WA,Physical health,58,5,8.6
+54410,Kellerberrin,WA,Physical health,14,,
+54480,Kent,WA,Physical health,6,,
+54550,Kojonup,WA,Physical health,22,3,13.6
+54620,Kondinin,WA,Physical health,8,,
+54690,Koorda,WA,Physical health,,,
+54760,Kulin,WA,Physical health,9,,
+54830,Kwinana,WA,Physical health,770,80,10.4
+54900,Lake Grace,WA,Physical health,17,3,17.6
+54970,Laverton,WA,Physical health,7,,
+55040,Leonora,WA,Physical health,28,7,25
+55110,Mandurah,WA,Physical health,999,133,13.3
+55180,Manjimup,WA,Physical health,99,6,6.1
+55250,Meekatharra,WA,Physical health,12,,
+55320,Melville,WA,Physical health,1083,59,5.4
+55390,Menzies,WA,Physical health,7,,
+55460,Merredin,WA,Physical health,34,5,14.7
+55530,Mingenew,WA,Physical health,5,,
+55600,Moora,WA,Physical health,36,3,8.3
+55670,Morawa,WA,Physical health,7,,
+55740,Mosman Park,WA,Physical health,87,8,9.2
+55810,Mount Magnet,WA,Physical health,10,,
+55880,Mount Marshall,WA,Physical health,6,,
+55950,Mukinbudin,WA,Physical health,8,,
+56090,Mundaring,WA,Physical health,450,38,8.4
+56160,Murchison,WA,Physical health,,,
+56230,Murray,WA,Physical health,225,31,13.8
+56300,Nannup,WA,Physical health,6,,
+56370,Narembeen,WA,Physical health,15,,
+56460,Narrogin,WA,Physical health,46,7,15.2
+56580,Nedlands,WA,Physical health,214,16,7.5
+56620,Ngaanyatjarraku,WA,Physical health,,,
+56730,Northam,WA,Physical health,107,13,12.1
+56790,Northampton,WA,Physical health,25,3,12
+56860,Nungarin,WA,Physical health,4,,
+56930,Peppermint Grove,WA,Physical health,9,,
+57000,Perenjori,WA,Physical health,,,
+57080,Perth,WA,Physical health,164,9,5.5
+57140,Pingelly,WA,Physical health,19,2,10.5
+57210,Plantagenet,WA,Physical health,40,8,20
+57280,Port Hedland,WA,Physical health,227,20,8.8
+57350,Quairading,WA,Physical health,16,,
+57420,Ravensthorpe,WA,Physical health,21,3,14.3
+57490,Rockingham,WA,Physical health,1834,251,13.7
+57630,Sandstone,WA,Physical health,0,,
+57700,Serpentine-Jarrahdale,WA,Physical health,590,68,11.5
+57770,Shark Bay,WA,Physical health,6,,
+57840,South Perth,WA,Physical health,389,34,8.7
+57910,Stirling,WA,Physical health,2465,219,8.9
+57980,Subiaco,WA,Physical health,139,5,3.6
+58050,Swan,WA,Physical health,2273,272,12.0
+58190,Tammin,WA,Physical health,,,
+58260,Three Springs,WA,Physical health,12,,
+58330,Toodyay,WA,Physical health,29,6,20.7
+58400,Trayning,WA,Physical health,,,
+58470,Upper Gascoyne,WA,Physical health,5,,
+58510,Victoria Park,WA,Physical health,374,31,8.3
+58540,Victoria Plains,WA,Physical health,7,,
+58570,Vincent,WA,Physical health,356,17,4.8
+58610,Wagin,WA,Physical health,12,,
+58680,Wandering,WA,Physical health,,,
+58760,Wanneroo,WA,Physical health,3049,318,10.4
+58820,Waroona,WA,Physical health,38,2,5.3
+58890,West Arthur,WA,Physical health,5,,
+59030,Westonia,WA,Physical health,0,,
+59100,Wickepin,WA,Physical health,5,,
+59170,Williams,WA,Physical health,18,2,11.1
+59250,Wiluna,WA,Physical health,5,,
+59310,Wongan-Ballidu,WA,Physical health,12,,
+59320,Woodanilling,WA,Physical health,6,,
+59330,Wyalkatchem,WA,Physical health,4,,
+59340,Wyndham-East Kimberley,WA,Physical health,117,26,22.2
+59350,Yalgoo,WA,Physical health,,,
+59360,Yilgarn,WA,Physical health,14,,
+59370,York,WA,Physical health,28,3,10.7
+60210,Break O'Day,TAS,Physical health,32,4,12.5
+60410,Brighton,TAS,Physical health,252,31,12.3
+60610,Burnie,TAS,Physical health,202,42,20.8
+60810,Central Coast (Tas.),TAS,Physical health,194,24,12.4
+61010,Central Highlands (Tas.),TAS,Physical health,27,4,14.8
+61210,Circular Head,TAS,Physical health,81,8,9.9
+61410,Clarence,TAS,Physical health,624,50,8.0
+61510,Derwent Valley,TAS,Physical health,121,25,20.7
+61610,Devonport,TAS,Physical health,225,26,11.6
+61810,Dorset,TAS,Physical health,52,6,11.5
+62010,Flinders (Tas.),TAS,Physical health,6,,
+62210,George Town,TAS,Physical health,61,12,19.7
+62410,Glamorgan-Spring Bay,TAS,Physical health,31,7,22.6
+62610,Glenorchy,TAS,Physical health,433,74,17.1
+62810,Hobart,TAS,Physical health,404,31,7.7
+63010,Huon Valley,TAS,Physical health,173,21,12.1
+63210,Kentish,TAS,Physical health,59,6,10.2
+63410,King Island,TAS,Physical health,16,,
+63610,Kingborough,TAS,Physical health,413,17,4.1
+63810,Latrobe (Tas.),TAS,Physical health,118,8,6.8
+64010,Launceston,TAS,Physical health,715,98,13.7
+64210,Meander Valley,TAS,Physical health,199,30,15.1
+64610,Northern Midlands,TAS,Physical health,148,12,8.1
+64810,Sorell,TAS,Physical health,178,28,15.7
+65010,Southern Midlands,TAS,Physical health,71,11,15.5
+65210,Tasman,TAS,Physical health,12,,
+65410,Waratah-Wynyard,TAS,Physical health,149,6,4.0
+65610,West Coast,TAS,Physical health,37,6,16.2
+65810,West Tamar,TAS,Physical health,214,28,13.1
+70200,Alice Springs,NT,Physical health,317,57,18.0
+70420,Barkly,NT,Physical health,69,29,42.0
+70540,Belyuen,NT,Physical health,,,
+70620,Central Desert,NT,Physical health,72,36,50
+70700,Coomalie,NT,Physical health,16,4,25
+71000,Darwin,NT,Physical health,856,113,13.2
+71150,Darwin Waterfront Precinct,NT,Physical health,,,
+71300,East Arnhem,NT,Physical health,97,37,38.1
+72200,Katherine,NT,Physical health,135,35,25.9
+72300,Litchfield,NT,Physical health,240,37,15.4
+72330,MacDonnell,NT,Physical health,61,30,49.2
+72800,Palmerston,NT,Physical health,531,84,15.8
+73600,Roper Gulf,NT,Physical health,73,21,28.8
+74050,Tiwi Islands,NT,Physical health,22,20,90.0
+74550,Victoria Daly,NT,Physical health,34,9,26.5
+74560,Wagait,NT,Physical health,4,,
+74660,West Arnhem,NT,Physical health,53,16,30.2
+74680,West Daly,NT,Physical health,21,15,71.4
+79399,Unincorporated NT,NT,Physical health,89,19,21.3
+89399,Unincorporated ACT,ACT,Physical health,4925,681,13.8
+10050,Albury,NSW,Social competence,643,79,12.3
+10180,Armidale,NSW,Social competence,287,57,19.9
+10250,Ballina,NSW,Social competence,408,38,9.3
+10300,Balranald,NSW,Social competence,27,4,14.8
+10470,Bathurst,NSW,Social competence,500,52,10.4
+10500,Bayside (NSW),NSW,Social competence,1512,161,10.6
+10550,Bega Valley,NSW,Social competence,296,40,13.5
+10600,Bellingen,NSW,Social competence,92,7,7.6
+10650,Berrigan,NSW,Social competence,72,6,8.3
+10750,Blacktown,NSW,Social competence,5507,717,13.0
+10800,Bland,NSW,Social competence,66,5,7.6
+10850,Blayney,NSW,Social competence,97,11,11.3
+10900,Blue Mountains,NSW,Social competence,666,32,4.8
+10950,Bogan,NSW,Social competence,41,2,4.9
+11150,Bourke,NSW,Social competence,31,6,19.4
+11200,Brewarrina,NSW,Social competence,23,3,13.0
+11250,Broken Hill,NSW,Social competence,179,26,14.5
+11300,Burwood,NSW,Social competence,273,20,7.3
+11350,Byron,NSW,Social competence,325,25,7.7
+11400,Cabonne,NSW,Social competence,161,11,6.8
+11450,Camden,NSW,Social competence,2118,160,7.6
+11500,Campbelltown (NSW),NSW,Social competence,2353,267,11.3
+11520,Canada Bay,NSW,Social competence,751,56,7.5
+11570,Canterbury-Bankstown,NSW,Social competence,4256,442,10.4
+11600,Carrathool,NSW,Social competence,38,1,2.6
+11650,Central Coast (NSW),NSW,Social competence,3658,329,9.0
+11700,Central Darling,NSW,Social competence,24,4,16.7
+11720,Cessnock,NSW,Social competence,780,109,14.0
+11730,Clarence Valley,NSW,Social competence,553,52,9.4
+11750,Cobar,NSW,Social competence,51,10,19.6
+11800,Coffs Harbour,NSW,Social competence,731,80,10.9
+12000,Coolamon,NSW,Social competence,64,4,6.2
+12150,Coonamble,NSW,Social competence,75,6,8
+12160,Cootamundra-Gundagai,NSW,Social competence,108,11,10.2
+12350,Cowra,NSW,Social competence,126,19,15.1
+12380,Cumberland,NSW,Social competence,2977,384,12.9
+12390,Dubbo,NSW,Social competence,612,70,11.4
+12700,Dungog,NSW,Social competence,106,20,18.9
+12730,Edward River,NSW,Social competence,94,6,6.4
+12750,Eurobodalla,NSW,Social competence,302,24,7.9
+12850,Fairfield,NSW,Social competence,2005,307,15.3
+12870,Federation,NSW,Social competence,121,18,14.9
+12900,Forbes,NSW,Social competence,111,8,7.2
+12930,Georges River,NSW,Social competence,1327,120,9.0
+12950,Gilgandra,NSW,Social competence,46,5,10.9
+13010,Glen Innes Severn,NSW,Social competence,65,12,18.5
+13310,Goulburn Mulwaree,NSW,Social competence,341,29,8.5
+13340,Greater Hume,NSW,Social competence,103,8,7.8
+13450,Griffith,NSW,Social competence,319,29,9.1
+13550,Gunnedah,NSW,Social competence,142,14,9.9
+13660,Gwydir,NSW,Social competence,44,12,27.3
+13800,Hawkesbury,NSW,Social competence,718,53,7.4
+13850,Hay,NSW,Social competence,24,9,37.5
+13910,Hilltops,NSW,Social competence,192,15,7.8
+14000,Hornsby,NSW,Social competence,1557,125,8.0
+14100,Hunters Hill,NSW,Social competence,127,6,4.7
+14170,Inner West,NSW,Social competence,1444,88,6.1
+14220,Inverell,NSW,Social competence,190,18,9.5
+14300,Junee,NSW,Social competence,52,7,13.5
+14350,Kempsey,NSW,Social competence,262,26,9.9
+14400,Kiama,NSW,Social competence,216,8,3.7
+14500,Ku-ring-gai,NSW,Social competence,1155,85,7.4
+14550,Kyogle,NSW,Social competence,99,19,19.2
+14600,Lachlan,NSW,Social competence,74,9,12.2
+14650,Lake Macquarie,NSW,Social competence,2149,199,9.3
+14700,Lane Cove,NSW,Social competence,420,32,7.6
+14750,Leeton,NSW,Social competence,137,12,8.8
+14850,Lismore,NSW,Social competence,349,43,12.3
+14870,Lithgow,NSW,Social competence,160,10,6.2
+14900,Liverpool,NSW,Social competence,3134,403,12.9
+14920,Liverpool Plains,NSW,Social competence,65,6,9.2
+14950,Lockhart,NSW,Social competence,37,0,0
+15050,Maitland,NSW,Social competence,1145,133,11.6
+15240,Mid-Coast,NSW,Social competence,790,97,12.3
+15270,Mid-Western,NSW,Social competence,315,51,16.2
+15300,Moree Plains,NSW,Social competence,127,30,23.6
+15350,Mosman,NSW,Social competence,217,5,2.3
+15520,Murray River,NSW,Social competence,126,7,5.6
+15560,Murrumbidgee,NSW,Social competence,26,6,23.1
+15650,Muswellbrook,NSW,Social competence,183,30,16.4
+15700,Nambucca Valley,NSW,Social competence,176,27,15.3
+15750,Narrabri,NSW,Social competence,137,13,9.5
+15800,Narrandera,NSW,Social competence,76,11,14.5
+15850,Narromine,NSW,Social competence,57,5,8.8
+15900,Newcastle,NSW,Social competence,1610,159,9.9
+15950,North Sydney,NSW,Social competence,479,40,8.4
+15990,Northern Beaches,NSW,Social competence,2569,149,5.8
+16100,Oberon,NSW,Social competence,51,5,9.8
+16150,Orange,NSW,Social competence,471,46,9.8
+16200,Parkes,NSW,Social competence,184,14,7.6
+16260,Parramatta,NSW,Social competence,2807,267,9.5
+16350,Penrith,NSW,Social competence,2623,319,12.2
+16380,Port Macquarie-Hastings,NSW,Social competence,749,83,11.1
+16400,Port Stephens,NSW,Social competence,685,69,10.1
+16490,Queanbeyan-Palerang,NSW,Social competence,759,77,10.1
+16550,Randwick,NSW,Social competence,1074,96,8.9
+16610,Richmond Valley,NSW,Social competence,215,16,7.4
+16700,Ryde,NSW,Social competence,1278,107,8.4
+16900,Shellharbour,NSW,Social competence,913,100,11.0
+16950,Shoalhaven,NSW,Social competence,1094,127,11.6
+17000,Singleton,NSW,Social competence,261,32,12.3
+17040,Snowy Monaro,NSW,Social competence,192,15,7.8
+17080,Snowy Valleys,NSW,Social competence,162,22,13.6
+17100,Strathfield,NSW,Social competence,350,29,8.3
+17150,Sutherland,NSW,Social competence,2534,146,5.8
+17200,Sydney,NSW,Social competence,866,54,6.2
+17310,Tamworth,NSW,Social competence,754,79,10.5
+17350,Temora,NSW,Social competence,54,5,9.3
+17400,Tenterfield,NSW,Social competence,63,4,6.3
+17420,The Hills,NSW,Social competence,2348,158,6.7
+17550,Tweed,NSW,Social competence,973,72,7.4
+17620,Upper Hunter,NSW,Social competence,146,11,7.5
+17640,Upper Lachlan,NSW,Social competence,77,10,13.0
+17650,Uralla,NSW,Social competence,63,19,30.2
+17750,Wagga Wagga,NSW,Social competence,771,105,13.6
+17850,Walcha,NSW,Social competence,39,2,5.1
+17900,Walgett,NSW,Social competence,83,14,16.9
+17950,Warren,NSW,Social competence,25,0,0
+18020,Warrumbungle,NSW,Social competence,109,11,10.1
+18050,Waverley,NSW,Social competence,551,27,4.9
+18100,Weddin,NSW,Social competence,36,1,2.8
+18200,Wentworth,NSW,Social competence,94,6,6.4
+18250,Willoughby,NSW,Social competence,744,50,6.7
+18350,Wingecarribee,NSW,Social competence,488,29,5.9
+18400,Wollondilly,NSW,Social competence,711,51,7.2
+18450,Wollongong,NSW,Social competence,2216,209,9.4
+18500,Woollahra,NSW,Social competence,405,17,4.2
+18710,Yass Valley,NSW,Social competence,133,7,5.3
+19399,Unincorporated NSW,NSW,Social competence,,,
+20110,Alpine,VIC,Social competence,114,8,7.0
+20260,Ararat,VIC,Social competence,107,26,24.3
+20570,Ballarat,VIC,Social competence,1121,135,12.0
+20660,Banyule,VIC,Social competence,1162,88,7.6
+20740,Bass Coast,VIC,Social competence,300,46,15.3
+20830,Baw Baw,VIC,Social competence,644,81,12.6
+20910,Bayside (Vic.),VIC,Social competence,779,33,4.2
+21010,Benalla,VIC,Social competence,126,25,19.8
+21110,Boroondara,VIC,Social competence,1078,70,6.5
+21180,Brimbank,VIC,Social competence,1777,221,12.4
+21270,Buloke,VIC,Social competence,48,4,8.3
+21370,Campaspe,VIC,Social competence,320,29,9.1
+21450,Cardinia,VIC,Social competence,1611,180,11.2
+21610,Casey,VIC,Social competence,5285,622,11.8
+21670,Central Goldfields,VIC,Social competence,82,10,12.2
+21750,Colac Otway,VIC,Social competence,185,35,18.9
+21830,Corangamite,VIC,Social competence,119,10,8.4
+21890,Darebin,VIC,Social competence,1166,85,7.3
+22110,East Gippsland,VIC,Social competence,285,43,15.1
+22170,Frankston,VIC,Social competence,1221,128,10.5
+22250,Gannawarra,VIC,Social competence,104,8,7.7
+22310,Glen Eira,VIC,Social competence,1167,99,8.5
+22410,Glenelg,VIC,Social competence,146,17,11.6
+22490,Golden Plains,VIC,Social competence,270,32,11.9
+22620,Greater Bendigo,VIC,Social competence,1323,144,10.9
+22670,Greater Dandenong,VIC,Social competence,1533,201,13.1
+22750,Greater Geelong,VIC,Social competence,2548,270,10.6
+22830,Greater Shepparton,VIC,Social competence,740,131,17.7
+22910,Hepburn,VIC,Social competence,131,12,9.2
+22980,Hindmarsh,VIC,Social competence,41,3,7.3
+23110,Hobsons Bay,VIC,Social competence,737,78,10.6
+23190,Horsham,VIC,Social competence,198,23,11.6
+23270,Hume,VIC,Social competence,3093,510,16.5
+23350,Indigo,VIC,Social competence,143,15,10.5
+23430,Kingston (Vic.),VIC,Social competence,1436,100,7.0
+23670,Knox,VIC,Social competence,1251,102,8.2
+23810,Latrobe (Vic.),VIC,Social competence,697,106,15.2
+23940,Loddon,VIC,Social competence,69,9,13.0
+24130,Macedon Ranges,VIC,Social competence,526,28,5.3
+24210,Manningham,VIC,Social competence,1106,49,4.4
+24250,Mansfield,VIC,Social competence,69,6,8.7
+24330,Maribyrnong,VIC,Social competence,770,92,11.9
+24410,Maroondah,VIC,Social competence,1127,65,5.8
+24600,Melbourne,VIC,Social competence,616,77,12.5
+24650,Melton,VIC,Social competence,2482,367,14.8
+24780,Mildura,VIC,Social competence,419,52,12.4
+24850,Mitchell,VIC,Social competence,585,67,11.5
+24900,Moira,VIC,Social competence,285,42,14.7
+24970,Monash,VIC,Social competence,1555,118,7.6
+25060,Moonee Valley,VIC,Social competence,856,69,8.1
+25150,Moorabool,VIC,Social competence,414,40,9.7
+24700,Moreland,VIC,Social competence,1417,140,9.9
+25340,Mornington Peninsula,VIC,Social competence,1357,90,6.6
+25430,Mount Alexander,VIC,Social competence,152,17,11.2
+25490,Moyne,VIC,Social competence,179,14,7.8
+25620,Murrindindi,VIC,Social competence,122,8,6.6
+25710,Nillumbik,VIC,Social competence,632,34,5.4
+25810,Northern Grampians,VIC,Social competence,81,10,12.3
+25900,Port Phillip,VIC,Social competence,526,40,7.6
+25990,Pyrenees,VIC,Social competence,46,4,8.7
+26080,Queenscliffe,VIC,Social competence,22,,
+26170,South Gippsland,VIC,Social competence,268,38,14.2
+26260,Southern Grampians,VIC,Social competence,147,17,11.6
+26350,Stonnington,VIC,Social competence,509,29,5.7
+26430,Strathbogie,VIC,Social competence,81,4,4.9
+26490,Surf Coast,VIC,Social competence,356,8,2.2
+26610,Swan Hill,VIC,Social competence,211,20,9.5
+26670,Towong,VIC,Social competence,55,7,12.7
+26700,Wangaratta,VIC,Social competence,242,16,6.6
+26730,Warrnambool,VIC,Social competence,365,34,9.3
+26810,Wellington,VIC,Social competence,429,48,11.2
+26890,West Wimmera,VIC,Social competence,43,0,0
+26980,Whitehorse,VIC,Social competence,1429,111,7.8
+27070,Whittlesea,VIC,Social competence,2594,269,10.4
+27170,Wodonga,VIC,Social competence,505,61,12.1
+27260,Wyndham,VIC,Social competence,4497,596,13.3
+27350,Yarra,VIC,Social competence,559,49,8.8
+27450,Yarra Ranges,VIC,Social competence,1547,117,7.6
+27630,Yarriambiack,VIC,Social competence,44,5,11.4
+29399,Unincorporated Vic,VIC,Social competence,0,,
+30250,Aurukun,QLD,Social competence,16,,
+30300,Balonne,QLD,Social competence,62,7,11.3
+30370,Banana,QLD,Social competence,171,19,11.1
+30410,Barcaldine,QLD,Social competence,29,6,20.7
+30450,Barcoo,QLD,Social competence,6,,
+30760,Blackall Tambo,QLD,Social competence,22,5,22.7
+30900,Boulia,QLD,Social competence,4,,
+31000,Brisbane,QLD,Social competence,12927,1199,9.3
+31750,Bulloo,QLD,Social competence,4,,
+31820,Bundaberg,QLD,Social competence,971,125,12.9
+31900,Burdekin,QLD,Social competence,201,31,15.4
+31950,Burke,QLD,Social competence,,,
+32080,Cairns,QLD,Social competence,1818,206,11.3
+32250,Carpentaria,QLD,Social competence,24,10,41.7
+32260,Cassowary Coast,QLD,Social competence,346,59,17.1
+32270,Central Highlands (Qld),QLD,Social competence,408,69,16.9
+32310,Charters Towers,QLD,Social competence,111,10,9.0
+32330,Cherbourg,QLD,Social competence,23,9,39.1
+32450,Cloncurry,QLD,Social competence,46,3,6.5
+32500,Cook,QLD,Social competence,45,2,4.4
+32600,Croydon,QLD,Social competence,,,
+32750,Diamantina,QLD,Social competence,,,
+32770,Doomadgee,QLD,Social competence,30,5,16.7
+32810,Douglas,QLD,Social competence,103,7,6.8
+33100,Etheridge,QLD,Social competence,13,,
+33200,Flinders (Qld),QLD,Social competence,23,2,8.7
+33220,Fraser Coast,QLD,Social competence,974,128,13.1
+33360,Gladstone,QLD,Social competence,859,109,12.7
+33430,Gold Coast,QLD,Social competence,6183,596,9.6
+33610,Goondiwindi,QLD,Social competence,133,14,10.5
+33620,Gympie,QLD,Social competence,527,45,8.5
+33800,Hinchinbrook,QLD,Social competence,95,7,7.4
+33830,Hope Vale,QLD,Social competence,18,8,44.4
+33960,Ipswich,QLD,Social competence,3649,484,13.3
+33980,Isaac,QLD,Social competence,307,43,14.0
+34420,Kowanyama,QLD,Social competence,10,,
+34530,Livingstone,QLD,Social competence,405,51,12.6
+34570,Lockhart River,QLD,Social competence,8,,
+34580,Lockyer Valley,QLD,Social competence,477,50,10.5
+34590,Logan,QLD,Social competence,5042,688,13.6
+34710,Longreach,QLD,Social competence,39,3,7.7
+34770,Mackay,QLD,Social competence,1558,227,14.6
+34800,McKinlay,QLD,Social competence,6,,
+34830,Mapoon,QLD,Social competence,7,,
+34860,Maranoa,QLD,Social competence,155,23,14.8
+34880,Mareeba,QLD,Social competence,216,27,12.5
+35010,Moreton Bay,QLD,Social competence,5681,773,13.6
+35250,Mornington,QLD,Social competence,18,,
+35300,Mount Isa,QLD,Social competence,292,50,17.1
+35600,Murweh,QLD,Social competence,40,7,17.5
+35670,Napranum,QLD,Social competence,17,1,5.9
+35740,Noosa,QLD,Social competence,415,19,4.6
+35760,North Burnett,QLD,Social competence,96,11,11.5
+35780,Northern Peninsula Area,QLD,Social competence,55,9,16.4
+35790,Palm Island,QLD,Social competence,31,3,9.7
+35800,Paroo,QLD,Social competence,27,11,40.7
+36070,Pormpuraaw,QLD,Social competence,9,,
+36150,Quilpie,QLD,Social competence,15,0,0
+36250,Redland,QLD,Social competence,1640,145,8.8
+36300,Richmond,QLD,Social competence,11,,
+36370,Rockhampton,QLD,Social competence,972,129,13.3
+36510,Scenic Rim,QLD,Social competence,411,47,11.4
+36580,Somerset,QLD,Social competence,285,35,12.3
+36630,South Burnett,QLD,Social competence,312,49,15.7
+36660,Southern Downs,QLD,Social competence,361,58,16.1
+36720,Sunshine Coast,QLD,Social competence,3615,320,8.9
+36820,Tablelands,QLD,Social competence,264,30,11.4
+36910,Toowoomba,QLD,Social competence,2022,275,13.6
+36950,Torres,QLD,Social competence,55,7,12.7
+36960,Torres Strait Island,QLD,Social competence,90,23,25.6
+37010,Townsville,QLD,Social competence,2221,305,13.7
+37300,Weipa,QLD,Social competence,65,0,0
+37310,Western Downs,QLD,Social competence,471,60,12.7
+37340,Whitsunday,QLD,Social competence,372,32,8.6
+37400,Winton,QLD,Social competence,5,,
+37550,Woorabinda,QLD,Social competence,24,5,20.8
+37570,Wujal Wujal,QLD,Social competence,4,,
+37600,Yarrabah,QLD,Social competence,45,9,20
+40070,Adelaide,SA,Social competence,67,9,13.4
+40120,Adelaide Hills,SA,Social competence,390,38,9.7
+40150,Adelaide Plains,SA,Social competence,106,15,14.2
+40220,Alexandrina,SA,Social competence,213,21,9.9
+40250,Anangu Pitjantjatjara Yunkunyt,SA,Social competence,30,15,50
+40310,Barossa,SA,Social competence,230,21,9.1
+40430,Barunga West,SA,Social competence,24,3,12.5
+40520,Berri Barmera,SA,Social competence,89,11,12.4
+40700,Burnside,SA,Social competence,426,32,7.5
+40910,Campbelltown (SA),SA,Social competence,524,58,11.1
+41010,Ceduna,SA,Social competence,54,8,14.8
+41060,Charles Sturt,SA,Social competence,1065,107,10.0
+41140,Clare and Gilbert Valleys,SA,Social competence,79,12,15.2
+41190,Cleve,SA,Social competence,22,4,18.2
+41330,Coober Pedy,SA,Social competence,6,,
+41560,Copper Coast,SA,Social competence,128,17,13.3
+41750,Elliston,SA,Social competence,10,,
+41830,Flinders Ranges,SA,Social competence,17,3,17.6
+41960,Franklin Harbour,SA,Social competence,,,
+42030,Gawler,SA,Social competence,250,26,10.4
+42110,Goyder,SA,Social competence,20,3,15
+42250,Grant,SA,Social competence,72,2,2.8
+42600,Holdfast Bay,SA,Social competence,273,24,8.8
+42750,Kangaroo Island,SA,Social competence,47,1,2.1
+43080,Karoonda East Murray,SA,Social competence,15,2,13.3
+43220,Kimba,SA,Social competence,11,,
+43360,Kingston (SA),SA,Social competence,12,,
+43650,Light,SA,Social competence,185,18,9.7
+43710,Lower Eyre Peninsula,SA,Social competence,67,7,10.4
+43790,Loxton Waikerie,SA,Social competence,118,12,10.2
+44000,Maralinga Tjarutja,SA,Social competence,,,
+44060,Marion,SA,Social competence,974,87,8.9
+44210,Mid Murray,SA,Social competence,69,5,7.2
+44340,Mitcham,SA,Social competence,713,35,4.9
+44550,Mount Barker,SA,Social competence,478,48,10.0
+44620,Mount Gambier,SA,Social competence,281,33,11.7
+44830,Mount Remarkable,SA,Social competence,25,5,20
+45040,Murray Bridge,SA,Social competence,173,38,22.0
+45090,Naracoorte Lucindale,SA,Social competence,102,20,19.6
+45120,Northern Areas,SA,Social competence,43,3,7.0
+45290,Norwood Payneham and St Peters,SA,Social competence,315,20,6.3
+45340,Onkaparinga,SA,Social competence,1792,222,12.4
+45400,Orroroo Carrieton,SA,Social competence,14,,
+45540,Peterborough,SA,Social competence,10,,
+45680,Playford,SA,Social competence,1468,239,16.3
+45890,Port Adelaide Enfield,SA,Social competence,1326,124,9.4
+46090,Port Augusta,SA,Social competence,163,23,14.1
+46300,Port Lincoln,SA,Social competence,155,17,11.0
+46450,Port Pirie,SA,Social competence,190,42,22.1
+46510,Prospect,SA,Social competence,221,10,4.5
+46670,Renmark Paringa,SA,Social competence,104,15,14.4
+46860,Robe,SA,Social competence,13,,
+46970,Roxby Downs,SA,Social competence,57,3,5.3
+47140,Salisbury,SA,Social competence,1625,231,14.2
+47290,Southern Mallee,SA,Social competence,19,2,10.5
+47490,Streaky Bay,SA,Social competence,21,2,9.5
+47630,Tatiara,SA,Social competence,57,1,1.8
+47700,Tea Tree Gully,SA,Social competence,983,99,10.1
+47800,Coorong,SA,Social competence,54,5,9.3
+47910,Tumby Bay,SA,Social competence,34,4,11.8
+47980,Unley,SA,Social competence,334,24,7.2
+48050,Victor Harbor,SA,Social competence,80,17,21.2
+48130,Wakefield,SA,Social competence,75,3,4
+48260,Walkerville,SA,Social competence,63,1,1.6
+48340,Wattle Range,SA,Social competence,115,21,18.3
+48410,West Torrens,SA,Social competence,529,39,7.4
+48540,Whyalla,SA,Social competence,224,52,23.2
+48640,Wudinna,SA,Social competence,11,,
+48750,Yankalilla,SA,Social competence,52,3,5.8
+48830,Yorke Peninsula,SA,Social competence,93,6,6.5
+49399,Unincorporated SA,SA,Social competence,30,3,10
+50080,Albany,WA,Social competence,416,49,11.8
+50210,Armadale,WA,Social competence,1603,228,14.2
+50250,Ashburton,WA,Social competence,117,18,15.4
+50280,Augusta Margaret River,WA,Social competence,227,21,9.3
+50350,Bassendean,WA,Social competence,180,18,10
+50420,Bayswater,WA,Social competence,722,75,10.4
+50490,Belmont,WA,Social competence,413,33,8.0
+50560,Beverley,WA,Social competence,14,,
+50630,Boddington,WA,Social competence,17,,
+50770,Boyup Brook,WA,Social competence,23,5,21.7
+50840,Bridgetown-Greenbushes,WA,Social competence,48,0,0
+50910,Brookton,WA,Social competence,11,,
+50980,Broome,WA,Social competence,199,28,14.1
+51080,Broomehill-Tambellup,WA,Social competence,20,2,10
+51120,Bruce Rock,WA,Social competence,15,2,13.3
+51190,Bunbury,WA,Social competence,317,30,9.5
+51260,Busselton,WA,Social competence,502,24,4.8
+51310,Cambridge,WA,Social competence,290,15,5.2
+51330,Canning,WA,Social competence,1051,85,8.1
+51400,Capel,WA,Social competence,242,25,10.3
+51470,Carnamah,WA,Social competence,8,,
+51540,Carnarvon,WA,Social competence,63,14,22.2
+51610,Chapman Valley,WA,Social competence,12,,
+51680,Chittering,WA,Social competence,73,5,6.8
+51710,Christmas Island,WA,Social competence,20,,
+51750,Claremont,WA,Social competence,135,10,7.4
+51820,Cockburn,WA,Social competence,1500,124,8.3
+51860,Cocos Islands,WA,Social competence,11,,
+51890,Collie,WA,Social competence,115,9,7.8
+51960,Coolgardie,WA,Social competence,44,6,13.6
+52030,Coorow,WA,Social competence,9,,
+52100,Corrigin,WA,Social competence,10,,
+52170,Cottesloe,WA,Social competence,82,5,6.1
+52240,Cranbrook,WA,Social competence,9,,
+52310,Cuballing,WA,Social competence,,,
+52380,Cue,WA,Social competence,,,
+52450,Cunderdin,WA,Social competence,14,,
+52520,Dalwallinu,WA,Social competence,19,1,5.3
+52590,Dandaragan,WA,Social competence,33,1,3.0
+52660,Dardanup,WA,Social competence,203,11,5.4
+52730,Denmark,WA,Social competence,64,0,0
+52800,Derby-West Kimberley,WA,Social competence,96,27,28.1
+52870,Donnybrook-Balingup,WA,Social competence,73,2,2.7
+52940,Dowerin,WA,Social competence,11,,
+53010,Dumbleyung,WA,Social competence,8,,
+53080,Dundas,WA,Social competence,6,,
+53150,East Fremantle,WA,Social competence,73,6,8.2
+53220,East Pilbara,WA,Social competence,83,9,10.8
+53290,Esperance,WA,Social competence,176,15,8.5
+53360,Exmouth,WA,Social competence,40,1,2.5
+53430,Fremantle,WA,Social competence,315,24,7.6
+53570,Gingin,WA,Social competence,54,4,7.4
+53640,Gnowangerup,WA,Social competence,21,0,0
+53710,Goomalling,WA,Social competence,12,,
+53780,Gosnells,WA,Social competence,1693,292,17.2
+53800,Greater Geraldton,WA,Social competence,512,73,14.3
+53920,Halls Creek,WA,Social competence,35,11,31.4
+53990,Harvey,WA,Social competence,358,39,10.9
+54060,Irwin,WA,Social competence,25,1,4
+54130,Jerramungup,WA,Social competence,12,,
+54170,Joondalup,WA,Social competence,1771,131,7.4
+54200,Kalamunda,WA,Social competence,706,61,8.6
+54280,Kalgoorlie-Boulder,WA,Social competence,455,44,9.7
+54310,Karratha,WA,Social competence,390,36,9.2
+54340,Katanning,WA,Social competence,58,3,5.2
+54410,Kellerberrin,WA,Social competence,14,,
+54480,Kent,WA,Social competence,6,,
+54550,Kojonup,WA,Social competence,22,3,13.6
+54620,Kondinin,WA,Social competence,8,,
+54690,Koorda,WA,Social competence,,,
+54760,Kulin,WA,Social competence,9,,
+54830,Kwinana,WA,Social competence,771,93,12.1
+54900,Lake Grace,WA,Social competence,17,0,0
+54970,Laverton,WA,Social competence,7,,
+55040,Leonora,WA,Social competence,26,1,3.8
+55110,Mandurah,WA,Social competence,999,144,14.4
+55180,Manjimup,WA,Social competence,99,12,12.1
+55250,Meekatharra,WA,Social competence,12,,
+55320,Melville,WA,Social competence,1082,58,5.4
+55390,Menzies,WA,Social competence,6,,
+55460,Merredin,WA,Social competence,34,3,8.8
+55530,Mingenew,WA,Social competence,5,,
+55600,Moora,WA,Social competence,36,2,5.6
+55670,Morawa,WA,Social competence,7,,
+55740,Mosman Park,WA,Social competence,87,4,4.6
+55810,Mount Magnet,WA,Social competence,10,,
+55880,Mount Marshall,WA,Social competence,6,,
+55950,Mukinbudin,WA,Social competence,8,,
+56090,Mundaring,WA,Social competence,449,36,8.0
+56160,Murchison,WA,Social competence,,,
+56230,Murray,WA,Social competence,224,21,9.4
+56300,Nannup,WA,Social competence,6,,
+56370,Narembeen,WA,Social competence,15,,
+56460,Narrogin,WA,Social competence,46,5,10.9
+56580,Nedlands,WA,Social competence,214,13,6.1
+56620,Ngaanyatjarraku,WA,Social competence,,,
+56730,Northam,WA,Social competence,107,14,13.1
+56790,Northampton,WA,Social competence,25,1,4
+56860,Nungarin,WA,Social competence,4,,
+56930,Peppermint Grove,WA,Social competence,9,,
+57000,Perenjori,WA,Social competence,,,
+57080,Perth,WA,Social competence,164,10,6.1
+57140,Pingelly,WA,Social competence,19,1,5.3
+57210,Plantagenet,WA,Social competence,40,9,22.5
+57280,Port Hedland,WA,Social competence,227,13,5.7
+57350,Quairading,WA,Social competence,16,,
+57420,Ravensthorpe,WA,Social competence,21,5,23.8
+57490,Rockingham,WA,Social competence,1833,190,10.4
+57630,Sandstone,WA,Social competence,0,,
+57700,Serpentine-Jarrahdale,WA,Social competence,590,76,12.9
+57770,Shark Bay,WA,Social competence,6,,
+57840,South Perth,WA,Social competence,389,33,8.5
+57910,Stirling,WA,Social competence,2461,204,8.3
+57980,Subiaco,WA,Social competence,139,3,2.2
+58050,Swan,WA,Social competence,2271,226,10.0
+58190,Tammin,WA,Social competence,,,
+58260,Three Springs,WA,Social competence,12,,
+58330,Toodyay,WA,Social competence,29,3,10.3
+58400,Trayning,WA,Social competence,,,
+58470,Upper Gascoyne,WA,Social competence,5,,
+58510,Victoria Park,WA,Social competence,374,31,8.3
+58540,Victoria Plains,WA,Social competence,7,,
+58570,Vincent,WA,Social competence,356,21,5.9
+58610,Wagin,WA,Social competence,12,,
+58680,Wandering,WA,Social competence,,,
+58760,Wanneroo,WA,Social competence,3048,282,9.3
+58820,Waroona,WA,Social competence,38,3,7.9
+58890,West Arthur,WA,Social competence,5,,
+59030,Westonia,WA,Social competence,0,,
+59100,Wickepin,WA,Social competence,5,,
+59170,Williams,WA,Social competence,18,3,16.7
+59250,Wiluna,WA,Social competence,5,,
+59310,Wongan-Ballidu,WA,Social competence,12,,
+59320,Woodanilling,WA,Social competence,6,,
+59330,Wyalkatchem,WA,Social competence,4,,
+59340,Wyndham-East Kimberley,WA,Social competence,117,22,18.8
+59350,Yalgoo,WA,Social competence,,,
+59360,Yilgarn,WA,Social competence,14,,
+59370,York,WA,Social competence,28,0,0
+60210,Break O'Day,TAS,Social competence,32,4,12.5
+60410,Brighton,TAS,Social competence,252,56,22.2
+60610,Burnie,TAS,Social competence,202,39,19.3
+60810,Central Coast (Tas.),TAS,Social competence,194,32,16.5
+61010,Central Highlands (Tas.),TAS,Social competence,27,4,14.8
+61210,Circular Head,TAS,Social competence,81,6,7.4
+61410,Clarence,TAS,Social competence,624,71,11.4
+61510,Derwent Valley,TAS,Social competence,121,27,22.3
+61610,Devonport,TAS,Social competence,225,21,9.3
+61810,Dorset,TAS,Social competence,52,3,5.8
+62010,Flinders (Tas.),TAS,Social competence,6,,
+62210,George Town,TAS,Social competence,61,9,14.8
+62410,Glamorgan-Spring Bay,TAS,Social competence,31,6,19.4
+62610,Glenorchy,TAS,Social competence,433,80,18.5
+62810,Hobart,TAS,Social competence,404,29,7.2
+63010,Huon Valley,TAS,Social competence,173,15,8.7
+63210,Kentish,TAS,Social competence,59,6,10.2
+63410,King Island,TAS,Social competence,16,,
+63610,Kingborough,TAS,Social competence,413,25,6.1
+63810,Latrobe (Tas.),TAS,Social competence,118,7,5.9
+64010,Launceston,TAS,Social competence,715,85,11.9
+64210,Meander Valley,TAS,Social competence,199,21,10.6
+64610,Northern Midlands,TAS,Social competence,148,13,8.8
+64810,Sorell,TAS,Social competence,178,42,23.6
+65010,Southern Midlands,TAS,Social competence,71,8,11.3
+65210,Tasman,TAS,Social competence,12,,
+65410,Waratah-Wynyard,TAS,Social competence,149,13,8.7
+65610,West Coast,TAS,Social competence,37,6,16.2
+65810,West Tamar,TAS,Social competence,214,33,15.4
+70200,Alice Springs,NT,Social competence,316,62,19.6
+70420,Barkly,NT,Social competence,69,21,30.4
+70540,Belyuen,NT,Social competence,,,
+70620,Central Desert,NT,Social competence,72,39,54.2
+70700,Coomalie,NT,Social competence,16,6,37.5
+71000,Darwin,NT,Social competence,856,147,17.2
+71150,Darwin Waterfront Precinct,NT,Social competence,,,
+71300,East Arnhem,NT,Social competence,97,28,28.9
+72200,Katherine,NT,Social competence,135,48,35.6
+72300,Litchfield,NT,Social competence,238,43,18.1
+72330,MacDonnell,NT,Social competence,61,28,45.9
+72800,Palmerston,NT,Social competence,531,92,17.3
+73600,Roper Gulf,NT,Social competence,73,19,26.0
+74050,Tiwi Islands,NT,Social competence,22,9,40.9
+74550,Victoria Daly,NT,Social competence,34,9,26.5
+74560,Wagait,NT,Social competence,4,,
+74660,West Arnhem,NT,Social competence,52,19,36.5
+74680,West Daly,NT,Social competence,21,9,42.9
+79399,Unincorporated NT,NT,Social competence,88,10,11.4
+89399,Unincorporated ACT,ACT,Social competence,4920,568,11.5
+10050,Albury,NSW,Emotional maturity,639,61,9.5
+10180,Armidale,NSW,Emotional maturity,287,45,15.7
+10250,Ballina,NSW,Emotional maturity,406,37,9.1
+10300,Balranald,NSW,Emotional maturity,27,3,11.1
+10470,Bathurst,NSW,Emotional maturity,494,29,5.9
+10500,Bayside (NSW),NSW,Emotional maturity,1493,101,6.8
+10550,Bega Valley,NSW,Emotional maturity,294,37,12.6
+10600,Bellingen,NSW,Emotional maturity,92,9,9.8
+10650,Berrigan,NSW,Emotional maturity,72,6,8.3
+10750,Blacktown,NSW,Emotional maturity,5477,437,8.0
+10800,Bland,NSW,Emotional maturity,66,4,6.1
+10850,Blayney,NSW,Emotional maturity,97,6,6.2
+10900,Blue Mountains,NSW,Emotional maturity,663,51,7.7
+10950,Bogan,NSW,Emotional maturity,41,3,7.3
+11150,Bourke,NSW,Emotional maturity,31,3,9.7
+11200,Brewarrina,NSW,Emotional maturity,19,2,10.5
+11250,Broken Hill,NSW,Emotional maturity,179,22,12.3
+11300,Burwood,NSW,Emotional maturity,274,16,5.8
+11350,Byron,NSW,Emotional maturity,321,28,8.7
+11400,Cabonne,NSW,Emotional maturity,161,17,10.6
+11450,Camden,NSW,Emotional maturity,2109,157,7.4
+11500,Campbelltown (NSW),NSW,Emotional maturity,2343,189,8.1
+11520,Canada Bay,NSW,Emotional maturity,743,50,6.7
+11570,Canterbury-Bankstown,NSW,Emotional maturity,4202,330,7.9
+11600,Carrathool,NSW,Emotional maturity,38,0,0
+11650,Central Coast (NSW),NSW,Emotional maturity,3644,335,9.2
+11700,Central Darling,NSW,Emotional maturity,21,3,14.3
+11720,Cessnock,NSW,Emotional maturity,779,93,11.9
+11730,Clarence Valley,NSW,Emotional maturity,553,51,9.2
+11750,Cobar,NSW,Emotional maturity,51,8,15.7
+11800,Coffs Harbour,NSW,Emotional maturity,727,78,10.7
+12000,Coolamon,NSW,Emotional maturity,64,3,4.7
+12150,Coonamble,NSW,Emotional maturity,75,6,8
+12160,Cootamundra-Gundagai,NSW,Emotional maturity,108,9,8.3
+12350,Cowra,NSW,Emotional maturity,126,12,9.5
+12380,Cumberland,NSW,Emotional maturity,2957,201,6.8
+12390,Dubbo,NSW,Emotional maturity,609,58,9.5
+12700,Dungog,NSW,Emotional maturity,106,7,6.6
+12730,Edward River,NSW,Emotional maturity,94,9,9.6
+12750,Eurobodalla,NSW,Emotional maturity,302,18,6.0
+12850,Fairfield,NSW,Emotional maturity,1992,197,9.9
+12870,Federation,NSW,Emotional maturity,121,17,14.0
+12900,Forbes,NSW,Emotional maturity,111,8,7.2
+12930,Georges River,NSW,Emotional maturity,1320,68,5.2
+12950,Gilgandra,NSW,Emotional maturity,46,5,10.9
+13010,Glen Innes Severn,NSW,Emotional maturity,64,6,9.4
+13310,Goulburn Mulwaree,NSW,Emotional maturity,341,29,8.5
+13340,Greater Hume,NSW,Emotional maturity,103,16,15.5
+13450,Griffith,NSW,Emotional maturity,301,21,7.0
+13550,Gunnedah,NSW,Emotional maturity,142,10,7.0
+13660,Gwydir,NSW,Emotional maturity,43,8,18.6
+13800,Hawkesbury,NSW,Emotional maturity,713,48,6.7
+13850,Hay,NSW,Emotional maturity,23,5,21.7
+13910,Hilltops,NSW,Emotional maturity,192,9,4.7
+14000,Hornsby,NSW,Emotional maturity,1553,108,7.0
+14100,Hunters Hill,NSW,Emotional maturity,127,8,6.3
+14170,Inner West,NSW,Emotional maturity,1428,84,5.9
+14220,Inverell,NSW,Emotional maturity,176,18,10.2
+14300,Junee,NSW,Emotional maturity,52,3,5.8
+14350,Kempsey,NSW,Emotional maturity,262,32,12.2
+14400,Kiama,NSW,Emotional maturity,215,9,4.2
+14500,Ku-ring-gai,NSW,Emotional maturity,1139,90,7.9
+14550,Kyogle,NSW,Emotional maturity,99,20,20.2
+14600,Lachlan,NSW,Emotional maturity,74,8,10.8
+14650,Lake Macquarie,NSW,Emotional maturity,2149,197,9.2
+14700,Lane Cove,NSW,Emotional maturity,418,15,3.6
+14750,Leeton,NSW,Emotional maturity,137,12,8.8
+14850,Lismore,NSW,Emotional maturity,347,34,9.8
+14870,Lithgow,NSW,Emotional maturity,160,18,11.2
+14900,Liverpool,NSW,Emotional maturity,3088,254,8.2
+14920,Liverpool Plains,NSW,Emotional maturity,65,6,9.2
+14950,Lockhart,NSW,Emotional maturity,37,2,5.4
+15050,Maitland,NSW,Emotional maturity,1143,127,11.1
+15240,Mid-Coast,NSW,Emotional maturity,785,88,11.2
+15270,Mid-Western,NSW,Emotional maturity,315,43,13.7
+15300,Moree Plains,NSW,Emotional maturity,127,22,17.3
+15350,Mosman,NSW,Emotional maturity,216,8,3.7
+15520,Murray River,NSW,Emotional maturity,126,8,6.3
+15560,Murrumbidgee,NSW,Emotional maturity,26,9,34.6
+15650,Muswellbrook,NSW,Emotional maturity,183,23,12.6
+15700,Nambucca Valley,NSW,Emotional maturity,175,25,14.3
+15750,Narrabri,NSW,Emotional maturity,136,11,8.1
+15800,Narrandera,NSW,Emotional maturity,76,11,14.5
+15850,Narromine,NSW,Emotional maturity,56,6,10.7
+15900,Newcastle,NSW,Emotional maturity,1607,147,9.1
+15950,North Sydney,NSW,Emotional maturity,478,30,6.3
+15990,Northern Beaches,NSW,Emotional maturity,2563,154,6.0
+16100,Oberon,NSW,Emotional maturity,49,2,4.1
+16150,Orange,NSW,Emotional maturity,471,51,10.8
+16200,Parkes,NSW,Emotional maturity,180,19,10.6
+16260,Parramatta,NSW,Emotional maturity,2795,198,7.1
+16350,Penrith,NSW,Emotional maturity,2604,252,9.7
+16380,Port Macquarie-Hastings,NSW,Emotional maturity,746,79,10.6
+16400,Port Stephens,NSW,Emotional maturity,677,75,11.1
+16490,Queanbeyan-Palerang,NSW,Emotional maturity,747,65,8.7
+16550,Randwick,NSW,Emotional maturity,1060,74,7.0
+16610,Richmond Valley,NSW,Emotional maturity,214,21,9.8
+16700,Ryde,NSW,Emotional maturity,1274,89,7.0
+16900,Shellharbour,NSW,Emotional maturity,906,76,8.4
+16950,Shoalhaven,NSW,Emotional maturity,1092,106,9.7
+17000,Singleton,NSW,Emotional maturity,261,27,10.3
+17040,Snowy Monaro,NSW,Emotional maturity,192,11,5.7
+17080,Snowy Valleys,NSW,Emotional maturity,162,25,15.4
+17100,Strathfield,NSW,Emotional maturity,350,28,8
+17150,Sutherland,NSW,Emotional maturity,2529,131,5.2
+17200,Sydney,NSW,Emotional maturity,849,50,5.9
+17310,Tamworth,NSW,Emotional maturity,739,69,9.3
+17350,Temora,NSW,Emotional maturity,53,1,1.9
+17400,Tenterfield,NSW,Emotional maturity,63,8,12.7
+17420,The Hills,NSW,Emotional maturity,2325,119,5.1
+17550,Tweed,NSW,Emotional maturity,971,78,8.0
+17620,Upper Hunter,NSW,Emotional maturity,145,11,7.6
+17640,Upper Lachlan,NSW,Emotional maturity,77,10,13.0
+17650,Uralla,NSW,Emotional maturity,63,10,15.9
+17750,Wagga Wagga,NSW,Emotional maturity,768,97,12.6
+17850,Walcha,NSW,Emotional maturity,39,3,7.7
+17900,Walgett,NSW,Emotional maturity,80,14,17.5
+17950,Warren,NSW,Emotional maturity,25,0,0
+18020,Warrumbungle,NSW,Emotional maturity,109,8,7.3
+18050,Waverley,NSW,Emotional maturity,551,18,3.3
+18100,Weddin,NSW,Emotional maturity,36,1,2.8
+18200,Wentworth,NSW,Emotional maturity,92,6,6.5
+18250,Willoughby,NSW,Emotional maturity,736,39,5.3
+18350,Wingecarribee,NSW,Emotional maturity,487,34,7.0
+18400,Wollondilly,NSW,Emotional maturity,709,58,8.2
+18450,Wollongong,NSW,Emotional maturity,2205,186,8.4
+18500,Woollahra,NSW,Emotional maturity,405,14,3.5
+18710,Yass Valley,NSW,Emotional maturity,133,8,6.0
+19399,Unincorporated NSW,NSW,Emotional maturity,,,
+20110,Alpine,VIC,Emotional maturity,114,11,9.6
+20260,Ararat,VIC,Emotional maturity,107,24,22.4
+20570,Ballarat,VIC,Emotional maturity,1119,146,13.0
+20660,Banyule,VIC,Emotional maturity,1152,83,7.2
+20740,Bass Coast,VIC,Emotional maturity,300,42,14
+20830,Baw Baw,VIC,Emotional maturity,644,82,12.7
+20910,Bayside (Vic.),VIC,Emotional maturity,775,45,5.8
+21010,Benalla,VIC,Emotional maturity,126,23,18.3
+21110,Boroondara,VIC,Emotional maturity,1074,87,8.1
+21180,Brimbank,VIC,Emotional maturity,1764,179,10.1
+21270,Buloke,VIC,Emotional maturity,48,8,16.7
+21370,Campaspe,VIC,Emotional maturity,319,39,12.2
+21450,Cardinia,VIC,Emotional maturity,1608,178,11.1
+21610,Casey,VIC,Emotional maturity,5262,553,10.5
+21670,Central Goldfields,VIC,Emotional maturity,82,10,12.2
+21750,Colac Otway,VIC,Emotional maturity,181,23,12.7
+21830,Corangamite,VIC,Emotional maturity,119,9,7.6
+21890,Darebin,VIC,Emotional maturity,1153,94,8.2
+22110,East Gippsland,VIC,Emotional maturity,284,41,14.4
+22170,Frankston,VIC,Emotional maturity,1208,127,10.5
+22250,Gannawarra,VIC,Emotional maturity,104,12,11.5
+22310,Glen Eira,VIC,Emotional maturity,1162,110,9.5
+22410,Glenelg,VIC,Emotional maturity,146,15,10.3
+22490,Golden Plains,VIC,Emotional maturity,266,33,12.4
+22620,Greater Bendigo,VIC,Emotional maturity,1317,147,11.2
+22670,Greater Dandenong,VIC,Emotional maturity,1521,180,11.8
+22750,Greater Geelong,VIC,Emotional maturity,2544,267,10.5
+22830,Greater Shepparton,VIC,Emotional maturity,740,118,15.9
+22910,Hepburn,VIC,Emotional maturity,131,15,11.5
+22980,Hindmarsh,VIC,Emotional maturity,41,3,7.3
+23110,Hobsons Bay,VIC,Emotional maturity,716,62,8.7
+23190,Horsham,VIC,Emotional maturity,198,30,15.2
+23270,Hume,VIC,Emotional maturity,3052,378,12.4
+23350,Indigo,VIC,Emotional maturity,143,21,14.7
+23430,Kingston (Vic.),VIC,Emotional maturity,1428,117,8.2
+23670,Knox,VIC,Emotional maturity,1243,123,9.9
+23810,Latrobe (Vic.),VIC,Emotional maturity,697,115,16.5
+23940,Loddon,VIC,Emotional maturity,69,5,7.2
+24130,Macedon Ranges,VIC,Emotional maturity,523,28,5.4
+24210,Manningham,VIC,Emotional maturity,1102,80,7.3
+24250,Mansfield,VIC,Emotional maturity,69,6,8.7
+24330,Maribyrnong,VIC,Emotional maturity,768,88,11.5
+24410,Maroondah,VIC,Emotional maturity,1122,83,7.4
+24600,Melbourne,VIC,Emotional maturity,615,69,11.2
+24650,Melton,VIC,Emotional maturity,2466,250,10.1
+24780,Mildura,VIC,Emotional maturity,418,57,13.6
+24850,Mitchell,VIC,Emotional maturity,583,80,13.7
+24900,Moira,VIC,Emotional maturity,284,37,13.0
+24970,Monash,VIC,Emotional maturity,1553,121,7.8
+25060,Moonee Valley,VIC,Emotional maturity,854,54,6.3
+25150,Moorabool,VIC,Emotional maturity,406,36,8.9
+24700,Moreland,VIC,Emotional maturity,1391,111,8.0
+25340,Mornington Peninsula,VIC,Emotional maturity,1353,105,7.8
+25430,Mount Alexander,VIC,Emotional maturity,151,18,11.9
+25490,Moyne,VIC,Emotional maturity,178,9,5.1
+25620,Murrindindi,VIC,Emotional maturity,122,13,10.7
+25710,Nillumbik,VIC,Emotional maturity,630,41,6.5
+25810,Northern Grampians,VIC,Emotional maturity,81,9,11.1
+25900,Port Phillip,VIC,Emotional maturity,526,48,9.1
+25990,Pyrenees,VIC,Emotional maturity,46,3,6.5
+26080,Queenscliffe,VIC,Emotional maturity,22,,
+26170,South Gippsland,VIC,Emotional maturity,268,39,14.6
+26260,Southern Grampians,VIC,Emotional maturity,146,24,16.4
+26350,Stonnington,VIC,Emotional maturity,508,28,5.5
+26430,Strathbogie,VIC,Emotional maturity,81,6,7.4
+26490,Surf Coast,VIC,Emotional maturity,356,16,4.5
+26610,Swan Hill,VIC,Emotional maturity,211,18,8.5
+26670,Towong,VIC,Emotional maturity,55,8,14.5
+26700,Wangaratta,VIC,Emotional maturity,240,11,4.6
+26730,Warrnambool,VIC,Emotional maturity,365,38,10.4
+26810,Wellington,VIC,Emotional maturity,429,58,13.5
+26890,West Wimmera,VIC,Emotional maturity,43,0,0
+26980,Whitehorse,VIC,Emotional maturity,1423,110,7.7
+27070,Whittlesea,VIC,Emotional maturity,2585,210,8.1
+27170,Wodonga,VIC,Emotional maturity,503,65,12.9
+27260,Wyndham,VIC,Emotional maturity,4450,404,9.1
+27350,Yarra,VIC,Emotional maturity,559,54,9.7
+27450,Yarra Ranges,VIC,Emotional maturity,1542,133,8.6
+27630,Yarriambiack,VIC,Emotional maturity,44,4,9.1
+29399,Unincorporated Vic,VIC,Emotional maturity,0,,
+30250,Aurukun,QLD,Emotional maturity,5,,
+30300,Balonne,QLD,Emotional maturity,61,8,13.1
+30370,Banana,QLD,Emotional maturity,171,17,9.9
+30410,Barcaldine,QLD,Emotional maturity,29,4,13.8
+30450,Barcoo,QLD,Emotional maturity,6,,
+30760,Blackall Tambo,QLD,Emotional maturity,22,3,13.6
+30900,Boulia,QLD,Emotional maturity,4,,
+31000,Brisbane,QLD,Emotional maturity,12876,1205,9.4
+31750,Bulloo,QLD,Emotional maturity,4,,
+31820,Bundaberg,QLD,Emotional maturity,967,147,15.2
+31900,Burdekin,QLD,Emotional maturity,200,26,13
+31950,Burke,QLD,Emotional maturity,,,
+32080,Cairns,QLD,Emotional maturity,1811,183,10.1
+32250,Carpentaria,QLD,Emotional maturity,24,8,33.3
+32260,Cassowary Coast,QLD,Emotional maturity,344,57,16.6
+32270,Central Highlands (Qld),QLD,Emotional maturity,405,62,15.3
+32310,Charters Towers,QLD,Emotional maturity,111,12,10.8
+32330,Cherbourg,QLD,Emotional maturity,23,9,39.1
+32450,Cloncurry,QLD,Emotional maturity,46,1,2.2
+32500,Cook,QLD,Emotional maturity,45,2,4.4
+32600,Croydon,QLD,Emotional maturity,,,
+32750,Diamantina,QLD,Emotional maturity,,,
+32770,Doomadgee,QLD,Emotional maturity,30,5,16.7
+32810,Douglas,QLD,Emotional maturity,103,7,6.8
+33100,Etheridge,QLD,Emotional maturity,12,,
+33200,Flinders (Qld),QLD,Emotional maturity,23,2,8.7
+33220,Fraser Coast,QLD,Emotional maturity,972,157,16.2
+33360,Gladstone,QLD,Emotional maturity,852,119,14.0
+33430,Gold Coast,QLD,Emotional maturity,6155,609,9.9
+33610,Goondiwindi,QLD,Emotional maturity,133,12,9.0
+33620,Gympie,QLD,Emotional maturity,525,52,9.9
+33800,Hinchinbrook,QLD,Emotional maturity,95,5,5.3
+33830,Hope Vale,QLD,Emotional maturity,18,2,11.1
+33960,Ipswich,QLD,Emotional maturity,3624,471,13.0
+33980,Isaac,QLD,Emotional maturity,305,44,14.4
+34420,Kowanyama,QLD,Emotional maturity,10,,
+34530,Livingstone,QLD,Emotional maturity,405,38,9.4
+34570,Lockhart River,QLD,Emotional maturity,8,,
+34580,Lockyer Valley,QLD,Emotional maturity,468,55,11.8
+34590,Logan,QLD,Emotional maturity,5030,657,13.1
+34710,Longreach,QLD,Emotional maturity,39,3,7.7
+34770,Mackay,QLD,Emotional maturity,1556,213,13.7
+34800,McKinlay,QLD,Emotional maturity,6,,
+34830,Mapoon,QLD,Emotional maturity,7,,
+34860,Maranoa,QLD,Emotional maturity,154,16,10.4
+34880,Mareeba,QLD,Emotional maturity,215,23,10.7
+35010,Moreton Bay,QLD,Emotional maturity,5662,789,13.9
+35250,Mornington,QLD,Emotional maturity,18,,
+35300,Mount Isa,QLD,Emotional maturity,292,50,17.1
+35600,Murweh,QLD,Emotional maturity,40,6,15
+35670,Napranum,QLD,Emotional maturity,16,1,6.2
+35740,Noosa,QLD,Emotional maturity,415,24,5.8
+35760,North Burnett,QLD,Emotional maturity,96,13,13.5
+35780,Northern Peninsula Area,QLD,Emotional maturity,55,14,25.5
+35790,Palm Island,QLD,Emotional maturity,31,4,12.9
+35800,Paroo,QLD,Emotional maturity,27,9,33.3
+36070,Pormpuraaw,QLD,Emotional maturity,9,,
+36150,Quilpie,QLD,Emotional maturity,14,,
+36250,Redland,QLD,Emotional maturity,1632,171,10.5
+36300,Richmond,QLD,Emotional maturity,11,,
+36370,Rockhampton,QLD,Emotional maturity,971,149,15.3
+36510,Scenic Rim,QLD,Emotional maturity,410,51,12.4
+36580,Somerset,QLD,Emotional maturity,282,24,8.5
+36630,South Burnett,QLD,Emotional maturity,311,36,11.6
+36660,Southern Downs,QLD,Emotional maturity,359,51,14.2
+36720,Sunshine Coast,QLD,Emotional maturity,3610,311,8.6
+36820,Tablelands,QLD,Emotional maturity,263,29,11.0
+36910,Toowoomba,QLD,Emotional maturity,2021,276,13.7
+36950,Torres,QLD,Emotional maturity,55,5,9.1
+36960,Torres Strait Island,QLD,Emotional maturity,89,20,22.5
+37010,Townsville,QLD,Emotional maturity,2213,261,11.8
+37300,Weipa,QLD,Emotional maturity,65,1,1.5
+37310,Western Downs,QLD,Emotional maturity,470,56,11.9
+37340,Whitsunday,QLD,Emotional maturity,370,31,8.4
+37400,Winton,QLD,Emotional maturity,5,,
+37550,Woorabinda,QLD,Emotional maturity,24,10,41.7
+37570,Wujal Wujal,QLD,Emotional maturity,4,,
+37600,Yarrabah,QLD,Emotional maturity,45,13,28.9
+40070,Adelaide,SA,Emotional maturity,65,5,7.7
+40120,Adelaide Hills,SA,Emotional maturity,388,36,9.3
+40150,Adelaide Plains,SA,Emotional maturity,105,7,6.7
+40220,Alexandrina,SA,Emotional maturity,213,25,11.7
+40250,Anangu Pitjantjatjara Yunkunyt,SA,Emotional maturity,30,17,56.7
+40310,Barossa,SA,Emotional maturity,230,25,10.9
+40430,Barunga West,SA,Emotional maturity,24,3,12.5
+40520,Berri Barmera,SA,Emotional maturity,89,10,11.2
+40700,Burnside,SA,Emotional maturity,420,30,7.1
+40910,Campbelltown (SA),SA,Emotional maturity,519,51,9.8
+41010,Ceduna,SA,Emotional maturity,54,9,16.7
+41060,Charles Sturt,SA,Emotional maturity,1062,107,10.1
+41140,Clare and Gilbert Valleys,SA,Emotional maturity,79,7,8.9
+41190,Cleve,SA,Emotional maturity,22,3,13.6
+41330,Coober Pedy,SA,Emotional maturity,6,,
+41560,Copper Coast,SA,Emotional maturity,128,21,16.4
+41750,Elliston,SA,Emotional maturity,10,,
+41830,Flinders Ranges,SA,Emotional maturity,17,3,17.6
+41960,Franklin Harbour,SA,Emotional maturity,,,
+42030,Gawler,SA,Emotional maturity,250,28,11.2
+42110,Goyder,SA,Emotional maturity,20,4,20
+42250,Grant,SA,Emotional maturity,72,4,5.6
+42600,Holdfast Bay,SA,Emotional maturity,273,20,7.3
+42750,Kangaroo Island,SA,Emotional maturity,47,3,6.4
+43080,Karoonda East Murray,SA,Emotional maturity,15,3,20
+43220,Kimba,SA,Emotional maturity,11,,
+43360,Kingston (SA),SA,Emotional maturity,12,,
+43650,Light,SA,Emotional maturity,185,23,12.4
+43710,Lower Eyre Peninsula,SA,Emotional maturity,66,7,10.6
+43790,Loxton Waikerie,SA,Emotional maturity,118,12,10.2
+44000,Maralinga Tjarutja,SA,Emotional maturity,,,
+44060,Marion,SA,Emotional maturity,971,88,9.1
+44210,Mid Murray,SA,Emotional maturity,68,4,5.9
+44340,Mitcham,SA,Emotional maturity,705,54,7.7
+44550,Mount Barker,SA,Emotional maturity,476,56,11.8
+44620,Mount Gambier,SA,Emotional maturity,281,33,11.7
+44830,Mount Remarkable,SA,Emotional maturity,25,5,20
+45040,Murray Bridge,SA,Emotional maturity,172,43,25
+45090,Naracoorte Lucindale,SA,Emotional maturity,102,11,10.8
+45120,Northern Areas,SA,Emotional maturity,43,2,4.7
+45290,Norwood Payneham and St Peters,SA,Emotional maturity,314,25,8.0
+45340,Onkaparinga,SA,Emotional maturity,1790,251,14.0
+45400,Orroroo Carrieton,SA,Emotional maturity,14,,
+45540,Peterborough,SA,Emotional maturity,10,,
+45680,Playford,SA,Emotional maturity,1469,253,17.2
+45890,Port Adelaide Enfield,SA,Emotional maturity,1314,121,9.2
+46090,Port Augusta,SA,Emotional maturity,161,25,15.5
+46300,Port Lincoln,SA,Emotional maturity,155,13,8.4
+46450,Port Pirie,SA,Emotional maturity,190,20,10.5
+46510,Prospect,SA,Emotional maturity,221,11,5.0
+46670,Renmark Paringa,SA,Emotional maturity,104,15,14.4
+46860,Robe,SA,Emotional maturity,13,,
+46970,Roxby Downs,SA,Emotional maturity,57,3,5.3
+47140,Salisbury,SA,Emotional maturity,1617,212,13.1
+47290,Southern Mallee,SA,Emotional maturity,19,1,5.3
+47490,Streaky Bay,SA,Emotional maturity,21,2,9.5
+47630,Tatiara,SA,Emotional maturity,57,2,3.5
+47700,Tea Tree Gully,SA,Emotional maturity,981,85,8.7
+47800,Coorong,SA,Emotional maturity,54,7,13.0
+47910,Tumby Bay,SA,Emotional maturity,34,2,5.9
+47980,Unley,SA,Emotional maturity,334,23,6.9
+48050,Victor Harbor,SA,Emotional maturity,79,14,17.7
+48130,Wakefield,SA,Emotional maturity,75,5,6.7
+48260,Walkerville,SA,Emotional maturity,63,1,1.6
+48340,Wattle Range,SA,Emotional maturity,115,20,17.4
+48410,West Torrens,SA,Emotional maturity,529,57,10.8
+48540,Whyalla,SA,Emotional maturity,224,42,18.8
+48640,Wudinna,SA,Emotional maturity,11,,
+48750,Yankalilla,SA,Emotional maturity,52,5,9.6
+48830,Yorke Peninsula,SA,Emotional maturity,93,9,9.7
+49399,Unincorporated SA,SA,Emotional maturity,29,6,20.7
+50080,Albany,WA,Emotional maturity,415,50,12.0
+50210,Armadale,WA,Emotional maturity,1601,234,14.6
+50250,Ashburton,WA,Emotional maturity,117,23,19.7
+50280,Augusta Margaret River,WA,Emotional maturity,225,28,12.4
+50350,Bassendean,WA,Emotional maturity,180,15,8.3
+50420,Bayswater,WA,Emotional maturity,705,65,9.2
+50490,Belmont,WA,Emotional maturity,413,40,9.7
+50560,Beverley,WA,Emotional maturity,14,,
+50630,Boddington,WA,Emotional maturity,17,,
+50770,Boyup Brook,WA,Emotional maturity,23,5,21.7
+50840,Bridgetown-Greenbushes,WA,Emotional maturity,48,1,2.1
+50910,Brookton,WA,Emotional maturity,11,,
+50980,Broome,WA,Emotional maturity,199,26,13.1
+51080,Broomehill-Tambellup,WA,Emotional maturity,20,3,15
+51120,Bruce Rock,WA,Emotional maturity,15,1,6.7
+51190,Bunbury,WA,Emotional maturity,317,28,8.8
+51260,Busselton,WA,Emotional maturity,497,36,7.2
+51310,Cambridge,WA,Emotional maturity,290,17,5.9
+51330,Canning,WA,Emotional maturity,1045,88,8.4
+51400,Capel,WA,Emotional maturity,242,32,13.2
+51470,Carnamah,WA,Emotional maturity,8,,
+51540,Carnarvon,WA,Emotional maturity,63,13,20.6
+51610,Chapman Valley,WA,Emotional maturity,12,,
+51680,Chittering,WA,Emotional maturity,73,2,2.7
+51710,Christmas Island,WA,Emotional maturity,20,,
+51750,Claremont,WA,Emotional maturity,134,10,7.5
+51820,Cockburn,WA,Emotional maturity,1483,130,8.8
+51860,Cocos Islands,WA,Emotional maturity,11,,
+51890,Collie,WA,Emotional maturity,115,13,11.3
+51960,Coolgardie,WA,Emotional maturity,44,7,15.9
+52030,Coorow,WA,Emotional maturity,9,,
+52100,Corrigin,WA,Emotional maturity,10,,
+52170,Cottesloe,WA,Emotional maturity,82,3,3.7
+52240,Cranbrook,WA,Emotional maturity,9,,
+52310,Cuballing,WA,Emotional maturity,,,
+52380,Cue,WA,Emotional maturity,,,
+52450,Cunderdin,WA,Emotional maturity,14,,
+52520,Dalwallinu,WA,Emotional maturity,19,2,10.5
+52590,Dandaragan,WA,Emotional maturity,32,2,6.2
+52660,Dardanup,WA,Emotional maturity,201,19,9.5
+52730,Denmark,WA,Emotional maturity,64,2,3.1
+52800,Derby-West Kimberley,WA,Emotional maturity,95,19,20
+52870,Donnybrook-Balingup,WA,Emotional maturity,73,8,11.0
+52940,Dowerin,WA,Emotional maturity,11,,
+53010,Dumbleyung,WA,Emotional maturity,8,,
+53080,Dundas,WA,Emotional maturity,6,,
+53150,East Fremantle,WA,Emotional maturity,73,9,12.3
+53220,East Pilbara,WA,Emotional maturity,82,7,8.5
+53290,Esperance,WA,Emotional maturity,176,15,8.5
+53360,Exmouth,WA,Emotional maturity,40,1,2.5
+53430,Fremantle,WA,Emotional maturity,315,29,9.2
+53570,Gingin,WA,Emotional maturity,54,1,1.9
+53640,Gnowangerup,WA,Emotional maturity,21,0,0
+53710,Goomalling,WA,Emotional maturity,12,,
+53780,Gosnells,WA,Emotional maturity,1654,209,12.6
+53800,Greater Geraldton,WA,Emotional maturity,510,82,16.1
+53920,Halls Creek,WA,Emotional maturity,35,11,31.4
+53990,Harvey,WA,Emotional maturity,358,41,11.5
+54060,Irwin,WA,Emotional maturity,25,2,8
+54130,Jerramungup,WA,Emotional maturity,12,,
+54170,Joondalup,WA,Emotional maturity,1768,153,8.7
+54200,Kalamunda,WA,Emotional maturity,704,70,9.9
+54280,Kalgoorlie-Boulder,WA,Emotional maturity,455,24,5.3
+54310,Karratha,WA,Emotional maturity,389,39,10.0
+54340,Katanning,WA,Emotional maturity,58,3,5.2
+54410,Kellerberrin,WA,Emotional maturity,14,,
+54480,Kent,WA,Emotional maturity,6,,
+54550,Kojonup,WA,Emotional maturity,22,3,13.6
+54620,Kondinin,WA,Emotional maturity,8,,
+54690,Koorda,WA,Emotional maturity,,,
+54760,Kulin,WA,Emotional maturity,9,,
+54830,Kwinana,WA,Emotional maturity,769,80,10.4
+54900,Lake Grace,WA,Emotional maturity,17,1,5.9
+54970,Laverton,WA,Emotional maturity,7,,
+55040,Leonora,WA,Emotional maturity,26,2,7.7
+55110,Mandurah,WA,Emotional maturity,996,120,12.0
+55180,Manjimup,WA,Emotional maturity,98,15,15.3
+55250,Meekatharra,WA,Emotional maturity,12,,
+55320,Melville,WA,Emotional maturity,1082,62,5.7
+55390,Menzies,WA,Emotional maturity,6,,
+55460,Merredin,WA,Emotional maturity,34,3,8.8
+55530,Mingenew,WA,Emotional maturity,5,,
+55600,Moora,WA,Emotional maturity,36,4,11.1
+55670,Morawa,WA,Emotional maturity,7,,
+55740,Mosman Park,WA,Emotional maturity,87,5,5.7
+55810,Mount Magnet,WA,Emotional maturity,10,,
+55880,Mount Marshall,WA,Emotional maturity,6,,
+55950,Mukinbudin,WA,Emotional maturity,8,,
+56090,Mundaring,WA,Emotional maturity,449,54,12.0
+56160,Murchison,WA,Emotional maturity,,,
+56230,Murray,WA,Emotional maturity,224,24,10.7
+56300,Nannup,WA,Emotional maturity,6,,
+56370,Narembeen,WA,Emotional maturity,15,,
+56460,Narrogin,WA,Emotional maturity,46,6,13.0
+56580,Nedlands,WA,Emotional maturity,214,12,5.6
+56620,Ngaanyatjarraku,WA,Emotional maturity,,,
+56730,Northam,WA,Emotional maturity,106,16,15.1
+56790,Northampton,WA,Emotional maturity,25,1,4
+56860,Nungarin,WA,Emotional maturity,4,,
+56930,Peppermint Grove,WA,Emotional maturity,9,,
+57000,Perenjori,WA,Emotional maturity,,,
+57080,Perth,WA,Emotional maturity,162,9,5.6
+57140,Pingelly,WA,Emotional maturity,19,1,5.3
+57210,Plantagenet,WA,Emotional maturity,40,5,12.5
+57280,Port Hedland,WA,Emotional maturity,227,21,9.3
+57350,Quairading,WA,Emotional maturity,16,,
+57420,Ravensthorpe,WA,Emotional maturity,21,4,19.0
+57490,Rockingham,WA,Emotional maturity,1830,193,10.5
+57630,Sandstone,WA,Emotional maturity,0,,
+57700,Serpentine-Jarrahdale,WA,Emotional maturity,584,73,12.5
+57770,Shark Bay,WA,Emotional maturity,6,,
+57840,South Perth,WA,Emotional maturity,388,46,11.9
+57910,Stirling,WA,Emotional maturity,2451,203,8.3
+57980,Subiaco,WA,Emotional maturity,138,7,5.1
+58050,Swan,WA,Emotional maturity,2264,235,10.4
+58190,Tammin,WA,Emotional maturity,,,
+58260,Three Springs,WA,Emotional maturity,12,,
+58330,Toodyay,WA,Emotional maturity,29,5,17.2
+58400,Trayning,WA,Emotional maturity,,,
+58470,Upper Gascoyne,WA,Emotional maturity,5,,
+58510,Victoria Park,WA,Emotional maturity,367,33,9.0
+58540,Victoria Plains,WA,Emotional maturity,7,,
+58570,Vincent,WA,Emotional maturity,356,23,6.5
+58610,Wagin,WA,Emotional maturity,12,,
+58680,Wandering,WA,Emotional maturity,,,
+58760,Wanneroo,WA,Emotional maturity,3038,344,11.3
+58820,Waroona,WA,Emotional maturity,38,2,5.3
+58890,West Arthur,WA,Emotional maturity,5,,
+59030,Westonia,WA,Emotional maturity,0,,
+59100,Wickepin,WA,Emotional maturity,5,,
+59170,Williams,WA,Emotional maturity,18,1,5.6
+59250,Wiluna,WA,Emotional maturity,5,,
+59310,Wongan-Ballidu,WA,Emotional maturity,12,,
+59320,Woodanilling,WA,Emotional maturity,6,,
+59330,Wyalkatchem,WA,Emotional maturity,4,,
+59340,Wyndham-East Kimberley,WA,Emotional maturity,117,30,25.6
+59350,Yalgoo,WA,Emotional maturity,,,
+59360,Yilgarn,WA,Emotional maturity,14,,
+59370,York,WA,Emotional maturity,28,0,0
+60210,Break O'Day,TAS,Emotional maturity,32,5,15.6
+60410,Brighton,TAS,Emotional maturity,252,41,16.3
+60610,Burnie,TAS,Emotional maturity,201,39,19.4
+60810,Central Coast (Tas.),TAS,Emotional maturity,194,19,9.8
+61010,Central Highlands (Tas.),TAS,Emotional maturity,27,4,14.8
+61210,Circular Head,TAS,Emotional maturity,81,8,9.9
+61410,Clarence,TAS,Emotional maturity,624,51,8.2
+61510,Derwent Valley,TAS,Emotional maturity,121,21,17.4
+61610,Devonport,TAS,Emotional maturity,225,17,7.6
+61810,Dorset,TAS,Emotional maturity,52,3,5.8
+62010,Flinders (Tas.),TAS,Emotional maturity,6,,
+62210,George Town,TAS,Emotional maturity,61,4,6.6
+62410,Glamorgan-Spring Bay,TAS,Emotional maturity,31,6,19.4
+62610,Glenorchy,TAS,Emotional maturity,433,63,14.5
+62810,Hobart,TAS,Emotional maturity,404,26,6.4
+63010,Huon Valley,TAS,Emotional maturity,172,19,11.0
+63210,Kentish,TAS,Emotional maturity,59,5,8.5
+63410,King Island,TAS,Emotional maturity,16,,
+63610,Kingborough,TAS,Emotional maturity,410,36,8.8
+63810,Latrobe (Tas.),TAS,Emotional maturity,118,8,6.8
+64010,Launceston,TAS,Emotional maturity,714,79,11.1
+64210,Meander Valley,TAS,Emotional maturity,197,24,12.2
+64610,Northern Midlands,TAS,Emotional maturity,148,16,10.8
+64810,Sorell,TAS,Emotional maturity,178,51,28.7
+65010,Southern Midlands,TAS,Emotional maturity,71,19,26.8
+65210,Tasman,TAS,Emotional maturity,12,,
+65410,Waratah-Wynyard,TAS,Emotional maturity,149,16,10.7
+65610,West Coast,TAS,Emotional maturity,37,5,13.5
+65810,West Tamar,TAS,Emotional maturity,214,28,13.1
+70200,Alice Springs,NT,Emotional maturity,305,51,16.7
+70420,Barkly,NT,Emotional maturity,66,16,24.2
+70540,Belyuen,NT,Emotional maturity,,,
+70620,Central Desert,NT,Emotional maturity,71,29,40.8
+70700,Coomalie,NT,Emotional maturity,16,4,25
+71000,Darwin,NT,Emotional maturity,855,131,15.3
+71150,Darwin Waterfront Precinct,NT,Emotional maturity,,,
+71300,East Arnhem,NT,Emotional maturity,96,25,26.0
+72200,Katherine,NT,Emotional maturity,130,32,24.6
+72300,Litchfield,NT,Emotional maturity,238,35,14.7
+72330,MacDonnell,NT,Emotional maturity,60,27,45
+72800,Palmerston,NT,Emotional maturity,530,67,12.6
+73600,Roper Gulf,NT,Emotional maturity,72,13,18.1
+74050,Tiwi Islands,NT,Emotional maturity,22,10,45.5
+74550,Victoria Daly,NT,Emotional maturity,34,7,20.6
+74560,Wagait,NT,Emotional maturity,4,,
+74660,West Arnhem,NT,Emotional maturity,51,16,31.4
+74680,West Daly,NT,Emotional maturity,21,14,66.7
+79399,Unincorporated NT,NT,Emotional maturity,88,12,13.6
+89399,Unincorporated ACT,ACT,Emotional maturity,4898,566,11.6
+10050,Albury,NSW,Language & thinking,643,54,8.4
+10180,Armidale,NSW,Language & thinking,288,45,15.6
+10250,Ballina,NSW,Language & thinking,408,17,4.2
+10300,Balranald,NSW,Language & thinking,27,1,3.7
+10470,Bathurst,NSW,Language & thinking,500,53,10.6
+10500,Bayside (NSW),NSW,Language & thinking,1505,69,4.6
+10550,Bega Valley,NSW,Language & thinking,285,28,9.8
+10600,Bellingen,NSW,Language & thinking,92,4,4.3
+10650,Berrigan,NSW,Language & thinking,72,5,6.9
+10750,Blacktown,NSW,Language & thinking,5502,540,9.8
+10800,Bland,NSW,Language & thinking,66,5,7.6
+10850,Blayney,NSW,Language & thinking,97,11,11.3
+10900,Blue Mountains,NSW,Language & thinking,665,33,5.0
+10950,Bogan,NSW,Language & thinking,41,1,2.4
+11150,Bourke,NSW,Language & thinking,31,7,22.6
+11200,Brewarrina,NSW,Language & thinking,23,5,21.7
+11250,Broken Hill,NSW,Language & thinking,178,24,13.5
+11300,Burwood,NSW,Language & thinking,274,17,6.2
+11350,Byron,NSW,Language & thinking,325,14,4.3
+11400,Cabonne,NSW,Language & thinking,161,14,8.7
+11450,Camden,NSW,Language & thinking,2118,108,5.1
+11500,Campbelltown (NSW),NSW,Language & thinking,2350,231,9.8
+11520,Canada Bay,NSW,Language & thinking,749,16,2.1
+11570,Canterbury-Bankstown,NSW,Language & thinking,4246,366,8.6
+11600,Carrathool,NSW,Language & thinking,38,0,0
+11650,Central Coast (NSW),NSW,Language & thinking,3659,239,6.5
+11700,Central Darling,NSW,Language & thinking,24,3,12.5
+11720,Cessnock,NSW,Language & thinking,780,61,7.8
+11730,Clarence Valley,NSW,Language & thinking,553,42,7.6
+11750,Cobar,NSW,Language & thinking,51,11,21.6
+11800,Coffs Harbour,NSW,Language & thinking,730,72,9.9
+12000,Coolamon,NSW,Language & thinking,64,2,3.1
+12150,Coonamble,NSW,Language & thinking,62,10,16.1
+12160,Cootamundra-Gundagai,NSW,Language & thinking,108,9,8.3
+12350,Cowra,NSW,Language & thinking,126,22,17.5
+12380,Cumberland,NSW,Language & thinking,2975,288,9.7
+12390,Dubbo,NSW,Language & thinking,612,41,6.7
+12700,Dungog,NSW,Language & thinking,106,12,11.3
+12730,Edward River,NSW,Language & thinking,94,4,4.3
+12750,Eurobodalla,NSW,Language & thinking,302,28,9.3
+12850,Fairfield,NSW,Language & thinking,2002,260,13.0
+12870,Federation,NSW,Language & thinking,121,14,11.6
+12900,Forbes,NSW,Language & thinking,111,10,9.0
+12930,Georges River,NSW,Language & thinking,1327,70,5.3
+12950,Gilgandra,NSW,Language & thinking,46,4,8.7
+13010,Glen Innes Severn,NSW,Language & thinking,65,10,15.4
+13310,Goulburn Mulwaree,NSW,Language & thinking,341,26,7.6
+13340,Greater Hume,NSW,Language & thinking,103,8,7.8
+13450,Griffith,NSW,Language & thinking,319,44,13.8
+13550,Gunnedah,NSW,Language & thinking,142,20,14.1
+13660,Gwydir,NSW,Language & thinking,44,13,29.5
+13800,Hawkesbury,NSW,Language & thinking,718,45,6.3
+13850,Hay,NSW,Language & thinking,24,6,25
+13910,Hilltops,NSW,Language & thinking,192,11,5.7
+14000,Hornsby,NSW,Language & thinking,1557,59,3.8
+14100,Hunters Hill,NSW,Language & thinking,127,8,6.3
+14170,Inner West,NSW,Language & thinking,1439,53,3.7
+14220,Inverell,NSW,Language & thinking,190,22,11.6
+14300,Junee,NSW,Language & thinking,52,9,17.3
+14350,Kempsey,NSW,Language & thinking,262,34,13.0
+14400,Kiama,NSW,Language & thinking,216,8,3.7
+14500,Ku-ring-gai,NSW,Language & thinking,1154,27,2.3
+14550,Kyogle,NSW,Language & thinking,99,12,12.1
+14600,Lachlan,NSW,Language & thinking,74,13,17.6
+14650,Lake Macquarie,NSW,Language & thinking,2147,110,5.1
+14700,Lane Cove,NSW,Language & thinking,420,12,2.9
+14750,Leeton,NSW,Language & thinking,137,17,12.4
+14850,Lismore,NSW,Language & thinking,349,36,10.3
+14870,Lithgow,NSW,Language & thinking,160,16,10
+14900,Liverpool,NSW,Language & thinking,3130,293,9.4
+14920,Liverpool Plains,NSW,Language & thinking,65,4,6.2
+14950,Lockhart,NSW,Language & thinking,37,1,2.7
+15050,Maitland,NSW,Language & thinking,1143,89,7.8
+15240,Mid-Coast,NSW,Language & thinking,784,75,9.6
+15270,Mid-Western,NSW,Language & thinking,315,25,7.9
+15300,Moree Plains,NSW,Language & thinking,127,21,16.5
+15350,Mosman,NSW,Language & thinking,217,2,0.9
+15520,Murray River,NSW,Language & thinking,126,6,4.8
+15560,Murrumbidgee,NSW,Language & thinking,26,3,11.5
+15650,Muswellbrook,NSW,Language & thinking,183,12,6.6
+15700,Nambucca Valley,NSW,Language & thinking,176,12,6.8
+15750,Narrabri,NSW,Language & thinking,137,10,7.3
+15800,Narrandera,NSW,Language & thinking,76,9,11.8
+15850,Narromine,NSW,Language & thinking,57,4,7.0
+15900,Newcastle,NSW,Language & thinking,1611,108,6.7
+15950,North Sydney,NSW,Language & thinking,479,15,3.1
+15990,Northern Beaches,NSW,Language & thinking,2570,54,2.1
+16100,Oberon,NSW,Language & thinking,51,5,9.8
+16150,Orange,NSW,Language & thinking,471,38,8.1
+16200,Parkes,NSW,Language & thinking,184,16,8.7
+16260,Parramatta,NSW,Language & thinking,2804,145,5.2
+16350,Penrith,NSW,Language & thinking,2621,243,9.3
+16380,Port Macquarie-Hastings,NSW,Language & thinking,750,57,7.6
+16400,Port Stephens,NSW,Language & thinking,680,63,9.3
+16490,Queanbeyan-Palerang,NSW,Language & thinking,755,62,8.2
+16550,Randwick,NSW,Language & thinking,1073,28,2.6
+16610,Richmond Valley,NSW,Language & thinking,214,19,8.9
+16700,Ryde,NSW,Language & thinking,1277,44,3.4
+16900,Shellharbour,NSW,Language & thinking,911,73,8.0
+16950,Shoalhaven,NSW,Language & thinking,1093,76,7.0
+17000,Singleton,NSW,Language & thinking,261,24,9.2
+17040,Snowy Monaro,NSW,Language & thinking,192,10,5.2
+17080,Snowy Valleys,NSW,Language & thinking,162,23,14.2
+17100,Strathfield,NSW,Language & thinking,350,15,4.3
+17150,Sutherland,NSW,Language & thinking,2530,70,2.8
+17200,Sydney,NSW,Language & thinking,866,20,2.3
+17310,Tamworth,NSW,Language & thinking,753,88,11.7
+17350,Temora,NSW,Language & thinking,54,2,3.7
+17400,Tenterfield,NSW,Language & thinking,63,10,15.9
+17420,The Hills,NSW,Language & thinking,2336,97,4.2
+17550,Tweed,NSW,Language & thinking,973,49,5.0
+17620,Upper Hunter,NSW,Language & thinking,146,7,4.8
+17640,Upper Lachlan,NSW,Language & thinking,77,7,9.1
+17650,Uralla,NSW,Language & thinking,63,6,9.5
+17750,Wagga Wagga,NSW,Language & thinking,769,82,10.7
+17850,Walcha,NSW,Language & thinking,39,1,2.6
+17900,Walgett,NSW,Language & thinking,83,15,18.1
+17950,Warren,NSW,Language & thinking,25,0,0
+18020,Warrumbungle,NSW,Language & thinking,109,15,13.8
+18050,Waverley,NSW,Language & thinking,551,6,1.1
+18100,Weddin,NSW,Language & thinking,36,0,0
+18200,Wentworth,NSW,Language & thinking,94,7,7.4
+18250,Willoughby,NSW,Language & thinking,744,20,2.7
+18350,Wingecarribee,NSW,Language & thinking,488,18,3.7
+18400,Wollondilly,NSW,Language & thinking,711,34,4.8
+18450,Wollongong,NSW,Language & thinking,2214,129,5.8
+18500,Woollahra,NSW,Language & thinking,404,3,0.7
+18710,Yass Valley,NSW,Language & thinking,133,6,4.5
+19399,Unincorporated NSW,NSW,Language & thinking,,,
+20110,Alpine,VIC,Language & thinking,114,7,6.1
+20260,Ararat,VIC,Language & thinking,107,14,13.1
+20570,Ballarat,VIC,Language & thinking,1121,108,9.6
+20660,Banyule,VIC,Language & thinking,1157,39,3.4
+20740,Bass Coast,VIC,Language & thinking,300,13,4.3
+20830,Baw Baw,VIC,Language & thinking,644,63,9.8
+20910,Bayside (Vic.),VIC,Language & thinking,779,14,1.8
+21010,Benalla,VIC,Language & thinking,126,10,7.9
+21110,Boroondara,VIC,Language & thinking,1075,26,2.4
+21180,Brimbank,VIC,Language & thinking,1774,190,10.7
+21270,Buloke,VIC,Language & thinking,48,1,2.1
+21370,Campaspe,VIC,Language & thinking,320,25,7.8
+21450,Cardinia,VIC,Language & thinking,1609,149,9.3
+21610,Casey,VIC,Language & thinking,5270,560,10.6
+21670,Central Goldfields,VIC,Language & thinking,82,16,19.5
+21750,Colac Otway,VIC,Language & thinking,185,20,10.8
+21830,Corangamite,VIC,Language & thinking,119,4,3.4
+21890,Darebin,VIC,Language & thinking,1163,48,4.1
+22110,East Gippsland,VIC,Language & thinking,285,38,13.3
+22170,Frankston,VIC,Language & thinking,1221,87,7.1
+22250,Gannawarra,VIC,Language & thinking,104,13,12.5
+22310,Glen Eira,VIC,Language & thinking,1166,43,3.7
+22410,Glenelg,VIC,Language & thinking,146,7,4.8
+22490,Golden Plains,VIC,Language & thinking,270,23,8.5
+22620,Greater Bendigo,VIC,Language & thinking,1322,96,7.3
+22670,Greater Dandenong,VIC,Language & thinking,1527,169,11.1
+22750,Greater Geelong,VIC,Language & thinking,2545,169,6.6
+22830,Greater Shepparton,VIC,Language & thinking,740,99,13.4
+22910,Hepburn,VIC,Language & thinking,131,4,3.1
+22980,Hindmarsh,VIC,Language & thinking,41,3,7.3
+23110,Hobsons Bay,VIC,Language & thinking,735,35,4.8
+23190,Horsham,VIC,Language & thinking,198,21,10.6
+23270,Hume,VIC,Language & thinking,3081,360,11.7
+23350,Indigo,VIC,Language & thinking,143,12,8.4
+23430,Kingston (Vic.),VIC,Language & thinking,1434,57,4.0
+23670,Knox,VIC,Language & thinking,1250,56,4.5
+23810,Latrobe (Vic.),VIC,Language & thinking,696,72,10.3
+23940,Loddon,VIC,Language & thinking,69,4,5.8
+24130,Macedon Ranges,VIC,Language & thinking,525,21,4
+24210,Manningham,VIC,Language & thinking,1105,28,2.5
+24250,Mansfield,VIC,Language & thinking,68,4,5.9
+24330,Maribyrnong,VIC,Language & thinking,766,37,4.8
+24410,Maroondah,VIC,Language & thinking,1127,41,3.6
+24600,Melbourne,VIC,Language & thinking,614,61,9.9
+24650,Melton,VIC,Language & thinking,2481,305,12.3
+24780,Mildura,VIC,Language & thinking,419,55,13.1
+24850,Mitchell,VIC,Language & thinking,585,55,9.4
+24900,Moira,VIC,Language & thinking,285,27,9.5
+24970,Monash,VIC,Language & thinking,1551,67,4.3
+25060,Moonee Valley,VIC,Language & thinking,855,28,3.3
+25150,Moorabool,VIC,Language & thinking,413,30,7.3
+24700,Moreland,VIC,Language & thinking,1416,76,5.4
+25340,Mornington Peninsula,VIC,Language & thinking,1357,56,4.1
+25430,Mount Alexander,VIC,Language & thinking,148,10,6.8
+25490,Moyne,VIC,Language & thinking,178,10,5.6
+25620,Murrindindi,VIC,Language & thinking,122,3,2.5
+25710,Nillumbik,VIC,Language & thinking,631,20,3.2
+25810,Northern Grampians,VIC,Language & thinking,81,6,7.4
+25900,Port Phillip,VIC,Language & thinking,525,23,4.4
+25990,Pyrenees,VIC,Language & thinking,46,3,6.5
+26080,Queenscliffe,VIC,Language & thinking,22,,
+26170,South Gippsland,VIC,Language & thinking,267,31,11.6
+26260,Southern Grampians,VIC,Language & thinking,147,8,5.4
+26350,Stonnington,VIC,Language & thinking,509,10,2.0
+26430,Strathbogie,VIC,Language & thinking,81,6,7.4
+26490,Surf Coast,VIC,Language & thinking,356,7,2.0
+26610,Swan Hill,VIC,Language & thinking,211,9,4.3
+26670,Towong,VIC,Language & thinking,55,0,0
+26700,Wangaratta,VIC,Language & thinking,241,13,5.4
+26730,Warrnambool,VIC,Language & thinking,365,22,6.0
+26810,Wellington,VIC,Language & thinking,429,25,5.8
+26890,West Wimmera,VIC,Language & thinking,43,1,2.3
+26980,Whitehorse,VIC,Language & thinking,1423,38,2.7
+27070,Whittlesea,VIC,Language & thinking,2588,176,6.8
+27170,Wodonga,VIC,Language & thinking,505,38,7.5
+27260,Wyndham,VIC,Language & thinking,4491,426,9.5
+27350,Yarra,VIC,Language & thinking,559,29,5.2
+27450,Yarra Ranges,VIC,Language & thinking,1547,76,4.9
+27630,Yarriambiack,VIC,Language & thinking,44,5,11.4
+29399,Unincorporated Vic,VIC,Language & thinking,0,,
+30250,Aurukun,QLD,Language & thinking,9,,
+30300,Balonne,QLD,Language & thinking,62,11,17.7
+30370,Banana,QLD,Language & thinking,170,14,8.2
+30410,Barcaldine,QLD,Language & thinking,29,6,20.7
+30450,Barcoo,QLD,Language & thinking,6,,
+30760,Blackall Tambo,QLD,Language & thinking,22,2,9.1
+30900,Boulia,QLD,Language & thinking,4,,
+31000,Brisbane,QLD,Language & thinking,12918,754,5.8
+31750,Bulloo,QLD,Language & thinking,4,,
+31820,Bundaberg,QLD,Language & thinking,968,125,12.9
+31900,Burdekin,QLD,Language & thinking,201,23,11.4
+31950,Burke,QLD,Language & thinking,,,
+32080,Cairns,QLD,Language & thinking,1816,140,7.7
+32250,Carpentaria,QLD,Language & thinking,24,7,29.2
+32260,Cassowary Coast,QLD,Language & thinking,345,55,15.9
+32270,Central Highlands (Qld),QLD,Language & thinking,406,62,15.3
+32310,Charters Towers,QLD,Language & thinking,111,11,9.9
+32330,Cherbourg,QLD,Language & thinking,23,13,56.5
+32450,Cloncurry,QLD,Language & thinking,46,4,8.7
+32500,Cook,QLD,Language & thinking,45,8,17.8
+32600,Croydon,QLD,Language & thinking,,,
+32750,Diamantina,QLD,Language & thinking,,,
+32770,Doomadgee,QLD,Language & thinking,30,15,50
+32810,Douglas,QLD,Language & thinking,103,8,7.8
+33100,Etheridge,QLD,Language & thinking,13,,
+33200,Flinders (Qld),QLD,Language & thinking,23,1,4.3
+33220,Fraser Coast,QLD,Language & thinking,973,103,10.6
+33360,Gladstone,QLD,Language & thinking,859,103,12.0
+33430,Gold Coast,QLD,Language & thinking,6184,319,5.2
+33610,Goondiwindi,QLD,Language & thinking,133,21,15.8
+33620,Gympie,QLD,Language & thinking,525,53,10.1
+33800,Hinchinbrook,QLD,Language & thinking,95,7,7.4
+33830,Hope Vale,QLD,Language & thinking,18,5,27.8
+33960,Ipswich,QLD,Language & thinking,3643,377,10.3
+33980,Isaac,QLD,Language & thinking,307,27,8.8
+34420,Kowanyama,QLD,Language & thinking,10,,
+34530,Livingstone,QLD,Language & thinking,404,12,3.0
+34570,Lockhart River,QLD,Language & thinking,8,,
+34580,Lockyer Valley,QLD,Language & thinking,479,30,6.3
+34590,Logan,QLD,Language & thinking,5041,528,10.5
+34710,Longreach,QLD,Language & thinking,39,4,10.3
+34770,Mackay,QLD,Language & thinking,1558,152,9.8
+34800,McKinlay,QLD,Language & thinking,6,,
+34830,Mapoon,QLD,Language & thinking,7,,
+34860,Maranoa,QLD,Language & thinking,155,15,9.7
+34880,Mareeba,QLD,Language & thinking,217,26,12.0
+35010,Moreton Bay,QLD,Language & thinking,5676,498,8.8
+35250,Mornington,QLD,Language & thinking,18,,
+35300,Mount Isa,QLD,Language & thinking,292,49,16.8
+35600,Murweh,QLD,Language & thinking,40,5,12.5
+35670,Napranum,QLD,Language & thinking,17,8,47.1
+35740,Noosa,QLD,Language & thinking,411,18,4.4
+35760,North Burnett,QLD,Language & thinking,96,14,14.6
+35780,Northern Peninsula Area,QLD,Language & thinking,55,7,12.7
+35790,Palm Island,QLD,Language & thinking,31,11,35.5
+35800,Paroo,QLD,Language & thinking,27,7,25.9
+36070,Pormpuraaw,QLD,Language & thinking,9,,
+36150,Quilpie,QLD,Language & thinking,15,0,0
+36250,Redland,QLD,Language & thinking,1637,107,6.5
+36300,Richmond,QLD,Language & thinking,11,,
+36370,Rockhampton,QLD,Language & thinking,972,106,10.9
+36510,Scenic Rim,QLD,Language & thinking,411,33,8.0
+36580,Somerset,QLD,Language & thinking,285,27,9.5
+36630,South Burnett,QLD,Language & thinking,312,45,14.4
+36660,Southern Downs,QLD,Language & thinking,361,44,12.2
+36720,Sunshine Coast,QLD,Language & thinking,3609,185,5.1
+36820,Tablelands,QLD,Language & thinking,264,24,9.1
+36910,Toowoomba,QLD,Language & thinking,2021,232,11.5
+36950,Torres,QLD,Language & thinking,55,6,10.9
+36960,Torres Strait Island,QLD,Language & thinking,90,27,30
+37010,Townsville,QLD,Language & thinking,2222,224,10.1
+37300,Weipa,QLD,Language & thinking,65,1,1.5
+37310,Western Downs,QLD,Language & thinking,471,43,9.1
+37340,Whitsunday,QLD,Language & thinking,371,38,10.2
+37400,Winton,QLD,Language & thinking,5,,
+37550,Woorabinda,QLD,Language & thinking,24,8,33.3
+37570,Wujal Wujal,QLD,Language & thinking,4,,
+37600,Yarrabah,QLD,Language & thinking,45,12,26.7
+40070,Adelaide,SA,Language & thinking,67,4,6.0
+40120,Adelaide Hills,SA,Language & thinking,390,16,4.1
+40150,Adelaide Plains,SA,Language & thinking,105,15,14.3
+40220,Alexandrina,SA,Language & thinking,210,4,1.9
+40250,Anangu Pitjantjatjara Yunkunyt,SA,Language & thinking,29,21,72.4
+40310,Barossa,SA,Language & thinking,230,9,3.9
+40430,Barunga West,SA,Language & thinking,24,1,4.2
+40520,Berri Barmera,SA,Language & thinking,89,12,13.5
+40700,Burnside,SA,Language & thinking,426,10,2.3
+40910,Campbelltown (SA),SA,Language & thinking,523,24,4.6
+41010,Ceduna,SA,Language & thinking,54,10,18.5
+41060,Charles Sturt,SA,Language & thinking,1063,69,6.5
+41140,Clare and Gilbert Valleys,SA,Language & thinking,79,7,8.9
+41190,Cleve,SA,Language & thinking,22,0,0
+41330,Coober Pedy,SA,Language & thinking,6,,
+41560,Copper Coast,SA,Language & thinking,128,9,7.0
+41750,Elliston,SA,Language & thinking,10,,
+41830,Flinders Ranges,SA,Language & thinking,17,3,17.6
+41960,Franklin Harbour,SA,Language & thinking,,,
+42030,Gawler,SA,Language & thinking,250,9,3.6
+42110,Goyder,SA,Language & thinking,20,1,5
+42250,Grant,SA,Language & thinking,72,4,5.6
+42600,Holdfast Bay,SA,Language & thinking,273,7,2.6
+42750,Kangaroo Island,SA,Language & thinking,47,1,2.1
+43080,Karoonda East Murray,SA,Language & thinking,15,0,0
+43220,Kimba,SA,Language & thinking,11,,
+43360,Kingston (SA),SA,Language & thinking,12,,
+43650,Light,SA,Language & thinking,185,14,7.6
+43710,Lower Eyre Peninsula,SA,Language & thinking,67,4,6.0
+43790,Loxton Waikerie,SA,Language & thinking,117,16,13.7
+44000,Maralinga Tjarutja,SA,Language & thinking,,,
+44060,Marion,SA,Language & thinking,968,52,5.4
+44210,Mid Murray,SA,Language & thinking,69,5,7.2
+44340,Mitcham,SA,Language & thinking,712,16,2.2
+44550,Mount Barker,SA,Language & thinking,472,26,5.5
+44620,Mount Gambier,SA,Language & thinking,281,23,8.2
+44830,Mount Remarkable,SA,Language & thinking,25,1,4
+45040,Murray Bridge,SA,Language & thinking,173,24,13.9
+45090,Naracoorte Lucindale,SA,Language & thinking,102,2,2.0
+45120,Northern Areas,SA,Language & thinking,43,4,9.3
+45290,Norwood Payneham and St Peters,SA,Language & thinking,315,14,4.4
+45340,Onkaparinga,SA,Language & thinking,1782,126,7.1
+45400,Orroroo Carrieton,SA,Language & thinking,14,,
+45540,Peterborough,SA,Language & thinking,10,,
+45680,Playford,SA,Language & thinking,1466,198,13.5
+45890,Port Adelaide Enfield,SA,Language & thinking,1325,104,7.8
+46090,Port Augusta,SA,Language & thinking,163,38,23.3
+46300,Port Lincoln,SA,Language & thinking,154,8,5.2
+46450,Port Pirie,SA,Language & thinking,190,18,9.5
+46510,Prospect,SA,Language & thinking,221,8,3.6
+46670,Renmark Paringa,SA,Language & thinking,104,9,8.7
+46860,Robe,SA,Language & thinking,13,,
+46970,Roxby Downs,SA,Language & thinking,57,2,3.5
+47140,Salisbury,SA,Language & thinking,1623,186,11.5
+47290,Southern Mallee,SA,Language & thinking,19,0,0
+47490,Streaky Bay,SA,Language & thinking,21,0,0
+47630,Tatiara,SA,Language & thinking,57,2,3.5
+47700,Tea Tree Gully,SA,Language & thinking,980,47,4.8
+47800,Coorong,SA,Language & thinking,54,2,3.7
+47910,Tumby Bay,SA,Language & thinking,34,2,5.9
+47980,Unley,SA,Language & thinking,334,9,2.7
+48050,Victor Harbor,SA,Language & thinking,80,7,8.8
+48130,Wakefield,SA,Language & thinking,75,7,9.3
+48260,Walkerville,SA,Language & thinking,63,0,0
+48340,Wattle Range,SA,Language & thinking,115,13,11.3
+48410,West Torrens,SA,Language & thinking,528,33,6.2
+48540,Whyalla,SA,Language & thinking,224,27,12.1
+48640,Wudinna,SA,Language & thinking,11,,
+48750,Yankalilla,SA,Language & thinking,52,3,5.8
+48830,Yorke Peninsula,SA,Language & thinking,93,4,4.3
+49399,Unincorporated SA,SA,Language & thinking,30,5,16.7
+50080,Albany,WA,Language & thinking,415,50,12.0
+50210,Armadale,WA,Language & thinking,1600,186,11.6
+50250,Ashburton,WA,Language & thinking,117,22,18.8
+50280,Augusta Margaret River,WA,Language & thinking,227,13,5.7
+50350,Bassendean,WA,Language & thinking,179,12,6.7
+50420,Bayswater,WA,Language & thinking,721,49,6.8
+50490,Belmont,WA,Language & thinking,413,40,9.7
+50560,Beverley,WA,Language & thinking,14,,
+50630,Boddington,WA,Language & thinking,17,,
+50770,Boyup Brook,WA,Language & thinking,23,6,26.1
+50840,Bridgetown-Greenbushes,WA,Language & thinking,48,2,4.2
+50910,Brookton,WA,Language & thinking,11,,
+50980,Broome,WA,Language & thinking,199,39,19.6
+51080,Broomehill-Tambellup,WA,Language & thinking,20,3,15
+51120,Bruce Rock,WA,Language & thinking,15,1,6.7
+51190,Bunbury,WA,Language & thinking,317,31,9.8
+51260,Busselton,WA,Language & thinking,498,17,3.4
+51310,Cambridge,WA,Language & thinking,289,5,1.7
+51330,Canning,WA,Language & thinking,1048,83,7.9
+51400,Capel,WA,Language & thinking,242,20,8.3
+51470,Carnamah,WA,Language & thinking,8,,
+51540,Carnarvon,WA,Language & thinking,63,20,31.7
+51610,Chapman Valley,WA,Language & thinking,12,,
+51680,Chittering,WA,Language & thinking,73,2,2.7
+51710,Christmas Island,WA,Language & thinking,20,,
+51750,Claremont,WA,Language & thinking,135,2,1.5
+51820,Cockburn,WA,Language & thinking,1494,94,6.3
+51860,Cocos Islands,WA,Language & thinking,11,,
+51890,Collie,WA,Language & thinking,115,14,12.2
+51960,Coolgardie,WA,Language & thinking,44,11,25
+52030,Coorow,WA,Language & thinking,9,,
+52100,Corrigin,WA,Language & thinking,10,,
+52170,Cottesloe,WA,Language & thinking,82,3,3.7
+52240,Cranbrook,WA,Language & thinking,9,,
+52310,Cuballing,WA,Language & thinking,,,
+52380,Cue,WA,Language & thinking,,,
+52450,Cunderdin,WA,Language & thinking,14,,
+52520,Dalwallinu,WA,Language & thinking,19,0,0
+52590,Dandaragan,WA,Language & thinking,33,2,6.1
+52660,Dardanup,WA,Language & thinking,203,14,6.9
+52730,Denmark,WA,Language & thinking,64,3,4.7
+52800,Derby-West Kimberley,WA,Language & thinking,95,27,28.4
+52870,Donnybrook-Balingup,WA,Language & thinking,73,2,2.7
+52940,Dowerin,WA,Language & thinking,11,,
+53010,Dumbleyung,WA,Language & thinking,8,,
+53080,Dundas,WA,Language & thinking,6,,
+53150,East Fremantle,WA,Language & thinking,73,1,1.4
+53220,East Pilbara,WA,Language & thinking,83,12,14.5
+53290,Esperance,WA,Language & thinking,176,19,10.8
+53360,Exmouth,WA,Language & thinking,40,0,0
+53430,Fremantle,WA,Language & thinking,314,12,3.8
+53570,Gingin,WA,Language & thinking,54,0,0
+53640,Gnowangerup,WA,Language & thinking,21,0,0
+53710,Goomalling,WA,Language & thinking,12,,
+53780,Gosnells,WA,Language & thinking,1687,207,12.3
+53800,Greater Geraldton,WA,Language & thinking,508,97,19.1
+53920,Halls Creek,WA,Language & thinking,35,10,28.6
+53990,Harvey,WA,Language & thinking,358,26,7.3
+54060,Irwin,WA,Language & thinking,25,0,0
+54130,Jerramungup,WA,Language & thinking,12,,
+54170,Joondalup,WA,Language & thinking,1771,85,4.8
+54200,Kalamunda,WA,Language & thinking,706,36,5.1
+54280,Kalgoorlie-Boulder,WA,Language & thinking,448,54,12.1
+54310,Karratha,WA,Language & thinking,389,29,7.5
+54340,Katanning,WA,Language & thinking,58,6,10.3
+54410,Kellerberrin,WA,Language & thinking,14,,
+54480,Kent,WA,Language & thinking,6,,
+54550,Kojonup,WA,Language & thinking,22,4,18.2
+54620,Kondinin,WA,Language & thinking,8,,
+54690,Koorda,WA,Language & thinking,,,
+54760,Kulin,WA,Language & thinking,9,,
+54830,Kwinana,WA,Language & thinking,769,81,10.5
+54900,Lake Grace,WA,Language & thinking,17,0,0
+54970,Laverton,WA,Language & thinking,7,,
+55040,Leonora,WA,Language & thinking,26,6,23.1
+55110,Mandurah,WA,Language & thinking,997,91,9.1
+55180,Manjimup,WA,Language & thinking,98,7,7.1
+55250,Meekatharra,WA,Language & thinking,12,,
+55320,Melville,WA,Language & thinking,1082,21,1.9
+55390,Menzies,WA,Language & thinking,7,,
+55460,Merredin,WA,Language & thinking,34,1,2.9
+55530,Mingenew,WA,Language & thinking,5,,
+55600,Moora,WA,Language & thinking,36,3,8.3
+55670,Morawa,WA,Language & thinking,7,,
+55740,Mosman Park,WA,Language & thinking,87,4,4.6
+55810,Mount Magnet,WA,Language & thinking,10,,
+55880,Mount Marshall,WA,Language & thinking,6,,
+55950,Mukinbudin,WA,Language & thinking,8,,
+56090,Mundaring,WA,Language & thinking,449,18,4.0
+56160,Murchison,WA,Language & thinking,,,
+56230,Murray,WA,Language & thinking,225,18,8
+56300,Nannup,WA,Language & thinking,6,,
+56370,Narembeen,WA,Language & thinking,15,,
+56460,Narrogin,WA,Language & thinking,46,4,8.7
+56580,Nedlands,WA,Language & thinking,214,11,5.1
+56620,Ngaanyatjarraku,WA,Language & thinking,,,
+56730,Northam,WA,Language & thinking,107,16,15.0
+56790,Northampton,WA,Language & thinking,25,4,16
+56860,Nungarin,WA,Language & thinking,4,,
+56930,Peppermint Grove,WA,Language & thinking,9,,
+57000,Perenjori,WA,Language & thinking,,,
+57080,Perth,WA,Language & thinking,164,15,9.1
+57140,Pingelly,WA,Language & thinking,19,2,10.5
+57210,Plantagenet,WA,Language & thinking,40,7,17.5
+57280,Port Hedland,WA,Language & thinking,226,31,13.7
+57350,Quairading,WA,Language & thinking,16,,
+57420,Ravensthorpe,WA,Language & thinking,21,4,19.0
+57490,Rockingham,WA,Language & thinking,1833,163,8.9
+57630,Sandstone,WA,Language & thinking,0,,
+57700,Serpentine-Jarrahdale,WA,Language & thinking,590,75,12.7
+57770,Shark Bay,WA,Language & thinking,6,,
+57840,South Perth,WA,Language & thinking,389,24,6.2
+57910,Stirling,WA,Language & thinking,2462,142,5.8
+57980,Subiaco,WA,Language & thinking,139,2,1.4
+58050,Swan,WA,Language & thinking,2269,187,8.2
+58190,Tammin,WA,Language & thinking,,,
+58260,Three Springs,WA,Language & thinking,12,,
+58330,Toodyay,WA,Language & thinking,29,6,20.7
+58400,Trayning,WA,Language & thinking,,,
+58470,Upper Gascoyne,WA,Language & thinking,5,,
+58510,Victoria Park,WA,Language & thinking,374,17,4.5
+58540,Victoria Plains,WA,Language & thinking,7,,
+58570,Vincent,WA,Language & thinking,356,16,4.5
+58610,Wagin,WA,Language & thinking,12,,
+58680,Wandering,WA,Language & thinking,,,
+58760,Wanneroo,WA,Language & thinking,3048,241,7.9
+58820,Waroona,WA,Language & thinking,38,1,2.6
+58890,West Arthur,WA,Language & thinking,5,,
+59030,Westonia,WA,Language & thinking,0,,
+59100,Wickepin,WA,Language & thinking,5,,
+59170,Williams,WA,Language & thinking,18,0,0
+59250,Wiluna,WA,Language & thinking,5,,
+59310,Wongan-Ballidu,WA,Language & thinking,12,,
+59320,Woodanilling,WA,Language & thinking,6,,
+59330,Wyalkatchem,WA,Language & thinking,,,
+59340,Wyndham-East Kimberley,WA,Language & thinking,117,43,36.8
+59350,Yalgoo,WA,Language & thinking,,,
+59360,Yilgarn,WA,Language & thinking,14,,
+59370,York,WA,Language & thinking,28,1,3.6
+60210,Break O'Day,TAS,Language & thinking,32,7,21.9
+60410,Brighton,TAS,Language & thinking,252,34,13.5
+60610,Burnie,TAS,Language & thinking,202,21,10.4
+60810,Central Coast (Tas.),TAS,Language & thinking,194,22,11.3
+61010,Central Highlands (Tas.),TAS,Language & thinking,27,4,14.8
+61210,Circular Head,TAS,Language & thinking,81,3,3.7
+61410,Clarence,TAS,Language & thinking,622,46,7.4
+61510,Derwent Valley,TAS,Language & thinking,121,18,14.9
+61610,Devonport,TAS,Language & thinking,225,24,10.7
+61810,Dorset,TAS,Language & thinking,52,4,7.7
+62010,Flinders (Tas.),TAS,Language & thinking,6,,
+62210,George Town,TAS,Language & thinking,60,2,3.3
+62410,Glamorgan-Spring Bay,TAS,Language & thinking,31,3,9.7
+62610,Glenorchy,TAS,Language & thinking,433,68,15.7
+62810,Hobart,TAS,Language & thinking,404,12,3.0
+63010,Huon Valley,TAS,Language & thinking,171,15,8.8
+63210,Kentish,TAS,Language & thinking,59,4,6.8
+63410,King Island,TAS,Language & thinking,16,,
+63610,Kingborough,TAS,Language & thinking,411,21,5.1
+63810,Latrobe (Tas.),TAS,Language & thinking,118,6,5.1
+64010,Launceston,TAS,Language & thinking,715,72,10.1
+64210,Meander Valley,TAS,Language & thinking,199,23,11.6
+64610,Northern Midlands,TAS,Language & thinking,148,10,6.8
+64810,Sorell,TAS,Language & thinking,178,19,10.7
+65010,Southern Midlands,TAS,Language & thinking,71,4,5.6
+65210,Tasman,TAS,Language & thinking,12,,
+65410,Waratah-Wynyard,TAS,Language & thinking,149,11,7.4
+65610,West Coast,TAS,Language & thinking,37,6,16.2
+65810,West Tamar,TAS,Language & thinking,213,18,8.5
+70200,Alice Springs,NT,Language & thinking,316,58,18.4
+70420,Barkly,NT,Language & thinking,69,26,37.7
+70540,Belyuen,NT,Language & thinking,,,
+70620,Central Desert,NT,Language & thinking,72,47,65.3
+70700,Coomalie,NT,Language & thinking,16,6,37.5
+71000,Darwin,NT,Language & thinking,856,110,12.9
+71150,Darwin Waterfront Precinct,NT,Language & thinking,,,
+71300,East Arnhem,NT,Language & thinking,96,53,55.2
+72200,Katherine,NT,Language & thinking,133,31,23.3
+72300,Litchfield,NT,Language & thinking,240,24,10
+72330,MacDonnell,NT,Language & thinking,62,42,67.7
+72800,Palmerston,NT,Language & thinking,531,60,11.3
+73600,Roper Gulf,NT,Language & thinking,73,34,46.6
+74050,Tiwi Islands,NT,Language & thinking,22,14,63.6
+74550,Victoria Daly,NT,Language & thinking,34,14,41.2
+74560,Wagait,NT,Language & thinking,4,,
+74660,West Arnhem,NT,Language & thinking,53,31,58.5
+74680,West Daly,NT,Language & thinking,21,19,90.0
+79399,Unincorporated NT,NT,Language & thinking,89,15,16.9
+89399,Unincorporated ACT,ACT,Language & thinking,4860,353,7.3
+10050,Albury,NSW,Communication,643,69,10.7
+10180,Armidale,NSW,Communication,288,56,19.4
+10250,Ballina,NSW,Communication,408,15,3.7
+10300,Balranald,NSW,Communication,27,5,18.5
+10470,Bathurst,NSW,Communication,501,29,5.8
+10500,Bayside (NSW),NSW,Communication,1512,131,8.7
+10550,Bega Valley,NSW,Communication,296,23,7.8
+10600,Bellingen,NSW,Communication,92,7,7.6
+10650,Berrigan,NSW,Communication,72,4,5.6
+10750,Blacktown,NSW,Communication,5508,680,12.3
+10800,Bland,NSW,Communication,66,5,7.6
+10850,Blayney,NSW,Communication,97,9,9.3
+10900,Blue Mountains,NSW,Communication,666,25,3.8
+10950,Bogan,NSW,Communication,41,2,4.9
+11150,Bourke,NSW,Communication,31,9,29.0
+11200,Brewarrina,NSW,Communication,23,4,17.4
+11250,Broken Hill,NSW,Communication,179,20,11.2
+11300,Burwood,NSW,Communication,274,29,10.6
+11350,Byron,NSW,Communication,325,17,5.2
+11400,Cabonne,NSW,Communication,161,13,8.1
+11450,Camden,NSW,Communication,2118,175,8.3
+11500,Campbelltown (NSW),NSW,Communication,2353,258,11.0
+11520,Canada Bay,NSW,Communication,750,59,7.9
+11570,Canterbury-Bankstown,NSW,Communication,4259,477,11.2
+11600,Carrathool,NSW,Communication,38,0,0
+11650,Central Coast (NSW),NSW,Communication,3660,222,6.1
+11700,Central Darling,NSW,Communication,24,2,8.3
+11720,Cessnock,NSW,Communication,780,59,7.6
+11730,Clarence Valley,NSW,Communication,553,41,7.4
+11750,Cobar,NSW,Communication,51,6,11.8
+11800,Coffs Harbour,NSW,Communication,730,54,7.4
+12000,Coolamon,NSW,Communication,64,7,10.9
+12150,Coonamble,NSW,Communication,75,10,13.3
+12160,Cootamundra-Gundagai,NSW,Communication,108,7,6.5
+12350,Cowra,NSW,Communication,126,18,14.3
+12380,Cumberland,NSW,Communication,2988,418,14.0
+12390,Dubbo,NSW,Communication,612,49,8.0
+12700,Dungog,NSW,Communication,106,11,10.4
+12730,Edward River,NSW,Communication,94,11,11.7
+12750,Eurobodalla,NSW,Communication,301,25,8.3
+12850,Fairfield,NSW,Communication,2003,351,17.5
+12870,Federation,NSW,Communication,121,17,14.0
+12900,Forbes,NSW,Communication,111,7,6.3
+12930,Georges River,NSW,Communication,1327,136,10.2
+12950,Gilgandra,NSW,Communication,46,3,6.5
+13010,Glen Innes Severn,NSW,Communication,65,6,9.2
+13310,Goulburn Mulwaree,NSW,Communication,341,13,3.8
+13340,Greater Hume,NSW,Communication,103,9,8.7
+13450,Griffith,NSW,Communication,319,36,11.3
+13550,Gunnedah,NSW,Communication,142,10,7.0
+13660,Gwydir,NSW,Communication,44,20,45.5
+13800,Hawkesbury,NSW,Communication,717,35,4.9
+13850,Hay,NSW,Communication,24,4,16.7
+13910,Hilltops,NSW,Communication,192,16,8.3
+14000,Hornsby,NSW,Communication,1557,118,7.6
+14100,Hunters Hill,NSW,Communication,127,6,4.7
+14170,Inner West,NSW,Communication,1443,73,5.1
+14220,Inverell,NSW,Communication,189,25,13.2
+14300,Junee,NSW,Communication,52,4,7.7
+14350,Kempsey,NSW,Communication,262,35,13.4
+14400,Kiama,NSW,Communication,216,9,4.2
+14500,Ku-ring-gai,NSW,Communication,1155,71,6.1
+14550,Kyogle,NSW,Communication,99,16,16.2
+14600,Lachlan,NSW,Communication,74,11,14.9
+14650,Lake Macquarie,NSW,Communication,2148,155,7.2
+14700,Lane Cove,NSW,Communication,420,27,6.4
+14750,Leeton,NSW,Communication,137,9,6.6
+14850,Lismore,NSW,Communication,349,31,8.9
+14870,Lithgow,NSW,Communication,160,10,6.2
+14900,Liverpool,NSW,Communication,3141,404,12.9
+14920,Liverpool Plains,NSW,Communication,65,6,9.2
+14950,Lockhart,NSW,Communication,37,0,0
+15050,Maitland,NSW,Communication,1145,104,9.1
+15240,Mid-Coast,NSW,Communication,790,69,8.7
+15270,Mid-Western,NSW,Communication,314,31,9.9
+15300,Moree Plains,NSW,Communication,127,11,8.7
+15350,Mosman,NSW,Communication,217,4,1.8
+15520,Murray River,NSW,Communication,126,5,4.0
+15560,Murrumbidgee,NSW,Communication,26,4,15.4
+15650,Muswellbrook,NSW,Communication,183,13,7.1
+15700,Nambucca Valley,NSW,Communication,176,21,11.9
+15750,Narrabri,NSW,Communication,137,10,7.3
+15800,Narrandera,NSW,Communication,76,10,13.2
+15850,Narromine,NSW,Communication,57,4,7.0
+15900,Newcastle,NSW,Communication,1610,132,8.2
+15950,North Sydney,NSW,Communication,480,30,6.2
+15990,Northern Beaches,NSW,Communication,2570,84,3.3
+16100,Oberon,NSW,Communication,51,4,7.8
+16150,Orange,NSW,Communication,471,37,7.9
+16200,Parkes,NSW,Communication,184,13,7.1
+16260,Parramatta,NSW,Communication,2806,282,10.0
+16350,Penrith,NSW,Communication,2623,261,10.0
+16380,Port Macquarie-Hastings,NSW,Communication,750,54,7.2
+16400,Port Stephens,NSW,Communication,685,63,9.2
+16490,Queanbeyan-Palerang,NSW,Communication,760,53,7.0
+16550,Randwick,NSW,Communication,1075,65,6.0
+16610,Richmond Valley,NSW,Communication,215,14,6.5
+16700,Ryde,NSW,Communication,1277,120,9.4
+16900,Shellharbour,NSW,Communication,913,83,9.1
+16950,Shoalhaven,NSW,Communication,1094,81,7.4
+17000,Singleton,NSW,Communication,261,12,4.6
+17040,Snowy Monaro,NSW,Communication,192,16,8.3
+17080,Snowy Valleys,NSW,Communication,162,16,9.9
+17100,Strathfield,NSW,Communication,350,39,11.1
+17150,Sutherland,NSW,Communication,2534,115,4.5
+17200,Sydney,NSW,Communication,866,52,6.0
+17310,Tamworth,NSW,Communication,754,77,10.2
+17350,Temora,NSW,Communication,54,5,9.3
+17400,Tenterfield,NSW,Communication,63,6,9.5
+17420,The Hills,NSW,Communication,2346,141,6.0
+17550,Tweed,NSW,Communication,973,45,4.6
+17620,Upper Hunter,NSW,Communication,146,9,6.2
+17640,Upper Lachlan,NSW,Communication,77,6,7.8
+17650,Uralla,NSW,Communication,63,6,9.5
+17750,Wagga Wagga,NSW,Communication,771,79,10.2
+17850,Walcha,NSW,Communication,39,2,5.1
+17900,Walgett,NSW,Communication,83,19,22.9
+17950,Warren,NSW,Communication,25,0,0
+18020,Warrumbungle,NSW,Communication,109,9,8.3
+18050,Waverley,NSW,Communication,551,12,2.2
+18100,Weddin,NSW,Communication,36,0,0
+18200,Wentworth,NSW,Communication,94,5,5.3
+18250,Willoughby,NSW,Communication,745,50,6.7
+18350,Wingecarribee,NSW,Communication,487,19,3.9
+18400,Wollondilly,NSW,Communication,712,34,4.8
+18450,Wollongong,NSW,Communication,2216,161,7.3
+18500,Woollahra,NSW,Communication,405,11,2.7
+18710,Yass Valley,NSW,Communication,133,4,3.0
+19399,Unincorporated NSW,NSW,Communication,,,
+20110,Alpine,VIC,Communication,114,3,2.6
+20260,Ararat,VIC,Communication,107,16,15.0
+20570,Ballarat,VIC,Communication,1121,112,10.0
+20660,Banyule,VIC,Communication,1161,52,4.5
+20740,Bass Coast,VIC,Communication,300,21,7
+20830,Baw Baw,VIC,Communication,644,54,8.4
+20910,Bayside (Vic.),VIC,Communication,779,18,2.3
+21010,Benalla,VIC,Communication,126,9,7.1
+21110,Boroondara,VIC,Communication,1078,63,5.8
+21180,Brimbank,VIC,Communication,1777,246,13.8
+21270,Buloke,VIC,Communication,48,6,12.5
+21370,Campaspe,VIC,Communication,320,24,7.5
+21450,Cardinia,VIC,Communication,1611,119,7.4
+21610,Casey,VIC,Communication,5286,542,10.3
+21670,Central Goldfields,VIC,Communication,82,12,14.6
+21750,Colac Otway,VIC,Communication,185,24,13.0
+21830,Corangamite,VIC,Communication,119,2,1.7
+21890,Darebin,VIC,Communication,1166,61,5.2
+22110,East Gippsland,VIC,Communication,285,27,9.5
+22170,Frankston,VIC,Communication,1221,83,6.8
+22250,Gannawarra,VIC,Communication,104,6,5.8
+22310,Glen Eira,VIC,Communication,1167,75,6.4
+22410,Glenelg,VIC,Communication,146,14,9.6
+22490,Golden Plains,VIC,Communication,270,21,7.8
+22620,Greater Bendigo,VIC,Communication,1323,106,8.0
+22670,Greater Dandenong,VIC,Communication,1532,215,14.0
+22750,Greater Geelong,VIC,Communication,2548,179,7.0
+22830,Greater Shepparton,VIC,Communication,740,113,15.3
+22910,Hepburn,VIC,Communication,131,4,3.1
+22980,Hindmarsh,VIC,Communication,41,5,12.2
+23110,Hobsons Bay,VIC,Communication,737,42,5.7
+23190,Horsham,VIC,Communication,198,20,10.1
+23270,Hume,VIC,Communication,3096,432,14.0
+23350,Indigo,VIC,Communication,143,10,7.0
+23430,Kingston (Vic.),VIC,Communication,1436,72,5.0
+23670,Knox,VIC,Communication,1250,73,5.8
+23810,Latrobe (Vic.),VIC,Communication,698,71,10.2
+23940,Loddon,VIC,Communication,69,8,11.6
+24130,Macedon Ranges,VIC,Communication,526,9,1.7
+24210,Manningham,VIC,Communication,1106,65,5.9
+24250,Mansfield,VIC,Communication,69,3,4.3
+24330,Maribyrnong,VIC,Communication,770,79,10.3
+24410,Maroondah,VIC,Communication,1127,56,5.0
+24600,Melbourne,VIC,Communication,616,74,12.0
+24650,Melton,VIC,Communication,2481,299,12.1
+24780,Mildura,VIC,Communication,419,43,10.3
+24850,Mitchell,VIC,Communication,585,25,4.3
+24900,Moira,VIC,Communication,285,20,7.0
+24970,Monash,VIC,Communication,1554,121,7.8
+25060,Moonee Valley,VIC,Communication,856,42,4.9
+25150,Moorabool,VIC,Communication,414,24,5.8
+24700,Moreland,VIC,Communication,1417,87,6.1
+25340,Mornington Peninsula,VIC,Communication,1357,58,4.3
+25430,Mount Alexander,VIC,Communication,152,10,6.6
+25490,Moyne,VIC,Communication,179,10,5.6
+25620,Murrindindi,VIC,Communication,122,1,0.8
+25710,Nillumbik,VIC,Communication,632,17,2.7
+25810,Northern Grampians,VIC,Communication,81,5,6.2
+25900,Port Phillip,VIC,Communication,526,30,5.7
+25990,Pyrenees,VIC,Communication,46,1,2.2
+26080,Queenscliffe,VIC,Communication,22,,
+26170,South Gippsland,VIC,Communication,267,25,9.4
+26260,Southern Grampians,VIC,Communication,147,11,7.5
+26350,Stonnington,VIC,Communication,509,21,4.1
+26430,Strathbogie,VIC,Communication,81,5,6.2
+26490,Surf Coast,VIC,Communication,356,6,1.7
+26610,Swan Hill,VIC,Communication,211,18,8.5
+26670,Towong,VIC,Communication,55,1,1.8
+26700,Wangaratta,VIC,Communication,242,12,5.0
+26730,Warrnambool,VIC,Communication,365,20,5.5
+26810,Wellington,VIC,Communication,429,33,7.7
+26890,West Wimmera,VIC,Communication,43,0,0
+26980,Whitehorse,VIC,Communication,1430,70,4.9
+27070,Whittlesea,VIC,Communication,2594,239,9.2
+27170,Wodonga,VIC,Communication,505,42,8.3
+27260,Wyndham,VIC,Communication,4498,491,10.9
+27350,Yarra,VIC,Communication,558,41,7.3
+27450,Yarra Ranges,VIC,Communication,1547,59,3.8
+27630,Yarriambiack,VIC,Communication,44,4,9.1
+29399,Unincorporated Vic,VIC,Communication,0,,
+30250,Aurukun,QLD,Communication,16,,
+30300,Balonne,QLD,Communication,62,7,11.3
+30370,Banana,QLD,Communication,171,15,8.8
+30410,Barcaldine,QLD,Communication,29,3,10.3
+30450,Barcoo,QLD,Communication,6,,
+30760,Blackall Tambo,QLD,Communication,22,2,9.1
+30900,Boulia,QLD,Communication,4,,
+31000,Brisbane,QLD,Communication,12928,950,7.3
+31750,Bulloo,QLD,Communication,4,,
+31820,Bundaberg,QLD,Communication,971,94,9.7
+31900,Burdekin,QLD,Communication,201,25,12.4
+31950,Burke,QLD,Communication,,,
+32080,Cairns,QLD,Communication,1819,196,10.8
+32250,Carpentaria,QLD,Communication,24,6,25
+32260,Cassowary Coast,QLD,Communication,345,67,19.4
+32270,Central Highlands (Qld),QLD,Communication,409,46,11.2
+32310,Charters Towers,QLD,Communication,111,13,11.7
+32330,Cherbourg,QLD,Communication,23,10,43.5
+32450,Cloncurry,QLD,Communication,46,5,10.9
+32500,Cook,QLD,Communication,45,3,6.7
+32600,Croydon,QLD,Communication,,,
+32750,Diamantina,QLD,Communication,,,
+32770,Doomadgee,QLD,Communication,30,6,20
+32810,Douglas,QLD,Communication,103,9,8.7
+33100,Etheridge,QLD,Communication,13,,
+33200,Flinders (Qld),QLD,Communication,23,2,8.7
+33220,Fraser Coast,QLD,Communication,974,110,11.3
+33360,Gladstone,QLD,Communication,859,74,8.6
+33430,Gold Coast,QLD,Communication,6184,380,6.1
+33610,Goondiwindi,QLD,Communication,133,16,12.0
+33620,Gympie,QLD,Communication,527,34,6.5
+33800,Hinchinbrook,QLD,Communication,95,13,13.7
+33830,Hope Vale,QLD,Communication,18,4,22.2
+33960,Ipswich,QLD,Communication,3649,389,10.7
+33980,Isaac,QLD,Communication,307,20,6.5
+34420,Kowanyama,QLD,Communication,10,,
+34530,Livingstone,QLD,Communication,405,32,7.9
+34570,Lockhart River,QLD,Communication,8,,
+34580,Lockyer Valley,QLD,Communication,480,42,8.8
+34590,Logan,QLD,Communication,5043,566,11.2
+34710,Longreach,QLD,Communication,39,4,10.3
+34770,Mackay,QLD,Communication,1558,164,10.5
+34800,McKinlay,QLD,Communication,6,,
+34830,Mapoon,QLD,Communication,7,,
+34860,Maranoa,QLD,Communication,155,12,7.7
+34880,Mareeba,QLD,Communication,217,22,10.1
+35010,Moreton Bay,QLD,Communication,5681,522,9.2
+35250,Mornington,QLD,Communication,18,,
+35300,Mount Isa,QLD,Communication,292,47,16.1
+35600,Murweh,QLD,Communication,40,4,10
+35670,Napranum,QLD,Communication,17,3,17.6
+35740,Noosa,QLD,Communication,415,16,3.9
+35760,North Burnett,QLD,Communication,96,17,17.7
+35780,Northern Peninsula Area,QLD,Communication,55,9,16.4
+35790,Palm Island,QLD,Communication,31,3,9.7
+35800,Paroo,QLD,Communication,28,10,35.7
+36070,Pormpuraaw,QLD,Communication,9,,
+36150,Quilpie,QLD,Communication,15,0,0
+36250,Redland,QLD,Communication,1640,96,5.9
+36300,Richmond,QLD,Communication,11,,
+36370,Rockhampton,QLD,Communication,972,109,11.2
+36510,Scenic Rim,QLD,Communication,412,14,3.4
+36580,Somerset,QLD,Communication,286,34,11.9
+36630,South Burnett,QLD,Communication,312,46,14.7
+36660,Southern Downs,QLD,Communication,361,49,13.6
+36720,Sunshine Coast,QLD,Communication,3615,210,5.8
+36820,Tablelands,QLD,Communication,264,14,5.3
+36910,Toowoomba,QLD,Communication,2022,252,12.5
+36950,Torres,QLD,Communication,55,7,12.7
+36960,Torres Strait Island,QLD,Communication,90,25,27.8
+37010,Townsville,QLD,Communication,2222,211,9.5
+37300,Weipa,QLD,Communication,65,0,0
+37310,Western Downs,QLD,Communication,471,41,8.7
+37340,Whitsunday,QLD,Communication,372,32,8.6
+37400,Winton,QLD,Communication,5,,
+37550,Woorabinda,QLD,Communication,23,6,26.1
+37570,Wujal Wujal,QLD,Communication,4,,
+37600,Yarrabah,QLD,Communication,46,9,19.6
+40070,Adelaide,SA,Communication,67,4,6.0
+40120,Adelaide Hills,SA,Communication,390,19,4.9
+40150,Adelaide Plains,SA,Communication,106,8,7.5
+40220,Alexandrina,SA,Communication,213,7,3.3
+40250,Anangu Pitjantjatjara Yunkunyt,SA,Communication,30,8,26.7
+40310,Barossa,SA,Communication,230,13,5.7
+40430,Barunga West,SA,Communication,24,1,4.2
+40520,Berri Barmera,SA,Communication,89,8,9.0
+40700,Burnside,SA,Communication,426,23,5.4
+40910,Campbelltown (SA),SA,Communication,524,38,7.3
+41010,Ceduna,SA,Communication,54,3,5.6
+41060,Charles Sturt,SA,Communication,1065,87,8.2
+41140,Clare and Gilbert Valleys,SA,Communication,79,11,13.9
+41190,Cleve,SA,Communication,22,0,0
+41330,Coober Pedy,SA,Communication,6,,
+41560,Copper Coast,SA,Communication,128,15,11.7
+41750,Elliston,SA,Communication,10,,
+41830,Flinders Ranges,SA,Communication,17,2,11.8
+41960,Franklin Harbour,SA,Communication,,,
+42030,Gawler,SA,Communication,250,14,5.6
+42110,Goyder,SA,Communication,20,2,10
+42250,Grant,SA,Communication,72,2,2.8
+42600,Holdfast Bay,SA,Communication,273,14,5.1
+42750,Kangaroo Island,SA,Communication,47,2,4.3
+43080,Karoonda East Murray,SA,Communication,15,1,6.7
+43220,Kimba,SA,Communication,11,,
+43360,Kingston (SA),SA,Communication,12,,
+43650,Light,SA,Communication,185,13,7.0
+43710,Lower Eyre Peninsula,SA,Communication,67,8,11.9
+43790,Loxton Waikerie,SA,Communication,118,9,7.6
+44000,Maralinga Tjarutja,SA,Communication,,,
+44060,Marion,SA,Communication,974,78,8.0
+44210,Mid Murray,SA,Communication,69,3,4.3
+44340,Mitcham,SA,Communication,713,23,3.2
+44550,Mount Barker,SA,Communication,478,25,5.2
+44620,Mount Gambier,SA,Communication,281,19,6.8
+44830,Mount Remarkable,SA,Communication,25,3,12
+45040,Murray Bridge,SA,Communication,172,32,18.6
+45090,Naracoorte Lucindale,SA,Communication,102,9,8.8
+45120,Northern Areas,SA,Communication,43,4,9.3
+45290,Norwood Payneham and St Peters,SA,Communication,315,15,4.8
+45340,Onkaparinga,SA,Communication,1791,149,8.3
+45400,Orroroo Carrieton,SA,Communication,14,,
+45540,Peterborough,SA,Communication,10,,
+45680,Playford,SA,Communication,1469,207,14.1
+45890,Port Adelaide Enfield,SA,Communication,1325,131,9.9
+46090,Port Augusta,SA,Communication,163,22,13.5
+46300,Port Lincoln,SA,Communication,155,13,8.4
+46450,Port Pirie,SA,Communication,190,19,10
+46510,Prospect,SA,Communication,221,15,6.8
+46670,Renmark Paringa,SA,Communication,104,9,8.7
+46860,Robe,SA,Communication,13,,
+46970,Roxby Downs,SA,Communication,57,4,7.0
+47140,Salisbury,SA,Communication,1626,233,14.3
+47290,Southern Mallee,SA,Communication,19,2,10.5
+47490,Streaky Bay,SA,Communication,21,0,0
+47630,Tatiara,SA,Communication,57,2,3.5
+47700,Tea Tree Gully,SA,Communication,983,90,9.2
+47800,Coorong,SA,Communication,54,6,11.1
+47910,Tumby Bay,SA,Communication,34,4,11.8
+47980,Unley,SA,Communication,334,11,3.3
+48050,Victor Harbor,SA,Communication,80,6,7.5
+48130,Wakefield,SA,Communication,75,7,9.3
+48260,Walkerville,SA,Communication,63,2,3.2
+48340,Wattle Range,SA,Communication,115,8,7.0
+48410,West Torrens,SA,Communication,529,46,8.7
+48540,Whyalla,SA,Communication,224,25,11.2
+48640,Wudinna,SA,Communication,11,,
+48750,Yankalilla,SA,Communication,52,1,1.9
+48830,Yorke Peninsula,SA,Communication,93,4,4.3
+49399,Unincorporated SA,SA,Communication,30,4,13.3
+50080,Albany,WA,Communication,416,31,7.5
+50210,Armadale,WA,Communication,1603,211,13.2
+50250,Ashburton,WA,Communication,117,11,9.4
+50280,Augusta Margaret River,WA,Communication,228,9,3.9
+50350,Bassendean,WA,Communication,181,18,9.9
+50420,Bayswater,WA,Communication,722,69,9.6
+50490,Belmont,WA,Communication,413,35,8.5
+50560,Beverley,WA,Communication,14,,
+50630,Boddington,WA,Communication,17,,
+50770,Boyup Brook,WA,Communication,23,2,8.7
+50840,Bridgetown-Greenbushes,WA,Communication,48,0,0
+50910,Brookton,WA,Communication,11,,
+50980,Broome,WA,Communication,200,27,13.5
+51080,Broomehill-Tambellup,WA,Communication,20,1,5
+51120,Bruce Rock,WA,Communication,15,0,0
+51190,Bunbury,WA,Communication,317,32,10.1
+51260,Busselton,WA,Communication,503,17,3.4
+51310,Cambridge,WA,Communication,290,10,3.4
+51330,Canning,WA,Communication,1052,118,11.2
+51400,Capel,WA,Communication,242,22,9.1
+51470,Carnamah,WA,Communication,8,,
+51540,Carnarvon,WA,Communication,63,22,34.9
+51610,Chapman Valley,WA,Communication,12,,
+51680,Chittering,WA,Communication,73,3,4.1
+51710,Christmas Island,WA,Communication,20,,
+51750,Claremont,WA,Communication,135,3,2.2
+51820,Cockburn,WA,Communication,1502,118,7.9
+51860,Cocos Islands,WA,Communication,11,,
+51890,Collie,WA,Communication,115,4,3.5
+51960,Coolgardie,WA,Communication,44,6,13.6
+52030,Coorow,WA,Communication,9,,
+52100,Corrigin,WA,Communication,10,,
+52170,Cottesloe,WA,Communication,82,5,6.1
+52240,Cranbrook,WA,Communication,9,,
+52310,Cuballing,WA,Communication,,,
+52380,Cue,WA,Communication,,,
+52450,Cunderdin,WA,Communication,14,,
+52520,Dalwallinu,WA,Communication,19,0,0
+52590,Dandaragan,WA,Communication,33,1,3.0
+52660,Dardanup,WA,Communication,203,17,8.4
+52730,Denmark,WA,Communication,64,4,6.2
+52800,Derby-West Kimberley,WA,Communication,96,27,28.1
+52870,Donnybrook-Balingup,WA,Communication,73,4,5.5
+52940,Dowerin,WA,Communication,11,,
+53010,Dumbleyung,WA,Communication,8,,
+53080,Dundas,WA,Communication,6,,
+53150,East Fremantle,WA,Communication,73,1,1.4
+53220,East Pilbara,WA,Communication,83,11,13.3
+53290,Esperance,WA,Communication,176,11,6.2
+53360,Exmouth,WA,Communication,40,0,0
+53430,Fremantle,WA,Communication,315,16,5.1
+53570,Gingin,WA,Communication,54,4,7.4
+53640,Gnowangerup,WA,Communication,21,0,0
+53710,Goomalling,WA,Communication,12,,
+53780,Gosnells,WA,Communication,1690,304,18.0
+53800,Greater Geraldton,WA,Communication,512,71,13.9
+53920,Halls Creek,WA,Communication,34,10,29.4
+53990,Harvey,WA,Communication,358,24,6.7
+54060,Irwin,WA,Communication,25,2,8
+54130,Jerramungup,WA,Communication,12,,
+54170,Joondalup,WA,Communication,1771,97,5.5
+54200,Kalamunda,WA,Communication,707,60,8.5
+54280,Kalgoorlie-Boulder,WA,Communication,456,45,9.9
+54310,Karratha,WA,Communication,391,27,6.9
+54340,Katanning,WA,Communication,58,4,6.9
+54410,Kellerberrin,WA,Communication,14,,
+54480,Kent,WA,Communication,6,,
+54550,Kojonup,WA,Communication,22,4,18.2
+54620,Kondinin,WA,Communication,8,,
+54690,Koorda,WA,Communication,,,
+54760,Kulin,WA,Communication,9,,
+54830,Kwinana,WA,Communication,771,85,11.0
+54900,Lake Grace,WA,Communication,17,2,11.8
+54970,Laverton,WA,Communication,7,,
+55040,Leonora,WA,Communication,27,5,18.5
+55110,Mandurah,WA,Communication,997,96,9.6
+55180,Manjimup,WA,Communication,100,7,7
+55250,Meekatharra,WA,Communication,12,,
+55320,Melville,WA,Communication,1083,62,5.7
+55390,Menzies,WA,Communication,7,,
+55460,Merredin,WA,Communication,34,2,5.9
+55530,Mingenew,WA,Communication,5,,
+55600,Moora,WA,Communication,36,1,2.8
+55670,Morawa,WA,Communication,7,,
+55740,Mosman Park,WA,Communication,87,10,11.5
+55810,Mount Magnet,WA,Communication,10,,
+55880,Mount Marshall,WA,Communication,6,,
+55950,Mukinbudin,WA,Communication,8,,
+56090,Mundaring,WA,Communication,450,21,4.7
+56160,Murchison,WA,Communication,,,
+56230,Murray,WA,Communication,224,20,8.9
+56300,Nannup,WA,Communication,6,,
+56370,Narembeen,WA,Communication,15,,
+56460,Narrogin,WA,Communication,46,5,10.9
+56580,Nedlands,WA,Communication,214,11,5.1
+56620,Ngaanyatjarraku,WA,Communication,,,
+56730,Northam,WA,Communication,107,14,13.1
+56790,Northampton,WA,Communication,25,2,8
+56860,Nungarin,WA,Communication,4,,
+56930,Peppermint Grove,WA,Communication,9,,
+57000,Perenjori,WA,Communication,,,
+57080,Perth,WA,Communication,164,24,14.6
+57140,Pingelly,WA,Communication,19,2,10.5
+57210,Plantagenet,WA,Communication,41,11,26.8
+57280,Port Hedland,WA,Communication,227,17,7.5
+57350,Quairading,WA,Communication,16,,
+57420,Ravensthorpe,WA,Communication,21,4,19.0
+57490,Rockingham,WA,Communication,1834,168,9.2
+57630,Sandstone,WA,Communication,0,,
+57700,Serpentine-Jarrahdale,WA,Communication,590,55,9.3
+57770,Shark Bay,WA,Communication,6,,
+57840,South Perth,WA,Communication,389,37,9.5
+57910,Stirling,WA,Communication,2465,221,9.0
+57980,Subiaco,WA,Communication,139,0,0
+58050,Swan,WA,Communication,2274,299,13.1
+58190,Tammin,WA,Communication,,,
+58260,Three Springs,WA,Communication,12,,
+58330,Toodyay,WA,Communication,29,5,17.2
+58400,Trayning,WA,Communication,,,
+58470,Upper Gascoyne,WA,Communication,5,,
+58510,Victoria Park,WA,Communication,375,34,9.1
+58540,Victoria Plains,WA,Communication,7,,
+58570,Vincent,WA,Communication,356,21,5.9
+58610,Wagin,WA,Communication,12,,
+58680,Wandering,WA,Communication,,,
+58760,Wanneroo,WA,Communication,3049,307,10.1
+58820,Waroona,WA,Communication,38,4,10.5
+58890,West Arthur,WA,Communication,5,,
+59030,Westonia,WA,Communication,0,,
+59100,Wickepin,WA,Communication,5,,
+59170,Williams,WA,Communication,18,3,16.7
+59250,Wiluna,WA,Communication,5,,
+59310,Wongan-Ballidu,WA,Communication,12,,
+59320,Woodanilling,WA,Communication,6,,
+59330,Wyalkatchem,WA,Communication,4,,
+59340,Wyndham-East Kimberley,WA,Communication,117,20,17.1
+59350,Yalgoo,WA,Communication,,,
+59360,Yilgarn,WA,Communication,14,,
+59370,York,WA,Communication,28,1,3.6
+60210,Break O'Day,TAS,Communication,32,4,12.5
+60410,Brighton,TAS,Communication,252,29,11.5
+60610,Burnie,TAS,Communication,202,27,13.4
+60810,Central Coast (Tas.),TAS,Communication,194,15,7.7
+61010,Central Highlands (Tas.),TAS,Communication,27,2,7.4
+61210,Circular Head,TAS,Communication,81,3,3.7
+61410,Clarence,TAS,Communication,624,43,6.9
+61510,Derwent Valley,TAS,Communication,121,12,9.9
+61610,Devonport,TAS,Communication,225,7,3.1
+61810,Dorset,TAS,Communication,52,3,5.8
+62010,Flinders (Tas.),TAS,Communication,6,,
+62210,George Town,TAS,Communication,61,7,11.5
+62410,Glamorgan-Spring Bay,TAS,Communication,31,3,9.7
+62610,Glenorchy,TAS,Communication,433,52,12.0
+62810,Hobart,TAS,Communication,404,21,5.2
+63010,Huon Valley,TAS,Communication,173,13,7.5
+63210,Kentish,TAS,Communication,59,3,5.1
+63410,King Island,TAS,Communication,16,,
+63610,Kingborough,TAS,Communication,413,18,4.4
+63810,Latrobe (Tas.),TAS,Communication,118,4,3.4
+64010,Launceston,TAS,Communication,714,53,7.4
+64210,Meander Valley,TAS,Communication,199,19,9.5
+64610,Northern Midlands,TAS,Communication,148,6,4.1
+64810,Sorell,TAS,Communication,178,20,11.2
+65010,Southern Midlands,TAS,Communication,71,3,4.2
+65210,Tasman,TAS,Communication,12,,
+65410,Waratah-Wynyard,TAS,Communication,149,1,0.7
+65610,West Coast,TAS,Communication,37,7,18.9
+65810,West Tamar,TAS,Communication,214,14,6.5
+70200,Alice Springs,NT,Communication,317,44,13.9
+70420,Barkly,NT,Communication,69,22,31.9
+70540,Belyuen,NT,Communication,,,
+70620,Central Desert,NT,Communication,72,41,56.9
+70700,Coomalie,NT,Communication,16,6,37.5
+71000,Darwin,NT,Communication,856,111,13.0
+71150,Darwin Waterfront Precinct,NT,Communication,,,
+71300,East Arnhem,NT,Communication,97,32,33.0
+72200,Katherine,NT,Communication,135,28,20.7
+72300,Litchfield,NT,Communication,240,23,9.6
+72330,MacDonnell,NT,Communication,62,33,53.2
+72800,Palmerston,NT,Communication,530,60,11.3
+73600,Roper Gulf,NT,Communication,73,25,34.2
+74050,Tiwi Islands,NT,Communication,22,8,36.4
+74550,Victoria Daly,NT,Communication,34,9,26.5
+74560,Wagait,NT,Communication,4,,
+74660,West Arnhem,NT,Communication,53,17,32.1
+74680,West Daly,NT,Communication,21,11,52.4
+79399,Unincorporated NT,NT,Communication,89,15,16.9
+89399,Unincorporated ACT,ACT,Communication,4924,526,10.7

@@ -45,7 +45,11 @@
     .viz{width:100%;margin:26px 0 8px}
     .viz > div{width:100%}
     #vis8{overflow-x:auto}
+    .scroll-x{overflow-x:auto}
+    .scroll-x > .min-520{min-width:520px}
+    .scroll-x > .min-680{min-width:680px}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .grid-2 > *{min-width:0}
     .note{font-size:14px;color:var(--muted);max-width:70ch;margin:6px 0 0}
     .aside{border-left:3px solid var(--rust);padding:2px 0 2px 16px;margin:28px 0 0;max-width:62ch}
     .aside strong{color:var(--rust-deep)}
@@ -69,6 +73,7 @@
     .vega-bindings{font-size:14px;color:var(--muted);margin-top:6px}
     .vega-bind-name{font-weight:700;color:var(--ink);margin-right:6px}
     .vega-bindings input[type=range]{accent-color:var(--rust);vertical-align:middle;width:220px}
+    .vega-bindings select{font:inherit;color:var(--ink);padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:#fff}
 
     @media (max-width: 900px){
       .grid-2,.foot-grid{grid-template-columns:1fr;gap:20px}
@@ -112,7 +117,8 @@
           — but your council shapes the odds far more than that average suggests.</p>
       </div>
     </div>
-    <div class="viz"><div id="vis1"></div></div>
+    <div class="viz scroll-x"><div id="vis1"></div></div>
+    <p class="note">Panels zoom into the five largest cities, where most children live. Grey = result suppressed.</p>
   </section>
 
   <section class="chapter" id="who-where">
@@ -124,10 +130,10 @@
         <div class="viz"><div id="vis2"></div></div>
       </div>
       <div>
-        <p class="lead">Grouping councils into equal-sized grid squares removes the size bias and shows where things
-          changed between 2021 and 2024. Orange squares got worse, blue squares improved. 58 of 92 squares got worse,
-          and those squares are home to 9 in 10 of the children assessed.</p>
-        <div class="viz"><div id="vis3"></div></div>
+        <p class="lead">Grouping councils into equal-sized hexagons removes the size bias and shows where things
+          changed between 2021 and 2024. Orange hexagons got worse, blue hexagons improved. 83 of 125 hexagons got worse,
+          and those hexagons are home to 9 in 10 (89.7%) of the children assessed.</p>
+        <div class="viz scroll-x"><div id="vis3" class="min-520"></div></div>
       </div>
     </div>
   </section>
@@ -145,13 +151,12 @@
         <h2>A decade of progress, reversed</h2>
         <p class="lead">The share of children on track on all five areas rose steadily to a peak of 55.4% in 2018.
           By 2024 it had fallen to 52.9%. Seven of the eight states and territories went backwards; only Queensland held steady. The sharpest falls were
-          in emotional maturity and social competence — the skills children need to settle into a classroom.</p>
+          in emotional maturity and social competence — the skills children need to settle into a classroom.
+          Three of the five areas reached their worst level since the census began.</p>
       </div>
     </div>
-    <div class="grid-2">
-      <div class="viz"><div id="vis5"></div></div>
-      <div class="viz"><div id="vis6"></div></div>
-    </div>
+    <div class="viz"><div id="vis5"></div></div>
+    <div class="viz scroll-x"><div id="vis6"></div></div>
   </section>
 
   <!-- ───────── Part 3: disadvantage ───────── -->
@@ -181,22 +186,27 @@
       <div class="chapter-num">4</div>
       <div>
         <h2>The older they get, the less they move</h2>
-        <p class="lead">Australia's 24-Hour Movement Guidelines ask school-age children for at least 60 minutes of
-          moderate-to-vigorous activity <em>every</em> day. Among 5–8 year olds, about 3 in 10 manage it.
-          By 15–17, fewer than 1 in 10 do.</p>
+        <p class="lead">Australia's 24-Hour Movement Guidelines set targets for daily activity, strength activity,
+          screen time and sleep. About 13 in 100 children aged 5–8 meet all of them. By 15–17, fewer than 1 in 100 do.</p>
       </div>
     </div>
     <div class="viz"><div id="vis8"></div></div>
+    <p class="lead" style="margin-top:28px">Sleep holds up reasonably well. Activity and screen time are where the
+      guidelines break: by 15–17, fewer than 1 in 10 meet either.</p>
+    <div class="viz scroll-x"><div id="vis8b" class="min-680"></div></div>
+    <p class="lead" style="margin-top:28px">At 5–8, children spend about as long being active as on screens. By 15–17,
+      screens take nearly four times as long, and girls are the least active of all, at 55 minutes a day.</p>
+    <div class="viz scroll-x"><div id="vis9" class="min-680"></div></div>
     <div class="grid-2" style="margin-top:28px">
       <div>
-        <p class="lead">Boys and girls start out equally active. By the late teens, girls average 55 minutes a day,
-          19 fewer than boys.</p>
-        <div class="viz"><div id="vis9"></div></div>
+        <p class="lead">Screens also move into the bedroom. Fewer than 3 in 100 children aged 5–8 have a phone in
+          their room; by 15–17, more than 8 in 10 do.</p>
+        <div class="viz scroll-x"><div id="vis10"></div></div>
       </div>
       <div>
-        <p class="lead">At the same time, screens move into the bedroom and the last hour before sleep. Teenagers
-          sleep about an hour and a half less than younger children.</p>
-        <div class="viz"><div id="vis10"></div></div>
+        <p class="lead">And sleep gets worse, not just shorter. Nearly half of 2–5 year olds slept 'very well';
+          by 15–17, only about 1 in 5 did.</p>
+        <div class="viz scroll-x"><div id="vis10b" class="min-520"></div></div>
       </div>
     </div>
   </section>
@@ -207,12 +217,12 @@
       <div class="chapter-num">5</div>
       <div>
         <h2>And what they eat</h2>
-        <p class="lead">Free sugars — those added to food and drinks, plus honey and juice — climb with age.
-          Teenagers get 10.1% of their daily energy from them, just over the World Health Organization's limit and
-          higher than adults.</p>
+        <p class="lead">Children's diets carry more saturated fat than recommended at every age: 13–14% of daily
+          energy against a target of no more than 10%. Free sugars climb with age, reaching the World Health
+          Organization's 10% limit by the teens.</p>
       </div>
     </div>
-    <div class="viz"><div id="vis11"></div></div>
+    <div class="viz scroll-x"><div id="vis11"></div></div>
   </section>
 
   <section class="conclusion">
@@ -236,6 +246,11 @@
           <li><strong>National Nutrition and Physical Activity Survey 2023</strong>, Australian Bureau of Statistics.
             Children's physical activity, screen time and sleep (tables 1–2, 4–5, 12) and food and nutrients (table 2).
             <a href="https://www.abs.gov.au/statistics/health/food-and-nutrition/national-nutrition-and-physical-activity-survey/latest-release">abs.gov.au</a></li>
+          <li><strong>Dietary guideline limits</strong>: National Health and Medical Research Council, Nutrient
+            Reference Values for Australia and New Zealand (saturated and trans fat, suggested dietary target);
+            World Health Organization, Guideline: Sugars intake for adults and children, 2015.
+            <a href="https://www.eatforhealth.gov.au/nutrient-reference-values">eatforhealth.gov.au</a> ·
+            <a href="https://www.who.int/publications/i/item/9789241549028">who.int</a></li>
           <li><strong>Local Government Area boundaries 2024</strong>, ABS Australian Statistical Geography Standard
             Edition 3, simplified with mapshaper.
             <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files">abs.gov.au</a></li>
@@ -265,11 +280,13 @@
     ["#vis3",  "js/3_bins.vg.json"],
     ["#vis4",  "js/4_boxplot.vg.json"],
     ["#vis5",  "js/5_heatmap.vg.json"],
-    ["#vis6",  "js/6_slope.vg.json"],
+    ["#vis6",  "js/6_domains.vg.json"],
     ["#vis7",  "js/7_dumbbell.vg.json"],
-    ["#vis8",  "js/8_waffle.vg.json"],
+    ["#vis8",  "js/8_isotype.vg.json"],
+    ["#vis8b", "js/8b_guidelines.vg.json"],
     ["#vis9",  "js/9_butterfly.vg.json"],
-    ["#vis10", "js/10_connected_scatter.vg.json"],
+    ["#vis10", "js/10_bedroom_devices.vg.json"],
+    ["#vis10b","js/10b_sleep_quality.vg.json"],
     ["#vis11", "js/11_bullet.vg.json"]
   ];
   charts.forEach(([el, url]) => vegaEmbed(el, url, opts).catch(console.error));

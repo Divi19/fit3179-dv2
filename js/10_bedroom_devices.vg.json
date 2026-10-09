@@ -1,0 +1,557 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Phones move into the bedroom in the early teens",
+    "subtitle": "% of children with each type of screen device in their bedroom, 2023"
+  },
+  "width": 380,
+  "height": 300,
+  "data": {
+    "url": "data/nnpas_bedroom_devices.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "age_order": "number",
+        "device_order": "number",
+        "pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.pct * 16",
+      "as": "area"
+    },
+    {
+      "calculate": "datum.device == 'Any screen device'",
+      "as": "is_total"
+    },
+    {
+      "calculate": "format(datum.pct, datum.pct < 10 ? '.1f' : '.0f') + '%'",
+      "as": "label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "device",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "device_order"
+      },
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelColor": "#1d2a35",
+        "labelFontSize": 11,
+        "labelPadding": 8
+      }
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "t": "separator above the total row"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#8a949b",
+        "strokeDash": [
+          3,
+          3
+        ]
+      },
+      "encoding": {
+        "y": {
+          "value": 250.0
+        },
+        "x": {
+          "value": 0
+        },
+        "x2": {
+          "value": 380
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!datum.is_total"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "circle",
+        "filled": true,
+        "color": "#b3561a",
+        "opacity": 1,
+        "strokeWidth": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "age_order",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": {
+            "domain": [
+              -0.5,
+              7.2
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "['2–5', '5–8', '9–11', '12–14', '15–17'][datum.value]",
+            "grid": false,
+            "orient": "top",
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 11,
+            "titleAnchor": "start",
+            "titleX": 0
+          }
+        },
+        "size": {
+          "field": "area",
+          "type": "quantitative",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "device",
+            "title": "Device in bedroom"
+          },
+          {
+            "field": "age_group",
+            "title": "Age"
+          },
+          {
+            "field": "pct",
+            "title": "% of children",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.is_total"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "circle",
+        "filled": false,
+        "color": "#b3561a",
+        "opacity": 1,
+        "strokeWidth": 1.6
+      },
+      "encoding": {
+        "x": {
+          "field": "age_order",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": {
+            "domain": [
+              -0.5,
+              7.2
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "['2–5', '5–8', '9–11', '12–14', '15–17'][datum.value]",
+            "grid": false,
+            "orient": "top",
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 11,
+            "titleAnchor": "start",
+            "titleX": 0
+          }
+        },
+        "size": {
+          "field": "area",
+          "type": "quantitative",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "device",
+            "title": "Device in bedroom"
+          },
+          {
+            "field": "age_group",
+            "title": "Age"
+          },
+          {
+            "field": "pct",
+            "title": "% of children",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.pct >= 40 && !datum.is_total"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "x": {
+          "field": "age_order",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": {
+            "domain": [
+              -0.5,
+              7.2
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "['2–5', '5–8', '9–11', '12–14', '15–17'][datum.value]",
+            "grid": false,
+            "orient": "top",
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 11,
+            "titleAnchor": "start",
+            "titleX": 0
+          }
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.pct >= 40 && datum.is_total"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#7a3510"
+      },
+      "encoding": {
+        "x": {
+          "field": "age_order",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": {
+            "domain": [
+              -0.5,
+              7.2
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "['2–5', '5–8', '9–11', '12–14', '15–17'][datum.value]",
+            "grid": false,
+            "orient": "top",
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 11,
+            "titleAnchor": "start",
+            "titleX": 0
+          }
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.pct < 40"
+        },
+        {
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 3) / 49.35",
+          "as": "lx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 10,
+        "color": "#5b6670"
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": {
+            "domain": [
+              -0.5,
+              7.2
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "['2–5', '5–8', '9–11', '12–14', '15–17'][datum.value]",
+            "grid": false,
+            "orient": "top",
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 11,
+            "titleAnchor": "start",
+            "titleX": 0
+          }
+        },
+        "text": {
+          "field": "label"
+        },
+        "tooltip": [
+          {
+            "field": "device",
+            "title": "Device in bedroom"
+          },
+          {
+            "field": "age_group",
+            "title": "Age"
+          },
+          {
+            "field": "pct",
+            "title": "% of children",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.device == 'Smartphone/watch' && datum.age_order == 4"
+        },
+        {
+          "calculate": "[format(datum.pct, '.0f') + '% of ' + datum.age_group + ' year olds', 'have a phone in their bedroom']",
+          "as": "t"
+        },
+        {
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
+          "as": "lx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#7a3510",
+        "lineHeight": 13,
+        "dy": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": {
+            "domain": [
+              -0.5,
+              7.2
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "['2–5', '5–8', '9–11', '12–14', '15–17'][datum.value]",
+            "grid": false,
+            "orient": "top",
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 11,
+            "titleAnchor": "start",
+            "titleX": 0
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.is_total && datum.age_order == 4"
+        },
+        {
+          "calculate": "['Almost all (' + format(datum.pct, '.0f') + '%) have at least', 'one screen in their bedroom']",
+          "as": "t"
+        },
+        {
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
+          "as": "lx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#7a3510",
+        "lineHeight": 13,
+        "dy": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": {
+            "domain": [
+              -0.5,
+              7.2
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "['2–5', '5–8', '9–11', '12–14', '15–17'][datum.value]",
+            "grid": false,
+            "orient": "top",
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold",
+            "labelColor": "#1d2a35",
+            "labelFontSize": 11,
+            "titleAnchor": "start",
+            "titleX": 0
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

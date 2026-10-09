@@ -1,0 +1,9 @@
+nutrient,age_group,age_order,group,pct_energy,moe,limit,ideal
+Saturated + trans fat,2–4,0,Children,13.8,0.5,10,
+Saturated + trans fat,5–11,1,Children,13.7,0.3,10,
+Saturated + trans fat,12–17,2,Children,13.1,0.3,10,
+Saturated + trans fat,Adults 18+,3,Adults,12.8,0.1,10,
+Free sugars,2–4,0,Children,7.4,0.8,10,5
+Free sugars,5–11,1,Children,9.4,0.5,10,5
+Free sugars,12–17,2,Children,10.1,0.8,10,5
+Free sugars,Adults 18+,3,Adults,7.9,0.3,10,5

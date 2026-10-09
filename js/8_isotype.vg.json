@@ -1,0 +1,283 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Out of every 100 children, how many meet all of the guidelines?",
+    "subtitle": "Children who met every 24-Hour Movement Guideline (daily activity, strength activity, screen time and sleep), 2023"
+  },
+  "data": {
+    "url": "data/nnpas_guidelines.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "age_order": "number",
+        "guideline_order": "number",
+        "pct": "number",
+        "moe": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.guideline == 'All guidelines'"
+    },
+    {
+      "calculate": "'Ages ' + datum.age_group",
+      "as": "age_head"
+    },
+    {
+      "calculate": "datum.pct < 1 ? ['fewer than 1 in 100', '(' + format(datum.pct, '.1f') + '%)'] : format(round(datum.pct), 'd') + ' in 100'",
+      "as": "big"
+    },
+    {
+      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') : 'not published'",
+      "as": "moe_label"
+    },
+    {
+      "calculate": "sequence(0, 100)",
+      "as": "cell"
+    },
+    {
+      "flatten": [
+        "cell"
+      ]
+    },
+    {
+      "calculate": "datum.cell % 10",
+      "as": "col"
+    },
+    {
+      "calculate": "floor(datum.cell / 10)",
+      "as": "row"
+    },
+    {
+      "calculate": "datum.cell < round(datum.pct) ? 'Met all of them' : 'Did not'",
+      "as": "met"
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "age_head",
+      "type": "nominal",
+      "sort": {
+        "field": "age_order",
+        "op": "min"
+      },
+      "title": null,
+      "header": {
+        "labelFontSize": 13,
+        "labelFontWeight": "bold",
+        "labelColor": "#1d2a35",
+        "labelAnchor": "start",
+        "labelPadding": 8
+      }
+    }
+  },
+  "spacing": 40,
+  "spec": {
+    "width": 240,
+    "height": 240,
+    "encoding": {
+      "x": {
+        "field": "col",
+        "type": "ordinal",
+        "axis": null,
+        "scale": {
+          "domain": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      },
+      "y": {
+        "field": "row",
+        "type": "ordinal",
+        "axis": null,
+        "sort": "descending",
+        "scale": {
+          "domain": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      }
+    },
+    "layer": [
+      {
+        "transform": [
+          {
+            "filter": "datum.sex == 'All'"
+          }
+        ],
+        "mark": {
+          "type": "point",
+          "shape": "M-0.3,-0.7a0.3,0.3 0 1,0 0.6,0a0.3,0.3 0 1,0 -0.6,0Z M-0.56,-0.3L0.56,-0.3L0.44,0.3L0.22,0.3L0.22,1L-0.22,1L-0.22,0.3L-0.44,0.3Z",
+          "size": 420,
+          "filled": true,
+          "opacity": 1,
+          "strokeWidth": 0
+        },
+        "encoding": {
+          "color": {
+            "field": "met",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Met all of them",
+                "Did not"
+              ],
+              "range": [
+                "#007c9e",
+                "#e3e7e6"
+              ]
+            },
+            "legend": {
+              "title": null,
+              "orient": "top",
+              "symbolType": "M-0.3,-0.7a0.3,0.3 0 1,0 0.6,0a0.3,0.3 0 1,0 -0.6,0Z M-0.56,-0.3L0.56,-0.3L0.44,0.3L0.22,0.3L0.22,1L-0.22,1L-0.22,0.3L-0.44,0.3Z",
+              "symbolSize": 220,
+              "symbolStrokeWidth": 0
+            }
+          },
+          "tooltip": [
+            {
+              "field": "age_group",
+              "title": "Age"
+            },
+            {
+              "field": "pct",
+              "title": "% meeting all guidelines",
+              "format": ".1f"
+            },
+            {
+              "field": "moe_label",
+              "title": "95% margin of error"
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.sex == 'All' && datum.cell == 0"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "top",
+          "x": 0,
+          "y": 252,
+          "fontSize": 20,
+          "lineHeight": 23,
+          "fontWeight": "bold",
+          "color": "#007c9e"
+        },
+        "encoding": {
+          "x": null,
+          "y": null,
+          "text": {
+            "field": "big"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.sex == 'Girls' && datum.cell == 0 && datum.pct == 0"
+          },
+          {
+            "calculate": "['Among girls aged ' + datum.age_group + ', none in the', 'sample met them all (' + format(datum.pct, '.1f') + '%)']",
+            "as": "t"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "top",
+          "x": 0,
+          "y": 306,
+          "fontSize": 11,
+          "fontWeight": "bold",
+          "color": "#7a3510",
+          "lineHeight": 14
+        },
+        "encoding": {
+          "x": null,
+          "y": null,
+          "text": {
+            "field": "t"
+          }
+        }
+      }
+    ]
+  },
+  "resolve": {
+    "scale": {
+      "x": "shared",
+      "y": "shared"
+    }
+  },
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}
