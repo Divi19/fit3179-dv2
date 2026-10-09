@@ -127,6 +127,30 @@ with open(OUT+"aedc_domains_national.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(domrows[0])); w.writeheader(); w.writerows(domrows)
 print("domains 2021/2024:", [(d['domain'],d['year'],d['vulnerable_pct']) for d in domrows if d['year'] in (2021,2024)])
 
+# National on track / at risk / vulnerable per domain, 2009 and 2024 (chart 0), summed over the 8 "all domains" sheets.
+# r[0] = domain (first row of each block only), r[1] = year, r[2] on track n, r[4] at risk n, r[6] vulnerable n, r[8] total.
+cat=collections.defaultdict(lambda:[0,0,0,0])
+for sn in wb.sheetnames[1:]:
+    if 'summary' in sn.lower(): continue
+    ws=wb[sn]; ws.reset_dimensions(); label=None
+    for r in ws.iter_rows(values_only=True):
+        r=list(r)+[None]*20
+        if r[0] not in (None,''): label=r[0]
+        if r[1] in (2009,2024) and all(isinstance(r[i],(int,float)) for i in (2,4,6,8)):
+            for j,i in enumerate((6,4,2,8)): cat[(label,r[1])][j]+=r[i]
+DORDER=['Physical health','Social competence','Emotional maturity','Language & thinking','Communication']
+CATS=['Vulnerable','At risk','On track']
+catrows=[]
+for (l,y),(v,ar,ot,t) in sorted(cat.items(),key=lambda kv:(DORDER.index(DSHORT[kv[0][0]]),kv[0][1])):
+    for co,(c,n) in enumerate(zip(CATS,(v,ar,ot))):
+        catrows.append(dict(domain=DSHORT[l],domain_order=DORDER.index(DSHORT[l]),year=y,category=c,category_order=co,n=n,total=t,pct=round(100*n/t,1)))
+with open(OUT+"aedc_categories_national.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(catrows[0])); w.writeheader(); w.writerows(catrows)
+natv={(d['domain'],d['year']):d['vulnerable_pct'] for d in domrows}
+assert all(c['pct']==natv[(c['domain'],c['year'])] for c in catrows if c['category']=='Vulnerable'), "vulnerable % differs from aedc_domains_national.csv"
+print("aedc_categories_national.csv 2024 (vulnerable / at risk / on track):")
+for d in DORDER: print("  ",d,[c['pct'] for c in catrows if c['domain']==d and c['year']==2024])
+
 # ---------- 4. SEIFA: most vs least disadvantaged, on track on five (chart 7) ----------
 seifa=[]; nat=collections.defaultdict(lambda:[0,0]); state=None
 for r in rows("seifa-2009-24.xlsx","SEIFA On track five"):
