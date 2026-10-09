@@ -195,3 +195,89 @@ for a,lab,grp in (('2–4','2–4 yrs','Children'),('5–11','5–11 yrs','Child
 with open(OUT+"nnpas_free_sugars.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(sug[0])); w.writeheader(); w.writerows(sug)
 print("sugars:", sug)
+
+# ================= ABS NNPAS 2023, new chart files =================
+def findp(rs,prefix,start=0):
+    for i,r in enumerate(rs[start:],start):
+        if isinstance(r[0],str) and r[0].strip().startswith(prefix): return i,r
+    raise KeyError(prefix)
+def pnum(v): return v if isinstance(v,(int,float)) and not isinstance(v,bool) else None   # "np" -> None
+SEXES=(('All','Children aged 5–17 years(c)'),('Boys','Males aged 5–17 years'),('Girls','Females aged 5–17 years'))
+
+# ---------- 8. All 24-hour guidelines + each guideline, by age and sex (charts 8, 8b) ----------
+g3=rows("CPASSDC01–02.xlsx","Table 2.3_Proportions"); g4=rows("CPASSDC01–02.xlsx","Table 2.4_MoEs")
+assert [str(x) for x in g3[5][1:5]]==AGES
+GUIDE=(('All guidelines','Met 24-Hour Movement Guidelines'),('Activity','Met physical activity recommendation'),
+       ('Strength','Did muscle/bone strengthening activity on 3 or more days'),
+       ('Screen time','Met sedentary screen time recommendation'),('Sleep','Met sleep recommendation'))
+gl=[]
+for sex,block in SEXES:
+    b3=[i for i,r in enumerate(g3) if r[1]==block][0]; b4=[i for i,r in enumerate(g4) if r[1]==block][0]
+    for go,(g,label) in enumerate(GUIDE):
+        _,p=findp(g3,label,b3); _,m=findp(g4,label,b4)
+        for k,a in enumerate(AGES):
+            mo=pnum(m[1+k])
+            gl.append(dict(sex=sex,age_group=a,age_order=k,guideline=g,guideline_order=go,pct=p[1+k],moe='' if mo is None else mo))
+with open(OUT+"nnpas_guidelines.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(gl[0])); w.writeheader(); w.writerows(gl)
+print("nnpas_guidelines.csv")
+for sex in ('All','Boys','Girls'):
+    for g,_ in GUIDE:
+        if sex=='All' or g=='All guidelines':
+            print("  ",sex,g,[x['pct'] for x in gl if x['sex']==sex and x['guideline']==g],"moe",[x['moe'] for x in gl if x['sex']==sex and x['guideline']==g])
+
+# ---------- 9. Activity vs sedentary screen minutes per day, by age and sex (chart 9) ----------
+acts=[]
+for sex,block in SEXES:
+    bi=[i for i,r in enumerate(t5) if r[1]==block][0]
+    _,a=find(t5,'Total moderate or vigorous physical activity (incl. active transport)',bi)
+    hi,_=findp(t5,'Average sedentary screen time per day',bi)
+    _,s=find(t5,'All days',hi)                                   # the "All days" row inside the screen-time block
+    for k,ag in enumerate(AGES):
+        acts.append(dict(sex=sex,age_group=ag,age_order=k,activity_min=round(a[1+k].total_seconds()/60),screen_min=round(s[1+k].total_seconds()/60)))
+with open(OUT+"nnpas_activity_screens.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(acts[0])); w.writeheader(); w.writerows(acts)
+print("nnpas_activity_screens.csv")
+for sex,_ in SEXES:
+    print("  ",sex,"activity",[x['activity_min'] for x in acts if x['sex']==sex],"screens",[x['screen_min'] for x in acts if x['sex']==sex])
+
+# ---------- 10. Screen devices in the bedroom + sleep quality, by age (charts 10, 10b) ----------
+AGES5=['2–5']+AGES
+col12={str(h).replace('(c)','').replace('(b)',''):i for i,h in enumerate(t12[5]) if h}
+DEV=(('Smartphone/watch','Smart phone or smart watch'),('Computer','Computer (including desktop or laptop)'),
+     ('Television','Television (including DVDs, streaming services, free-to-air)'),('Tablet','Tablet'),
+     ('Gaming console','Gaming console'))
+devs=[]
+for d,label in DEV:
+    _,r=findp(t12,label); devs.append((d,[r[col12[a]] for a in AGES5]))
+devs.sort(key=lambda t:-t[1][-1])                                  # single devices ordered by the 15–17 value
+_,r=findp(t12,'Total with screen-based device located in bedroom'); devs.append(('Any screen device',[r[col12[a]] for a in AGES5]))
+bed=[dict(age_group=a,age_order=k,device=d,device_order=o,pct=v[k]) for o,(d,v) in enumerate(devs) for k,a in enumerate(AGES5)]
+with open(OUT+"nnpas_bedroom_devices.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(bed[0])); w.writeheader(); w.writerows(bed)
+print("nnpas_bedroom_devices.csv"); [print("  ",d,v) for d,v in devs]
+RATE=(('Very good','Very good'),('Good','Good'),('Fair','Fair'),('Poor / very poor','Poor / Very poor'))
+raw={rt:[findp(t12,label)[1][col12[a]] for a in AGES5] for rt,label in RATE}
+sq=[]
+for k,a in enumerate(AGES5):
+    tot=sum(raw[rt][k] for rt,_ in RATE)                           # "not known" sits in the published total; drop it
+    for o,(rt,_) in enumerate(RATE):
+        sq.append(dict(age_group=a,age_order=k,rating=rt,rating_order=o,pct_raw=raw[rt][k],pct=round(100*raw[rt][k]/tot,1)))
+with open(OUT+"nnpas_sleep_quality.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(sq[0])); w.writeheader(); w.writerows(sq)
+print("nnpas_sleep_quality.csv")
+for rt,_ in RATE: print("  ",rt,"raw",raw[rt],"normalised",[x['pct'] for x in sq if x['rating']==rt])
+
+# ---------- 11. Saturated fat and free sugars vs dietary limits (chart 11) ----------
+# Limits are fixed reference values: NHMRC Nutrient Reference Values (saturated + trans fat, no more than 10% of energy)
+# and WHO Guideline: Sugars intake for adults and children, 2015 (free sugars below 10%, ideally below 5%).
+NUTR=(('Saturated + trans fat','Saturated fat + trans fatty acids',10,''),('Free sugars','Free sugars',10,5))
+hdr=n2[5]; nut=[]
+for name,label,lim,ideal in NUTR:
+    _,mr=find(n2,label); _,er=find(m2,label)
+    for k,(a,lab,grp) in enumerate((('2–4','2–4','Children'),('5–11','5–11','Children'),('12–17','12–17','Children'),('18 years and over','Adults 18+','Adults'))):
+        i=hdr.index(a); nut.append(dict(nutrient=name,age_group=lab,age_order=k,group=grp,pct_energy=mr[i],moe=er[i],limit=lim,ideal=ideal))
+with open(OUT+"nnpas_nutrients.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(nut[0])); w.writeheader(); w.writerows(nut)
+print("nnpas_nutrients.csv")
+for name,*_ in NUTR: print("  ",name,[(x['age_group'],x['pct_energy'],x['moe']) for x in nut if x['nutrient']==name])

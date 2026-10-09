@@ -1,0 +1,61 @@
+sex,age_group,age_order,guideline,guideline_order,pct,moe
+All,5–8,0,All guidelines,0,13.4,3.9
+All,9–11,1,All guidelines,0,12.1,4.9
+All,12–14,2,All guidelines,0,2.1,
+All,15–17,3,All guidelines,0,0.6,
+All,5–8,0,Activity,1,30.8,5
+All,9–11,1,Activity,1,23,5.7
+All,12–14,2,Activity,1,8.2,4.1
+All,15–17,3,Activity,1,7.6,2.7
+All,5–8,0,Strength,2,89.8,2.2
+All,9–11,1,Strength,2,87.5,4.3
+All,12–14,2,Strength,2,82.7,4.4
+All,15–17,3,Strength,2,73.3,4.7
+All,5–8,0,Screen time,3,45.5,5.2
+All,9–11,1,Screen time,3,37.2,7.1
+All,12–14,2,Screen time,3,15.6,4.8
+All,15–17,3,Screen time,3,8.7,3.5
+All,5–8,0,Sleep,4,92.8,2.7
+All,9–11,1,Sleep,4,88.3,2.2
+All,12–14,2,Sleep,4,75.9,4.3
+All,15–17,3,Sleep,4,75.3,6.8
+Boys,5–8,0,All guidelines,0,15,5.6
+Boys,9–11,1,All guidelines,0,16,8.6
+Boys,12–14,2,All guidelines,0,5.9,5.2
+Boys,15–17,3,All guidelines,0,1.1,
+Boys,5–8,0,Activity,1,34.1,7.2
+Boys,9–11,1,Activity,1,29.1,9
+Boys,12–14,2,Activity,1,10.7,6.9
+Boys,15–17,3,Activity,1,10.4,4.4
+Boys,5–8,0,Strength,2,95.1,3.5
+Boys,9–11,1,Strength,2,91.3,6.5
+Boys,12–14,2,Strength,2,88.4,7.2
+Boys,15–17,3,Strength,2,82.8,6
+Boys,5–8,0,Screen time,3,46.1,8
+Boys,9–11,1,Screen time,3,38.3,11
+Boys,12–14,2,Screen time,3,17.6,7.8
+Boys,15–17,3,Screen time,3,11.9,6.3
+Boys,5–8,0,Sleep,4,95.8,3.7
+Boys,9–11,1,Sleep,4,91,5.8
+Boys,12–14,2,Sleep,4,79.8,6.7
+Boys,15–17,3,Sleep,4,75.1,7.8
+Girls,5–8,0,All guidelines,0,9.8,5
+Girls,9–11,1,All guidelines,0,6.6,5.4
+Girls,12–14,2,All guidelines,0,0.9,
+Girls,15–17,3,All guidelines,0,0,0
+Girls,5–8,0,Activity,1,25,6.5
+Girls,9–11,1,Activity,1,20.6,7.9
+Girls,12–14,2,Activity,1,7.4,4.2
+Girls,15–17,3,Activity,1,5.6,3.4
+Girls,5–8,0,Strength,2,87,4.4
+Girls,9–11,1,Strength,2,86.4,5.5
+Girls,12–14,2,Strength,2,77.2,10
+Girls,15–17,3,Strength,2,62,8.6
+Girls,5–8,0,Screen time,3,46.9,7.6
+Girls,9–11,1,Screen time,3,34.4,9.3
+Girls,12–14,2,Screen time,3,13.9,5.5
+Girls,15–17,3,Screen time,3,4.8,
+Girls,5–8,0,Sleep,4,92.3,4.2
+Girls,9–11,1,Sleep,4,87.2,6
+Girls,12–14,2,Sleep,4,73.4,6.1
+Girls,15–17,3,Sleep,4,73.6,11.1
