@@ -72,7 +72,7 @@ with open(OUT+"aedc_lga.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(out[0])); w.writeheader(); w.writerows(out)
 print("aedc_lga.csv", len(out), "rows,", len({o['lga_code'] for o in out}), "councils")
 
-# ---------- 1b. AEDC by council, 2024, vulnerable per domain (chart 1 dropdown) ----------
+# ---------- 2. AEDC by council, 2024, vulnerable per domain (chart 1 dropdown) ----------
 # One or more: n = r[19], % = r[20]. Domain sheets: vulnerable pairs start at r[33], so 2024 is r[43], r[44].
 MEASURES=[('One or more domains','LGA One or more',19),('Physical health','LGA Health',43),
           ('Social competence','LGA Social',43),('Emotional maturity','LGA Emotional',43),
@@ -98,7 +98,7 @@ print("aedc_lga_domains.csv", len(lgadom), "rows; check Albury DV1/Health, Brisb
       chk[('Albury','One or more domains')], chk[('Albury','Physical health')],
       chk[('Brisbane','One or more domains')], chk[('Brisbane','Language & thinking')])
 
-# ---------- 2. State trends: summary indicators (chart 5) + national domains (chart 6) ----------
+# ---------- 3. State trends: summary indicators (chart 5) + national domains (chart 6) ----------
 wb=openpyxl.load_workbook(SRC+"state-and-territory-trends-(2009-2024).xlsx", data_only=True, read_only=True)
 SHORT={'Developmentally vulnerable on one or more domains':'Vulnerable on 1+ domains',
        'Developmentally vulnerable on two or more domains':'Vulnerable on 2+ domains',
@@ -127,7 +127,7 @@ with open(OUT+"aedc_domains_national.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(domrows[0])); w.writeheader(); w.writerows(domrows)
 print("domains 2021/2024:", [(d['domain'],d['year'],d['vulnerable_pct']) for d in domrows if d['year'] in (2021,2024)])
 
-# ---------- 3. SEIFA: most vs least disadvantaged, on track on five (chart 7) ----------
+# ---------- 4. SEIFA: most vs least disadvantaged, on track on five (chart 7) ----------
 seifa=[]; nat=collections.defaultdict(lambda:[0,0]); state=None
 for r in rows("seifa-2009-24.xlsx","SEIFA On track five"):
     b,c=r[1],r[2]
@@ -145,28 +145,23 @@ with open(OUT+"aedc_seifa.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(seifa[0])); w.writeheader(); w.writerows(seifa)
 print("seifa national:", {k:round(100*v[0]/v[1],1) for k,v in nat.items()})
 
-# ---------- NNPAS shared helpers ----------
+# ================= ABS NNPAS 2023 (charts 8–11) =================
 def find(rs,label,start=0):
     for i,r in enumerate(rs[start:],start):
         if isinstance(r[0],str) and r[0].strip()==label: return i,r
     raise KeyError(label)
-AGES=['5–8','9–11','12–14','15–17']
-
-t5=rows("CPASSDC04–05.xlsx","Table 5.1_Means")
-
-t12=rows("CPASSDC12.xlsx","Table 12.3_Proportions")
-
-n2=rows("NNPASDC02.xlsx","Table 2.1_Means Persons"); m2=rows("NNPASDC02.xlsx","Table 2.2_MoEs Persons")
-
-# ================= ABS NNPAS 2023, new chart files =================
 def findp(rs,prefix,start=0):
     for i,r in enumerate(rs[start:],start):
         if isinstance(r[0],str) and r[0].strip().startswith(prefix): return i,r
     raise KeyError(prefix)
 def pnum(v): return v if isinstance(v,(int,float)) and not isinstance(v,bool) else None   # "np" -> None
 SEXES=(('All','Children aged 5–17 years(c)'),('Boys','Males aged 5–17 years'),('Girls','Females aged 5–17 years'))
+AGES=['5–8','9–11','12–14','15–17']
+t5=rows("CPASSDC04–05.xlsx","Table 5.1_Means")
+t12=rows("CPASSDC12.xlsx","Table 12.3_Proportions")
+n2=rows("NNPASDC02.xlsx","Table 2.1_Means Persons"); m2=rows("NNPASDC02.xlsx","Table 2.2_MoEs Persons")
 
-# ---------- 8. All 24-hour guidelines + each guideline, by age and sex (charts 8, 8b) ----------
+# ---------- 5. All 24-hour guidelines + each guideline, by age and sex (charts 8, 8b) ----------
 g3=rows("CPASSDC01–02.xlsx","Table 2.3_Proportions"); g4=rows("CPASSDC01–02.xlsx","Table 2.4_MoEs")
 assert [str(x) for x in g3[5][1:5]]==AGES
 GUIDE=(('All guidelines','Met 24-Hour Movement Guidelines'),('Activity','Met physical activity recommendation'),
@@ -188,7 +183,7 @@ for sex in ('All','Boys','Girls'):
         if sex=='All' or g=='All guidelines':
             print("  ",sex,g,[x['pct'] for x in gl if x['sex']==sex and x['guideline']==g],"moe",[x['moe'] for x in gl if x['sex']==sex and x['guideline']==g])
 
-# ---------- 9. Activity vs sedentary screen minutes per day, by age and sex (chart 9) ----------
+# ---------- 6. Activity vs sedentary screen minutes per day, by age and sex (chart 9) ----------
 acts=[]
 for sex,block in SEXES:
     bi=[i for i,r in enumerate(t5) if r[1]==block][0]
@@ -203,7 +198,7 @@ print("nnpas_activity_screens.csv")
 for sex,_ in SEXES:
     print("  ",sex,"activity",[x['activity_min'] for x in acts if x['sex']==sex],"screens",[x['screen_min'] for x in acts if x['sex']==sex])
 
-# ---------- 10. Screen devices in the bedroom + sleep quality, by age (charts 10, 10b) ----------
+# ---------- 7. Screen devices in the bedroom + sleep quality, by age (charts 10, 10b) ----------
 AGES5=['2–5']+AGES
 col12={str(h).replace('(c)','').replace('(b)',''):i for i,h in enumerate(t12[5]) if h}
 DEV=(('Smartphone/watch','Smart phone or smart watch'),('Computer','Computer (including desktop or laptop)'),
@@ -230,7 +225,7 @@ with open(OUT+"nnpas_sleep_quality.csv","w",newline="") as f:
 print("nnpas_sleep_quality.csv")
 for rt,_ in RATE: print("  ",rt,"raw",raw[rt],"normalised",[x['pct'] for x in sq if x['rating']==rt])
 
-# ---------- 11. Saturated fat and free sugars vs dietary limits (chart 11) ----------
+# ---------- 8. Saturated fat and free sugars vs dietary limits (chart 11) ----------
 # Limits are fixed reference values: NHMRC Nutrient Reference Values (saturated + trans fat, no more than 10% of energy)
 # and WHO Guideline: Sugars intake for adults and children, 2015 (free sugars below 10%, ideally below 5%).
 NUTR=(('Saturated + trans fat','Saturated fat + trans fatty acids',10,''),('Free sugars','Free sugars',10,5))
