@@ -1,6 +1,6 @@
 import openpyxl, csv, collections, json
 import sys
-SRC=(sys.argv[1] if len(sys.argv)>1 else "..")+"/"   # folder holding the original .xlsx files
+SRC=(sys.argv[1] if len(sys.argv)>1 else "raw")+"/"   # folder holding the original .xlsx files (run from repo root)
 OUT="data/"
 YEARS=[2009,2012,2015,2018,2021,2024]
 STATE_ABBR={'New South Wales':'NSW','Victoria':'VIC','Queensland':'QLD','South Australia':'SA','Western Australia':'WA','Tasmania':'TAS','Northern Territory':'NT','Australian Capital Territory':'ACT'}
@@ -17,7 +17,7 @@ def num(v):
 def rows(fn, sheet):
     wb=openpyxl.load_workbook(SRC+fn, data_only=True, read_only=True)
     ws=wb[sheet]; ws.reset_dimensions()
-    return [list(r)+[None]*30 for r in ws.iter_rows(values_only=True)]
+    return [list(r)+[None]*50 for r in ws.iter_rows(values_only=True)]
 
 # ---------- 1. AEDC by council, long format (charts 1-4) ----------
 cent={}
