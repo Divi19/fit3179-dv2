@@ -1,0 +1,535 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Beyond the vulnerable 1 in 10, another 1 in 7 children is at risk",
+    "subtitle": "% of children starting school in each category, by area of development, Australia"
+  },
+  "width": "container",
+  "height": 230,
+  "params": [
+    {
+      "name": "year",
+      "value": 2024,
+      "bind": {
+        "input": "radio",
+        "options": [
+          2009,
+          2024
+        ],
+        "name": "Year: "
+      }
+    }
+  ],
+  "data": {
+    "url": "data/aedc_categories_national.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "domain_order": "number",
+        "year": "number",
+        "category_order": "number",
+        "n": "number",
+        "total": "number",
+        "pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year == year"
+    },
+    {
+      "calculate": "100 * datum.n / datum.total",
+      "as": "share"
+    },
+    {
+      "window": [
+        {
+          "op": "sum",
+          "field": "share",
+          "as": "x1"
+        }
+      ],
+      "sort": [
+        {
+          "field": "category_order"
+        }
+      ],
+      "groupby": [
+        "domain"
+      ],
+      "frame": [
+        null,
+        0
+      ]
+    },
+    {
+      "calculate": "datum.x1 - datum.share",
+      "as": "x0"
+    },
+    {
+      "calculate": "(datum.x0 + datum.x1) / 2",
+      "as": "mid"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "domain",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Physical health",
+        "Social competence",
+        "Emotional maturity",
+        "Language & thinking",
+        "Communication"
+      ],
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontWeight": "bold",
+        "labelColor": "#1d2a35",
+        "labelFontSize": 12,
+        "labelPadding": 8
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.62
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "x0",
+          "type": "quantitative",
+          "title": "% of children starting school",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              10,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + '%'",
+            "grid": false
+          }
+        },
+        "x2": {
+          "field": "x1"
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Vulnerable",
+              "At risk",
+              "On track"
+            ],
+            "range": [
+              "#b3561a",
+              "#eda96a",
+              "#e6e7e4"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolType": "square",
+            "symbolStrokeWidth": 0,
+            "offset": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "domain",
+            "title": "Area"
+          },
+          {
+            "field": "category",
+            "title": "Category"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "pct",
+            "title": "% of children",
+            "format": ".1f"
+          },
+          {
+            "field": "n",
+            "title": "Children",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.category != 'On track'"
+        },
+        {
+          "calculate": "format(datum.pct, '.1f')",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "mid",
+          "type": "quantitative",
+          "title": "% of children starting school",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              10,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + '%'",
+            "grid": false
+          }
+        },
+        "text": {
+          "field": "t"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.category == 'Vulnerable'",
+            "value": "#ffffff"
+          },
+          "value": "#1d2a35"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 10
+          },
+          {
+            "x": 25
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "color": "#1d2a35",
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "title": "% of children starting school",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              10,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + '%'",
+            "grid": false
+          }
+        },
+        "y": {
+          "value": -22
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 10,
+            "t": "2009 cut-off: bottom 10%",
+            "y": -22
+          },
+          {
+            "x": 25,
+            "t": "next 15% = at risk",
+            "y": -8
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 4,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "title": "% of children starting school",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              10,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + '%'",
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.category == 'Vulnerable'"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "share",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rank == 1"
+        },
+        {
+          "calculate": "'← Largest vulnerable share: ' + format(datum.pct, '.1f') + '%'",
+          "as": "t"
+        },
+        {
+          "calculate": "datum.x1 + 17",
+          "as": "lx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#7a3510"
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "% of children starting school",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              10,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + '%'",
+            "grid": false
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.category != 'On track'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "n",
+              "as": "n_behind"
+            },
+            {
+              "op": "max",
+              "field": "total",
+              "as": "total"
+            }
+          ],
+          "groupby": [
+            "domain"
+          ]
+        },
+        {
+          "calculate": "100 * datum.n_behind / datum.total",
+          "as": "behind"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "behind",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rank == 1"
+        },
+        {
+          "calculate": "format(datum.behind, '.1f') + '% vulnerable or at risk: ' + format(datum.n_behind, ',') + ' children, about 1 in ' + format(round(100 / datum.behind), 'd')",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "x": {
+          "datum": 100,
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

@@ -48,6 +48,7 @@
     .scroll-x{overflow-x:auto}
     .scroll-x > .min-520{min-width:520px}
     .scroll-x > .min-680{min-width:680px}
+    .scroll-x > .min-820{min-width:820px}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
     .grid-2 > *{min-width:0}
     .note{font-size:14px;color:var(--muted);max-width:70ch;margin:6px 0 0}
@@ -117,6 +118,9 @@
           — but your council shapes the odds far more than that average suggests.</p>
       </div>
     </div>
+    <p class="lead" style="margin-top:8px">Each area is scored against a fixed 2009 benchmark: the lowest 10% of scores
+      are 'vulnerable', the next 15% 'at risk'.</p>
+    <div class="viz scroll-x"><div id="vis0" class="min-820"></div></div>
     <div class="viz scroll-x"><div id="vis1"></div></div>
     <p class="note">Panels zoom into the five largest cities, where most children live. Grey = result suppressed.</p>
   </section>
@@ -275,6 +279,7 @@
 <script>
   const opts = { actions: false, renderer: "svg" };
   const charts = [
+    ["#vis0",  "js/0_categories.vg.json"],
     ["#vis1",  "js/1_choropleth.vg.json"],
     ["#vis2",  "js/2_symbols.vg.json"],
     ["#vis3",  "js/3_bins.vg.json"],
