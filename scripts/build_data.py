@@ -42,6 +42,32 @@ with open(OUT+"aedc_lga.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(out[0])); w.writeheader(); w.writerows(out)
 print("aedc_lga.csv", len(out), "rows,", len({o['lga_code'] for o in out}), "councils")
 
+# ---------- 1b. AEDC by council, 2024, vulnerable per domain (chart 1 dropdown) ----------
+# One or more: n = r[19], % = r[20]. Domain sheets: vulnerable pairs start at r[33], so 2024 is r[43], r[44].
+MEASURES=[('One or more domains','LGA One or more',19),('Physical health','LGA Health',43),
+          ('Social competence','LGA Social',43),('Emotional maturity','LGA Emotional',43),
+          ('Language & thinking','LGA Language',43),('Communication','LGA Communication',43)]
+lgadom=[]
+for measure,sheet,ci in MEASURES:
+    state=None
+    for r in rows("lga-2009-24.xlsx",sheet)[6:]:
+        b,c=r[1],r[2]
+        if isinstance(b,str) and b in STATE_ABBR: state=STATE_ABBR[b]; continue
+        if isinstance(b,(int,float)) and float(b).is_integer():
+            code=RENAME.get(int(b),int(b))
+            if code not in cent: continue
+            valid=num(r[8]); n=num(r[ci]); pct=num(r[ci+1])
+            lgadom.append(dict(lga_code=code,lga_name=c,state=state,measure=measure,
+                               children_assessed=int(valid) if valid is not None else '',
+                               vulnerable_n=int(n) if n is not None else '',
+                               vulnerable_pct=round(pct,1) if pct is not None else ''))
+with open(OUT+"aedc_lga_domains.csv","w",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=list(lgadom[0])); w.writeheader(); w.writerows(lgadom)
+chk={(d['lga_name'],d['measure']):d['vulnerable_pct'] for d in lgadom}
+print("aedc_lga_domains.csv", len(lgadom), "rows; check Albury DV1/Health, Brisbane DV1/Language:",
+      chk[('Albury','One or more domains')], chk[('Albury','Physical health')],
+      chk[('Brisbane','One or more domains')], chk[('Brisbane','Language & thinking')])
+
 # ---------- 2. State trends: summary indicators (chart 5) + national domains (chart 6) ----------
 wb=openpyxl.load_workbook(SRC+"state-and-territory-trends-(2009-2024).xlsx", data_only=True, read_only=True)
 SHORT={'Developmentally vulnerable on one or more domains':'Vulnerable on 1+ domains',
