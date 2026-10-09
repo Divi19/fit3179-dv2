@@ -156,15 +156,7 @@ t5=rows("CPASSDC04–05.xlsx","Table 5.1_Means")
 
 t12=rows("CPASSDC12.xlsx","Table 12.3_Proportions")
 
-# ---------- 7. NNPAS free sugars (chart 11) ----------
 n2=rows("NNPASDC02.xlsx","Table 2.1_Means Persons"); m2=rows("NNPASDC02.xlsx","Table 2.2_MoEs Persons")
-hdr=n2[5]; _,fs=find(n2,'Free sugars'); _,fm=find(m2,'Free sugars')
-sug=[]
-for a,lab,grp in (('2–4','2–4 yrs','Children'),('5–11','5–11 yrs','Children'),('12–17','12–17 yrs','Children'),('18 years and over','Adults 18+','Adults')):
-    i=hdr.index(a); sug.append(dict(age_group=lab,group=grp,free_sugars_pct=fs[i],moe=fm[i]))
-with open(OUT+"nnpas_free_sugars.csv","w",newline="") as f:
-    w=csv.DictWriter(f,fieldnames=list(sug[0])); w.writeheader(); w.writerows(sug)
-print("sugars:", sug)
 
 # ================= ABS NNPAS 2023, new chart files =================
 def findp(rs,prefix,start=0):
