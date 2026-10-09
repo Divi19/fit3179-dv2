@@ -1,0 +1,444 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Activity and screen time are where the guidelines break",
+    "subtitle": "% of children meeting each guideline, by age, 2023 · arrow runs from ages 5–8 to 15–17"
+  },
+  "width": "container",
+  "height": 260,
+  "params": [
+    {
+      "name": "sex",
+      "value": "All",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "All",
+          "Boys",
+          "Girls"
+        ],
+        "name": "Show: "
+      }
+    }
+  ],
+  "data": {
+    "url": "data/nnpas_guidelines.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "age_order": "number",
+        "guideline_order": "number",
+        "pct": "number",
+        "moe": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.sex == sex && datum.guideline != 'All guidelines'"
+    },
+    {
+      "calculate": "datum.age_order == 0 ? datum.pct : null",
+      "as": "p_first"
+    },
+    {
+      "calculate": "datum.age_order == 3 ? datum.pct : null",
+      "as": "p_last"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "p_first",
+          "as": "start"
+        },
+        {
+          "op": "max",
+          "field": "p_last",
+          "as": "teen_pct"
+        }
+      ],
+      "groupby": [
+        "guideline"
+      ]
+    },
+    {
+      "calculate": "datum.teen_pct < datum.start ? 'triangle-left' : 'triangle-right'",
+      "as": "dir"
+    },
+    {
+      "calculate": "'Ages ' + datum.age_group",
+      "as": "age"
+    },
+    {
+      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') : 'not published'",
+      "as": "moe_label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "guideline",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "teen_pct",
+        "op": "max",
+        "order": "descending"
+      },
+      "axis": {
+        "labelFontSize": 12,
+        "labelColor": "#1d2a35",
+        "labelFontWeight": "bold",
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 10
+      }
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.age_order == 0"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#9aa3a9",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "start",
+          "type": "quantitative",
+          "title": "% of children meeting the guideline",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "x2": {
+          "field": "teen_pct"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.age_order == 3"
+        },
+        {
+          "calculate": "datum.teen_pct + (datum.dir == 'triangle-left' ? 1.6 : -1.6)",
+          "as": "tip"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "opacity": 1,
+        "size": 110,
+        "color": "#5b6670",
+        "strokeWidth": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "tip",
+          "type": "quantitative",
+          "title": "% of children meeting the guideline",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "shape": {
+          "field": "dir",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "triangle-left",
+              "triangle-right"
+            ],
+            "range": [
+              "triangle-left",
+              "triangle-right"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "opacity": 1,
+        "size": 170,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "pct",
+          "type": "quantitative",
+          "title": "% of children meeting the guideline",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "color": {
+          "field": "age",
+          "type": "ordinal",
+          "title": "Age",
+          "sort": {
+            "field": "age_order"
+          },
+          "scale": {
+            "domain": [
+              "Ages 5–8",
+              "Ages 9–11",
+              "Ages 12–14",
+              "Ages 15–17"
+            ],
+            "range": [
+              "#b4d8e4",
+              "#4598b4",
+              "#16739a",
+              "#0a4f6c"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolStrokeWidth": 0
+          }
+        },
+        "tooltip": [
+          {
+            "field": "guideline",
+            "title": "Guideline"
+          },
+          {
+            "field": "age_group",
+            "title": "Age"
+          },
+          {
+            "field": "pct",
+            "title": "% meeting",
+            "format": ".1f"
+          },
+          {
+            "field": "moe_label",
+            "title": "95% margin of error"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.age_order == 3 && (datum.guideline == 'Activity' || datum.guideline == 'Screen time')"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "max",
+              "field": "pct",
+              "as": "worst_teen"
+            },
+            {
+              "op": "max",
+              "field": "teen_pct",
+              "as": "teen_edge"
+            }
+          ]
+        },
+        {
+          "filter": "datum.worst_teen < 10 && datum.guideline == 'Screen time'"
+        },
+        {
+          "calculate": "datum.teen_edge + 2",
+          "as": "lx"
+        },
+        {
+          "calculate": "'Fewer than 1 in 10 teens meet these'",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#cf6a12",
+        "dy": {
+          "expr": "height / 8"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "% of children meeting the guideline",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.age_order == 3 && datum.guideline == 'Sleep'"
+        },
+        {
+          "calculate": "datum.teen_pct - 5",
+          "as": "lx"
+        },
+        {
+          "calculate": "'Sleep mostly holds'",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#007c9e"
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "% of children meeting the guideline",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Atkinson Hyperlegible",
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5b6670",
+      "titleColor": "#5b6670",
+      "gridColor": "#e7e9e8",
+      "domainColor": "#b8bec2",
+      "tickColor": "#b8bec2",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "legend": {
+      "labelColor": "#5b6670",
+      "titleColor": "#1d2a35",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "bold",
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "title": {
+      "anchor": "start",
+      "font": "Atkinson Hyperlegible",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#1d2a35",
+      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleColor": "#5b6670",
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "header": {
+      "labelFont": "Atkinson Hyperlegible",
+      "titleFont": "Atkinson Hyperlegible"
+    },
+    "text": {
+      "font": "Atkinson Hyperlegible"
+    }
+  }
+}

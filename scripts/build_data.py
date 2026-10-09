@@ -145,20 +145,12 @@ with open(OUT+"aedc_seifa.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(seifa[0])); w.writeheader(); w.writerows(seifa)
 print("seifa national:", {k:round(100*v[0]/v[1],1) for k,v in nat.items()})
 
-# ---------- 4. NNPAS guidelines met, by age (chart 8) ----------
+# ---------- NNPAS shared helpers ----------
 def find(rs,label,start=0):
     for i,r in enumerate(rs[start:],start):
         if isinstance(r[0],str) and r[0].strip()==label: return i,r
     raise KeyError(label)
-g1=rows("CPASSDC01–02.xlsx","Table 1.3_Proportions"); g2=rows("CPASSDC01–02.xlsx","Table 2.3_Proportions")
 AGES=['5–8','9–11','12–14','15–17']
-guid=[]
-_,r=find(g1,'Met physical activity recommendation'); guid.append(dict(age_group='2–5',guideline='3+ hours of play a day',pct=r[3]))
-_,r=find(g2,'Met physical activity recommendation')
-for k,a in enumerate(AGES): guid.append(dict(age_group=a,guideline='60+ min of moderate–vigorous activity a day',pct=r[1+k]))
-with open(OUT+"nnpas_activity_guideline.csv","w",newline="") as f:
-    w=csv.DictWriter(f,fieldnames=list(guid[0])); w.writeheader(); w.writerows(guid)
-print("guideline:", [(x['age_group'],x['pct']) for x in guid])
 
 # ---------- 5. NNPAS minutes of activity by sex (chart 9) ----------
 t5=rows("CPASSDC04–05.xlsx","Table 5.1_Means")
