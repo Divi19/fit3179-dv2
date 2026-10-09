@@ -890,8 +890,13 @@
                         "type": "csv",
                         "parse": {
                           "lga_code": "string",
+                          "year": "number",
+                          "children_assessed": "number",
+                          "vulnerable_n": "number",
+                          "vulnerable_pct": "number",
                           "lon": "number",
-                          "lat": "number"
+                          "lat": "number",
+                          "hex_id": "string"
                         }
                       }
                     },
@@ -1003,8 +1008,13 @@
                         "type": "csv",
                         "parse": {
                           "lga_code": "string",
+                          "year": "number",
+                          "children_assessed": "number",
+                          "vulnerable_n": "number",
+                          "vulnerable_pct": "number",
                           "lon": "number",
-                          "lat": "number"
+                          "lat": "number",
+                          "hex_id": "string"
                         }
                       }
                     },
@@ -1097,8 +1107,13 @@
                         "type": "csv",
                         "parse": {
                           "lga_code": "string",
+                          "year": "number",
+                          "children_assessed": "number",
+                          "vulnerable_n": "number",
+                          "vulnerable_pct": "number",
                           "lon": "number",
-                          "lat": "number"
+                          "lat": "number",
+                          "hex_id": "string"
                         }
                       }
                     },
