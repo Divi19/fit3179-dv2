@@ -2,20 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Where most affected children live",
-    "subtitle": "Number of children vulnerable on 1+ domains, by council · drag the slider to replay 2009–2024"
-  },
-  "width": "container",
-  "height": 400,
-  "projection": {
-    "type": "conicEqualArea",
-    "parallels": [
-      -18,
-      -36
-    ],
-    "rotate": [
-      -133.5,
-      0
-    ]
+    "subtitle": "Number of children vulnerable on 1+ domains, by council · use the slider or press play"
   },
   "params": [
     {
@@ -28,166 +15,438 @@
         "step": 3,
         "name": "Collection year "
       }
-    }
-  ],
-  "layer": [
-    {
-      "data": {
-        "url": "data/aus_lga.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "states"
-        }
-      },
-      "mark": {
-        "type": "geoshape",
-        "fill": "#eef0ee",
-        "stroke": "#ffffff",
-        "strokeWidth": 1
-      }
     },
     {
+      "name": "zoom",
+      "value": "Australia",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Australia",
+          "Sydney",
+          "Melbourne",
+          "Brisbane",
+          "Perth",
+          "Adelaide"
+        ],
+        "name": "Zoom to "
+      }
+    }
+  ],
+  "spacing": 14,
+  "vconcat": [
+    {
+      "title": {
+        "text": "Vulnerable children nationally",
+        "fontSize": 12,
+        "subtitle": null
+      },
+      "width": 510,
+      "height": 80,
       "data": {
-        "url": "data/aedc_lga.csv",
+        "url": "data/aedc_states.csv",
         "format": {
           "type": "csv",
           "parse": {
-            "lga_code": "string",
             "year": "number",
-            "children_assessed": "number",
-            "vulnerable_n": "number",
-            "vulnerable_pct": "number",
-            "lon": "number",
-            "lat": "number"
+            "pct": "number",
+            "n": "number",
+            "children": "number"
           }
         }
       },
       "transform": [
         {
-          "filter": "datum.year == year && isValid(datum.vulnerable_n) && datum.vulnerable_n > 0"
-        },
-        {
-          "calculate": "datum.vulnerable_pct >= 90 ? '90% or more' : format(datum.vulnerable_pct,'.1f') + '%'",
-          "as": "pct_label"
+          "filter": "datum.state == 'Australia' && datum.indicator == 'Vulnerable on 1+ domains'"
         }
       ],
-      "mark": {
-        "type": "circle",
-        "fill": "#b3561a",
-        "fillOpacity": 0.55,
-        "stroke": "#ffffff",
-        "strokeWidth": 0.6
-      },
       "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold"
+          }
         },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
-        },
-        "size": {
-          "field": "vulnerable_n",
+        "y": {
+          "field": "n",
           "type": "quantitative",
+          "title": null,
+          "axis": null,
           "scale": {
             "domain": [
               0,
-              3200
-            ],
-            "range": [
-              0,
-              1400
+              75000
             ]
-          },
-          "legend": {
-            "title": "Vulnerable children",
-            "orient": "top-left",
-            "values": [
-              250,
-              1000,
-              3000
-            ],
-            "symbolFillColor": "#b3561a",
-            "symbolOpacity": 0.55,
-            "symbolStrokeColor": "#ffffff"
           }
-        },
-        "order": {
-          "field": "vulnerable_n",
-          "sort": "descending"
-        },
-        "tooltip": [
-          {
-            "field": "lga_name",
-            "title": "Council"
-          },
-          {
-            "field": "year",
-            "title": "Year"
-          },
-          {
-            "field": "vulnerable_n",
-            "title": "Vulnerable children",
-            "format": ","
-          },
-          {
-            "field": "pct_label",
-            "title": "Share of children"
-          }
-        ]
-      }
-    },
-    {
-      "data": {
-        "url": "data/aus_lga.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "states"
         }
       },
-      "mark": {
-        "type": "geoshape",
-        "fill": null,
-        "stroke": "#5b6670",
-        "strokeWidth": 0.9
-      }
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "width": {
+              "band": 0.6
+            },
+            "cornerRadiusEnd": 2
+          },
+          "encoding": {
+            "color": {
+              "condition": {
+                "test": "datum.year == year",
+                "value": "#7a3510"
+              },
+              "value": "#dfe3e4"
+            },
+            "tooltip": [
+              {
+                "field": "year",
+                "title": "Year"
+              },
+              {
+                "field": "n",
+                "title": "Vulnerable children, Australia",
+                "format": ","
+              },
+              {
+                "field": "pct",
+                "title": "% of children",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.year == year"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "baseline": "bottom",
+            "dy": -3,
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "color": "#7a3510"
+          },
+          "encoding": {
+            "text": {
+              "field": "n",
+              "type": "quantitative",
+              "format": ","
+            }
+          }
+        }
+      ]
     },
     {
-      "data": {
-        "values": [
-          {
-            "lon": 149.2,
-            "lat": -21.6,
-            "t": "Brisbane alone: 2,756 children,"
-          },
-          {
-            "lon": 149.2,
-            "lat": -22.7,
-            "t": "2.5× the whole of the NT ↘"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#7a3510"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "t"
+      "width": 510,
+      "height": 400,
+      "projection": {
+        "type": "conicEqualArea",
+        "parallels": [
+          -18,
+          -36
+        ],
+        "rotate": [
+          -133.5,
+          0
+        ],
+        "fit": {
+          "expr": "zoom == 'Sydney' ? {type: 'Feature', properties: {}, geometry: {type: 'MultiPoint', coordinates: [[150.55, -34.2], [151.35, -33.55], [150.55, -33.55], [151.35, -34.2]]}} : zoom == 'Melbourne' ? {type: 'Feature', properties: {}, geometry: {type: 'MultiPoint', coordinates: [[144.55, -38.35], [145.55, -37.55], [144.55, -37.55], [145.55, -38.35]]}} : zoom == 'Brisbane' ? {type: 'Feature', properties: {}, geometry: {type: 'MultiPoint', coordinates: [[152.65, -27.95], [153.25, -26.95], [152.65, -26.95], [153.25, -27.95]]}} : zoom == 'Perth' ? {type: 'Feature', properties: {}, geometry: {type: 'MultiPoint', coordinates: [[115.65, -32.55], [116.15, -31.6], [115.65, -31.6], [116.15, -32.55]]}} : zoom == 'Adelaide' ? {type: 'Feature', properties: {}, geometry: {type: 'MultiPoint', coordinates: [[138.45, -35.25], [138.85, -34.65], [138.45, -34.65], [138.85, -35.25]]}} : {type: 'Feature', properties: {}, geometry: {type: 'MultiPoint', coordinates: [[112.93, -25.53], [153.36, -25.01], [142.17, -9.22], [146.86, -43.63], [160, -27.5]]}}"
         }
-      }
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "data/aus_lga.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "states"
+            }
+          },
+          "mark": {
+            "type": "geoshape",
+            "fill": "#eef0ee",
+            "stroke": "#ffffff",
+            "strokeWidth": 1,
+            "clip": true
+          }
+        },
+        {
+          "data": {
+            "url": "data/aedc_lga.csv",
+            "format": {
+              "type": "csv",
+              "parse": {
+                "lga_code": "string",
+                "year": "number",
+                "children_assessed": "number",
+                "vulnerable_n": "number",
+                "vulnerable_pct": "number",
+                "lon": "number",
+                "lat": "number",
+                "hex_id": "string"
+              }
+            }
+          },
+          "transform": [
+            {
+              "filter": "isValid(datum.vulnerable_n)"
+            },
+            {
+              "calculate": "datum.year == 2009 ? datum.vulnerable_n : null",
+              "as": "n09"
+            },
+            {
+              "joinaggregate": [
+                {
+                  "op": "max",
+                  "field": "n09",
+                  "as": "n2009"
+                }
+              ],
+              "groupby": [
+                "lga_code"
+              ]
+            },
+            {
+              "filter": "datum.year == year && datum.vulnerable_n > 0"
+            },
+            {
+              "calculate": "isValid(datum.n2009) ? (datum.vulnerable_n - datum.n2009 >= 0 ? '+' : '−') + format(abs(datum.vulnerable_n - datum.n2009), ',') + ' since 2009' : 'no 2009 result'",
+              "as": "change_label"
+            },
+            {
+              "calculate": "datum.vulnerable_pct >= 90 ? '90% or more' : format(datum.vulnerable_pct, '.1f') + '%'",
+              "as": "pct_label"
+            }
+          ],
+          "mark": {
+            "type": "circle",
+            "fill": "#7a3510",
+            "fillOpacity": 0.6,
+            "stroke": "#ffffff",
+            "strokeWidth": 0.75,
+            "clip": true
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "size": {
+              "field": "vulnerable_n",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  3200
+                ],
+                "range": [
+                  0,
+                  1400
+                ]
+              },
+              "legend": {
+                "title": "Vulnerable children",
+                "orient": "none",
+                "legendX": 0,
+                "legendY": 430,
+                "values": [
+                  250,
+                  1000,
+                  3000
+                ],
+                "symbolFillColor": "#7a3510",
+                "symbolOpacity": 0.6,
+                "symbolStrokeColor": "#ffffff"
+              }
+            },
+            "order": {
+              "field": "vulnerable_n",
+              "sort": "descending"
+            },
+            "tooltip": [
+              {
+                "field": "lga_name",
+                "title": "Council"
+              },
+              {
+                "field": "year",
+                "title": "Year"
+              },
+              {
+                "field": "vulnerable_n",
+                "title": "Vulnerable children",
+                "format": ","
+              },
+              {
+                "field": "n2009",
+                "title": "Vulnerable children in 2009",
+                "format": ","
+              },
+              {
+                "field": "change_label",
+                "title": "Change"
+              },
+              {
+                "field": "pct_label",
+                "title": "% vulnerable"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "data/aus_lga.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "states"
+            }
+          },
+          "mark": {
+            "type": "geoshape",
+            "fill": null,
+            "stroke": "#5b6670",
+            "strokeWidth": 0.9,
+            "clip": true
+          }
+        },
+        {
+          "data": {
+            "url": "data/aedc_lga.csv",
+            "format": {
+              "type": "csv",
+              "parse": {
+                "lga_code": "string",
+                "year": "number",
+                "children_assessed": "number",
+                "vulnerable_n": "number",
+                "vulnerable_pct": "number",
+                "lon": "number",
+                "lat": "number",
+                "hex_id": "string"
+              }
+            }
+          },
+          "transform": [
+            {
+              "filter": "datum.lga_name == 'Brisbane' && datum.year == year"
+            },
+            {
+              "calculate": "sqrt(datum.vulnerable_n * 0.437500) / 2",
+              "as": "r"
+            },
+            {
+              "calculate": "'──'",
+              "as": "t"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 9,
+            "color": "#1d2a35",
+            "clip": true,
+            "dx": {
+              "expr": "datum.r + 1"
+            },
+            "dy": -3
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        },
+        {
+          "data": {
+            "url": "data/aedc_lga.csv",
+            "format": {
+              "type": "csv",
+              "parse": {
+                "lga_code": "string",
+                "year": "number",
+                "children_assessed": "number",
+                "vulnerable_n": "number",
+                "vulnerable_pct": "number",
+                "lon": "number",
+                "lat": "number",
+                "hex_id": "string"
+              }
+            }
+          },
+          "transform": [
+            {
+              "filter": "datum.lga_name == 'Brisbane' && datum.year == year"
+            },
+            {
+              "calculate": "sqrt(datum.vulnerable_n * 0.437500) / 2",
+              "as": "r"
+            },
+            {
+              "calculate": "['Brisbane', format(datum.vulnerable_n, ',')]",
+              "as": "t"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#7a3510",
+            "lineHeight": 13,
+            "clip": true,
+            "dx": {
+              "expr": "datum.r + 17"
+            }
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "t"
+            },
+            "tooltip": [
+              {
+                "field": "lga_name",
+                "title": "Council"
+              },
+              {
+                "field": "vulnerable_n",
+                "title": "Vulnerable children",
+                "format": ","
+              }
+            ]
+          }
+        }
+      ]
     }
   ],
   "config": {
