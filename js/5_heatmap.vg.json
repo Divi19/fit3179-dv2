@@ -2,10 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Seven of eight states slipped in 2024",
-    "subtitle": "% of children on track on all five domains, by state and collection year"
+    "subtitle": "% of children on track on all five areas, by state · colour = change since the previous collection"
   },
   "width": "container",
-  "height": 290,
+  "height": 330,
   "data": {
     "url": "data/aedc_states.csv",
     "format": {
@@ -21,6 +21,43 @@
   "transform": [
     {
       "filter": "datum.indicator == 'On track on all 5 domains'"
+    },
+    {
+      "window": [
+        {
+          "op": "lag",
+          "field": "pct",
+          "as": "prev"
+        }
+      ],
+      "sort": [
+        {
+          "field": "year"
+        }
+      ],
+      "groupby": [
+        "state"
+      ]
+    },
+    {
+      "calculate": "isValid(datum.prev) ? datum.pct - datum.prev : null",
+      "as": "change"
+    },
+    {
+      "calculate": "!isValid(datum.change) ? 'Start (2009)' : datum.change <= -2 ? 'Down 2+ pts' : datum.change < -0.5 ? 'Down 0.5–2' : datum.change <= 0.5 ? 'Little change' : datum.change < 2 ? 'Up 0.5–2' : 'Up 2+ pts'",
+      "as": "class"
+    },
+    {
+      "calculate": "isValid(datum.change) ? (datum.change > 0 ? '+' : datum.change < 0 ? '−' : '±') + format(abs(datum.change), '.1f') + ' pts' : 'first collection'",
+      "as": "change_label"
+    },
+    {
+      "calculate": "datum.year == 2024 && datum.state != 'Australia' ? 'Since 2021: ' + lower(datum.sig_2021_2024) + '; since 2009: ' + lower(datum.sig_2009_2024) : ''",
+      "as": "sig_label"
+    },
+    {
+      "calculate": "datum.sig_2021_2024 == 'Significant decrease' ? '▼' : datum.sig_2021_2024 == 'Significant increase' ? '▲' : ''",
+      "as": "sig_mark"
     }
   ],
   "encoding": {
@@ -41,6 +78,7 @@
       "type": "nominal",
       "title": null,
       "sort": [
+        "Australia",
         "NSW",
         "VIC",
         "WA",
@@ -53,9 +91,11 @@
       "axis": {
         "domain": false,
         "ticks": false,
-        "labelFontWeight": "bold",
         "labelColor": "#1d2a35",
-        "labelFontSize": 12
+        "labelFontSize": 12,
+        "labelFontWeight": {
+          "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
+        }
       }
     }
   },
@@ -69,37 +109,43 @@
       },
       "encoding": {
         "color": {
-          "field": "pct",
-          "type": "quantitative",
+          "field": "class",
+          "type": "ordinal",
+          "title": "Change since previous collection",
           "scale": {
-            "type": "threshold",
             "domain": [
-              45,
-              50,
-              53,
-              56
+              "Start (2009)",
+              "Down 2+ pts",
+              "Down 0.5–2",
+              "Little change",
+              "Up 0.5–2",
+              "Up 2+ pts"
             ],
             "range": [
-              "#e2f0f4",
-              "#b4d8e4",
-              "#7fbcd0",
-              "#4598b4",
-              "#16739a"
+              "#f1f2f0",
+              "#b3561a",
+              "#eda96a",
+              "#e6e7e4",
+              "#9cc9d6",
+              "#007c9e"
             ]
           },
           "legend": {
-            "title": "% on track",
             "orient": "bottom",
             "direction": "horizontal",
-            "labelExpr": "datum.label"
+            "symbolType": "square",
+            "symbolStrokeColor": "#d5d9db",
+            "symbolStrokeWidth": 0.5
           }
         },
         "tooltip": [
           {
-            "field": "state"
+            "field": "state",
+            "title": "State"
           },
           {
-            "field": "year"
+            "field": "year",
+            "title": "Year"
           },
           {
             "field": "pct",
@@ -107,17 +153,26 @@
             "format": ".1f"
           },
           {
-            "field": "children",
-            "title": "Children assessed",
-            "format": ","
+            "field": "change_label",
+            "title": "Change from previous collection"
+          },
+          {
+            "field": "sig_label",
+            "title": "Statistical significance"
           }
         ]
       }
     },
     {
+      "transform": [
+        {
+          "filter": "datum.state != 'Australia'"
+        }
+      ],
       "mark": {
         "type": "text",
-        "fontSize": 11
+        "fontSize": 11,
+        "fontWeight": "normal"
       },
       "encoding": {
         "text": {
@@ -127,10 +182,162 @@
         },
         "color": {
           "condition": {
-            "test": "datum.pct >= 53",
+            "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
             "value": "#ffffff"
           },
           "value": "#1d2a35"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.state == 'Australia'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "pct",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
+            "value": "#ffffff"
+          },
+          "value": "#1d2a35"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sig_mark != ''"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": -5,
+        "dy": 4,
+        "fontSize": 10
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "orient": "top",
+            "labelAngle": 0,
+            "domain": false,
+            "ticks": false,
+            "labelFontWeight": "bold"
+          },
+          "bandPosition": 1
+        },
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "Australia",
+            "NSW",
+            "VIC",
+            "WA",
+            "SA",
+            "QLD",
+            "TAS",
+            "ACT",
+            "NT"
+          ],
+          "axis": {
+            "domain": false,
+            "ticks": false,
+            "labelColor": "#1d2a35",
+            "labelFontSize": 12,
+            "labelFontWeight": {
+              "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
+            }
+          },
+          "bandPosition": 0
+        },
+        "text": {
+          "field": "sig_mark"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
+            "value": "#ffffff"
+          },
+          "value": "#1d2a35"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "k": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#1d2a35",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "x2": {
+          "value": {
+            "expr": "width"
+          }
+        },
+        "y": {
+          "value": {
+            "expr": "height / 9"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "▼ / ▲ = statistically significant change since 2021"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "x": {
+          "value": {
+            "expr": "width"
+          }
+        },
+        "y": {
+          "value": {
+            "expr": "height + 30"
+          }
+        },
+        "text": {
+          "field": "t"
         }
       }
     }
