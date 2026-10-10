@@ -1,145 +1,163 @@
-state,year,indicator,pct,n,children
-NSW,2024,Vulnerable on 1+ domains,21.8,18329,83968
-NSW,2021,Vulnerable on 1+ domains,21.2,19067,90137
-NSW,2018,Vulnerable on 1+ domains,19.9,18583,93245
-NSW,2015,Vulnerable on 1+ domains,20.2,18378,90956
-NSW,2012,Vulnerable on 1+ domains,19.9,17722,88921
-NSW,2009,Vulnerable on 1+ domains,21.3,17652,82710
-NSW,2024,Vulnerable on 2+ domains,11.2,9459,84259
-NSW,2021,Vulnerable on 2+ domains,10.5,9510,90331
-NSW,2018,Vulnerable on 2+ domains,9.6,9001,93468
-NSW,2015,Vulnerable on 2+ domains,9.6,8733,91143
-NSW,2012,Vulnerable on 2+ domains,9.2,8189,89260
-NSW,2009,Vulnerable on 2+ domains,10.3,8526,82866
-NSW,2024,On track on all 5 domains,54.2,45624,84171
-NSW,2021,On track on all 5 domains,55.5,50056,90266
-NSW,2018,On track on all 5 domains,57.2,53409,93377
-NSW,2015,On track on all 5 domains,55.8,50801,91115
-NSW,2012,On track on all 5 domains,56.1,50076,89199
-NSW,2009,On track on all 5 domains,54.8,45365,82807
-VIC,2024,Vulnerable on 1+ domains,22.3,13858,62121
-VIC,2021,Vulnerable on 1+ domains,19.9,13777,69068
-VIC,2018,Vulnerable on 1+ domains,19.9,14232,71671
-VIC,2015,Vulnerable on 1+ domains,19.9,13465,67670
-VIC,2012,Vulnerable on 1+ domains,19.5,12407,63584
-VIC,2009,Vulnerable on 1+ domains,20.3,11641,57277
-VIC,2024,Vulnerable on 2+ domains,11.8,7360,62275
-VIC,2021,Vulnerable on 2+ domains,10.2,7085,69217
-VIC,2018,Vulnerable on 2+ domains,10.1,7231,71828
-VIC,2015,Vulnerable on 2+ domains,9.9,6707,67812
-VIC,2012,Vulnerable on 2+ domains,9.5,6053,63889
-VIC,2009,Vulnerable on 2+ domains,10.0,5736,57420
-VIC,2024,On track on all 5 domains,53.8,33483,62256
-VIC,2021,On track on all 5 domains,57.2,39560,69152
-VIC,2018,On track on all 5 domains,57.7,41429,71765
-VIC,2015,On track on all 5 domains,57.5,38948,67769
-VIC,2012,On track on all 5 domains,57.5,36715,63834
-VIC,2009,On track on all 5 domains,56.0,32137,57378
-QLD,2024,Vulnerable on 1+ domains,25.4,14675,57860
-QLD,2021,Vulnerable on 1+ domains,24.7,15143,61279
-QLD,2018,Vulnerable on 1+ domains,25.9,15954,61673
-QLD,2015,Vulnerable on 1+ domains,26.1,16220,62027
-QLD,2012,Vulnerable on 1+ domains,26.2,15217,57994
-QLD,2009,Vulnerable on 1+ domains,29.6,15593,52603
-QLD,2024,Vulnerable on 2+ domains,13.6,7898,57956
-QLD,2021,Vulnerable on 2+ domains,13.2,8088,61385
-QLD,2018,Vulnerable on 2+ domains,13.9,8576,61781
-QLD,2015,Vulnerable on 2+ domains,14.0,8713,62103
-QLD,2012,Vulnerable on 2+ domains,13.8,8001,58107
-QLD,2009,Vulnerable on 2+ domains,15.8,8307,52670
-QLD,2024,On track on all 5 domains,51.7,29926,57930
-QLD,2021,On track on all 5 domains,51.4,31524,61364
-QLD,2018,On track on all 5 domains,50.5,31167,61751
-QLD,2015,On track on all 5 domains,49.3,30610,62094
-QLD,2012,On track on all 5 domains,48.3,28036,58087
-QLD,2009,On track on all 5 domains,40.9,21529,52685
-SA,2024,Vulnerable on 1+ domains,24.5,4299,17580
-SA,2021,Vulnerable on 1+ domains,23.8,4490,18881
-SA,2018,Vulnerable on 1+ domains,23.9,4564,19092
-SA,2015,Vulnerable on 1+ domains,23.5,4338,18451
-SA,2012,Vulnerable on 1+ domains,23.7,4115,17355
-SA,2009,Vulnerable on 1+ domains,22.8,3419,15009
-SA,2024,Vulnerable on 2+ domains,13.2,2321,17612
-SA,2021,Vulnerable on 2+ domains,12.7,2411,18921
-SA,2018,Vulnerable on 2+ domains,13.0,2490,19157
-SA,2015,Vulnerable on 2+ domains,12.2,2259,18509
-SA,2012,Vulnerable on 2+ domains,12.2,2126,17399
-SA,2009,Vulnerable on 2+ domains,11.5,1730,15031
-SA,2024,On track on all 5 domains,53.0,9337,17615
-SA,2021,On track on all 5 domains,53.7,10161,18911
-SA,2018,On track on all 5 domains,53.2,10186,19132
-SA,2015,On track on all 5 domains,52.0,9617,18490
-SA,2012,On track on all 5 domains,51.6,8976,17411
-SA,2009,On track on all 5 domains,51.7,7774,15038
-WA,2024,Vulnerable on 1+ domains,24.1,7807,32387
-WA,2021,Vulnerable on 1+ domains,20.3,6852,33716
-WA,2018,Vulnerable on 1+ domains,19.4,6369,32798
-WA,2015,Vulnerable on 1+ domains,21.3,6895,32373
-WA,2012,Vulnerable on 1+ domains,23.0,7048,30631
-WA,2009,Vulnerable on 1+ domains,24.7,6445,26052
-WA,2024,Vulnerable on 2+ domains,12.6,4086,32462
-WA,2021,Vulnerable on 2+ domains,10.2,3457,33782
-WA,2018,Vulnerable on 2+ domains,9.4,3086,32880
-WA,2015,Vulnerable on 2+ domains,10.5,3403,32478
-WA,2012,Vulnerable on 2+ domains,11.2,3449,30770
-WA,2009,Vulnerable on 2+ domains,12.2,3177,26091
-WA,2024,On track on all 5 domains,53.1,17215,32447
-WA,2021,On track on all 5 domains,57.5,19424,33756
-WA,2018,On track on all 5 domains,58.0,19056,32841
-WA,2015,On track on all 5 domains,55.3,17938,32421
-WA,2012,On track on all 5 domains,50.9,15633,30727
-WA,2009,On track on all 5 domains,46.5,12130,26090
-TAS,2024,Vulnerable on 1+ domains,25.9,1355,5234
-TAS,2021,Vulnerable on 1+ domains,23.2,1297,5589
-TAS,2018,Vulnerable on 1+ domains,21.5,1255,5825
-TAS,2015,Vulnerable on 1+ domains,21.0,1296,6159
-TAS,2012,Vulnerable on 1+ domains,21.5,1308,6086
-TAS,2009,Vulnerable on 1+ domains,21.8,1243,5699
-TAS,2024,Vulnerable on 2+ domains,14.3,748,5244
-TAS,2021,Vulnerable on 2+ domains,11.9,668,5594
-TAS,2018,Vulnerable on 2+ domains,10.7,625,5840
-TAS,2015,Vulnerable on 2+ domains,10.7,657,6158
-TAS,2012,Vulnerable on 2+ domains,10.1,618,6104
-TAS,2009,Vulnerable on 2+ domains,10.8,617,5699
-TAS,2024,On track on all 5 domains,48.9,2561,5238
-TAS,2021,On track on all 5 domains,52.7,2946,5594
-TAS,2018,On track on all 5 domains,54.5,3177,5829
-TAS,2015,On track on all 5 domains,55.6,3427,6159
-TAS,2012,On track on all 5 domains,54.5,3330,6113
-TAS,2009,On track on all 5 domains,52.0,2963,5701
-NT,2024,Vulnerable on 1+ domains,40.8,1096,2685
-NT,2021,Vulnerable on 1+ domains,39.2,1164,2973
-NT,2018,Vulnerable on 1+ domains,35.8,1141,3190
-NT,2015,Vulnerable on 1+ domains,37.2,1207,3248
-NT,2012,Vulnerable on 1+ domains,35.5,1106,3117
-NT,2009,Vulnerable on 1+ domains,38.7,1109,2865
-NT,2024,Vulnerable on 2+ domains,26.9,722,2686
-NT,2021,Vulnerable on 2+ domains,25.7,764,2975
-NT,2018,Vulnerable on 2+ domains,23.4,745,3184
-NT,2015,Vulnerable on 2+ domains,23.1,751,3255
-NT,2012,Vulnerable on 2+ domains,20.9,653,3130
-NT,2009,Vulnerable on 2+ domains,23.4,673,2878
-NT,2024,On track on all 5 domains,37.2,1001,2692
-NT,2021,On track on all 5 domains,38.6,1150,2976
-NT,2018,On track on all 5 domains,42.2,1349,3193
-NT,2015,On track on all 5 domains,41.2,1341,3256
-NT,2012,On track on all 5 domains,40.4,1264,3126
-NT,2009,On track on all 5 domains,38.0,1093,2874
-ACT,2024,Vulnerable on 1+ domains,28.1,1368,4876
-ACT,2021,Vulnerable on 1+ domains,26.7,1474,5521
-ACT,2018,Vulnerable on 1+ domains,24.6,1350,5482
-ACT,2015,Vulnerable on 1+ domains,22.5,1161,5157
-ACT,2012,Vulnerable on 1+ domains,22.0,1010,4594
-ACT,2009,Vulnerable on 1+ domains,22.2,927,4180
-ACT,2024,Vulnerable on 2+ domains,14.9,728,4902
-ACT,2021,Vulnerable on 2+ domains,13.3,735,5532
-ACT,2018,Vulnerable on 2+ domains,12.4,680,5481
-ACT,2015,Vulnerable on 2+ domains,10.3,531,5158
-ACT,2012,Vulnerable on 2+ domains,9.8,454,4616
-ACT,2009,Vulnerable on 2+ domains,10.9,456,4190
-ACT,2024,On track on all 5 domains,43.8,2147,4898
-ACT,2021,On track on all 5 domains,47.3,2615,5526
-ACT,2018,On track on all 5 domains,48.7,2667,5482
-ACT,2015,On track on all 5 domains,49.5,2556,5161
-ACT,2012,On track on all 5 domains,50.6,2332,4611
-ACT,2009,On track on all 5 domains,50.8,2127,4185
+state,year,indicator,pct,n,children,sig_2009_2024,sig_2021_2024
+NSW,2024,Vulnerable on 1+ domains,21.8,18329,83968,Significant increase,Significant increase
+NSW,2021,Vulnerable on 1+ domains,21.2,19067,90137,,
+NSW,2018,Vulnerable on 1+ domains,19.9,18583,93245,,
+NSW,2015,Vulnerable on 1+ domains,20.2,18378,90956,,
+NSW,2012,Vulnerable on 1+ domains,19.9,17722,88921,,
+NSW,2009,Vulnerable on 1+ domains,21.3,17652,82710,,
+NSW,2024,Vulnerable on 2+ domains,11.2,9459,84259,Significant increase,Significant increase
+NSW,2021,Vulnerable on 2+ domains,10.5,9510,90331,,
+NSW,2018,Vulnerable on 2+ domains,9.6,9001,93468,,
+NSW,2015,Vulnerable on 2+ domains,9.6,8733,91143,,
+NSW,2012,Vulnerable on 2+ domains,9.2,8189,89260,,
+NSW,2009,Vulnerable on 2+ domains,10.3,8526,82866,,
+NSW,2024,On track on all 5 domains,54.2,45624,84171,Significant decrease,Significant decrease
+NSW,2021,On track on all 5 domains,55.5,50056,90266,,
+NSW,2018,On track on all 5 domains,57.2,53409,93377,,
+NSW,2015,On track on all 5 domains,55.8,50801,91115,,
+NSW,2012,On track on all 5 domains,56.1,50076,89199,,
+NSW,2009,On track on all 5 domains,54.8,45365,82807,,
+VIC,2024,Vulnerable on 1+ domains,22.3,13858,62121,Significant increase,Significant increase
+VIC,2021,Vulnerable on 1+ domains,19.9,13777,69068,,
+VIC,2018,Vulnerable on 1+ domains,19.9,14232,71671,,
+VIC,2015,Vulnerable on 1+ domains,19.9,13465,67670,,
+VIC,2012,Vulnerable on 1+ domains,19.5,12407,63584,,
+VIC,2009,Vulnerable on 1+ domains,20.3,11641,57277,,
+VIC,2024,Vulnerable on 2+ domains,11.8,7360,62275,Significant increase,Significant increase
+VIC,2021,Vulnerable on 2+ domains,10.2,7085,69217,,
+VIC,2018,Vulnerable on 2+ domains,10.1,7231,71828,,
+VIC,2015,Vulnerable on 2+ domains,9.9,6707,67812,,
+VIC,2012,Vulnerable on 2+ domains,9.5,6053,63889,,
+VIC,2009,Vulnerable on 2+ domains,10.0,5736,57420,,
+VIC,2024,On track on all 5 domains,53.8,33483,62256,Significant decrease,Significant decrease
+VIC,2021,On track on all 5 domains,57.2,39560,69152,,
+VIC,2018,On track on all 5 domains,57.7,41429,71765,,
+VIC,2015,On track on all 5 domains,57.5,38948,67769,,
+VIC,2012,On track on all 5 domains,57.5,36715,63834,,
+VIC,2009,On track on all 5 domains,56.0,32137,57378,,
+QLD,2024,Vulnerable on 1+ domains,25.4,14675,57860,Significant decrease,Significant increase
+QLD,2021,Vulnerable on 1+ domains,24.7,15143,61279,,
+QLD,2018,Vulnerable on 1+ domains,25.9,15954,61673,,
+QLD,2015,Vulnerable on 1+ domains,26.1,16220,62027,,
+QLD,2012,Vulnerable on 1+ domains,26.2,15217,57994,,
+QLD,2009,Vulnerable on 1+ domains,29.6,15593,52603,,
+QLD,2024,Vulnerable on 2+ domains,13.6,7898,57956,Significant decrease,Significant increase
+QLD,2021,Vulnerable on 2+ domains,13.2,8088,61385,,
+QLD,2018,Vulnerable on 2+ domains,13.9,8576,61781,,
+QLD,2015,Vulnerable on 2+ domains,14.0,8713,62103,,
+QLD,2012,Vulnerable on 2+ domains,13.8,8001,58107,,
+QLD,2009,Vulnerable on 2+ domains,15.8,8307,52670,,
+QLD,2024,On track on all 5 domains,51.7,29926,57930,Significant increase,No significant change
+QLD,2021,On track on all 5 domains,51.4,31524,61364,,
+QLD,2018,On track on all 5 domains,50.5,31167,61751,,
+QLD,2015,On track on all 5 domains,49.3,30610,62094,,
+QLD,2012,On track on all 5 domains,48.3,28036,58087,,
+QLD,2009,On track on all 5 domains,40.9,21529,52685,,
+SA,2024,Vulnerable on 1+ domains,24.5,4299,17580,Significant increase,Significant increase
+SA,2021,Vulnerable on 1+ domains,23.8,4490,18881,,
+SA,2018,Vulnerable on 1+ domains,23.9,4564,19092,,
+SA,2015,Vulnerable on 1+ domains,23.5,4338,18451,,
+SA,2012,Vulnerable on 1+ domains,23.7,4115,17355,,
+SA,2009,Vulnerable on 1+ domains,22.8,3419,15009,,
+SA,2024,Vulnerable on 2+ domains,13.2,2321,17612,Significant increase,Significant increase
+SA,2021,Vulnerable on 2+ domains,12.7,2411,18921,,
+SA,2018,Vulnerable on 2+ domains,13.0,2490,19157,,
+SA,2015,Vulnerable on 2+ domains,12.2,2259,18509,,
+SA,2012,Vulnerable on 2+ domains,12.2,2126,17399,,
+SA,2009,Vulnerable on 2+ domains,11.5,1730,15031,,
+SA,2024,On track on all 5 domains,53.0,9337,17615,Significant increase,Significant decrease
+SA,2021,On track on all 5 domains,53.7,10161,18911,,
+SA,2018,On track on all 5 domains,53.2,10186,19132,,
+SA,2015,On track on all 5 domains,52.0,9617,18490,,
+SA,2012,On track on all 5 domains,51.6,8976,17411,,
+SA,2009,On track on all 5 domains,51.7,7774,15038,,
+WA,2024,Vulnerable on 1+ domains,24.1,7807,32387,Significant decrease,Significant increase
+WA,2021,Vulnerable on 1+ domains,20.3,6852,33716,,
+WA,2018,Vulnerable on 1+ domains,19.4,6369,32798,,
+WA,2015,Vulnerable on 1+ domains,21.3,6895,32373,,
+WA,2012,Vulnerable on 1+ domains,23.0,7048,30631,,
+WA,2009,Vulnerable on 1+ domains,24.7,6445,26052,,
+WA,2024,Vulnerable on 2+ domains,12.6,4086,32462,Significant increase,Significant increase
+WA,2021,Vulnerable on 2+ domains,10.2,3457,33782,,
+WA,2018,Vulnerable on 2+ domains,9.4,3086,32880,,
+WA,2015,Vulnerable on 2+ domains,10.5,3403,32478,,
+WA,2012,Vulnerable on 2+ domains,11.2,3449,30770,,
+WA,2009,Vulnerable on 2+ domains,12.2,3177,26091,,
+WA,2024,On track on all 5 domains,53.1,17215,32447,Significant increase,Significant decrease
+WA,2021,On track on all 5 domains,57.5,19424,33756,,
+WA,2018,On track on all 5 domains,58.0,19056,32841,,
+WA,2015,On track on all 5 domains,55.3,17938,32421,,
+WA,2012,On track on all 5 domains,50.9,15633,30727,,
+WA,2009,On track on all 5 domains,46.5,12130,26090,,
+TAS,2024,Vulnerable on 1+ domains,25.9,1355,5234,Significant increase,Significant increase
+TAS,2021,Vulnerable on 1+ domains,23.2,1297,5589,,
+TAS,2018,Vulnerable on 1+ domains,21.5,1255,5825,,
+TAS,2015,Vulnerable on 1+ domains,21.0,1296,6159,,
+TAS,2012,Vulnerable on 1+ domains,21.5,1308,6086,,
+TAS,2009,Vulnerable on 1+ domains,21.8,1243,5699,,
+TAS,2024,Vulnerable on 2+ domains,14.3,748,5244,Significant increase,Significant increase
+TAS,2021,Vulnerable on 2+ domains,11.9,668,5594,,
+TAS,2018,Vulnerable on 2+ domains,10.7,625,5840,,
+TAS,2015,Vulnerable on 2+ domains,10.7,657,6158,,
+TAS,2012,Vulnerable on 2+ domains,10.1,618,6104,,
+TAS,2009,Vulnerable on 2+ domains,10.8,617,5699,,
+TAS,2024,On track on all 5 domains,48.9,2561,5238,Significant decrease,Significant decrease
+TAS,2021,On track on all 5 domains,52.7,2946,5594,,
+TAS,2018,On track on all 5 domains,54.5,3177,5829,,
+TAS,2015,On track on all 5 domains,55.6,3427,6159,,
+TAS,2012,On track on all 5 domains,54.5,3330,6113,,
+TAS,2009,On track on all 5 domains,52.0,2963,5701,,
+NT,2024,Vulnerable on 1+ domains,40.8,1096,2685,Significant increase,Significant increase
+NT,2021,Vulnerable on 1+ domains,39.2,1164,2973,,
+NT,2018,Vulnerable on 1+ domains,35.8,1141,3190,,
+NT,2015,Vulnerable on 1+ domains,37.2,1207,3248,,
+NT,2012,Vulnerable on 1+ domains,35.5,1106,3117,,
+NT,2009,Vulnerable on 1+ domains,38.7,1109,2865,,
+NT,2024,Vulnerable on 2+ domains,26.9,722,2686,Significant increase,Significant increase
+NT,2021,Vulnerable on 2+ domains,25.7,764,2975,,
+NT,2018,Vulnerable on 2+ domains,23.4,745,3184,,
+NT,2015,Vulnerable on 2+ domains,23.1,751,3255,,
+NT,2012,Vulnerable on 2+ domains,20.9,653,3130,,
+NT,2009,Vulnerable on 2+ domains,23.4,673,2878,,
+NT,2024,On track on all 5 domains,37.2,1001,2692,No significant change,Significant decrease
+NT,2021,On track on all 5 domains,38.6,1150,2976,,
+NT,2018,On track on all 5 domains,42.2,1349,3193,,
+NT,2015,On track on all 5 domains,41.2,1341,3256,,
+NT,2012,On track on all 5 domains,40.4,1264,3126,,
+NT,2009,On track on all 5 domains,38.0,1093,2874,,
+ACT,2024,Vulnerable on 1+ domains,28.1,1368,4876,Significant increase,Significant increase
+ACT,2021,Vulnerable on 1+ domains,26.7,1474,5521,,
+ACT,2018,Vulnerable on 1+ domains,24.6,1350,5482,,
+ACT,2015,Vulnerable on 1+ domains,22.5,1161,5157,,
+ACT,2012,Vulnerable on 1+ domains,22.0,1010,4594,,
+ACT,2009,Vulnerable on 1+ domains,22.2,927,4180,,
+ACT,2024,Vulnerable on 2+ domains,14.9,728,4902,Significant increase,Significant increase
+ACT,2021,Vulnerable on 2+ domains,13.3,735,5532,,
+ACT,2018,Vulnerable on 2+ domains,12.4,680,5481,,
+ACT,2015,Vulnerable on 2+ domains,10.3,531,5158,,
+ACT,2012,Vulnerable on 2+ domains,9.8,454,4616,,
+ACT,2009,Vulnerable on 2+ domains,10.9,456,4190,,
+ACT,2024,On track on all 5 domains,43.8,2147,4898,Significant decrease,Significant decrease
+ACT,2021,On track on all 5 domains,47.3,2615,5526,,
+ACT,2018,On track on all 5 domains,48.7,2667,5482,,
+ACT,2015,On track on all 5 domains,49.5,2556,5161,,
+ACT,2012,On track on all 5 domains,50.6,2332,4611,,
+ACT,2009,On track on all 5 domains,50.8,2127,4185,,
+Australia,2024,Vulnerable on 1+ domains,23.5,62787,266711,,
+Australia,2021,Vulnerable on 1+ domains,22.0,63264,287164,,
+Australia,2018,Vulnerable on 1+ domains,21.7,63448,292976,,
+Australia,2015,Vulnerable on 1+ domains,22.0,62960,286041,,
+Australia,2012,Vulnerable on 1+ domains,22.0,59933,272282,,
+Australia,2009,Vulnerable on 1+ domains,23.6,58029,246395,,
+Australia,2024,Vulnerable on 2+ domains,12.5,33322,267396,,
+Australia,2021,Vulnerable on 2+ domains,11.4,32718,287737,,
+Australia,2018,Vulnerable on 2+ domains,11.0,32434,293619,,
+Australia,2015,Vulnerable on 2+ domains,11.1,31754,286616,,
+Australia,2012,Vulnerable on 2+ domains,10.8,29543,273275,,
+Australia,2009,Vulnerable on 2+ domains,11.8,29222,246845,,
+Australia,2024,On track on all 5 domains,52.9,141294,267247,,
+Australia,2021,On track on all 5 domains,54.8,157436,287545,,
+Australia,2018,On track on all 5 domains,55.4,162440,293370,,
+Australia,2015,On track on all 5 domains,54.2,155238,286465,,
+Australia,2012,On track on all 5 domains,53.6,146362,273108,,
+Australia,2009,On track on all 5 domains,50.7,125118,246758,,

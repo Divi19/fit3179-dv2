@@ -112,13 +112,22 @@ for sn in wb.sheetnames[1:]:
         if r[0] not in (None,''): label=r[0]
         if 'summary' in sn.lower():
             if isinstance(r[1],int) and isinstance(r[3],(int,float)):
-                summ.append(dict(state=st,year=r[1],indicator=SHORT[label],pct=round(r[3],1),n=r[2],children=r[4]))
+                summ.append(dict(state=st,year=r[1],indicator=SHORT[label],pct=round(r[3],1),n=r[2],children=r[4],
+                                 sig_2009_2024=(r[6] or '') if r[1]==2024 else '',sig_2021_2024=(r[7] or '') if r[1]==2024 else ''))
         else:
             if isinstance(r[1],int) and isinstance(r[6],(int,float)) and isinstance(r[8],(int,float)):
                 dom[(label,r[1])][0]+=r[6]; dom[(label,r[1])][1]+=r[8]
+# Australia = sum of n / sum of children across the 8 states (no significance test published for it)
+aus=collections.defaultdict(lambda:[0,0])
+for s in summ: aus[(s['indicator'],s['year'])][0]+=s['n']; aus[(s['indicator'],s['year'])][1]+=s['children']
+summ+=[dict(state='Australia',year=y,indicator=ind,pct=round(100*n/c,1),n=n,children=c,sig_2009_2024='',sig_2021_2024='')
+       for (ind,y),(n,c) in aus.items()]
 with open(OUT+"aedc_states.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(summ[0])); w.writeheader(); w.writerows(summ)
 print("aedc_states.csv", len(summ), "rows; states:", sorted({s['state'] for s in summ}))
+print("  Australia on track 5, by year:", sorted((y,s['pct']) for s in summ for y in [s['year']] if s['state']=='Australia' and s['indicator']=='On track on all 5 domains'))
+print("  Australia vulnerable 1+ n, by year:", sorted((s['year'],s['n']) for s in summ if s['state']=='Australia' and s['indicator']=='Vulnerable on 1+ domains'))
+print("  on track 5 significance 2024 (2009 vs 2024 / 2021 vs 2024):", [(s['state'],s['sig_2009_2024'],s['sig_2021_2024']) for s in summ if s['year']==2024 and s['indicator']=='On track on all 5 domains' and s['state']!='Australia'])
 DSHORT={'Physical health and wellbeing':'Physical health','Social competence':'Social competence',
         'Emotional maturity':'Emotional maturity','Language and cognitive skills (school-based)':'Language & thinking',
         'Communication skills and general knowledge':'Communication'}
