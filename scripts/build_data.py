@@ -169,7 +169,7 @@ for r in rows("seifa-2009-24.xlsx","SEIFA On track five"):
         q='Most disadvantaged' if c.startswith('Quintile 1') else 'Least disadvantaged'
         for k,y in enumerate(YEARS):
             valid=num(r[3+k]); n=num(r[9+2*k]); pct=num(r[10+2*k])
-            if y in (2021,2024) and pct is not None:
+            if y in (2009,2021,2024) and pct is not None:
                 seifa.append(dict(area=state,group=q,year=y,on_track_pct=round(pct,1)))
                 nat[(q,y)][0]+=n; nat[(q,y)][1]+=valid
 for (q,y),(n,t) in nat.items():
