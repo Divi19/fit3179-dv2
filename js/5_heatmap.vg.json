@@ -320,20 +320,18 @@
       },
       "mark": {
         "type": "text",
-        "align": "right",
+        "align": "left",
         "baseline": "top",
         "fontSize": 11,
         "color": "#1d2a35"
       },
       "encoding": {
         "x": {
-          "value": {
-            "expr": "width"
-          }
+          "value": 0
         },
         "y": {
           "value": {
-            "expr": "height + 30"
+            "expr": "height + 62"
           }
         },
         "text": {
