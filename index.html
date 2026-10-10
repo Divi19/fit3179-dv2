@@ -74,6 +74,9 @@
     .vega-bindings{font-size:14px;color:var(--muted);margin-top:6px}
     .vega-bind-name{font-weight:700;color:var(--ink);margin-right:6px}
     .vega-bindings input[type=range]{accent-color:var(--rust);vertical-align:middle;width:220px}
+    .play-btn{font:inherit;font-size:14px;font-weight:700;color:var(--ink);background:#fff;border:1px solid var(--rule);
+      border-radius:4px;padding:4px 12px;margin-top:6px;cursor:pointer}
+    .play-btn:hover{border-color:var(--rust)}
     .vega-bindings select{font:inherit;color:var(--ink);padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:#fff}
 
     @media (max-width: 900px){
@@ -132,6 +135,7 @@
           <strong>children</strong> rather than <strong>rates</strong> flips the picture: the largest numbers of
           vulnerable children live in fast-growing outer-suburban councils such as Brisbane, Moreton Bay and Logan.</p>
         <div class="viz"><div id="vis2"></div></div>
+        <button type="button" class="play-btn" id="play2">▶ Play 2009–2024</button>
       </div>
       <div>
         <p class="lead">Grouping councils into equal-sized hexagons removes the size bias and shows where things
@@ -297,7 +301,33 @@
     ["#vis10b","js/10b_sleep_quality.vg.json"],
     ["#vis11", "js/11_bullet.vg.json"]
   ];
-  charts.forEach(([el, url]) => vegaEmbed(el, url, opts).catch(console.error));
+  const views = {};
+  charts.forEach(([el, url]) => vegaEmbed(el, url, opts).then(r => { views[el] = r.view; }).catch(console.error));
+
+  // Chart 2 play button: step the year slider 2009 -> 2024 about once a second
+  const playBtn = document.getElementById("play2");
+  let playTimer = null;
+  function stopPlay() {
+    clearInterval(playTimer); playTimer = null;
+    playBtn.textContent = "▶ Play 2009–2024";
+  }
+  playBtn.addEventListener("click", () => {
+    const view = views["#vis2"];
+    if (!view) return;
+    stopPlay();
+    let year = 2009;
+    view.signal("year", year).runAsync();
+    playBtn.textContent = "■ Playing…";
+    playTimer = setInterval(() => {
+      year += 3;
+      if (year > 2024) { stopPlay(); return; }
+      view.signal("year", year).runAsync();
+    }, 1000);
+  });
+  // moving the slider by hand stops playback
+  document.getElementById("vis2").addEventListener("input", e => {
+    if (e.target.type === "range") stopPlay();
+  });
 </script>
 </body>
 </html>
