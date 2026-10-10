@@ -24,12 +24,12 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 
 0. 100% stacked bar with year toggle: vulnerable, at risk and on track in each area of development, 2009 vs 2024
 1. Choropleth map with city zoom panels and an area menu: % vulnerable by council, 2024
-2. Proportional symbol map with year slider: number of vulnerable children, 2009–2024
+2. Proportional symbol map with year slider, play button and city zoom: number of vulnerable children, with 2009 rings, 2009–2024
 3. Hexagon bin map: change in % vulnerable 2021 → 2024, ~100 km hexagons
-4. Box plot with council dots: spread within each state, 2024
-5. Heatmap: % on track on all five domains, state × year
+4. Box plot with council dots and named councils: spread within each state, 2024
+5. Heatmap coloured by change since the previous collection, with significance markers: % on track on all five domains, state × year
 6. Small multiples (line charts): % vulnerable in each area of development, 2009–2024
-7. Dumbbell chart: most vs least disadvantaged areas, by state, 2024
+7. Dumbbell chart with 2009 ghost and year switch: most vs least disadvantaged areas, by state, 2009 and 2024
 Bridge. Donut rings (small multiples) with legend highlight: how a 24-hour day is split, by age
 8. Isotype (pictogram grids): children meeting all 24-hour movement guidelines, by age
 8b. Arrow chart with sex toggle: % meeting each guideline, ages 5–8 to 15–17
@@ -45,9 +45,9 @@ Bridge. Donut rings (small multiples) with legend highlight: how a 24-hour day i
 | `aedc_categories_national.csv` | AEDC national on track / at risk / vulnerable, 2009 and 2024 | 0 |
 | `aedc_lga.csv` | AEDC by council, 2009–2024 (with `hex_id`) | 2, 3, 4 |
 | `aedc_lga_domains.csv` | AEDC by council, 2024, each area of development | 1 |
-| `aedc_states.csv` | AEDC state summary indicators | 5 |
+| `aedc_states.csv` | AEDC state summary indicators, significance flags and an Australia row | 2, 5 |
 | `aedc_domains_national.csv` | AEDC national % vulnerable per area | 6 |
-| `aedc_seifa.csv` | AEDC by socio-economic quintile | 7 |
+| `aedc_seifa.csv` | AEDC by socio-economic quintile, 2009, 2021 and 2024 | 7 |
 | `nnpas_day.csv` | ABS NNPAS tables 4.1 and 5.1 | Day rings |
 | `nnpas_guidelines.csv` | ABS NNPAS tables 2.3–2.4 | 8, 8b |
 | `nnpas_activity_screens.csv` | ABS NNPAS tables 5.1–5.2 (with RSEs) | 9 |
