@@ -24,12 +24,12 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 
 0. 100% stacked bar with year toggle: vulnerable, at risk and on track in each area of development, 2009 vs 2024
 1. Choropleth map with city zoom panels and an area menu: % vulnerable by council, 2024
-2. Proportional symbol map with year slider, play button and city zoom: number of vulnerable children, with 2009 rings, 2009–2024
+2. Proportional symbol map with year slider, play button, city zoom and a linked national bar chart: number of vulnerable children, 2009–2024
 3. Hexagon bin map: change in % vulnerable 2021 → 2024, ~100 km hexagons
 4. Box plot with council dots and named councils: spread within each state, 2024
-5. Heatmap coloured by change since the previous collection, with significance markers: % on track on all five domains, state × year
+5. Heatmap coloured by change since the previous collection (significance in tooltips): % on track on all five domains, state × year
 6. Small multiples (line charts): % vulnerable in each area of development, 2009–2024
-7. Dumbbell chart with 2009 ghost and year switch: most vs least disadvantaged areas, by state, 2009 and 2024
+7. Dumbbell chart with stacked 2009 and 2024 lanes and a year switch: most vs least disadvantaged areas, by state, 2009 and 2024
 Bridge. Donut rings (small multiples) with legend highlight: how a 24-hour day is split, by age
 8. Isotype (pictogram grids): children meeting all 24-hour movement guidelines, by age
 8b. Arrow chart with sex toggle: % meeting each guideline, ages 5–8 to 15–17
