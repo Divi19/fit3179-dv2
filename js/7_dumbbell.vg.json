@@ -1,11 +1,26 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "A 20-point gap between rich and poor areas",
-    "subtitle": "% of children on track on all five domains, most vs least disadvantaged fifth of areas, 2024"
+    "text": "The gap between rich and poor areas widened in every state",
+    "subtitle": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)"
   },
   "width": "container",
-  "height": 320,
+  "height": 360,
+  "params": [
+    {
+      "name": "show",
+      "value": "2024 vs 2009",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "2024 vs 2009",
+          "2024 only",
+          "2009 only"
+        ],
+        "name": "Show: "
+      }
+    }
+  ],
   "data": {
     "url": "data/aedc_seifa.csv",
     "format": {
@@ -18,7 +33,81 @@
   },
   "transform": [
     {
-      "filter": "datum.year == 2024"
+      "filter": "datum.year == 2009 || datum.year == 2024"
+    },
+    {
+      "calculate": "datum.group == 'Most disadvantaged' ? datum.on_track_pct : null",
+      "as": "q1v"
+    },
+    {
+      "calculate": "datum.group == 'Least disadvantaged' ? datum.on_track_pct : null",
+      "as": "q5v"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "q1v",
+          "as": "q1"
+        },
+        {
+          "op": "max",
+          "field": "q5v",
+          "as": "q5"
+        }
+      ],
+      "groupby": [
+        "area",
+        "year"
+      ]
+    },
+    {
+      "calculate": "datum.q5 - datum.q1",
+      "as": "gap"
+    },
+    {
+      "calculate": "datum.year == 2024 ? datum.gap : null",
+      "as": "g24"
+    },
+    {
+      "calculate": "datum.year == 2009 ? datum.gap : null",
+      "as": "g09"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "g24",
+          "as": "gap24"
+        },
+        {
+          "op": "max",
+          "field": "g09",
+          "as": "gap09"
+        }
+      ],
+      "groupby": [
+        "area"
+      ]
+    },
+    {
+      "calculate": "datum.area == 'Australia' ? 1000 : datum.gap24",
+      "as": "sortkey"
+    },
+    {
+      "calculate": "datum.area == 'ACT' ? \"Very few children in ACT's most disadvantaged areas — treat with caution\" : ''",
+      "as": "note"
+    },
+    {
+      "filter": "show == '2024 vs 2009' || (show == '2024 only' ? datum.year == 2024 : datum.year == 2009)"
+    },
+    {
+      "calculate": "show == '2024 vs 2009' && datum.year == 2009",
+      "as": "ghost"
+    },
+    {
+      "calculate": "(datum.ghost ? 0.4 : 1) * (datum.area == 'ACT' ? 0.5 : 1)",
+      "as": "alpha"
     }
   ],
   "encoding": {
@@ -26,17 +115,11 @@
       "field": "area",
       "type": "nominal",
       "title": null,
-      "sort": [
-        "Australia",
-        "NT",
-        "WA",
-        "VIC",
-        "QLD",
-        "TAS",
-        "SA",
-        "NSW",
-        "ACT"
-      ],
+      "sort": {
+        "field": "sortkey",
+        "op": "max",
+        "order": "descending"
+      },
       "axis": {
         "domain": false,
         "ticks": false,
@@ -52,37 +135,22 @@
     {
       "transform": [
         {
-          "aggregate": [
-            {
-              "op": "min",
-              "field": "on_track_pct",
-              "as": "lo"
-            },
-            {
-              "op": "max",
-              "field": "on_track_pct",
-              "as": "hi"
-            }
-          ],
-          "groupby": [
-            "area"
-          ]
+          "filter": "datum.group == 'Most disadvantaged'"
         }
       ],
       "mark": {
         "type": "rule",
-        "strokeWidth": 3,
-        "color": "#d5d9db"
+        "color": "#c4c9cc"
       },
       "encoding": {
         "x": {
-          "field": "lo",
+          "field": "q1",
           "type": "quantitative",
-          "title": "% on track on all five domains",
+          "title": "% on track on all five areas",
           "scale": {
             "domain": [
               10,
-              70
+              80
             ]
           },
           "axis": {
@@ -98,54 +166,115 @@
           }
         },
         "x2": {
-          "field": "hi"
+          "field": "q5"
+        },
+        "opacity": {
+          "field": "alpha",
+          "type": "quantitative",
+          "scale": null
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "datum.ghost",
+            "value": 1.5
+          },
+          "value": 3.5
         }
       }
     },
     {
+      "transform": [
+        {
+          "filter": "datum.ghost"
+        }
+      ],
       "mark": {
-        "type": "circle",
-        "size": 130,
-        "opacity": 1,
-        "stroke": "#ffffff",
+        "type": "point",
+        "shape": "circle",
+        "filled": false,
+        "size": 90,
         "strokeWidth": 1.5
       },
       "encoding": {
         "x": {
           "field": "on_track_pct",
-          "type": "quantitative"
+          "type": "quantitative",
+          "title": "% on track on all five areas",
+          "scale": {
+            "domain": [
+              10,
+              80
+            ]
+          },
+          "axis": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          }
         },
         "color": {
+          "condition": {
+            "test": "datum.area == 'ACT'",
+            "value": "#9aa3a9"
+          },
           "field": "group",
           "type": "nominal",
+          "title": null,
           "scale": {
             "domain": [
               "Most disadvantaged",
               "Least disadvantaged"
             ],
             "range": [
-              "#cf6a12",
+              "#b3561a",
               "#007c9e"
             ]
           },
           "legend": {
-            "title": null,
             "orient": "top",
             "direction": "horizontal",
-            "symbolType": "circle"
+            "symbolType": "circle",
+            "labelExpr": "datum.label + ' fifth of areas'",
+            "labelLimit": 0
           }
+        },
+        "opacity": {
+          "field": "alpha",
+          "type": "quantitative",
+          "scale": null
         },
         "tooltip": [
           {
-            "field": "area"
+            "field": "area",
+            "title": "Area"
           },
           {
-            "field": "group"
+            "field": "group",
+            "title": "Group"
+          },
+          {
+            "field": "year",
+            "title": "Year"
           },
           {
             "field": "on_track_pct",
             "title": "% on track",
             "format": ".1f"
+          },
+          {
+            "field": "gap",
+            "title": "Gap (points)",
+            "format": ".1f"
+          },
+          {
+            "field": "note",
+            "title": "Note"
           }
         ]
       }
@@ -153,35 +282,281 @@
     {
       "transform": [
         {
-          "pivot": "group",
-          "value": "on_track_pct",
+          "filter": "!datum.ghost"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 130,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "on_track_pct",
+          "type": "quantitative",
+          "title": "% on track on all five areas",
+          "scale": {
+            "domain": [
+              10,
+              80
+            ]
+          },
+          "axis": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.area == 'ACT'",
+            "value": "#9aa3a9"
+          },
+          "field": "group",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Most disadvantaged",
+              "Least disadvantaged"
+            ],
+            "range": [
+              "#b3561a",
+              "#007c9e"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolType": "circle",
+            "labelExpr": "datum.label + ' fifth of areas'",
+            "labelLimit": 0
+          }
+        },
+        "opacity": {
+          "field": "alpha",
+          "type": "quantitative",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "area",
+            "title": "Area"
+          },
+          {
+            "field": "group",
+            "title": "Group"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "on_track_pct",
+            "title": "% on track",
+            "format": ".1f"
+          },
+          {
+            "field": "gap",
+            "title": "Gap (points)",
+            "format": ".1f"
+          },
+          {
+            "field": "note",
+            "title": "Note"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.group == 'Most disadvantaged'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "gap24",
+              "as": "gap24"
+            },
+            {
+              "op": "max",
+              "field": "gap09",
+              "as": "gap09"
+            },
+            {
+              "op": "max",
+              "field": "year",
+              "as": "ymax"
+            },
+            {
+              "op": "min",
+              "field": "year",
+              "as": "ymin"
+            },
+            {
+              "op": "max",
+              "field": "sortkey",
+              "as": "sortkey"
+            }
+          ],
           "groupby": [
             "area"
           ]
         },
         {
-          "calculate": "datum['Least disadvantaged'] - datum['Most disadvantaged']",
-          "as": "gap"
-        },
-        {
-          "calculate": "format(datum.gap,'.1f') + ' pt gap'",
-          "as": "gap_label"
+          "calculate": "datum.ymin != datum.ymax ? format(datum.gap09, '.1f') + ' → ' + format(datum.gap24, '.1f') + ' pts' : format(datum.ymax == 2024 ? datum.gap24 : datum.gap09, '.1f') + ' pts'",
+          "as": "t"
         }
       ],
       "mark": {
         "type": "text",
         "align": "left",
-        "dx": 10,
-        "fontSize": 10.5,
+        "baseline": "middle",
+        "fontSize": 11,
         "color": "#5b6670"
       },
       "encoding": {
         "x": {
-          "field": "Least disadvantaged",
+          "datum": 68,
           "type": "quantitative"
         },
         "text": {
-          "field": "gap_label"
+          "field": "t"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum.area == 'ACT'",
+            "value": 0.6
+          },
+          "value": 1
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.area == 'Australia' && datum.group == 'Most disadvantaged'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "gap24",
+              "as": "gap24"
+            },
+            {
+              "op": "max",
+              "field": "gap09",
+              "as": "gap09"
+            },
+            {
+              "op": "max",
+              "field": "sortkey",
+              "as": "sortkey"
+            }
+          ],
+          "groupby": [
+            "area"
+          ]
+        },
+        {
+          "calculate": "'Gap widened: ' + format(datum.gap09, '.1f') + ' → ' + format(datum.gap24, '.1f') + ' points since 2009'",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -10,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1d2a35"
+      },
+      "encoding": {
+        "x": {
+          "datum": 51,
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.area != 'Australia' && datum.area != 'ACT' && datum.group == 'Most disadvantaged' && datum.year == 2024"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "gap24",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rank == 1"
+        },
+        {
+          "calculate": "'Largest gap: ' + format(datum.gap24, '.1f') + ' points in 2024'",
+          "as": "t"
+        },
+        {
+          "calculate": "(datum.q1 + datum.q5) / 2",
+          "as": "mid"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -10,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#7a3510"
+      },
+      "encoding": {
+        "x": {
+          "field": "mid",
+          "type": "quantitative",
+          "title": "% on track on all five areas",
+          "scale": {
+            "domain": [
+              10,
+              80
+            ]
+          },
+          "axis": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          }
+        },
+        "text": {
+          "field": "t"
         }
       }
     },
@@ -189,39 +564,92 @@
       "data": {
         "values": [
           {
-            "x": 17.8,
-            "area": "NT",
-            "t": "only 17.8% on track"
+            "k": 1
           }
         ]
       },
       "mark": {
-        "type": "text",
-        "align": "center",
-        "dy": -13,
-        "fontSize": 10.5,
-        "fontWeight": "bold",
-        "color": "#8a4a0c"
+        "type": "rule",
+        "color": "#1d2a35",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "value": {
+            "expr": "height / 9"
+          }
+        },
+        "x": {
+          "value": 0
+        },
+        "x2": {
+          "value": {
+            "expr": "width"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "k": 1
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "show == '2024 vs 2009'"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "circle",
+        "filled": false,
+        "size": 90,
+        "strokeWidth": 1.5,
+        "color": "#b3561a",
+        "opacity": 0.5
       },
       "encoding": {
         "x": {
-          "field": "x",
-          "type": "quantitative"
+          "value": {
+            "expr": "width - 150"
+          }
         },
         "y": {
-          "field": "area",
-          "type": "nominal",
-          "sort": [
-            "Australia",
-            "NT",
-            "WA",
-            "VIC",
-            "QLD",
-            "TAS",
-            "SA",
-            "NSW",
-            "ACT"
-          ]
+          "value": -16
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "faint = 2009"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "show == '2024 vs 2009'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "color": "#5b6670"
+      },
+      "encoding": {
+        "x": {
+          "value": {
+            "expr": "width - 140"
+          }
+        },
+        "y": {
+          "value": -16
         },
         "text": {
           "field": "t"
