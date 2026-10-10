@@ -44,7 +44,7 @@
       "as": "change"
     },
     {
-      "calculate": "!isValid(datum.change) ? 'Start (2009)' : datum.change <= -2 ? 'Down 2+ pts' : datum.change < -0.5 ? 'Down 0.5–2' : datum.change <= 0.5 ? 'Little change' : datum.change < 2 ? 'Up 0.5–2' : 'Up 2+ pts'",
+      "calculate": "!isValid(datum.change) ? '2009: starting point' : datum.change <= -2 ? 'Down 2+ pts' : datum.change < -0.5 ? 'Down 0.5–2' : datum.change <= 0.5 ? 'Little change' : datum.change < 2 ? 'Up 0.5–2' : 'Up 2+ pts'",
       "as": "class"
     },
     {
@@ -52,12 +52,8 @@
       "as": "change_label"
     },
     {
-      "calculate": "datum.year == 2024 && datum.state != 'Australia' ? 'Since 2021: ' + lower(datum.sig_2021_2024) + '; since 2009: ' + lower(datum.sig_2009_2024) : ''",
+      "calculate": "datum.year == 2024 && datum.state != 'Australia' ? 'Change since 2021: ' + lower(datum.sig_2021_2024) : ''",
       "as": "sig_label"
-    },
-    {
-      "calculate": "datum.sig_2021_2024 == 'Significant decrease' ? '▼' : datum.sig_2021_2024 == 'Significant increase' ? '▲' : ''",
-      "as": "sig_mark"
     }
   ],
   "encoding": {
@@ -101,6 +97,89 @@
   },
   "layer": [
     {
+      "transform": [
+        {
+          "filter": "datum.year == 2009"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "stroke": "#b8bec2",
+        "strokeWidth": 1,
+        "cornerRadius": 2,
+        "width": {
+          "band": 0.96
+        },
+        "height": {
+          "band": 0.9
+        }
+      },
+      "encoding": {
+        "color": {
+          "field": "class",
+          "type": "ordinal",
+          "title": "Change since previous collection",
+          "scale": {
+            "domain": [
+              "2009: starting point",
+              "Down 2+ pts",
+              "Down 0.5–2",
+              "Little change",
+              "Up 0.5–2",
+              "Up 2+ pts"
+            ],
+            "range": [
+              "#ffffff",
+              "#b3561a",
+              "#eda96a",
+              "#e6e7e4",
+              "#9cc9d6",
+              "#007c9e"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolType": "square",
+            "symbolStrokeColor": {
+              "expr": "datum.value == '2009: starting point' ? '#b8bec2' : '#d5d9db'"
+            },
+            "symbolStrokeWidth": {
+              "expr": "datum.value == '2009: starting point' ? 1 : 0.5"
+            }
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "pct",
+            "title": "% on track on all 5",
+            "format": ".1f"
+          },
+          {
+            "field": "change_label",
+            "title": "Change from previous collection"
+          },
+          {
+            "field": "sig_label",
+            "title": "Statistical significance"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year != 2009"
+        }
+      ],
       "mark": {
         "type": "rect",
         "stroke": "#ffffff",
@@ -114,7 +193,7 @@
           "title": "Change since previous collection",
           "scale": {
             "domain": [
-              "Start (2009)",
+              "2009: starting point",
               "Down 2+ pts",
               "Down 0.5–2",
               "Little change",
@@ -122,7 +201,7 @@
               "Up 2+ pts"
             ],
             "range": [
-              "#f1f2f0",
+              "#ffffff",
               "#b3561a",
               "#eda96a",
               "#e6e7e4",
@@ -134,8 +213,12 @@
             "orient": "bottom",
             "direction": "horizontal",
             "symbolType": "square",
-            "symbolStrokeColor": "#d5d9db",
-            "symbolStrokeWidth": 0.5
+            "symbolStrokeColor": {
+              "expr": "datum.value == '2009: starting point' ? '#b8bec2' : '#d5d9db'"
+            },
+            "symbolStrokeWidth": {
+              "expr": "datum.value == '2009: starting point' ? 1 : 0.5"
+            }
           }
         },
         "tooltip": [
@@ -181,10 +264,16 @@
           "format": ".1f"
         },
         "color": {
-          "condition": {
-            "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
-            "value": "#ffffff"
-          },
+          "condition": [
+            {
+              "test": "datum.year == 2009",
+              "value": "#5b6670"
+            },
+            {
+              "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
+              "value": "#ffffff"
+            }
+          ],
           "value": "#1d2a35"
         }
       }
@@ -207,76 +296,16 @@
           "format": ".1f"
         },
         "color": {
-          "condition": {
-            "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
-            "value": "#ffffff"
-          },
-          "value": "#1d2a35"
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.sig_mark != ''"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "top",
-        "dx": -5,
-        "dy": 4,
-        "fontSize": 10
-      },
-      "encoding": {
-        "x": {
-          "field": "year",
-          "type": "ordinal",
-          "title": null,
-          "axis": {
-            "orient": "top",
-            "labelAngle": 0,
-            "domain": false,
-            "ticks": false,
-            "labelFontWeight": "bold"
-          },
-          "bandPosition": 1
-        },
-        "y": {
-          "field": "state",
-          "type": "nominal",
-          "title": null,
-          "sort": [
-            "Australia",
-            "NSW",
-            "VIC",
-            "WA",
-            "SA",
-            "QLD",
-            "TAS",
-            "ACT",
-            "NT"
-          ],
-          "axis": {
-            "domain": false,
-            "ticks": false,
-            "labelColor": "#1d2a35",
-            "labelFontSize": 12,
-            "labelFontWeight": {
-              "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
+          "condition": [
+            {
+              "test": "datum.year == 2009",
+              "value": "#5b6670"
+            },
+            {
+              "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
+              "value": "#ffffff"
             }
-          },
-          "bandPosition": 0
-        },
-        "text": {
-          "field": "sig_mark"
-        },
-        "color": {
-          "condition": {
-            "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
-            "value": "#ffffff"
-          },
+          ],
           "value": "#1d2a35"
         }
       }
@@ -307,35 +336,6 @@
           "value": {
             "expr": "height / 9"
           }
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "t": "▼ / ▲ = statistically significant change since 2021"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "top",
-        "fontSize": 11,
-        "color": "#1d2a35"
-      },
-      "encoding": {
-        "x": {
-          "value": 0
-        },
-        "y": {
-          "value": {
-            "expr": "height + 62"
-          }
-        },
-        "text": {
-          "field": "t"
         }
       }
     }
