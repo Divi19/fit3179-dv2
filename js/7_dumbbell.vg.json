@@ -5,7 +5,7 @@
     "subtitle": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)"
   },
   "width": "container",
-  "height": 360,
+  "height": 470,
   "params": [
     {
       "name": "show",
@@ -102,11 +102,15 @@
       "filter": "show == '2024 vs 2009' || (show == '2024 only' ? datum.year == 2024 : datum.year == 2009)"
     },
     {
-      "calculate": "show == '2024 vs 2009' && datum.year == 2009",
-      "as": "ghost"
+      "calculate": "show != '2024 vs 2009' ? 'm' : datum.year == 2009 ? 'a' : 'b'",
+      "as": "lane"
     },
     {
-      "calculate": "(datum.ghost ? 0.4 : 1) * (datum.area == 'ACT' ? 0.5 : 1)",
+      "calculate": "datum.year == 2009 && show == '2024 vs 2009'",
+      "as": "hollow"
+    },
+    {
+      "calculate": "(datum.hollow ? 0.7 : 1) * (datum.area == 'ACT' ? 0.5 : 1)",
       "as": "alpha"
     }
   ],
@@ -120,6 +124,9 @@
         "op": "max",
         "order": "descending"
       },
+      "scale": {
+        "paddingInner": 0.18
+      },
       "axis": {
         "domain": false,
         "ticks": false,
@@ -129,18 +136,30 @@
           "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
         }
       }
+    },
+    "yOffset": {
+      "field": "lane",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "a",
+          "m",
+          "b"
+        ]
+      }
     }
   },
   "layer": [
     {
       "transform": [
         {
-          "filter": "datum.group == 'Most disadvantaged'"
+          "filter": "datum.group == 'Most disadvantaged' && !datum.hollow"
         }
       ],
       "mark": {
         "type": "rule",
-        "color": "#c4c9cc"
+        "color": "#c4c9cc",
+        "strokeWidth": 3.5
       },
       "encoding": {
         "x": {
@@ -172,20 +191,61 @@
           "field": "alpha",
           "type": "quantitative",
           "scale": null
-        },
-        "strokeWidth": {
-          "condition": {
-            "test": "datum.ghost",
-            "value": 1.5
-          },
-          "value": 3.5
         }
       }
     },
     {
       "transform": [
         {
-          "filter": "datum.ghost"
+          "filter": "datum.group == 'Most disadvantaged' && datum.hollow"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#9aa3a9",
+        "strokeWidth": 1.5,
+        "strokeDash": [
+          4,
+          3
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "q1",
+          "type": "quantitative",
+          "title": "% on track on all five areas",
+          "scale": {
+            "domain": [
+              10,
+              80
+            ]
+          },
+          "axis": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          }
+        },
+        "x2": {
+          "field": "q5"
+        },
+        "opacity": {
+          "field": "alpha",
+          "type": "quantitative",
+          "scale": null
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.hollow"
         }
       ],
       "mark": {
@@ -193,7 +253,9 @@
         "shape": "circle",
         "filled": false,
         "size": 90,
-        "strokeWidth": 1.5
+        "strokeWidth": 2,
+        "fill": "#ffffff",
+        "fillOpacity": 1
       },
       "encoding": {
         "x": {
@@ -282,7 +344,7 @@
     {
       "transform": [
         {
-          "filter": "!datum.ghost"
+          "filter": "!datum.hollow"
         }
       ],
       "mark": {
@@ -381,39 +443,7 @@
           "filter": "datum.group == 'Most disadvantaged'"
         },
         {
-          "aggregate": [
-            {
-              "op": "max",
-              "field": "gap24",
-              "as": "gap24"
-            },
-            {
-              "op": "max",
-              "field": "gap09",
-              "as": "gap09"
-            },
-            {
-              "op": "max",
-              "field": "year",
-              "as": "ymax"
-            },
-            {
-              "op": "min",
-              "field": "year",
-              "as": "ymin"
-            },
-            {
-              "op": "max",
-              "field": "sortkey",
-              "as": "sortkey"
-            }
-          ],
-          "groupby": [
-            "area"
-          ]
-        },
-        {
-          "calculate": "datum.ymin != datum.ymax ? format(datum.gap09, '.1f') + ' → ' + format(datum.gap24, '.1f') + ' pts' : format(datum.ymax == 2024 ? datum.gap24 : datum.gap09, '.1f') + ' pts'",
+          "calculate": "(show == '2024 vs 2009' ? datum.year + ': ' : '') + format(datum.gap, '.1f') + ' pts'",
           "as": "t"
         }
       ],
@@ -421,8 +451,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 11,
-        "color": "#5b6670"
+        "fontSize": 11
       },
       "encoding": {
         "x": {
@@ -432,12 +461,70 @@
         "text": {
           "field": "t"
         },
+        "color": {
+          "condition": {
+            "test": "datum.hollow",
+            "value": "#8a949b"
+          },
+          "value": "#5b6670"
+        },
         "opacity": {
           "condition": {
             "test": "datum.area == 'ACT'",
             "value": 0.6
           },
           "value": 1
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "show == '2024 vs 2009' && datum.area == 'Australia' && datum.group == 'Most disadvantaged'"
+        },
+        {
+          "calculate": "min(datum.q1, datum.q5)",
+          "as": "lx"
+        },
+        {
+          "calculate": "datum.year + ''",
+          "as": "t"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -10,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#5b6670"
+      },
+      "encoding": {
+        "x": {
+          "field": "lx",
+          "type": "quantitative",
+          "title": "% on track on all five areas",
+          "scale": {
+            "domain": [
+              10,
+              80
+            ]
+          },
+          "axis": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ]
+          }
+        },
+        "text": {
+          "field": "t"
         }
       }
     },
@@ -477,7 +564,7 @@
         "type": "text",
         "align": "center",
         "baseline": "bottom",
-        "dy": -10,
+        "dy": -3,
         "fontSize": 11,
         "fontWeight": "bold",
         "color": "#1d2a35"
@@ -486,6 +573,32 @@
         "x": {
           "datum": 51,
           "type": "quantitative"
+        },
+        "y": {
+          "field": "area",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "sortkey",
+            "op": "max",
+            "order": "descending"
+          },
+          "scale": {
+            "paddingInner": 0.18
+          },
+          "axis": {
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelColor": "#1d2a35",
+            "labelFontWeight": {
+              "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
+            }
+          },
+          "bandPosition": 0
+        },
+        "yOffset": {
+          "value": 0
         },
         "text": {
           "field": "t"
@@ -517,24 +630,23 @@
         {
           "calculate": "'Largest gap: ' + format(datum.gap24, '.1f') + ' points in 2024'",
           "as": "t"
-        },
-        {
-          "calculate": "(datum.q1 + datum.q5) / 2",
-          "as": "mid"
         }
       ],
       "mark": {
         "type": "text",
-        "align": "center",
-        "baseline": "bottom",
-        "dy": -10,
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#7a3510"
+        "color": "#7a3510",
+        "dy": {
+          "expr": "show == '2024 vs 2009' ? -15 : -13"
+        }
       },
       "encoding": {
         "x": {
-          "field": "mid",
+          "field": "q1",
           "type": "quantitative",
           "title": "% on track on all five areas",
           "scale": {
@@ -579,6 +691,7 @@
             "expr": "height / 9"
           }
         },
+        "yOffset": null,
         "x": {
           "value": 0
         },
@@ -607,26 +720,57 @@
         "shape": "circle",
         "filled": false,
         "size": 90,
-        "strokeWidth": 1.5,
-        "color": "#b3561a",
-        "opacity": 0.5
+        "strokeWidth": 2,
+        "color": "#5b6670"
       },
       "encoding": {
         "x": {
           "value": {
-            "expr": "width - 150"
+            "expr": "width - 236"
           }
         },
         "y": {
           "value": -16
-        }
+        },
+        "yOffset": null
       }
     },
     {
       "data": {
         "values": [
           {
-            "t": "faint = 2009"
+            "k": 1
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "show == '2024 vs 2009'"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 110,
+        "color": "#5b6670",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "value": {
+            "expr": "width - 220"
+          }
+        },
+        "y": {
+          "value": -16
+        },
+        "yOffset": null
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "hollow = 2009, solid = 2024"
           }
         ]
       },
@@ -645,12 +789,13 @@
       "encoding": {
         "x": {
           "value": {
-            "expr": "width - 140"
+            "expr": "width - 208"
           }
         },
         "y": {
           "value": -16
         },
+        "yOffset": null,
         "text": {
           "field": "t"
         }
