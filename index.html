@@ -95,12 +95,10 @@
   .hero{padding-block:64px 72px}
   .byline-top{font-size:15px;color:var(--sub)}
   .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
-  .hero-text{display:flex;flex-direction:column;gap:26px}
-  .big-stat{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
-  .big-stat b{font-family:var(--f-display);font-weight:400;font-size:clamp(84px,10vw,132px);line-height:.85;color:var(--orange);letter-spacing:-.02em}
-  .big-stat span{font-size:16px;color:var(--body);max-width:24ch;line-height:1.45;padding-bottom:6px}
-  .hero h1{font-size:clamp(48px,6.4vw,84px);line-height:1}
-  .stand{font-size:clamp(18px,1.6vw,20px);line-height:1.6;max-width:44ch;color:var(--body)}
+  .hero-text{display:flex;flex-direction:column;gap:22px}
+  .ghost{font-family:var(--f-display);font-size:clamp(150px,21vw,290px);line-height:.8;color:#f2b84b;opacity:.5;letter-spacing:-.03em;white-space:nowrap;margin-left:-.04em;pointer-events:none}
+  .hero h1{font-size:clamp(50px,7.2vw,96px);line-height:.94;margin-top:-6px}
+  .stand{font-size:clamp(17px,1.6vw,20px);line-height:1.5;max-width:40ch;color:#2c3640}
   .hero-map{width:100%;min-width:0}
   .etch-cap{font-size:14px;color:var(--sub);margin-top:6px}
   .tiles{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px;margin-top:20px}
@@ -162,8 +160,8 @@
     <p class="byline-top">Divieleisch Ranjan, FIT3179 Data Visualisation 2, Monash University</p>
     <div class="hero-grid">
       <div class="hero-text">
-        <div class="big-stat"><b>1 in 4</b><span>Australian children started school vulnerable in at least one area of development in 2024 (23.5%).</span></div>
-        <h1>Starting behind, slowing down</h1>
+        <div class="ghost" aria-hidden="true">1 in 4</div>
+        <h1>Starting behind, slowing down.</h1>
         <p class="stand">In 2024, one in eight children started school developmentally vulnerable in two or more areas, the highest share since the census began in 2009. As they grow, the habits that support them, moving, sleeping and eating well, fade.</p>
       </div>
       <div>
