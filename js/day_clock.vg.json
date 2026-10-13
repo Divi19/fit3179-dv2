@@ -55,7 +55,8 @@
                   "type": "point",
                   "fields": [
                     "activity"
-                  ]
+                  ],
+                  "toggle": "true"
                 },
                 "bind": "legend"
               }
