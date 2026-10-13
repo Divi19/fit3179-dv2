@@ -7,131 +7,154 @@
   <meta name="description" content="How Australian children arrive at school, and how their movement, sleep and diet change as they grow. Data: AEDC 2009–2024 and ABS NNPAS 2023.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display&display=swap">
   <style>
-  /* Layout: full-bleed horizontal bands (white / amber wash / rust tint / white / mint / white), one 1104px content column inside each, Vega-Lite charts sitting directly on the band. Single deliberate light look. */
+  /* Layout: full-bleed horizontal bands, one left-aligned 1104px column inside each. Chapters split into sub-sections with a rule and their own heading. Single deliberate light look. */
   :root{
     color-scheme:light;
-    --ink:#1c2430; --sub:#56606a; --rule:#d9dde2; --rule-soft:#e8ebee;
-    --rust:#b3561a; --rust-deep:#7a3510; --amber:#f2b84b; --teal:#007c9e; --teal-deep:#0a4f6c;
-    --white:#ffffff; --wash-amber:#fdf3df; --wash-rust:#f7e3d2; --wash-mint:#e6f2f0; --wash-foot:#f3f4f2;
+    --ink:#1c2430; --body:#2a3540; --sub:#46525d; --rule:#d5dadf;
+    --rust:#d0571b; --rust-deep:#8e3410; --rust-tint:#fbe7d8;
+    --orange:#f08a24;
+    --blue:#0a74c4; --blue-deep:#0b4c86; --blue-tint:#e4f1fb;
+    --white:#ffffff; --wash-warm:#fdf4e6; --wash-rust:#f9e4d4; --wash-blue:#eef5fb; --wash-foot:#f3f4f2;
     --f-display:'DM Serif Display',Georgia,'Times New Roman',serif;
     --f-body:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif;
     --col:1104px; --gutter:clamp(16px,3vw,28px);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--white);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6}
-  a{color:var(--teal)}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
-  .band{padding-inline:var(--gutter);padding-block:72px}
-  .col{max-width:var(--col);margin:0 auto;display:flex;flex-direction:column;gap:28px}
-  .white{background:var(--white)} .amber{background:var(--wash-amber)} .rusty{background:var(--wash-rust)} .mint{background:var(--wash-mint)}
+  body{margin:0;background:var(--white);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.7}
+  a{color:var(--blue)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .band{padding-inline:var(--gutter);padding-block:88px}
+  .col{max-width:var(--col);margin:0 auto;display:flex;flex-direction:column;gap:32px}
+  .white{background:var(--white)} .warm{background:var(--wash-warm)} .rusty{background:var(--wash-rust)} .bluey{background:var(--wash-blue)}
 
   /* progress bar */
   .progress{position:fixed;top:0;left:0;right:0;height:5px;z-index:20;padding-top:env(safe-area-inset-top,0px);pointer-events:none}
-  .progress i{display:block;height:5px;width:0;background:linear-gradient(to right,var(--rust) 0 var(--split,55%),var(--teal) var(--split,55%) 100%);background-size:100vw 5px;background-repeat:no-repeat}
+  .progress i{display:block;height:5px;width:0;background:linear-gradient(to right,var(--rust) 0 var(--split,55%),var(--blue) var(--split,55%) 100%);background-repeat:no-repeat}
 
   /* type */
-  .kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sub);margin:0}
-  .kicker .a{color:var(--rust)} .kicker .b{color:var(--teal)}
-  h1,h2,h3{font-family:var(--f-display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em}
-  h2{font-size:clamp(32px,4vw,46px);line-height:1.05}
-  h3{font-size:clamp(24px,2.6vw,30px);line-height:1.1}
-  .lead{margin:0;max-width:68ch;color:#2c3640}
-  .lead.c{text-align:center;margin-inline:auto}
-  .small{font-size:14px;color:var(--sub);margin:0;max-width:72ch}
-  .head{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-  .dash{width:min(520px,70%);border:0;border-top:3px dashed var(--ink);margin:2px 0 6px}
-  .dash.rust{border-top-color:var(--rust-deep)}
+  h1,h2,h3{font-family:var(--f-display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em;color:var(--ink)}
+  h2{font-size:clamp(34px,4.2vw,48px);line-height:1.08}
+  h3{font-size:clamp(23px,2.3vw,28px);line-height:1.2}
+  p{margin:0}
+  .lead{max-width:70ch;color:var(--body)}
+  .small{font-size:15px;color:var(--sub);max-width:76ch;line-height:1.65}
+
+  /* part opener: a coloured tag and the part name */
+  .part{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;padding-bottom:22px;border-bottom:2px solid var(--ink)}
+  .part-tag{font-size:18px;font-weight:700;color:#fff;padding:6px 16px;border-radius:4px;letter-spacing:.02em}
+  .part-tag.a{background:var(--rust)} .part-tag.b{background:var(--blue)}
+  .part-name{font-family:var(--f-display);font-size:clamp(24px,2.6vw,30px);line-height:1.2}
+  .part-src{font-size:15px;color:var(--sub);flex-basis:100%}
+
+  /* chapter header */
+  .chap{display:flex;flex-direction:column;gap:14px;max-width:760px}
+  .chap-no{font-size:17px;font-weight:700;letter-spacing:.02em}
+  .chap-no.a{color:var(--rust-deep)} .chap-no.b{color:var(--blue-deep)}
+  .chap .dash{width:150px;border:0;border-top:3px dashed var(--ink);margin:8px 0 16px}
+
+  /* sub-sections */
+  .sub{display:flex;flex-direction:column;gap:22px;border-top:1px solid var(--rule);padding-top:36px;margin-top:40px}
+  .sub.first{margin-top:16px}
+  .sub .intro{display:flex;flex-direction:column;gap:12px;max-width:72ch}
+  .viz{width:100%;min-width:0;margin-top:12px}
+  .viz>div{width:100%}
+  .scroll-x{overflow-x:auto}
+  .scroll-x>.min-520{min-width:520px} .scroll-x>.min-680{min-width:680px} .scroll-x>.min-820{min-width:820px}
+  .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+  .pair>*{min-width:0;display:flex;flex-direction:column;gap:14px}
+  .pair h4{font-family:var(--f-display);font-weight:400;font-size:22px;line-height:1.2;margin:0}
+  .card{background:var(--white);border-radius:6px;padding:28px 30px;box-shadow:0 1px 2px rgba(142,52,16,.08),0 10px 30px rgba(142,52,16,.09)}
+  .howto{border-left:3px solid var(--blue);background:rgba(255,255,255,.7);padding:10px 16px;font-size:15px;line-height:1.6;color:var(--body);max-width:72ch}
+  .howto b{color:var(--ink)}
+  .howto.a{border-left-color:var(--rust)}
+  .interlude{display:flex;flex-direction:column;gap:6px;padding:8px 0 8px 22px;border-left:4px solid var(--rust);margin-top:40px}
+  .interlude.b{border-left-color:var(--blue)}
+  .interlude p.big{font-family:var(--f-display);font-size:clamp(28px,3.4vw,40px);line-height:1.2;max-width:30ch}
+  .interlude .r{color:var(--rust)} .interlude .bl{color:var(--blue)}
+  .aside{border-left:3px solid var(--rust);padding:2px 0 2px 16px;max-width:66ch}
+  .aside strong{color:var(--rust-deep)}
+
+  /* vega-embed controls */
+  .vega-bindings{font-size:15px;color:var(--sub);margin-top:8px}
+  .vega-bind-name{font-weight:700;color:var(--ink);margin-right:6px}
+  .vega-bindings input[type=range]{accent-color:var(--rust);vertical-align:middle;width:220px}
+  .vega-bindings select{font:inherit;color:var(--ink);padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:#fff}
+  .play-btn{align-self:flex-start;font:inherit;font-size:15px;font-weight:700;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:999px;padding:5px 14px;cursor:pointer}
+  .play-btn:hover{border-color:var(--rust)}
 
   /* hero */
-  .hero{padding-block:56px 56px;position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:32px;align-items:center}
-  .ghost{position:absolute;left:-.04em;top:-.12em;font-family:var(--f-display);font-size:clamp(150px,21vw,290px);line-height:1;color:var(--amber);opacity:.5;pointer-events:none;letter-spacing:-.03em;white-space:nowrap}
-  .hero h1{position:relative;font-size:clamp(50px,7.2vw,96px);line-height:.94;margin-top:clamp(70px,9vw,130px)}
-  .hero h1 .s{color:var(--teal);display:block}
-  .hero .stand{position:relative;font-size:clamp(17px,1.6vw,20px);line-height:1.5;margin:22px 0 0;max-width:40ch;color:#2c3640}
-  .etch-wrap{position:relative}
+  .hero{padding-block:64px 72px}
+  .byline-top{font-size:15px;color:var(--sub)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+  .hero-text{display:flex;flex-direction:column;gap:26px}
+  .big-stat{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+  .big-stat b{font-family:var(--f-display);font-weight:400;font-size:clamp(84px,10vw,132px);line-height:.85;color:var(--orange);letter-spacing:-.02em}
+  .big-stat span{font-size:16px;color:var(--body);max-width:24ch;line-height:1.45;padding-bottom:6px}
+  .hero h1{font-size:clamp(48px,6.4vw,84px);line-height:1}
+  .stand{font-size:clamp(18px,1.6vw,20px);line-height:1.6;max-width:44ch;color:var(--body)}
   .hero-map{width:100%;min-width:0}
-  .etch-cap{font-size:12.5px;color:var(--sub);margin:4px 0 0;text-align:right}
+  .etch-cap{font-size:14px;color:var(--sub);margin-top:6px}
+  .tiles{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px;margin-top:20px}
+  .tile{border-radius:8px;padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px}
+  .tile .k{font-size:14px;font-weight:700;letter-spacing:.03em}
+  .tile b{font-family:var(--f-display);font-weight:400;font-size:clamp(44px,4.6vw,58px);line-height:1;font-variant-numeric:tabular-nums}
+  .tile p{font-size:15px;line-height:1.5;color:var(--body)}
+  .tile.t1{background:var(--rust-tint)} .tile.t1 .k,.tile.t1 b{color:var(--rust-deep)}
+  .tile.t2{background:var(--rust)} .tile.t2 .k,.tile.t2 b,.tile.t2 p{color:#fff}
+  .tile.t3{background:var(--blue-tint)} .tile.t3 .k,.tile.t3 b{color:var(--blue-deep)}
+
+  /* definition */
+  .def{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px;align-items:stretch}
+  .def-text{display:flex;flex-direction:column;gap:20px;justify-content:center}
+  .photo{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+  .photo img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block;border-radius:4px}
+  .photo figcaption{font-size:13px;color:var(--sub)}
+  .photo figcaption a{color:inherit}
+  .domains{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+  .dom{border-top:3px solid var(--rust);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+  .dom h4{margin:0;font-size:16px}
+  .dom p{font-size:15px;line-height:1.55;color:var(--body)}
+
+  /* bridge */
+  .bridge{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:center}
+  .bridge-text{display:flex;flex-direction:column;gap:22px}
+  .bridge-text p.big{font-family:var(--f-display);font-size:clamp(26px,2.6vw,32px);line-height:1.35;max-width:26ch}
+
+  /* summary + footer */
+  .takeaways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+  .takeaways div{display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--ink);padding-top:16px}
+  .takeaways div:nth-child(1){border-top-color:var(--rust)} .takeaways div:nth-child(2){border-top-color:var(--rust-deep)} .takeaways div:nth-child(3){border-top-color:var(--blue)}
+  .takeaways b{font-family:var(--f-display);font-weight:400;font-size:26px}
+  .takeaways p{font-size:16px;line-height:1.7;color:var(--body)}
+  footer{background:var(--wash-foot);padding-inline:var(--gutter);padding-block:60px 68px;font-size:15px;color:#36414b}
+  footer h4{font-family:var(--f-display);font-weight:400;font-size:22px;margin:0 0 12px;color:var(--ink)}
+  .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+  footer ul{padding-left:18px;margin:0;display:flex;flex-direction:column;gap:8px}
+  .byline{margin-top:36px;padding-top:18px;border-top:1px solid var(--rule);color:var(--sub);font-size:14px}
+
+
+  /* hero: faded figure behind the title */
+  .hero-text{position:relative}
+  .ghost{position:absolute;left:-.04em;top:-.12em;font-family:var(--f-display);font-size:clamp(150px,21vw,290px);line-height:1;color:#f2b84b;opacity:.5;pointer-events:none;letter-spacing:-.03em;white-space:nowrap}
+  .hero h1{position:relative;font-size:clamp(50px,7.2vw,96px);line-height:.94;margin-top:clamp(70px,9vw,130px)}
+  .hero h1 .s{color:var(--blue);display:block}
+  .hero .stand{position:relative}
   .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);margin-top:44px}
   .stat{padding:18px 22px 0 0}
   .stat+.stat{padding-left:22px;border-left:1px solid var(--rule)}
   .stat b{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(40px,4.4vw,54px);line-height:1;font-variant-numeric:tabular-nums}
   .stat span{display:block;font-size:15px;color:var(--sub);margin-top:8px;max-width:30ch}
-  .stat .r{color:var(--rust)} .stat .t{color:var(--teal)}
-
-  /* definition band */
-  .def{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;align-items:stretch}
-  .def-text{display:flex;flex-direction:column;gap:16px;justify-content:center}
-  .photo{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
-  .photo img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block;border-radius:2px}
-  .photo figcaption{font-size:12px;color:var(--sub)}
-  .photo figcaption a{color:inherit}
-  .domains{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px}
-  .dom{border-top:2px solid var(--ink);padding-top:12px;display:flex;flex-direction:column;gap:6px}
-  .dom h4{margin:0;font-size:15px}
-  .dom p{margin:0;font-size:13.5px;line-height:1.55;color:var(--sub)}
-  .dom .n{display:flex;gap:16px;align-items:baseline;margin-top:6px}
-  .dom .n b{font-family:var(--f-display);font-weight:400;font-size:32px;line-height:1;color:var(--rust)}
-  .dom .n span{font-size:12px;color:var(--sub);line-height:1.3}
-  .dom .n span em{font-style:normal;font-weight:700;color:#a8752f;font-size:15px;display:block}
-
-  /* charts */
-  .viz{width:100%;min-width:0}
-  .viz>div{width:100%}
-  .scroll-x{overflow-x:auto}
-  .scroll-x>.min-520{min-width:520px} .scroll-x>.min-680{min-width:680px} .scroll-x>.min-820{min-width:820px}
-  .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:start}
-  .pair>*{min-width:0;display:flex;flex-direction:column;gap:12px}
-  .pair h5{font-size:16px;margin:0}
-  .card{background:var(--white);border-radius:4px;padding:26px 28px;box-shadow:0 1px 2px rgba(122,53,16,.08),0 10px 28px rgba(122,53,16,.08)}
-  .hint{display:flex;align-items:flex-end;gap:8px;font-family:var(--f-display);font-style:italic;font-size:17px;line-height:1.3;color:var(--ink);margin:0 0 -10px;max-width:46ch}
-  .hint svg{flex:none;width:44px;height:30px}
-  .hint.r{align-self:flex-end;text-align:right;flex-direction:row-reverse}
-  .hint.r svg{transform:scaleX(-1)}
-  .hint small{font-family:var(--f-body);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sub);display:block;margin-bottom:2px}
-  .interlude{text-align:center;font-family:var(--f-display);font-size:clamp(28px,3.6vw,44px);line-height:1.15;margin:12px auto;max-width:34ch;text-wrap:balance}
-  .interlude .r{color:var(--rust)} .interlude .t{color:var(--teal)}
-  .interlude+.small{text-align:center;margin:-14px auto 0}
-  .aside{border-left:3px solid var(--rust);padding:2px 0 2px 16px;margin:0;max-width:64ch}
-  .aside strong{color:var(--rust-deep)}
-
-  /* chart controls from vega-embed */
-  .vega-bindings{font-size:14px;color:var(--sub);margin-top:6px}
-  .vega-bind-name{font-weight:700;color:var(--ink);margin-right:6px}
-  .vega-bindings input[type=range]{accent-color:var(--rust);vertical-align:middle;width:220px}
-  .vega-bindings select{font:inherit;color:var(--ink);padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:#fff}
-  .play-btn{align-self:flex-start;font:inherit;font-size:14px;font-weight:700;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:999px;padding:5px 14px;cursor:pointer}
-  .play-btn:hover{border-color:var(--rust)}
-
-  /* bridge */
-  .bridge{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:44px;align-items:center}
-  .bridge-text{display:flex;flex-direction:column;gap:18px}
-  .bridge-text p.big{font-family:var(--f-display);font-size:clamp(26px,3vw,36px);line-height:1.2;margin:0}
-  .handover{height:4px;width:160px;display:flex}
-  .handover i{flex:1;background:var(--rust)} .handover i+i{background:var(--teal)}
-
-  /* summary + footer */
-  .takeaways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
-  .takeaways div{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink);padding-top:14px}
-  .takeaways b{font-family:var(--f-display);font-weight:400;font-size:26px}
-  .takeaways p{margin:0;font-size:15.5px;line-height:1.65}
-  footer{background:var(--wash-foot);padding-inline:var(--gutter);padding-block:56px 64px;font-size:14.5px;color:#36414b}
-  footer h4{font-family:var(--f-display);font-weight:400;font-size:22px;margin:0 0 10px;color:var(--ink)}
-  .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
-  footer ul{padding-left:18px;margin:0;display:flex;flex-direction:column;gap:8px}
-  .byline{margin:36px 0 0;padding-top:18px;border-top:1px solid var(--rule);color:var(--sub);font-size:13.5px}
+  .stat .r{color:var(--rust)} .stat .t{color:var(--blue)}
+  @media (max-width:960px){.stats{grid-template-columns:1fr}.stat+.stat{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
 
   @media (max-width:960px){
-    .hero-grid,.def,.pair,.bridge,.foot{grid-template-columns:1fr}
+    .hero-grid,.def,.pair,.bridge,.foot,.tiles{grid-template-columns:1fr}
     .domains{grid-template-columns:repeat(2,minmax(0,1fr))}
     .takeaways{grid-template-columns:1fr}
-    .stats{grid-template-columns:1fr}
-    .stat+.stat{border-left:0;padding-left:0;border-top:1px solid var(--rule)}
-    .band{padding-block:52px}
-    .ghost{font-size:clamp(110px,30vw,170px)}
+    .band{padding-block:60px}
     .card{padding:18px 14px}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -142,12 +165,12 @@
 
 <div class="progress" aria-hidden="true"><i id="prog"></i></div>
 
-<!-- ============ HERO (white) ============ -->
+<!-- ============ HERO ============ -->
 <header class="band white hero">
   <div class="col">
-    <p class="kicker">A data story in two parts · FIT3179 Data Visualisation 2</p>
+    <p class="byline-top">Divieleisch Ranjan, FIT3179 Data Visualisation 2, Monash University</p>
     <div class="hero-grid">
-      <div style="position:relative">
+      <div class="hero-text">
         <div class="ghost" aria-hidden="true">1 in 4</div>
         <h1>Starting behind, <span class="s">slowing down.</span></h1>
         <p class="stand">In 2024, one in eight Australian children started school developmentally vulnerable in two or more areas, the highest share since the census began in 2009. As they grow, the habits that support them, moving, sleeping and eating well, fade.</p>
@@ -166,162 +189,188 @@
 </header>
 
 <main>
-<!-- ============ DEFINITION (amber wash) ============ -->
-<section class="band amber" id="define">
+<!-- ============ PART A OPENER + DEFINITION ============ -->
+<section class="band warm" id="define">
   <div class="col">
+    <div class="part"><span class="part-tag a">Part A</span><span class="part-name">Starting school</span><span class="part-src">Australian Early Development Census, every three years from 2009 to 2024</span></div>
     <div class="def">
       <div class="def-text">
-        <p class="kicker"><span class="a">Part A · The census</span> · Before we start</p>
-        <h2>What exactly is “developmentally vulnerable”?</h2>
-        <p class="lead">Every three years, teachers fill in a checklist for each child in their first year of full-time school. A child is <strong>vulnerable</strong> in an area when they score in the bottom 10% band set in the first census in 2009, and <strong>at risk</strong> in the next 15%. Because those lines are fixed, the shares can move above or below 10% over time.</p>
+        <h2>What does “developmentally vulnerable” mean?</h2>
+        <p class="lead">Every three years, teachers fill in a checklist for each child in their first year of full-time school. A child is <strong>vulnerable</strong> in an area when they score in the bottom 10% band set in the first census in 2009, and <strong>at risk</strong> in the next 15%.</p>
+        <p class="lead">Because those lines are fixed, the shares can rise above or fall below 10% over time.</p>
       </div>
       <figure class="photo">
         <img src="img/school.jpg" alt="Young children with backpacks and sun hats walking into school, seen from behind" width="1600" height="1250">
         <figcaption>Photo: <a href="https://unsplash.com/photos/people-walking-on-gray-concrete-road-during-daytime-hQXmjNi2baA">note thanun on Unsplash</a></figcaption>
       </figure>
     </div>
-    <div class="domains">
-      <div class="dom"><h4>Physical health</h4><p>Energy, fine and gross motor skills, coming to school ready for the day.</p></div>
-      <div class="dom"><h4>Social competence</h4><p>Getting along with others, following rules, taking responsibility.</p></div>
-      <div class="dom"><h4>Emotional maturity</h4><p>Helping others, managing worry and frustration, paying attention.</p></div>
-      <div class="dom"><h4>Language and thinking</h4><p>Early reading, writing and number skills learned at school.</p></div>
-      <div class="dom"><h4>Communication</h4><p>Telling a story, understanding others, general knowledge.</p></div>
+    <div class="sub">
+      <div class="intro"><h3>The five areas teachers assess</h3></div>
+      <div class="domains">
+        <div class="dom"><h4>Physical health</h4><p>Energy, fine and gross motor skills, coming to school ready for the day.</p></div>
+        <div class="dom"><h4>Social competence</h4><p>Getting along with others, following rules, taking responsibility.</p></div>
+        <div class="dom"><h4>Emotional maturity</h4><p>Helping others, managing worry and frustration, paying attention.</p></div>
+        <div class="dom"><h4>Language and thinking</h4><p>Early reading, writing and number skills learned at school.</p></div>
+        <div class="dom"><h4>Communication</h4><p>Telling a story, understanding others, general knowledge.</p></div>
+      </div>
     </div>
-    <p class="small">The chart below shows how many children fall into each band in every area, in 2009 and 2024.</p>
-    <div class="viz scroll-x"><div id="vis0" class="min-820"></div></div>
+    <div class="sub">
+      <div class="intro"><h3>How many children fall into each band</h3><p class="small">Switch between 2009 and 2024 to compare the first and latest census.</p></div>
+      <div class="viz scroll-x"><div id="vis0" class="min-820"></div></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ CHAPTER 1 (white) ============ -->
+<!-- ============ CHAPTER 1 ============ -->
 <section class="band white" id="where">
   <div class="col">
-    <div class="head">
-      <p class="kicker"><span class="a">Part A · The census</span> · Chapter 1</p>
+    <div class="chap">
+      <span class="chap-no a">Chapter 1</span>
       <h2>Where children start behind</h2>
       <hr class="dash">
-      <p class="lead c">Nationally, 23.5% of children were vulnerable on at least one area in 2024. But the council a child lives in shapes the odds far more than that average suggests. Use the menu to switch between the five areas.</p>
+      <p class="lead">Nationally, 23.5% of children were vulnerable on at least one area in 2024. But the council a child lives in shapes the odds far more than that average suggests.</p>
     </div>
-    <div class="viz scroll-x"><div id="vis1"></div></div>
-    <p class="small">Panels zoom into the five largest cities, where most children live. Grey means the result was suppressed.</p>
-    <p class="interlude"><span class="r">3.1%</span> in Weipa. <span class="r">Over 90%</span> in the Tiwi Islands.</p>
-    <p class="small">The lowest and highest council rates in 2024.</p>
-    <div class="pair">
-      <div>
-        <h5>How many children</h5>
-        <p class="small">Counting children rather than rates flips the picture: the largest numbers live in fast-growing outer suburbs such as Brisbane, Moreton Bay and Logan.</p>
-        <div class="viz scroll-x"><div id="vis2" class="min-520"></div></div>
-        <button type="button" class="play-btn" id="play2">▶ Play 2009–2024</button>
-      </div>
-      <div>
-        <h5>Which way it moved</h5>
-        <p class="small">83 of 125 hexagons got worse between 2021 and 2024, and they are home to 9 in 10 (89.7%) of the children assessed.</p>
-        <p class="hint r"><svg viewBox="0 0 44 30" aria-hidden="true"><path d="M3 4 C 18 4, 32 10, 38 24" fill="none" stroke="#1c2430" stroke-width="1.4"/><path d="M33 21 L38 25 L40 19" fill="none" stroke="#1c2430" stroke-width="1.4"/></svg><span><small>How to read this</small>Each hexagon is about 100 km across and pools every council inside it, so big empty councils no longer dominate.</span></p>
-        <div class="viz scroll-x"><div id="vis3" class="min-520"></div></div>
+    <div class="sub first">
+      <div class="intro"><h3>The rate in every council</h3><p class="small">Use the menu below the city panels to switch between the five areas. The panels zoom into the five largest cities, where most children live. Grey means the result was suppressed.</p></div>
+      <div class="viz scroll-x"><div id="vis1"></div></div>
+      <div class="interlude"><p class="big"><span class="r">3.1%</span> in Weipa. <span class="r">Over 90%</span> in the Tiwi Islands.</p><p class="small">The lowest and highest council rates in 2024.</p></div>
+    </div>
+    <div class="sub">
+      <div class="intro"><h3>Two other ways to look at it</h3><p class="small">Rates hide how many children are affected, and a single year hides direction. The left map counts children; the right map shows change since 2021.</p></div>
+      <div class="pair">
+        <div>
+          <h4>How many children</h4>
+          <p class="small">Counting children rather than rates flips the picture: the largest numbers live in fast-growing outer suburbs such as Brisbane, Moreton Bay and Logan.</p>
+          <div class="viz scroll-x"><div id="vis2" class="min-520"></div></div>
+          <button type="button" class="play-btn" id="play2">▶ Play 2009–2024</button>
+        </div>
+        <div>
+          <h4>Which way it moved</h4>
+          <p class="small">83 of 125 hexagons got worse between 2021 and 2024, and they are home to 9 in 10 (89.7%) of the children assessed.</p>
+          <p class="howto a"><b>How to read this:</b> each hexagon is about 100 km across and pools every council inside it, so large empty councils no longer dominate the map.</p>
+          <div class="viz scroll-x"><div id="vis3" class="min-520"></div></div>
+        </div>
       </div>
     </div>
-    <div class="viz scroll-x"><div id="vis4" class="min-820"></div></div>
-    <p class="small">The Australian Capital Territory is reported as a single council, so it is not shown in the box plot.</p>
+    <div class="sub">
+      <div class="intro"><h3>The spread inside each state</h3><p class="small">Each dot is one council. The Australian Capital Territory is reported as a single council, so it is not shown.</p></div>
+      <div class="viz scroll-x"><div id="vis4" class="min-820"></div></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ CHAPTER 2 (amber wash) ============ -->
-<section class="band amber" id="when">
+<!-- ============ CHAPTER 2 ============ -->
+<section class="band warm" id="when">
   <div class="col">
-    <div class="head">
-      <p class="kicker"><span class="a">Part A · The census</span> · Chapter 2</p>
+    <div class="chap">
+      <span class="chap-no a">Chapter 2</span>
       <h2>A decade of progress, reversed</h2>
       <hr class="dash">
-      <p class="lead c">The share of children on track on all five areas rose steadily to a peak in 2018, then fell. Seven of the eight states and territories went backwards in 2024. Three of the five areas reached their worst level since the census began.</p>
+      <p class="lead">The share of children on track on all five areas rose steadily to a peak in 2018, then fell. Seven of the eight states and territories went backwards in 2024, and three of the five areas reached their worst level since the census began.</p>
     </div>
-    <div class="viz scroll-x"><div id="vis5" class="min-680"></div></div>
-    <p class="interlude"><span class="r">55.4%</span> on track in 2018. <span class="r">52.9%</span> in 2024.</p>
-    <p class="small">Children on track on all five areas, Australia.</p>
-    <div class="viz scroll-x"><div id="vis6"></div></div>
+    <div class="sub first">
+      <div class="intro"><h3>State by state</h3><p class="small">Each cell shows the share on track on all five areas. Its colour shows the change since the previous census.</p></div>
+      <div class="viz scroll-x"><div id="vis5" class="min-680"></div></div>
+      <div class="interlude"><p class="big"><span class="r">55.4%</span> on track in 2018. <span class="r">52.9%</span> in 2024.</p><p class="small">Children on track on all five areas, Australia.</p></div>
+    </div>
+    <div class="sub">
+      <div class="intro"><h3>Area by area</h3><p class="small">The share vulnerable in each area since 2009. The dashed line marks where each area started.</p></div>
+      <div class="viz scroll-x"><div id="vis6"></div></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ CHAPTER 3 (rust tint, the punchline band) ============ -->
+<!-- ============ CHAPTER 3 ============ -->
 <section class="band rusty" id="who">
   <div class="col">
-    <div class="head">
-      <p class="kicker"><span class="a">Part A · The census</span> · Chapter 3</p>
+    <div class="chap">
+      <span class="chap-no a">Chapter 3</span>
       <h2>The postcode gap</h2>
-      <hr class="dash rust">
-      <p class="lead c">Children in Australia's most disadvantaged fifth of areas are about 20 points less likely to start school on track than those in the least disadvantaged fifth. The gap has widened since 2009, from 17.1 to 19.9 points, and is widest in the Northern Territory at 31.1.</p>
+      <hr class="dash">
+      <p class="lead">Children in Australia's most disadvantaged fifth of areas are about 20 points less likely to start school on track than those in the least disadvantaged fifth. The gap has widened since 2009, from 17.1 to 19.9 points, and is widest in the Northern Territory at 31.1.</p>
     </div>
-    <div class="card"><div class="viz scroll-x"><div id="vis7" class="min-820"></div></div></div>
+    <div class="card"><div class="viz scroll-x" style="margin-top:0"><div id="vis7" class="min-820"></div></div></div>
     <p class="aside"><strong>Since 2021 the gap narrowed slightly,</strong> but only because children in the least disadvantaged areas fell back (63.7% to 61.1%), while the most disadvantaged also slipped (42.5% to 41.2%). Nobody improved.</p>
   </div>
 </section>
 
-<!-- ============ BRIDGE (white) ============ -->
+<!-- ============ PART B OPENER + BRIDGE ============ -->
 <section class="band white" id="bridge">
   <div class="col">
+    <div class="part"><span class="part-tag b">Part B</span><span class="part-name">Growing up</span><span class="part-src">ABS National Nutrition and Physical Activity Survey 2023, children aged 2 to 17</span></div>
     <div class="bridge">
       <div class="bridge-text">
-        <div class="handover" aria-hidden="true"><i></i><i></i></div>
-        <p class="kicker"><span class="b">Part B · The survey</span> · Growing up</p>
-        <p class="big">The census stops at school entry. To see what happens next, we follow a national survey of children's movement, screens, sleep and diet from age 2 to 17.</p>
-        <p class="small">Different children, different years: the two datasets are not linked. The survey is the ABS National Nutrition and Physical Activity Survey 2023.</p>
+        <p class="big">The census stops at school entry. To see what happens next, we follow a national survey of children's movement, screens, sleep and diet.</p>
+        <p class="small">Different children and different years: the two datasets are not linked, so Part B describes children in general, not the same children as Part A.</p>
       </div>
       <figure class="photo">
         <img src="img/screens.jpg" alt="A child lying in bed in a dark room, looking at a glowing tablet" width="1600" height="1066">
         <figcaption>Photo: <a href="https://unsplash.com/photos/child-watching-tablet-in-dark-room-WIVkzWafPaQ">Helena Lopes on Unsplash</a></figcaption>
       </figure>
     </div>
-    <p class="hint"><svg viewBox="0 0 44 30" aria-hidden="true"><path d="M3 4 C 18 4, 32 10, 38 24" fill="none" stroke="#1c2430" stroke-width="1.4"/><path d="M33 21 L38 25 L40 19" fill="none" stroke="#1c2430" stroke-width="1.4"/></svg><span><small>How to read this</small>Each ring is one average day of 24 hours. Click a colour in the legend to follow it across the ages.</span></p>
-    <div class="viz scroll-x"><div id="visDay"></div></div>
+    <div class="sub">
+      <div class="intro"><h3>A day in the life, by age</h3><p class="howto"><b>How to read this:</b> each ring is one average day of 24 hours. Click a colour in the legend to highlight it across every age; double-click a ring to show all colours again.</p></div>
+      <div class="viz scroll-x"><div id="visDay"></div></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ CHAPTER 4 (mint) ============ -->
-<section class="band mint" id="move">
+<!-- ============ CHAPTER 4 ============ -->
+<section class="band bluey" id="move">
   <div class="col">
-    <div class="head">
-      <p class="kicker"><span class="b">Part B · The survey</span> · Chapter 4</p>
+    <div class="chap">
+      <span class="chap-no b">Chapter 4</span>
       <h2>The older they get, the less they move</h2>
       <hr class="dash">
-      <p class="lead c">Australia's 24-Hour Movement Guidelines set targets for daily activity, strength activity, screen time and sleep. About 13 in 100 children aged 5–8 meet all of them. By 15–17, fewer than 1 in 100 do.</p>
+      <p class="lead">Australia's 24-Hour Movement Guidelines set targets for daily activity, strength activity, screen time and sleep. About 13 in 100 children aged 5–8 meet all of them. By 15–17, fewer than 1 in 100 do.</p>
     </div>
-    <div class="viz"><div id="vis8" style="overflow-x:auto"></div></div>
-    <p class="lead">Sleep holds up reasonably well. Activity and screen time are where the guidelines break: by 15–17, fewer than 1 in 10 meet either.</p>
-    <p class="hint"><svg viewBox="0 0 44 30" aria-hidden="true"><path d="M3 4 C 18 4, 32 10, 38 24" fill="none" stroke="#1c2430" stroke-width="1.4"/><path d="M33 21 L38 25 L40 19" fill="none" stroke="#1c2430" stroke-width="1.4"/></svg><span><small>How to read this</small>Each arrow runs from ages 5–8 to 15–17. The longer it points left, the more children stop meeting that guideline.</span></p>
-    <div class="viz scroll-x"><div id="vis8b" class="min-680"></div></div>
-    <p class="interlude"><span class="t">65 minutes</span> moving. <span class="r">249 minutes</span> on screens.</p>
-    <p class="small">A typical day for a 15–17 year old.</p>
-    <p class="hint r"><svg viewBox="0 0 44 30" aria-hidden="true"><path d="M3 4 C 18 4, 32 10, 38 24" fill="none" stroke="#1c2430" stroke-width="1.4"/><path d="M33 21 L38 25 L40 19" fill="none" stroke="#1c2430" stroke-width="1.4"/></svg><span><small>How to read this</small>Activity grows to the left of the centre line, screens to the right. Dashed lines mark the guidelines.</span></p>
-    <div class="viz scroll-x"><div id="vis9" class="min-680"></div></div>
-    <div class="pair">
-      <div>
-        <p class="small">Screens move into the bedroom. Fewer than 3 in 100 children aged 5–8 have a phone in their room; by 15–17, more than 8 in 10 do.</p>
-        <div class="viz scroll-x"><div id="vis10"></div></div>
-      </div>
-      <div>
-        <p class="small">And sleep gets worse, not just shorter. Nearly half of 2–5 year olds slept very well; by 15–17, about 1 in 5 did.</p>
-        <div class="viz scroll-x"><div id="vis10b" class="min-520"></div></div>
+    <div class="sub first">
+      <div class="intro"><h3>Meeting every guideline</h3><p class="small">Each figure is one child out of 100.</p></div>
+      <div class="viz"><div id="vis8" style="overflow-x:auto"></div></div>
+    </div>
+    <div class="sub">
+      <div class="intro"><h3>Which guideline breaks</h3><p class="lead">Sleep holds up reasonably well. Activity and screen time are where the guidelines break: by 15–17, fewer than 1 in 10 meet either.</p><p class="howto"><b>How to read this:</b> each arrow runs from ages 5–8 to 15–17. The further it points left, the more children stop meeting that guideline.</p></div>
+      <div class="viz scroll-x"><div id="vis8b" class="min-680"></div></div>
+    </div>
+    <div class="sub">
+      <div class="intro"><h3>Moving versus screens</h3><p class="lead">At 5–8, children spend about as long being active as on screens. By 15–17, screens take nearly four times as long, and girls are the least active of all, at 55 minutes a day.</p><p class="howto"><b>How to read this:</b> activity grows to the left of the centre line and screens to the right. The dashed lines mark the guidelines.</p></div>
+      <div class="viz scroll-x"><div id="vis9" class="min-680"></div></div>
+      <div class="interlude b"><p class="big"><span class="bl">65 minutes</span> moving. <span class="r">249 minutes</span> on screens.</p><p class="small">A typical day for a 15–17 year old.</p></div>
+    </div>
+    <div class="sub">
+      <div class="intro"><h3>Screens in the bedroom, and how well they sleep</h3></div>
+      <div class="pair">
+        <div>
+          <p class="small">Fewer than 3 in 100 children aged 5–8 have a phone in their room. By 15–17, more than 8 in 10 do.</p>
+          <div class="viz scroll-x"><div id="vis10"></div></div>
+        </div>
+        <div>
+          <p class="small">Sleep gets worse, not just shorter. Nearly half of 2–5 year olds slept very well; by 15–17, about 1 in 5 did.</p>
+          <div class="viz scroll-x"><div id="vis10b" class="min-520"></div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CHAPTER 5 (white) ============ -->
+<!-- ============ CHAPTER 5 ============ -->
 <section class="band white" id="eat">
   <div class="col">
-    <div class="head">
-      <p class="kicker"><span class="b">Part B · The survey</span> · Chapter 5</p>
+    <div class="chap">
+      <span class="chap-no b">Chapter 5</span>
       <h2>And what they eat</h2>
       <hr class="dash">
-      <p class="lead c">Children's diets carry more saturated fat than recommended at every age: 13–14% of daily energy against a target of no more than 10%. Free sugars climb with age, reaching the World Health Organization's 10% limit by the teens.</p>
+      <p class="lead">Children's diets carry more saturated fat than recommended at every age: 13–14% of daily energy against a target of no more than 10%. Free sugars climb with age, reaching the World Health Organization's 10% limit by the teens.</p>
     </div>
     <div class="viz scroll-x"><div id="vis11" class="min-820"></div></div>
   </div>
 </section>
 
-<!-- ============ SUMMARY (amber wash) ============ -->
-<section class="band amber" id="summary">
+<!-- ============ SUMMARY ============ -->
+<section class="band warm" id="summary">
   <div class="col">
-    <div class="head">
-      <p class="kicker">In summary</p>
+    <div class="chap">
+      <span class="chap-no a">In summary</span>
       <h2>Place shows where to act. Age shows when.</h2>
       <hr class="dash">
     </div>
@@ -330,7 +379,7 @@
       <div><b>Wealth</b><p>The gap in on-track rates between the most and least disadvantaged fifth of areas widened from 17.1 to 19.9 points between 2009 and 2024, and grew in every state.</p></div>
       <div><b>Age</b><p>By 15–17, fewer than 1 in 100 children meet all the movement guidelines, screens take nearly four times as long as activity, and saturated fat stays over the limit at every age.</p></div>
     </div>
-    <p class="lead c">Support that reaches families before school, and keeps teenagers active and rested, addresses both halves of the same story.</p>
+    <p class="lead">Support that reaches families before school, and keeps teenagers active and rested, addresses both halves of the same story.</p>
   </div>
 </section>
 </main>
@@ -386,7 +435,7 @@ playBtn.addEventListener("click",()=>{const v=views["#vis2"]; if(!v) return; sto
   timer=setInterval(()=>{y+=3; if(y>2024){stop();return} v.signal("year",y).runAsync()},1000)});
 document.getElementById("vis2").addEventListener("input",e=>{if(e.target.type==="range") stop()});
 
-/* progress bar: rust through Part A, teal from the bridge on */
+/* progress bar: rust through Part A, blue from Part B on */
 const prog=document.getElementById("prog"), bridge=document.getElementById("bridge");
 function onScroll(){const h=document.documentElement.scrollHeight-innerHeight, p=h>0?scrollY/h:0;
   const split=Math.max(0,Math.min(100,(bridge.offsetTop-innerHeight*.5)/h*100));
