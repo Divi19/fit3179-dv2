@@ -61,7 +61,8 @@
   .sub .intro{display:flex;flex-direction:column;gap:12px;max-width:72ch}
   .viz{width:100%;min-width:0;margin-top:12px}
   .viz>div{width:100%}
-  .scroll-x{overflow-x:auto}
+  .scroll-x{overflow-x:visible}
+  @media (max-width:960px){.scroll-x{overflow-x:auto;scrollbar-width:none}.scroll-x::-webkit-scrollbar{display:none}}
   .scroll-x>.min-520{min-width:520px} .scroll-x>.min-680{min-width:680px} .scroll-x>.min-820{min-width:820px}
   .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
   .pair>*{min-width:0;display:flex;flex-direction:column;gap:14px}
@@ -315,7 +316,7 @@
     </div>
     <div class="sub first">
       <div class="intro"><h3>Meeting every guideline</h3><p class="small">Each figure is one child out of 100.</p></div>
-      <div class="viz"><div id="vis8" style="overflow-x:auto"></div></div>
+      <div class="viz scroll-x"><div id="vis8"></div></div>
     </div>
     <div class="sub">
       <div class="intro"><h3>Which guideline breaks</h3><p class="lead">Sleep holds up reasonably well. Activity and screen time are where the guidelines break: by 15–17, fewer than 1 in 10 meet either.</p><p class="howto"><b>How to read this:</b> each arrow runs from ages 5–8 to 15–17. The further it points left, the more children stop meeting that guideline.</p></div>
