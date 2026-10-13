@@ -95,7 +95,7 @@
                     "Everything else"
                   ],
                   "range": [
-                    "#1c2430",
+                    "#33415c",
                     "#0a74c4",
                     "#f08a24",
                     "#dfe3e4"
@@ -104,8 +104,14 @@
                 "legend": {
                   "orient": "top",
                   "direction": "horizontal",
-                  "symbolType": "circle",
-                  "symbolStrokeWidth": 0
+                  "symbolType": "square",
+                  "symbolStrokeWidth": 0,
+                  "title": "Click a colour to highlight it",
+                  "symbolSize": 180,
+                  "labelFontSize": 13,
+                  "titleFontSize": 13,
+                  "labelColor": "#1c2430",
+                  "columnPadding": 18
                 }
               },
               "opacity": {
