@@ -95,7 +95,7 @@
       "as": "sortkey"
     },
     {
-      "calculate": "datum.area == 'ACT' ? \"Very few children in ACT's most disadvantaged areas — treat with caution\" : ''",
+      "calculate": "datum.area == 'ACT' ? \"Very few children in ACT's most disadvantaged areas: treat with caution\" : ''",
       "as": "note"
     },
     {
