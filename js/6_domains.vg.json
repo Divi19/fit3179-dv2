@@ -67,30 +67,32 @@
     }
   ],
   "facet": {
-    "column": {
-      "field": "domain",
-      "type": "nominal",
-      "sort": [
-        "Physical health",
-        "Social competence",
-        "Emotional maturity",
-        "Language & thinking",
-        "Communication"
-      ],
-      "title": null,
-      "header": {
-        "labelFontSize": 13,
-        "labelFontWeight": "bold",
-        "labelColor": "#1c2430",
-        "labelAnchor": "start",
-        "labelPadding": 6
-      }
+    "field": "domain",
+    "type": "nominal",
+    "sort": [
+      "Physical health",
+      "Social competence",
+      "Emotional maturity",
+      "Language & thinking",
+      "Communication"
+    ],
+    "title": null,
+    "header": {
+      "labelFontSize": 13,
+      "labelFontWeight": "bold",
+      "labelColor": "#1c2430",
+      "labelAnchor": "start",
+      "labelPadding": 6
     }
   },
-  "spacing": 18,
+  "columns": 3,
+  "spacing": {
+    "row": 44,
+    "column": 40
+  },
   "spec": {
-    "width": 186,
-    "height": 220,
+    "width": 318,
+    "height": 240,
     "layer": [
       {
         "mark": {
@@ -626,6 +628,11 @@
         }
       }
     ]
+  },
+  "resolve": {
+    "axis": {
+      "x": "independent"
+    }
   },
   "config": {
     "font": "Atkinson Hyperlegible",
