@@ -98,7 +98,7 @@
             "color": {
               "condition": {
                 "test": "datum.year == year",
-                "value": "#7a3510"
+                "value": "#8e3410"
               },
               "value": "#dfe3e4"
             },
@@ -132,7 +132,7 @@
             "dy": -3,
             "fontSize": 12,
             "fontWeight": "bold",
-            "color": "#7a3510"
+            "color": "#8e3410"
           },
           "encoding": {
             "text": {
@@ -229,7 +229,7 @@
           ],
           "mark": {
             "type": "circle",
-            "fill": "#7a3510",
+            "fill": "#8e3410",
             "fillOpacity": 0.6,
             "stroke": "#ffffff",
             "strokeWidth": 0.75,
@@ -267,7 +267,7 @@
                   1000,
                   3000
                 ],
-                "symbolFillColor": "#7a3510",
+                "symbolFillColor": "#8e3410",
                 "symbolOpacity": 0.6,
                 "symbolStrokeColor": "#ffffff"
               }
@@ -317,7 +317,7 @@
           "mark": {
             "type": "geoshape",
             "fill": null,
-            "stroke": "#5b6670",
+            "stroke": "#46525d",
             "strokeWidth": 0.9,
             "clip": true
           }
@@ -357,7 +357,7 @@
             "align": "left",
             "baseline": "middle",
             "fontSize": 9,
-            "color": "#1d2a35",
+            "color": "#1c2430",
             "clip": true,
             "dx": {
               "expr": "datum.r + 1"
@@ -414,7 +414,7 @@
             "baseline": "middle",
             "fontSize": 11,
             "fontWeight": "bold",
-            "color": "#7a3510",
+            "color": "#8e3410",
             "lineHeight": 13,
             "clip": true,
             "dx": {
@@ -456,8 +456,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -468,8 +468,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -481,9 +481,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

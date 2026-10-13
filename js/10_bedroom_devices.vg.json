@@ -47,7 +47,7 @@
       "axis": {
         "domain": false,
         "ticks": false,
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontSize": 11,
         "labelPadding": 8
       }
@@ -92,7 +92,7 @@
         "type": "point",
         "shape": "circle",
         "filled": true,
-        "color": "#b3561a",
+        "color": "#d0571b",
         "opacity": 1,
         "strokeWidth": 0
       },
@@ -122,7 +122,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontSize": 11,
             "titleAnchor": "start",
             "titleX": 0
@@ -164,7 +164,7 @@
         "type": "point",
         "shape": "circle",
         "filled": false,
-        "color": "#b3561a",
+        "color": "#d0571b",
         "opacity": 1,
         "strokeWidth": 1.6
       },
@@ -194,7 +194,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontSize": 11,
             "titleAnchor": "start",
             "titleX": 0
@@ -266,7 +266,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontSize": 11,
             "titleAnchor": "start",
             "titleX": 0
@@ -289,7 +289,7 @@
         "baseline": "middle",
         "fontSize": 10,
         "fontWeight": "bold",
-        "color": "#7a3510"
+        "color": "#8e3410"
       },
       "encoding": {
         "x": {
@@ -317,7 +317,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontSize": 11,
             "titleAnchor": "start",
             "titleX": 0
@@ -343,7 +343,7 @@
         "align": "left",
         "baseline": "middle",
         "fontSize": 10,
-        "color": "#5b6670"
+        "color": "#46525d"
       },
       "encoding": {
         "x": {
@@ -371,7 +371,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontSize": 11,
             "titleAnchor": "start",
             "titleX": 0
@@ -421,7 +421,7 @@
         "baseline": "middle",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#7a3510",
+        "color": "#8e3410",
         "lineHeight": 13,
         "dy": 0
       },
@@ -451,7 +451,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontSize": 11,
             "titleAnchor": "start",
             "titleX": 0
@@ -482,7 +482,7 @@
         "baseline": "middle",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#7a3510",
+        "color": "#8e3410",
         "lineHeight": 13,
         "dy": 0
       },
@@ -512,7 +512,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontSize": 11,
             "titleAnchor": "start",
             "titleX": 0
@@ -531,8 +531,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -543,8 +543,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -556,9 +556,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

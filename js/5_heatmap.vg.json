@@ -87,7 +87,7 @@
       "axis": {
         "domain": false,
         "ticks": false,
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontSize": 12,
         "labelFontWeight": {
           "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
@@ -130,11 +130,11 @@
             ],
             "range": [
               "#ffffff",
-              "#b3561a",
-              "#eda96a",
+              "#d0571b",
+              "#f5a25e",
               "#e6e7e4",
-              "#9cc9d6",
-              "#007c9e"
+              "#9ccaee",
+              "#0a74c4"
             ]
           },
           "legend": {
@@ -202,11 +202,11 @@
             ],
             "range": [
               "#ffffff",
-              "#b3561a",
-              "#eda96a",
+              "#d0571b",
+              "#f5a25e",
               "#e6e7e4",
-              "#9cc9d6",
-              "#007c9e"
+              "#9ccaee",
+              "#0a74c4"
             ]
           },
           "legend": {
@@ -267,14 +267,14 @@
           "condition": [
             {
               "test": "datum.year == 2009",
-              "value": "#5b6670"
+              "value": "#46525d"
             },
             {
               "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
               "value": "#ffffff"
             }
           ],
-          "value": "#1d2a35"
+          "value": "#1c2430"
         }
       }
     },
@@ -299,14 +299,14 @@
           "condition": [
             {
               "test": "datum.year == 2009",
-              "value": "#5b6670"
+              "value": "#46525d"
             },
             {
               "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
               "value": "#ffffff"
             }
           ],
-          "value": "#1d2a35"
+          "value": "#1c2430"
         }
       }
     },
@@ -320,7 +320,7 @@
       },
       "mark": {
         "type": "rule",
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "strokeWidth": 1.2
       },
       "encoding": {
@@ -347,8 +347,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -359,8 +359,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -372,9 +372,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

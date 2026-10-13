@@ -131,7 +131,7 @@
         "domain": false,
         "ticks": false,
         "labelFontSize": 12,
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontWeight": {
           "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
         }
@@ -294,8 +294,8 @@
               "Least disadvantaged"
             ],
             "range": [
-              "#b3561a",
-              "#007c9e"
+              "#d0571b",
+              "#0a74c4"
             ]
           },
           "legend": {
@@ -390,8 +390,8 @@
               "Least disadvantaged"
             ],
             "range": [
-              "#b3561a",
-              "#007c9e"
+              "#d0571b",
+              "#0a74c4"
             ]
           },
           "legend": {
@@ -466,7 +466,7 @@
             "test": "datum.hollow",
             "value": "#8a949b"
           },
-          "value": "#5b6670"
+          "value": "#46525d"
         },
         "opacity": {
           "condition": {
@@ -498,7 +498,7 @@
         "dx": -10,
         "fontSize": 10,
         "fontWeight": "bold",
-        "color": "#5b6670"
+        "color": "#46525d"
       },
       "encoding": {
         "x": {
@@ -567,7 +567,7 @@
         "dy": -3,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -590,7 +590,7 @@
             "domain": false,
             "ticks": false,
             "labelFontSize": 12,
-            "labelColor": "#1d2a35",
+            "labelColor": "#1c2430",
             "labelFontWeight": {
               "expr": "datum.value == 'Australia' ? 'bold' : 'normal'"
             }
@@ -639,7 +639,7 @@
         "dx": 10,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#7a3510",
+        "color": "#8e3410",
         "dy": {
           "expr": "show == '2024 vs 2009' ? -15 : -13"
         }
@@ -682,7 +682,7 @@
       },
       "mark": {
         "type": "rule",
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "strokeWidth": 1
       },
       "encoding": {
@@ -721,7 +721,7 @@
         "filled": false,
         "size": 90,
         "strokeWidth": 2,
-        "color": "#5b6670"
+        "color": "#46525d"
       },
       "encoding": {
         "x": {
@@ -751,7 +751,7 @@
       "mark": {
         "type": "circle",
         "size": 110,
-        "color": "#5b6670",
+        "color": "#46525d",
         "opacity": 1
       },
       "encoding": {
@@ -784,7 +784,7 @@
         "align": "left",
         "baseline": "middle",
         "fontSize": 11,
-        "color": "#5b6670"
+        "color": "#46525d"
       },
       "encoding": {
         "x": {
@@ -809,8 +809,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -821,8 +821,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -834,9 +834,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

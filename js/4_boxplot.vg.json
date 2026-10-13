@@ -55,7 +55,7 @@
       ],
       "axis": {
         "labelFontWeight": "bold",
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontSize": 12
       }
     }
@@ -66,16 +66,16 @@
         "type": "boxplot",
         "extent": "min-max",
         "size": 26,
-        "color": "#f6d2a9",
+        "color": "#fbcfa3",
         "median": {
-          "color": "#7a3510",
+          "color": "#8e3410",
           "strokeWidth": 2.5
         },
         "rule": {
           "color": "#b8bec2"
         },
         "box": {
-          "stroke": "#d97d33"
+          "stroke": "#ec7a2c"
         },
         "ticks": false
       },
@@ -98,7 +98,7 @@
         "type": "circle",
         "size": 22,
         "opacity": 0.55,
-        "color": "#7a3510"
+        "color": "#8e3410"
       },
       "encoding": {
         "x": {
@@ -157,8 +157,8 @@
         "type": "circle",
         "size": 44,
         "opacity": 1,
-        "color": "#7a3510",
-        "stroke": "#1d2a35",
+        "color": "#8e3410",
+        "stroke": "#1c2430",
         "strokeWidth": 1.6
       },
       "encoding": {
@@ -276,7 +276,7 @@
         "dy": -4,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -373,7 +373,7 @@
         "dy": -4,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -416,7 +416,7 @@
           4,
           3
         ],
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -455,7 +455,7 @@
         "baseline": "bottom",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -489,7 +489,7 @@
         "type": "circle",
         "size": 44,
         "opacity": 0.8,
-        "color": "#7a3510",
+        "color": "#8e3410",
         "x": {
           "expr": "width - 392"
         }
@@ -513,7 +513,7 @@
         "align": "left",
         "baseline": "middle",
         "fontSize": 11,
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "x": {
           "expr": "width - 384"
         }
@@ -537,8 +537,8 @@
       },
       "mark": {
         "type": "rect",
-        "color": "#f6d2a9",
-        "stroke": "#d97d33",
+        "color": "#fbcfa3",
+        "stroke": "#ec7a2c",
         "x": {
           "expr": "width - 296"
         },
@@ -568,7 +568,7 @@
         "align": "left",
         "baseline": "middle",
         "fontSize": 11,
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "x": {
           "expr": "width - 270"
         }
@@ -592,7 +592,7 @@
       },
       "mark": {
         "type": "rule",
-        "color": "#7a3510",
+        "color": "#8e3410",
         "strokeWidth": 2.5,
         "x": {
           "expr": "width - 92"
@@ -620,7 +620,7 @@
         "align": "left",
         "baseline": "middle",
         "fontSize": 11,
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "x": {
           "expr": "width - 84"
         }
@@ -642,8 +642,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -654,8 +654,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -667,9 +667,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

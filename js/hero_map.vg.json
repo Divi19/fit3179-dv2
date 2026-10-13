@@ -26,7 +26,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "#f4f2ee",
-        "stroke": "#1d2a35",
+        "stroke": "#1c2430",
         "strokeWidth": 1.1
       }
     },
@@ -52,9 +52,9 @@
       ],
       "mark": {
         "type": "circle",
-        "fill": "#b3561a",
+        "fill": "#d0571b",
         "fillOpacity": 0.3,
-        "stroke": "#7a3510",
+        "stroke": "#8e3410",
         "strokeWidth": 0.8,
         "strokeOpacity": 0.8
       },
@@ -139,7 +139,7 @@
         "dy": -24,
         "fontSize": 13,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "longitude": {
@@ -163,8 +163,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -175,8 +175,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -188,9 +188,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
