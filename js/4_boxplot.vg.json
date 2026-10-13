@@ -211,7 +211,7 @@
     {
       "transform": [
         {
-          "filter": "indexof(['Brisbane', 'Weipa'], datum.lga_name) >= 0"
+          "filter": "indexof(['Brisbane', 'Weipa', 'Cherbourg', 'Tiwi Islands'], datum.lga_name) >= 0"
         },
         {
           "calculate": "datum.lga_name + ' ' + (datum.vulnerable_pct >= 90 ? '90%+' : format(datum.vulnerable_pct, '.1f') + '%')",
@@ -220,10 +220,18 @@
       ],
       "mark": {
         "type": "text",
-        "align": "left",
-        "baseline": "bottom",
-        "dx": 6,
-        "dy": -4,
+        "align": {
+          "expr": "datum.lga_name == 'Brisbane' ? 'right' : datum.lga_name == 'Weipa' ? 'left' : datum.lga_name == 'Cherbourg' ? 'right' : 'right'"
+        },
+        "baseline": {
+          "expr": "datum.lga_name == 'Brisbane' ? 'top' : datum.lga_name == 'Weipa' ? 'top' : datum.lga_name == 'Cherbourg' ? 'bottom' : 'bottom'"
+        },
+        "dx": {
+          "expr": "datum.lga_name == 'Brisbane' ? 6 : datum.lga_name == 'Weipa' ? 2 : datum.lga_name == 'Cherbourg' ? -4 : -4"
+        },
+        "dy": {
+          "expr": "datum.lga_name == 'Brisbane' ? 7 : datum.lga_name == 'Weipa' ? 7 : datum.lga_name == 'Cherbourg' ? -13 : -12"
+        },
         "fontSize": 11,
         "fontWeight": "bold",
         "color": "#ffffff",
@@ -261,7 +269,7 @@
     {
       "transform": [
         {
-          "filter": "indexof(['Brisbane', 'Weipa'], datum.lga_name) >= 0"
+          "filter": "indexof(['Brisbane', 'Weipa', 'Cherbourg', 'Tiwi Islands'], datum.lga_name) >= 0"
         },
         {
           "calculate": "datum.lga_name + ' ' + (datum.vulnerable_pct >= 90 ? '90%+' : format(datum.vulnerable_pct, '.1f') + '%')",
@@ -270,107 +278,18 @@
       ],
       "mark": {
         "type": "text",
-        "align": "left",
-        "baseline": "bottom",
-        "dx": 6,
-        "dy": -4,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#1c2430"
-      },
-      "encoding": {
-        "x": {
-          "field": "vulnerable_pct",
-          "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
-          "scale": {
-            "domain": [
-              0,
-              100
-            ]
-          }
+        "align": {
+          "expr": "datum.lga_name == 'Brisbane' ? 'right' : datum.lga_name == 'Weipa' ? 'left' : datum.lga_name == 'Cherbourg' ? 'right' : 'right'"
         },
-        "yOffset": {
-          "field": "jitter",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -1,
-              2
-            ]
-          }
+        "baseline": {
+          "expr": "datum.lga_name == 'Brisbane' ? 'top' : datum.lga_name == 'Weipa' ? 'top' : datum.lga_name == 'Cherbourg' ? 'bottom' : 'bottom'"
         },
-        "text": {
-          "field": "t"
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "indexof(['Cherbourg', 'Tiwi Islands'], datum.lga_name) >= 0"
+        "dx": {
+          "expr": "datum.lga_name == 'Brisbane' ? 6 : datum.lga_name == 'Weipa' ? 2 : datum.lga_name == 'Cherbourg' ? -4 : -4"
         },
-        {
-          "calculate": "datum.lga_name + ' ' + (datum.vulnerable_pct >= 90 ? '90%+' : format(datum.vulnerable_pct, '.1f') + '%')",
-          "as": "t"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "bottom",
-        "dx": -6,
-        "dy": -4,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#ffffff",
-        "stroke": "#ffffff",
-        "strokeWidth": 3,
-        "strokeJoin": "round"
-      },
-      "encoding": {
-        "x": {
-          "field": "vulnerable_pct",
-          "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
-          "scale": {
-            "domain": [
-              0,
-              100
-            ]
-          }
+        "dy": {
+          "expr": "datum.lga_name == 'Brisbane' ? 7 : datum.lga_name == 'Weipa' ? 7 : datum.lga_name == 'Cherbourg' ? -13 : -12"
         },
-        "yOffset": {
-          "field": "jitter",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -1,
-              2
-            ]
-          }
-        },
-        "text": {
-          "field": "t"
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "indexof(['Cherbourg', 'Tiwi Islands'], datum.lga_name) >= 0"
-        },
-        {
-          "calculate": "datum.lga_name + ' ' + (datum.vulnerable_pct >= 90 ? '90%+' : format(datum.vulnerable_pct, '.1f') + '%')",
-          "as": "t"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "bottom",
-        "dx": -6,
-        "dy": -4,
         "fontSize": 11,
         "fontWeight": "bold",
         "color": "#1c2430"
