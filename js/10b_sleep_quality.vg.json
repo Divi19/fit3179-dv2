@@ -81,7 +81,7 @@
         "domain": false,
         "ticks": false,
         "labelFontWeight": "bold",
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontSize": 12,
         "labelPadding": 8
       }
@@ -134,10 +134,10 @@
               "Very good"
             ],
             "range": [
-              "#b3561a",
-              "#eda96a",
-              "#7fbcd0",
-              "#16739a"
+              "#d0571b",
+              "#f5a25e",
+              "#78b6e6",
+              "#126fb8"
             ]
           },
           "legend": {
@@ -225,7 +225,7 @@
       },
       "mark": {
         "type": "rule",
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "strokeWidth": 1.2
       },
       "encoding": {
@@ -277,7 +277,7 @@
         "baseline": "top",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#b3561a"
+        "color": "#d0571b"
       },
       "encoding": {
         "x": {
@@ -326,7 +326,7 @@
         "baseline": "top",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#16739a"
+        "color": "#126fb8"
       },
       "encoding": {
         "x": {
@@ -407,7 +407,7 @@
         "baseline": "top",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#16739a",
+        "color": "#126fb8",
         "dy": {
           "expr": "height / 13"
         }
@@ -430,8 +430,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -442,8 +442,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -455,9 +455,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

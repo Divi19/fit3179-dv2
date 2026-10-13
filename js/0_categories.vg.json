@@ -88,7 +88,7 @@
         "domain": false,
         "ticks": false,
         "labelFontWeight": "bold",
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontSize": 12,
         "labelPadding": 8
       }
@@ -141,8 +141,8 @@
               "On track"
             ],
             "range": [
-              "#b3561a",
-              "#eda96a",
+              "#d0571b",
+              "#f5a25e",
               "#e6e7e4"
             ]
           },
@@ -230,7 +230,7 @@
             "test": "datum.category == 'Vulnerable'",
             "value": "#ffffff"
           },
-          "value": "#1d2a35"
+          "value": "#1c2430"
         }
       }
     },
@@ -251,7 +251,7 @@
           4,
           3
         ],
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "opacity": 0.75
       },
       "encoding": {
@@ -311,7 +311,7 @@
         "dx": 4,
         "fontSize": 10,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -385,7 +385,7 @@
         "baseline": "middle",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#7a3510"
+        "color": "#8e3410"
       },
       "encoding": {
         "x": {
@@ -416,73 +416,6 @@
           "field": "t"
         }
       }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.category != 'On track'"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "n",
-              "as": "n_behind"
-            },
-            {
-              "op": "max",
-              "field": "total",
-              "as": "total"
-            }
-          ],
-          "groupby": [
-            "domain"
-          ]
-        },
-        {
-          "calculate": "100 * datum.n_behind / datum.total",
-          "as": "behind"
-        },
-        {
-          "window": [
-            {
-              "op": "row_number",
-              "as": "rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "behind",
-              "order": "descending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.rank == 1"
-        },
-        {
-          "calculate": "format(datum.behind, '.1f') + '% vulnerable or at risk: ' + format(datum.n_behind, ',') + ' children, about 1 in ' + format(round(100 / datum.behind), 'd')",
-          "as": "t"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -8,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#1d2a35"
-      },
-      "encoding": {
-        "x": {
-          "datum": 100,
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "t"
-        }
-      }
     }
   ],
   "config": {
@@ -492,8 +425,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -504,8 +437,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -517,9 +450,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

@@ -91,7 +91,7 @@
         "domain": false,
         "ticks": false,
         "labelFontWeight": "bold",
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontSize": 12,
         "labelPadding": 8
       }
@@ -140,8 +140,8 @@
               "Sedentary screen time"
             ],
             "range": [
-              "#007c9e",
-              "#cf6a12"
+              "#0a74c4",
+              "#f08a24"
             ]
           },
           "legend": null
@@ -186,7 +186,7 @@
         "dx": -5,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -210,7 +210,7 @@
         "dx": 5,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "x": {
@@ -239,7 +239,7 @@
           4,
           3
         ],
-        "color": "#1d2a35",
+        "color": "#1c2430",
         "opacity": 0.7
       },
       "encoding": {
@@ -272,7 +272,7 @@
         "baseline": "top",
         "dx": -4,
         "fontSize": 10,
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "y": {
@@ -302,7 +302,7 @@
         "baseline": "top",
         "dx": 4,
         "fontSize": 10,
-        "color": "#1d2a35"
+        "color": "#1c2430"
       },
       "encoding": {
         "y": {
@@ -359,7 +359,7 @@
         "baseline": "bottom",
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#007c9e"
+        "color": "#0a74c4"
       },
       "encoding": {
         "y": {
@@ -389,7 +389,7 @@
         "baseline": "bottom",
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#cf6a12"
+        "color": "#f08a24"
       },
       "encoding": {
         "y": {
@@ -423,7 +423,7 @@
         "align": "left",
         "fontSize": 11,
         "fontStyle": "italic",
-        "color": "#5b6670"
+        "color": "#46525d"
       },
       "encoding": {
         "x": {
@@ -474,8 +474,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -486,8 +486,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -499,9 +499,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

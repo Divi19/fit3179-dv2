@@ -87,7 +87,7 @@
       },
       "axis": {
         "labelFontSize": 12,
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelFontWeight": "bold",
         "domain": false,
         "ticks": false,
@@ -150,7 +150,7 @@
         "filled": true,
         "opacity": 1,
         "size": 110,
-        "color": "#5b6670",
+        "color": "#46525d",
         "strokeWidth": 0
       },
       "encoding": {
@@ -240,10 +240,10 @@
               "Ages 15–17"
             ],
             "range": [
-              "#b4d8e4",
-              "#4598b4",
-              "#16739a",
-              "#0a4f6c"
+              "#b6d8f2",
+              "#3f95d6",
+              "#126fb8",
+              "#0b4c86"
             ]
           },
           "legend": {
@@ -310,7 +310,7 @@
         "baseline": "middle",
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#cf6a12",
+        "color": "#f08a24",
         "dy": {
           "expr": "height / 8"
         }
@@ -363,7 +363,7 @@
         "baseline": "middle",
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#007c9e"
+        "color": "#0a74c4"
       },
       "encoding": {
         "x": {
@@ -401,8 +401,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -413,8 +413,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -426,9 +426,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

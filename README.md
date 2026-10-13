@@ -10,7 +10,8 @@ movement, screen time, sleep and diet change as they grow (ABS National Nutritio
 | Path | What it is |
 |---|---|
 | `index.html` | The web page |
-| `js/*.vg.json` | One Vega-Lite specification per chart (15) |
+| `js/*.vg.json` | One Vega-Lite specification per chart (15), plus the hero map |
+| `img/` | The two photos (Unsplash, recoloured as duotones) |
 | `data/*.csv` | Cleaned data, one file per chart group |
 | `data/aus_lga.topojson` | Council boundaries (objects: `lga`, `states`; key: `properties.LGA_CODE24`) |
 | `data/hex_grid.geojson` | ~100 km hexagons used by the bin map (key: `properties.hex_id`) |
@@ -20,8 +21,13 @@ movement, screen time, sleep and diet change as they grow (ABS National Nutritio
 To rebuild the data, run `python3 scripts/build_data.py` from the repo root with the original spreadsheets in `raw/`
 (needs `openpyxl` and `pyproj`). It prints check values for each file.
 
+## Page design
+
+The page runs as full-width colour bands: white, warm sand and a rust tint for Part A (the census), then white and pale blue for Part B (the survey). Each chapter is split into sub-sections with their own headings. Headings use DM Serif Display and everything else, charts included, uses Atkinson Hyperlegible. Rust (`#d0571b`) marks the census and worse outcomes; blue (`#0a74c4`) marks the survey and better outcomes.
+
 ## Charts
 
+Hero. Proportional symbol map: vulnerable children per council, 2024
 0. 100% stacked bar with year toggle: vulnerable, at risk and on track in each area of development, 2009 vs 2024
 1. Choropleth map with city zoom panels and an area menu: % vulnerable by council, 2024
 2. Proportional symbol map with year slider, play button, city zoom and a linked national bar chart: number of vulnerable children, 2009–2024
@@ -54,9 +60,14 @@ Bridge. Donut rings (small multiples) with legend highlight: how a 24-hour day i
 | `nnpas_bedroom_devices.csv`, `nnpas_sleep_quality.csv` | ABS NNPAS tables 12.3–12.4 (with margins of error) | 10, 10b |
 | `nnpas_nutrients.csv` | ABS NNPAS food and nutrients tables 2.1–2.2 | 11 |
 
+## Images
+
+- Children walking to school: note thanun, Unsplash License
+- Child with a tablet at night: Helena Lopes, Unsplash License
+
 ## Sources (CC BY 4.0)
 
-- Australian Early Development Census, Australian Government Department of Education — aedc.gov.au
-- National Nutrition and Physical Activity Survey 2023, Australian Bureau of Statistics — abs.gov.au
+- Australian Early Development Census, Australian Government Department of Education, aedc.gov.au
+- National Nutrition and Physical Activity Survey 2023, Australian Bureau of Statistics, abs.gov.au
 - Local Government Areas 2024, ABS ASGS Edition 3 (simplified with mapshaper)
 - Guideline limits: NHMRC Nutrient Reference Values for Australia and New Zealand; WHO Guideline: Sugars intake for adults and children (2015)

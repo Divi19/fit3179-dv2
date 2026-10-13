@@ -81,7 +81,7 @@
       "header": {
         "labelFontSize": 13,
         "labelFontWeight": "bold",
-        "labelColor": "#1d2a35",
+        "labelColor": "#1c2430",
         "labelAnchor": "start",
         "labelPadding": 6
       }
@@ -150,7 +150,7 @@
           "baseline": "top",
           "dy": 4,
           "fontSize": 10,
-          "color": "#5b6670"
+          "color": "#46525d"
         },
         "transform": [
           {
@@ -214,7 +214,7 @@
       {
         "mark": {
           "type": "line",
-          "color": "#b3561a",
+          "color": "#d0571b",
           "strokeWidth": 2
         },
         "encoding": {
@@ -268,7 +268,7 @@
         "mark": {
           "type": "point",
           "filled": true,
-          "color": "#b3561a",
+          "color": "#d0571b",
           "size": 36,
           "opacity": 1
         },
@@ -343,7 +343,7 @@
         "mark": {
           "type": "point",
           "filled": true,
-          "color": "#7a3510",
+          "color": "#8e3410",
           "size": 110,
           "opacity": 1,
           "stroke": "#ffffff",
@@ -425,7 +425,7 @@
           "dy": -9,
           "fontSize": 12,
           "fontWeight": "bold",
-          "color": "#7a3510"
+          "color": "#8e3410"
         },
         "transform": [
           {
@@ -495,7 +495,7 @@
           "dy": -24,
           "fontSize": 11,
           "fontWeight": "bold",
-          "color": "#1d2a35"
+          "color": "#1c2430"
         },
         "transform": [
           {
@@ -564,7 +564,7 @@
           "dx": -8,
           "dy": 10,
           "fontSize": 11,
-          "color": "#1d2a35"
+          "color": "#1c2430"
         },
         "transform": [
           {
@@ -634,8 +634,8 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#5b6670",
-      "titleColor": "#5b6670",
+      "labelColor": "#46525d",
+      "titleColor": "#46525d",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
@@ -646,8 +646,8 @@
       "titleFont": "Atkinson Hyperlegible"
     },
     "legend": {
-      "labelColor": "#5b6670",
-      "titleColor": "#1d2a35",
+      "labelColor": "#46525d",
+      "titleColor": "#1c2430",
       "labelFontSize": 11,
       "titleFontSize": 11,
       "titleFontWeight": "bold",
@@ -659,9 +659,9 @@
       "font": "Atkinson Hyperlegible",
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#1d2a35",
+      "color": "#1c2430",
       "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#5b6670",
+      "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
