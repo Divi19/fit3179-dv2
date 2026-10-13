@@ -346,23 +346,17 @@
             {
               "calculate": "sqrt(datum.vulnerable_n * 0.437500) / 2",
               "as": "r"
-            },
-            {
-              "calculate": "'──'",
-              "as": "t"
             }
           ],
           "mark": {
-            "type": "text",
-            "align": "left",
-            "baseline": "middle",
-            "fontSize": 9,
-            "color": "#1c2430",
-            "clip": true,
-            "dx": {
-              "expr": "datum.r + 1"
-            },
-            "dy": -3
+            "type": "point",
+            "shape": "M 8 14 L 30 80 M 8 14 L 8.5 22.5 M 8 14 L 14 19.5",
+            "filled": false,
+            "stroke": "#1c2430",
+            "strokeWidth": 1.6,
+            "size": 4,
+            "opacity": 1,
+            "clip": true
           },
           "encoding": {
             "longitude": {
@@ -372,9 +366,6 @@
             "latitude": {
               "field": "lat",
               "type": "quantitative"
-            },
-            "text": {
-              "field": "t"
             }
           }
         },
@@ -410,16 +401,15 @@
           ],
           "mark": {
             "type": "text",
-            "align": "left",
-            "baseline": "middle",
-            "fontSize": 11,
+            "align": "center",
+            "baseline": "top",
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#8e3410",
-            "lineHeight": 13,
             "clip": true,
-            "dx": {
-              "expr": "datum.r + 17"
-            }
+            "dx": 30,
+            "dy": 86,
+            "lineHeight": 15
           },
           "encoding": {
             "longitude": {
