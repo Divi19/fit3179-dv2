@@ -135,21 +135,6 @@
   footer ul{padding-left:18px;margin:0;display:flex;flex-direction:column;gap:8px}
   .byline{margin-top:36px;padding-top:18px;border-top:1px solid var(--rule);color:var(--sub);font-size:14px}
 
-
-  /* hero: faded figure behind the title */
-  .hero-text{position:relative}
-  .ghost{position:absolute;left:-.04em;top:-.12em;font-family:var(--f-display);font-size:clamp(150px,21vw,290px);line-height:1;color:#f2b84b;opacity:.5;pointer-events:none;letter-spacing:-.03em;white-space:nowrap}
-  .hero h1{position:relative;font-size:clamp(50px,7.2vw,96px);line-height:.94;margin-top:clamp(70px,9vw,130px)}
-  .hero h1 .s{color:var(--blue);display:block}
-  .hero .stand{position:relative}
-  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);margin-top:44px}
-  .stat{padding:18px 22px 0 0}
-  .stat+.stat{padding-left:22px;border-left:1px solid var(--rule)}
-  .stat b{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(40px,4.4vw,54px);line-height:1;font-variant-numeric:tabular-nums}
-  .stat span{display:block;font-size:15px;color:var(--sub);margin-top:8px;max-width:30ch}
-  .stat .r{color:var(--rust)} .stat .t{color:var(--blue)}
-  @media (max-width:960px){.stats{grid-template-columns:1fr}.stat+.stat{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
-
   @media (max-width:960px){
     .hero-grid,.def,.pair,.bridge,.foot,.tiles{grid-template-columns:1fr}
     .domains{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -171,19 +156,19 @@
     <p class="byline-top">Divieleisch Ranjan, FIT3179 Data Visualisation 2, Monash University</p>
     <div class="hero-grid">
       <div class="hero-text">
-        <div class="ghost" aria-hidden="true">1 in 4</div>
-        <h1>Starting behind, <span class="s">slowing down.</span></h1>
-        <p class="stand">In 2024, one in eight Australian children started school developmentally vulnerable in two or more areas, the highest share since the census began in 2009. As they grow, the habits that support them, moving, sleeping and eating well, fade.</p>
+        <div class="big-stat"><b>1 in 4</b><span>Australian children started school vulnerable in at least one area of development in 2024 (23.5%).</span></div>
+        <h1>Starting behind, slowing down</h1>
+        <p class="stand">In 2024, one in eight children started school developmentally vulnerable in two or more areas, the highest share since the census began in 2009. As they grow, the habits that support them, moving, sleeping and eating well, fade.</p>
       </div>
-      <div class="etch-wrap">
+      <div>
         <div id="visHero" class="hero-map" role="img" aria-label="Map of Australia with a circle for each council, sized by its number of developmentally vulnerable children in 2024"></div>
-        <p class="etch-cap">Circles: vulnerable children per council, 2024. Brisbane has the most, at 2,756.</p>
+        <p class="etch-cap">Each circle is one council, sized by its number of vulnerable children in 2024. Brisbane has the most, at 2,756.</p>
       </div>
     </div>
-    <div class="stats">
-      <div class="stat"><b>288,483</b><span>children in their first year of school assessed by their teachers in 2024</span></div>
-      <div class="stat"><b class="r">12.5%</b><span>vulnerable on two or more areas, the highest since records began in 2009</span></div>
-      <div class="stat"><b class="t">7.6%</b><span>of 15–17 year olds active for an hour every day, down from 30.8% at ages 5–8</span></div>
+    <div class="tiles">
+      <div class="tile t1"><span class="k">Assessed in 2024</span><b>288,483</b><p>children in their first year of school, each scored by their teacher</p></div>
+      <div class="tile t2"><span class="k">Highest on record</span><b>12.5%</b><p>vulnerable on two or more areas, the most since 2009</p></div>
+      <div class="tile t3"><span class="k">By ages 15–17</span><b>7.6%</b><p>are active for an hour every day, down from 30.8% at ages 5–8</p></div>
     </div>
   </div>
 </header>
