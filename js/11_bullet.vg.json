@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Saturated fat is over the limit at every age; sugar climbs to the limit by the teens",
-    "subtitle": "Average % of daily energy, 2023 · bars show 95% margin of error"
+    "subtitle": "Average % of daily energy, 2023 · bars show 95% margin of error",
+    "offset": 42
   },
   "data": {
     "url": "data/nnpas_nutrients.csv",
@@ -254,10 +255,14 @@
                 ]
               },
               "legend": {
-                "orient": "top",
+                "orient": "none",
+                "legendX": -77,
+                "legendY": -82,
                 "direction": "horizontal",
                 "symbolType": "square",
-                "symbolStrokeWidth": 0
+                "symbolStrokeWidth": 0,
+                "labelFontSize": 12,
+                "symbolSize": 140
               }
             },
             "tooltip": [
@@ -517,14 +522,14 @@
               "filter": "datum.lowest > datum.limit && datum.age_order == 0"
             },
             {
-              "calculate": "['Over the limit at every age:', format(datum.lowest, '.0f') + '–' + format(datum.highest, '.0f') + '% of energy']",
+              "calculate": "['Over the limit at every', 'age: ' + format(datum.lowest, '.0f') + '–' + format(datum.highest, '.0f') + '% of energy']",
               "as": "t"
             }
           ],
           "mark": {
             "type": "text",
-            "align": "right",
-            "baseline": "bottom",
+            "align": "center",
+            "baseline": "middle",
             "fontSize": 11,
             "fontWeight": "bold",
             "color": "#8e3410",
@@ -532,11 +537,11 @@
           },
           "encoding": {
             "x": {
-              "datum": 15.8,
+              "datum": 13,
               "type": "quantitative"
             },
             "y": {
-              "value": 206
+              "value": 141
             },
             "text": {
               "field": "t"
@@ -786,10 +791,14 @@
                 ]
               },
               "legend": {
-                "orient": "top",
+                "orient": "none",
+                "legendX": -77,
+                "legendY": -82,
                 "direction": "horizontal",
                 "symbolType": "square",
-                "symbolStrokeWidth": 0
+                "symbolStrokeWidth": 0,
+                "labelFontSize": 12,
+                "symbolSize": 140
               }
             },
             "tooltip": [

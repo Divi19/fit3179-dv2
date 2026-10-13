@@ -66,7 +66,8 @@
         "labelAngle": 0,
         "domain": false,
         "ticks": false,
-        "labelFontWeight": "bold"
+        "labelFontWeight": "bold",
+        "labelPadding": 12
       }
     },
     "y": {
@@ -96,6 +97,40 @@
     }
   },
   "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "row": "Australia"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "fill": "#f3e3d6",
+        "cornerRadius": 4
+      },
+      "encoding": {
+        "x": {
+          "value": {
+            "expr": "-76"
+          }
+        },
+        "x2": {
+          "value": {
+            "expr": "width + 5"
+          }
+        },
+        "y": {
+          "value": -2
+        },
+        "y2": {
+          "value": {
+            "expr": "height / 9 + 1"
+          }
+        }
+      }
+    },
     {
       "transform": [
         {
@@ -314,27 +349,34 @@
       "data": {
         "values": [
           {
-            "k": 1
+            "row": "Australia"
           }
         ]
       },
       "mark": {
-        "type": "rule",
-        "color": "#1c2430",
-        "strokeWidth": 1.2
+        "type": "rect",
+        "fill": null,
+        "stroke": "#1c2430",
+        "strokeWidth": 2,
+        "cornerRadius": 4
       },
       "encoding": {
         "x": {
-          "value": 0
+          "value": {
+            "expr": "-76"
+          }
         },
         "x2": {
           "value": {
-            "expr": "width"
+            "expr": "width + 5"
           }
         },
         "y": {
+          "value": -2
+        },
+        "y2": {
           "value": {
-            "expr": "height / 9"
+            "expr": "height / 9 + 1"
           }
         }
       }

@@ -256,7 +256,10 @@
           "data": {
             "values": [
               {
-                "t": "Grey = result suppressed (too few children to report)"
+                "t": [
+                  "Grey = result suppressed",
+                  "(too few children to report)"
+                ]
               }
             ]
           },
@@ -264,10 +267,12 @@
             "type": "text",
             "align": "right",
             "baseline": "bottom",
-            "fontSize": 10,
-            "color": "#46525d",
+            "fontSize": 14,
+            "color": "#1c2430",
             "x": 1090,
-            "y": 600
+            "y": 600,
+            "fontWeight": "bold",
+            "lineHeight": 18
           },
           "encoding": {
             "text": {
@@ -1024,6 +1029,90 @@
                       "lat"
                     ]
                   }
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "shape": "M 0 6 L 0 110 M 0 6 L -4 13 M 0 6 L 4 13",
+                "filled": false,
+                "stroke": "#1c2430",
+                "strokeWidth": 1.6,
+                "size": 4,
+                "opacity": 1
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/aedc_lga_domains.csv",
+                "format": {
+                  "type": "csv",
+                  "parse": {
+                    "lga_code": "string",
+                    "children_assessed": "number",
+                    "vulnerable_n": "number",
+                    "vulnerable_pct": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.measure == measure && isValid(datum.vulnerable_pct)"
+                },
+                {
+                  "filter": "datum.state == 'QLD'"
+                },
+                {
+                  "window": [
+                    {
+                      "op": "row_number",
+                      "as": "rank"
+                    }
+                  ],
+                  "sort": [
+                    {
+                      "field": "vulnerable_n",
+                      "order": "descending"
+                    }
+                  ]
+                },
+                {
+                  "filter": "datum.rank == 1"
+                },
+                {
+                  "lookup": "lga_code",
+                  "from": {
+                    "data": {
+                      "url": "data/aedc_lga.csv",
+                      "format": {
+                        "type": "csv",
+                        "parse": {
+                          "lga_code": "string",
+                          "year": "number",
+                          "children_assessed": "number",
+                          "vulnerable_n": "number",
+                          "vulnerable_pct": "number",
+                          "lon": "number",
+                          "lat": "number",
+                          "hex_id": "string"
+                        }
+                      }
+                    },
+                    "key": "lga_code",
+                    "fields": [
+                      "lon",
+                      "lat"
+                    ]
+                  }
                 },
                 {
                   "calculate": "datum.vulnerable_pct >= 90 ? '90% or more' : format(datum.vulnerable_pct, '.1f') + '%'",
@@ -1037,9 +1126,9 @@
               "mark": {
                 "type": "text",
                 "align": "center",
-                "baseline": "bottom",
-                "dy": -7,
-                "fontSize": 10,
+                "baseline": "top",
+                "dy": 116,
+                "fontSize": 11,
                 "fontWeight": "bold",
                 "lineHeight": 12,
                 "color": "#ffffff",
@@ -1136,9 +1225,9 @@
               "mark": {
                 "type": "text",
                 "align": "center",
-                "baseline": "bottom",
-                "dy": -7,
-                "fontSize": 10,
+                "baseline": "top",
+                "dy": 116,
+                "fontSize": 11,
                 "fontWeight": "bold",
                 "color": "#1c2430",
                 "lineHeight": 12

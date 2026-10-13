@@ -257,6 +257,32 @@
     },
     {
       "data": {
+        "values": [
+          {
+            "lon": 89.0,
+            "lat": -30.0
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "opacity": 0,
+        "size": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      },
+      "description": "Invisible anchor so the map leaves room for the callout labels in the Indian Ocean"
+    },
+    {
+      "data": {
         "url": "data/aedc_lga.csv",
         "format": {
           "type": "csv",
@@ -409,55 +435,300 @@
           "filter": "datum.rise_rank <= 3"
         },
         {
-          "calculate": "datum.largest_name + ' area +' + format(datum.change, '.1f')",
+          "calculate": "replace(datum.largest_name, ' area', '') + '\\narea: +' + format(datum.change, '.1f') + ' points'",
           "as": "callout"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? 93.2 : datum.largest_name == 'Mandurah' ? 88.43 : datum.largest_name == 'Greater Shepparton' ? 113.53 : datum.cx + 2",
+          "as": "lx"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? -19.15 : datum.largest_name == 'Mandurah' ? -31.31 : datum.largest_name == 'Greater Shepparton' ? -44.04 : datum.cy",
+          "as": "ly"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? 112.6 : datum.largest_name == 'Mandurah' ? 108.44 : datum.largest_name == 'Greater Shepparton' ? 137.79 : datum.cx + 1.5",
+          "as": "sx"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? -23.51 : datum.largest_name == 'Mandurah' ? -35.96 : datum.largest_name == 'Greater Shepparton' ? -44.48 : datum.cy",
+          "as": "sy"
+        },
+        {
+          "calculate": "cos(datum.cy * PI / 180)",
+          "as": "k"
+        },
+        {
+          "calculate": "(datum.cx - datum.sx) * datum.k",
+          "as": "ddx"
+        },
+        {
+          "calculate": "datum.cy - datum.sy",
+          "as": "ddy"
+        },
+        {
+          "calculate": "sqrt(datum.ddx * datum.ddx + datum.ddy * datum.ddy)",
+          "as": "dd"
+        },
+        {
+          "calculate": "datum.cx - (datum.ddx / datum.dd) * 0.62 / datum.k",
+          "as": "tx"
+        },
+        {
+          "calculate": "datum.cy - (datum.ddy / datum.dd) * 0.62",
+          "as": "ty"
+        },
+        {
+          "calculate": "atan2(datum.ddx, datum.ddy) * 180 / PI",
+          "as": "angle"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#8e3410",
+        "strokeWidth": 1.3
+      },
+      "encoding": {
+        "longitude": {
+          "field": "sx",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "sy",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "tx"
+        },
+        "latitude2": {
+          "field": "ty"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/aedc_lga.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lga_code": "string",
+            "year": "number",
+            "children_assessed": "number",
+            "vulnerable_n": "number",
+            "vulnerable_pct": "number",
+            "lon": "number",
+            "lat": "number",
+            "hex_id": "string"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "(datum.year == 2021 || datum.year == 2024) && isValid(datum.vulnerable_n) && isValid(datum.children_assessed)"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "count",
+              "as": "years_present"
+            }
+          ],
+          "groupby": [
+            "lga_code"
+          ]
+        },
+        {
+          "filter": "datum.years_present == 2"
+        },
+        {
+          "calculate": "datum.year == 2021 ? datum.vulnerable_n : 0",
+          "as": "n21"
+        },
+        {
+          "calculate": "datum.year == 2021 ? datum.children_assessed : 0",
+          "as": "c21"
+        },
+        {
+          "calculate": "datum.year == 2024 ? datum.vulnerable_n : 0",
+          "as": "n24"
+        },
+        {
+          "calculate": "datum.year == 2024 ? datum.children_assessed : 0",
+          "as": "c24"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "n21",
+              "as": "n21"
+            },
+            {
+              "op": "sum",
+              "field": "c21",
+              "as": "c21"
+            },
+            {
+              "op": "sum",
+              "field": "n24",
+              "as": "n24"
+            },
+            {
+              "op": "sum",
+              "field": "c24",
+              "as": "c24"
+            },
+            {
+              "op": "distinct",
+              "field": "lga_code",
+              "as": "councils"
+            },
+            {
+              "op": "argmax",
+              "field": "c24",
+              "as": "largest"
+            }
+          ],
+          "groupby": [
+            "hex_id"
+          ]
+        },
+        {
+          "filter": "datum.c21 >= 100 && datum.c24 >= 100"
+        },
+        {
+          "lookup": "hex_id",
+          "from": {
+            "data": {
+              "url": "data/hex_grid.geojson",
+              "format": {
+                "type": "json",
+                "property": "features"
+              }
+            },
+            "key": "properties.hex_id"
+          },
+          "as": "geo"
+        },
+        {
+          "calculate": "datum.largest.lga_name",
+          "as": "largest_name"
+        },
+        {
+          "calculate": "datum.geo.properties.cx",
+          "as": "cx"
+        },
+        {
+          "calculate": "datum.geo.properties.cy",
+          "as": "cy"
+        },
+        {
+          "calculate": "100 * datum.n21 / datum.c21",
+          "as": "pct21"
+        },
+        {
+          "calculate": "100 * datum.n24 / datum.c24",
+          "as": "pct24"
+        },
+        {
+          "calculate": "datum.pct24 - datum.pct21",
+          "as": "change"
+        },
+        {
+          "calculate": "(datum.change > 0 ? '+' : '') + format(datum.change, '.1f') + ' points'",
+          "as": "change_label"
+        },
+        {
+          "filter": "datum.c24 >= 500"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rise_rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "change",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rise_rank <= 3"
+        },
+        {
+          "calculate": "replace(datum.largest_name, ' area', '') + '\\narea: +' + format(datum.change, '.1f') + ' points'",
+          "as": "callout"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? 93.2 : datum.largest_name == 'Mandurah' ? 88.43 : datum.largest_name == 'Greater Shepparton' ? 113.53 : datum.cx + 2",
+          "as": "lx"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? -19.15 : datum.largest_name == 'Mandurah' ? -31.31 : datum.largest_name == 'Greater Shepparton' ? -44.04 : datum.cy",
+          "as": "ly"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? 112.6 : datum.largest_name == 'Mandurah' ? 108.44 : datum.largest_name == 'Greater Shepparton' ? 137.79 : datum.cx + 1.5",
+          "as": "sx"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? -23.51 : datum.largest_name == 'Mandurah' ? -35.96 : datum.largest_name == 'Greater Shepparton' ? -44.48 : datum.cy",
+          "as": "sy"
+        },
+        {
+          "calculate": "cos(datum.cy * PI / 180)",
+          "as": "k"
+        },
+        {
+          "calculate": "(datum.cx - datum.sx) * datum.k",
+          "as": "ddx"
+        },
+        {
+          "calculate": "datum.cy - datum.sy",
+          "as": "ddy"
+        },
+        {
+          "calculate": "sqrt(datum.ddx * datum.ddx + datum.ddy * datum.ddy)",
+          "as": "dd"
+        },
+        {
+          "calculate": "datum.cx - (datum.ddx / datum.dd) * 0.62 / datum.k",
+          "as": "tx"
+        },
+        {
+          "calculate": "datum.cy - (datum.ddy / datum.dd) * 0.62",
+          "as": "ty"
+        },
+        {
+          "calculate": "atan2(datum.ddx, datum.ddy) * 180 / PI",
+          "as": "angle"
         }
       ],
       "mark": {
         "type": "point",
-        "shape": "circle",
-        "size": 28,
+        "shape": "triangle-up",
         "filled": true,
-        "color": "#1c2430"
+        "size": 70,
+        "color": "#8e3410",
+        "opacity": 1
       },
       "encoding": {
         "longitude": {
-          "field": "cx",
+          "field": "tx",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "cy",
+          "field": "ty",
           "type": "quantitative"
         },
-        "tooltip": [
-          {
-            "field": "change_label",
-            "title": "Change since 2021"
-          },
-          {
-            "field": "pct21",
-            "title": "2021 share (%)",
-            "format": ".1f"
-          },
-          {
-            "field": "pct24",
-            "title": "2024 share (%)",
-            "format": ".1f"
-          },
-          {
-            "field": "councils",
-            "title": "Councils in hexagon"
-          },
-          {
-            "field": "largest_name",
-            "title": "Largest council"
-          },
-          {
-            "field": "c24",
-            "title": "Children assessed 2024",
-            "format": ","
-          }
-        ]
+        "angle": {
+          "field": "angle",
+          "type": "quantitative",
+          "scale": null
+        }
       }
     },
     {
@@ -614,587 +885,71 @@
           "filter": "datum.rise_rank <= 3"
         },
         {
-          "calculate": "datum.largest_name + ' area +' + format(datum.change, '.1f')",
+          "calculate": "replace(datum.largest_name, ' area', '') + '\\narea: +' + format(datum.change, '.1f') + ' points'",
           "as": "callout"
         },
         {
-          "filter": "datum.cx < 140"
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? 93.2 : datum.largest_name == 'Mandurah' ? 88.43 : datum.largest_name == 'Greater Shepparton' ? 113.53 : datum.cx + 2",
+          "as": "lx"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? -19.15 : datum.largest_name == 'Mandurah' ? -31.31 : datum.largest_name == 'Greater Shepparton' ? -44.04 : datum.cy",
+          "as": "ly"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? 112.6 : datum.largest_name == 'Mandurah' ? 108.44 : datum.largest_name == 'Greater Shepparton' ? 137.79 : datum.cx + 1.5",
+          "as": "sx"
+        },
+        {
+          "calculate": "datum.largest_name == 'Greater Geraldton' ? -23.51 : datum.largest_name == 'Mandurah' ? -35.96 : datum.largest_name == 'Greater Shepparton' ? -44.48 : datum.cy",
+          "as": "sy"
+        },
+        {
+          "calculate": "cos(datum.cy * PI / 180)",
+          "as": "k"
+        },
+        {
+          "calculate": "(datum.cx - datum.sx) * datum.k",
+          "as": "ddx"
+        },
+        {
+          "calculate": "datum.cy - datum.sy",
+          "as": "ddy"
+        },
+        {
+          "calculate": "sqrt(datum.ddx * datum.ddx + datum.ddy * datum.ddy)",
+          "as": "dd"
+        },
+        {
+          "calculate": "datum.cx - (datum.ddx / datum.dd) * 0.62 / datum.k",
+          "as": "tx"
+        },
+        {
+          "calculate": "datum.cy - (datum.ddy / datum.dd) * 0.62",
+          "as": "ty"
+        },
+        {
+          "calculate": "atan2(datum.ddx, datum.ddy) * 180 / PI",
+          "as": "angle"
         }
       ],
       "mark": {
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "dx": 9,
-        "fontSize": 11,
+        "lineBreak": "\n",
+        "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#ffffff",
-        "stroke": "#ffffff",
-        "strokeWidth": 3,
-        "strokeJoin": "round"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "cx",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "cy",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "callout"
-        }
-      }
-    },
-    {
-      "data": {
-        "url": "data/aedc_lga.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "lga_code": "string",
-            "year": "number",
-            "children_assessed": "number",
-            "vulnerable_n": "number",
-            "vulnerable_pct": "number",
-            "lon": "number",
-            "lat": "number",
-            "hex_id": "string"
-          }
-        }
-      },
-      "transform": [
-        {
-          "filter": "(datum.year == 2021 || datum.year == 2024) && isValid(datum.vulnerable_n) && isValid(datum.children_assessed)"
-        },
-        {
-          "joinaggregate": [
-            {
-              "op": "count",
-              "as": "years_present"
-            }
-          ],
-          "groupby": [
-            "lga_code"
-          ]
-        },
-        {
-          "filter": "datum.years_present == 2"
-        },
-        {
-          "calculate": "datum.year == 2021 ? datum.vulnerable_n : 0",
-          "as": "n21"
-        },
-        {
-          "calculate": "datum.year == 2021 ? datum.children_assessed : 0",
-          "as": "c21"
-        },
-        {
-          "calculate": "datum.year == 2024 ? datum.vulnerable_n : 0",
-          "as": "n24"
-        },
-        {
-          "calculate": "datum.year == 2024 ? datum.children_assessed : 0",
-          "as": "c24"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "n21",
-              "as": "n21"
-            },
-            {
-              "op": "sum",
-              "field": "c21",
-              "as": "c21"
-            },
-            {
-              "op": "sum",
-              "field": "n24",
-              "as": "n24"
-            },
-            {
-              "op": "sum",
-              "field": "c24",
-              "as": "c24"
-            },
-            {
-              "op": "distinct",
-              "field": "lga_code",
-              "as": "councils"
-            },
-            {
-              "op": "argmax",
-              "field": "c24",
-              "as": "largest"
-            }
-          ],
-          "groupby": [
-            "hex_id"
-          ]
-        },
-        {
-          "filter": "datum.c21 >= 100 && datum.c24 >= 100"
-        },
-        {
-          "lookup": "hex_id",
-          "from": {
-            "data": {
-              "url": "data/hex_grid.geojson",
-              "format": {
-                "type": "json",
-                "property": "features"
-              }
-            },
-            "key": "properties.hex_id"
-          },
-          "as": "geo"
-        },
-        {
-          "calculate": "datum.largest.lga_name",
-          "as": "largest_name"
-        },
-        {
-          "calculate": "datum.geo.properties.cx",
-          "as": "cx"
-        },
-        {
-          "calculate": "datum.geo.properties.cy",
-          "as": "cy"
-        },
-        {
-          "calculate": "100 * datum.n21 / datum.c21",
-          "as": "pct21"
-        },
-        {
-          "calculate": "100 * datum.n24 / datum.c24",
-          "as": "pct24"
-        },
-        {
-          "calculate": "datum.pct24 - datum.pct21",
-          "as": "change"
-        },
-        {
-          "calculate": "(datum.change > 0 ? '+' : '') + format(datum.change, '.1f') + ' points'",
-          "as": "change_label"
-        },
-        {
-          "filter": "datum.c24 >= 500"
-        },
-        {
-          "window": [
-            {
-              "op": "row_number",
-              "as": "rise_rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "change",
-              "order": "descending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.rise_rank <= 3"
-        },
-        {
-          "calculate": "datum.largest_name + ' area +' + format(datum.change, '.1f')",
-          "as": "callout"
-        },
-        {
-          "filter": "datum.cx < 140"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 9,
-        "fontSize": 11,
-        "fontWeight": "bold",
+        "lineHeight": 15,
         "color": "#8e3410"
       },
       "encoding": {
         "longitude": {
-          "field": "cx",
+          "field": "lx",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "cy",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "callout"
-        }
-      }
-    },
-    {
-      "data": {
-        "url": "data/aedc_lga.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "lga_code": "string",
-            "year": "number",
-            "children_assessed": "number",
-            "vulnerable_n": "number",
-            "vulnerable_pct": "number",
-            "lon": "number",
-            "lat": "number",
-            "hex_id": "string"
-          }
-        }
-      },
-      "transform": [
-        {
-          "filter": "(datum.year == 2021 || datum.year == 2024) && isValid(datum.vulnerable_n) && isValid(datum.children_assessed)"
-        },
-        {
-          "joinaggregate": [
-            {
-              "op": "count",
-              "as": "years_present"
-            }
-          ],
-          "groupby": [
-            "lga_code"
-          ]
-        },
-        {
-          "filter": "datum.years_present == 2"
-        },
-        {
-          "calculate": "datum.year == 2021 ? datum.vulnerable_n : 0",
-          "as": "n21"
-        },
-        {
-          "calculate": "datum.year == 2021 ? datum.children_assessed : 0",
-          "as": "c21"
-        },
-        {
-          "calculate": "datum.year == 2024 ? datum.vulnerable_n : 0",
-          "as": "n24"
-        },
-        {
-          "calculate": "datum.year == 2024 ? datum.children_assessed : 0",
-          "as": "c24"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "n21",
-              "as": "n21"
-            },
-            {
-              "op": "sum",
-              "field": "c21",
-              "as": "c21"
-            },
-            {
-              "op": "sum",
-              "field": "n24",
-              "as": "n24"
-            },
-            {
-              "op": "sum",
-              "field": "c24",
-              "as": "c24"
-            },
-            {
-              "op": "distinct",
-              "field": "lga_code",
-              "as": "councils"
-            },
-            {
-              "op": "argmax",
-              "field": "c24",
-              "as": "largest"
-            }
-          ],
-          "groupby": [
-            "hex_id"
-          ]
-        },
-        {
-          "filter": "datum.c21 >= 100 && datum.c24 >= 100"
-        },
-        {
-          "lookup": "hex_id",
-          "from": {
-            "data": {
-              "url": "data/hex_grid.geojson",
-              "format": {
-                "type": "json",
-                "property": "features"
-              }
-            },
-            "key": "properties.hex_id"
-          },
-          "as": "geo"
-        },
-        {
-          "calculate": "datum.largest.lga_name",
-          "as": "largest_name"
-        },
-        {
-          "calculate": "datum.geo.properties.cx",
-          "as": "cx"
-        },
-        {
-          "calculate": "datum.geo.properties.cy",
-          "as": "cy"
-        },
-        {
-          "calculate": "100 * datum.n21 / datum.c21",
-          "as": "pct21"
-        },
-        {
-          "calculate": "100 * datum.n24 / datum.c24",
-          "as": "pct24"
-        },
-        {
-          "calculate": "datum.pct24 - datum.pct21",
-          "as": "change"
-        },
-        {
-          "calculate": "(datum.change > 0 ? '+' : '') + format(datum.change, '.1f') + ' points'",
-          "as": "change_label"
-        },
-        {
-          "filter": "datum.c24 >= 500"
-        },
-        {
-          "window": [
-            {
-              "op": "row_number",
-              "as": "rise_rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "change",
-              "order": "descending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.rise_rank <= 3"
-        },
-        {
-          "calculate": "datum.largest_name + ' area +' + format(datum.change, '.1f')",
-          "as": "callout"
-        },
-        {
-          "filter": "datum.cx >= 140"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -9,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#ffffff",
-        "stroke": "#ffffff",
-        "strokeWidth": 3,
-        "strokeJoin": "round"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "cx",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "cy",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "callout"
-        }
-      }
-    },
-    {
-      "data": {
-        "url": "data/aedc_lga.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "lga_code": "string",
-            "year": "number",
-            "children_assessed": "number",
-            "vulnerable_n": "number",
-            "vulnerable_pct": "number",
-            "lon": "number",
-            "lat": "number",
-            "hex_id": "string"
-          }
-        }
-      },
-      "transform": [
-        {
-          "filter": "(datum.year == 2021 || datum.year == 2024) && isValid(datum.vulnerable_n) && isValid(datum.children_assessed)"
-        },
-        {
-          "joinaggregate": [
-            {
-              "op": "count",
-              "as": "years_present"
-            }
-          ],
-          "groupby": [
-            "lga_code"
-          ]
-        },
-        {
-          "filter": "datum.years_present == 2"
-        },
-        {
-          "calculate": "datum.year == 2021 ? datum.vulnerable_n : 0",
-          "as": "n21"
-        },
-        {
-          "calculate": "datum.year == 2021 ? datum.children_assessed : 0",
-          "as": "c21"
-        },
-        {
-          "calculate": "datum.year == 2024 ? datum.vulnerable_n : 0",
-          "as": "n24"
-        },
-        {
-          "calculate": "datum.year == 2024 ? datum.children_assessed : 0",
-          "as": "c24"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "n21",
-              "as": "n21"
-            },
-            {
-              "op": "sum",
-              "field": "c21",
-              "as": "c21"
-            },
-            {
-              "op": "sum",
-              "field": "n24",
-              "as": "n24"
-            },
-            {
-              "op": "sum",
-              "field": "c24",
-              "as": "c24"
-            },
-            {
-              "op": "distinct",
-              "field": "lga_code",
-              "as": "councils"
-            },
-            {
-              "op": "argmax",
-              "field": "c24",
-              "as": "largest"
-            }
-          ],
-          "groupby": [
-            "hex_id"
-          ]
-        },
-        {
-          "filter": "datum.c21 >= 100 && datum.c24 >= 100"
-        },
-        {
-          "lookup": "hex_id",
-          "from": {
-            "data": {
-              "url": "data/hex_grid.geojson",
-              "format": {
-                "type": "json",
-                "property": "features"
-              }
-            },
-            "key": "properties.hex_id"
-          },
-          "as": "geo"
-        },
-        {
-          "calculate": "datum.largest.lga_name",
-          "as": "largest_name"
-        },
-        {
-          "calculate": "datum.geo.properties.cx",
-          "as": "cx"
-        },
-        {
-          "calculate": "datum.geo.properties.cy",
-          "as": "cy"
-        },
-        {
-          "calculate": "100 * datum.n21 / datum.c21",
-          "as": "pct21"
-        },
-        {
-          "calculate": "100 * datum.n24 / datum.c24",
-          "as": "pct24"
-        },
-        {
-          "calculate": "datum.pct24 - datum.pct21",
-          "as": "change"
-        },
-        {
-          "calculate": "(datum.change > 0 ? '+' : '') + format(datum.change, '.1f') + ' points'",
-          "as": "change_label"
-        },
-        {
-          "filter": "datum.c24 >= 500"
-        },
-        {
-          "window": [
-            {
-              "op": "row_number",
-              "as": "rise_rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "change",
-              "order": "descending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.rise_rank <= 3"
-        },
-        {
-          "calculate": "datum.largest_name + ' area +' + format(datum.change, '.1f')",
-          "as": "callout"
-        },
-        {
-          "filter": "datum.cx >= 140"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -9,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#8e3410"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "cx",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "cy",
+          "field": "ly",
           "type": "quantitative"
         },
         "text": {
