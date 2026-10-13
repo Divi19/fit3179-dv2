@@ -254,10 +254,14 @@
                 ]
               },
               "legend": {
-                "orient": "top",
+                "orient": "none",
+                "legendX": -77,
+                "legendY": -82,
                 "direction": "horizontal",
                 "symbolType": "square",
-                "symbolStrokeWidth": 0
+                "symbolStrokeWidth": 0,
+                "labelFontSize": 12,
+                "symbolSize": 140
               }
             },
             "tooltip": [
@@ -786,10 +790,14 @@
                 ]
               },
               "legend": {
-                "orient": "top",
+                "orient": "none",
+                "legendX": -77,
+                "legendY": -82,
                 "direction": "horizontal",
                 "symbolType": "square",
-                "symbolStrokeWidth": 0
+                "symbolStrokeWidth": 0,
+                "labelFontSize": 12,
+                "symbolSize": 140
               }
             },
             "tooltip": [
