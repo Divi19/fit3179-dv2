@@ -66,6 +66,12 @@
   .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
   .pair>*{min-width:0;display:flex;flex-direction:column;gap:14px}
   .pair h4{font-family:var(--f-display);font-weight:400;font-size:22px;line-height:1.2;margin:0}
+  .sub.roomy{gap:40px}
+  .sub.roomy .pair{gap:80px}
+  .sub.roomy .pair>*{gap:24px}
+  .sub.roomy .pair .viz{margin-top:20px}
+  .sub.roomy .howto{margin-block:6px}
+  .sub.roomy>.viz{margin-top:16px}
   .card{background:var(--white);border-radius:6px;padding:28px 30px;box-shadow:0 1px 2px rgba(142,52,16,.08),0 10px 30px rgba(142,52,16,.09)}
   .howto{background:var(--white);border:1px solid var(--rule);border-radius:8px;padding:14px 18px;font-size:15px;line-height:1.6;color:var(--body);max-width:72ch}
   .howto b{color:var(--ink)}
@@ -220,7 +226,7 @@
       <div class="viz scroll-x"><div id="vis1"></div></div>
       <div class="interlude"><p class="big"><span class="r">3.1%</span> in Weipa. <span class="r">Over 90%</span> in the Tiwi Islands.</p><p class="small">The lowest and highest council rates in 2024.</p></div>
     </div>
-    <div class="sub">
+    <div class="sub roomy">
       <div class="intro"><h3>Two other ways to look at it</h3><p class="small">Rates hide how many children are affected, and a single year hides direction. The left map counts children; the right map shows change since 2021.</p></div>
       <div class="pair">
         <div>
@@ -293,7 +299,7 @@
         <figcaption>Photo: <a href="https://unsplash.com/photos/child-watching-tablet-in-dark-room-WIVkzWafPaQ">Helena Lopes on Unsplash</a></figcaption>
       </figure>
     </div>
-    <div class="sub">
+    <div class="sub roomy">
       <div class="intro"><h3>A day in the life, by age</h3><p class="howto"><b>How to read this:</b> each ring is one average day of 24 hours. Click a colour in the legend to highlight it across every age; double-click a ring to show all colours again.</p></div>
       <div class="viz scroll-x"><div id="visDay"></div></div>
     </div>
@@ -322,8 +328,8 @@
       <div class="viz scroll-x"><div id="vis9" class="min-680"></div></div>
       <div class="interlude b"><p class="big"><span class="bl">65 minutes</span> moving. <span class="r">249 minutes</span> on screens.</p><p class="small">A typical day for a 15–17 year old.</p></div>
     </div>
-    <div class="sub">
-      <div class="intro"><h3>Screens in the bedroom, and how well they sleep</h3></div>
+    <div class="sub roomy">
+      <div class="intro"><h3>Screens in the bedroom and how well they sleep</h3></div>
       <div class="pair">
         <div>
           <p class="small">Fewer than 3 in 100 children aged 5–8 have a phone in their room. By 15–17, more than 8 in 10 do.</p>
