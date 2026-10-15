@@ -419,6 +419,27 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   </div>
 </header>
 
+<!-- ============ CLASS OF 24 (night, continues the hero) ============ -->
+<section class="nightb dark class-sec band" style="background:#141e2a" data-part="a" data-chap="A class of 24">
+  <div class="wrap">
+    <div class="class-grid">
+      <div>
+        <span class="kick">Picture one class</span>
+        <h2 style="margin-top:14px">If every child who started school in 2024 sat in one class of 24</h2>
+        <p class="sub">Three would be vulnerable in two or more areas. Three more would be vulnerable in one. Hover a figure to see which is which.</p>
+        <p class="class-note">AEDC 2024: 12.5% vulnerable on two or more areas, 23.5% on one or more. Rounded to whole children.</p>
+      </div>
+      <div><div id="visClass" style="width:100%"></div></div>
+    </div>
+    <div class="stats">
+      <div class="stat s1"><span class="k">Assessed in 2024</span><b>288,483</b><p>children in their first year of school, each scored by their teacher</p></div>
+      <div class="stat s2"><span class="k">Highest on record</span><b>12.5%</b><p>vulnerable on two or more areas, the most since 2009</p></div>
+      <div class="stat s3"><span class="k">By ages 15–17</span><b>7.6%</b><p>are active for an hour every day, down from 30.8% at ages 5–8</p></div>
+    </div>
+  </div>
+  <svg class="edge tall" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 C200 30 380 40 560 72 C760 108 960 40 1160 52 C1290 60 1380 84 1440 76 L1440 120 L0 120 Z" fill="#f4ead9"/></svg>
+</section>
+
 <main>
 <!-- ============ PART A OPENER + DEFINITION ============ -->
 <section class="band warm" id="define">
@@ -662,7 +683,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   if(innerWidth<700) document.querySelector(".hero svg.art").setAttribute("preserveAspectRatio","xMinYMax slice");
 })();
 const opts={actions:false,renderer:"svg"};
-const charts=[["#vis0","js/0_categories.vg.json"],["#vis1","js/1_choropleth.vg.json"],["#vis2","js/2_symbols.vg.json"],["#vis3","js/3_bins.vg.json"],["#vis4","js/4_boxplot.vg.json"],["#vis5","js/5_heatmap.vg.json"],["#vis6","js/6_domains.vg.json"],["#vis7","js/7_dumbbell.vg.json"],["#visDay","js/day_clock.vg.json"],["#vis8","js/8_isotype.vg.json"],["#vis8b","js/8b_guidelines.vg.json"],["#vis9","js/9_butterfly.vg.json"],["#vis10","js/10_bedroom_devices.vg.json"],["#vis10b","js/10b_sleep_quality.vg.json"],["#vis11","js/11_bullet.vg.json"]];
+const charts=[["#visClass","js/class_24.vg.json"],["#vis0","js/0_categories.vg.json"],["#vis1","js/1_choropleth.vg.json"],["#vis2","js/2_symbols.vg.json"],["#vis3","js/3_bins.vg.json"],["#vis4","js/4_boxplot.vg.json"],["#vis5","js/5_heatmap.vg.json"],["#vis6","js/6_domains.vg.json"],["#vis7","js/7_dumbbell.vg.json"],["#visDay","js/day_clock.vg.json"],["#vis8","js/8_isotype.vg.json"],["#vis8b","js/8b_guidelines.vg.json"],["#vis9","js/9_butterfly.vg.json"],["#vis10","js/10_bedroom_devices.vg.json"],["#vis10b","js/10b_sleep_quality.vg.json"],["#vis11","js/11_bullet.vg.json"]];
 const views={};
 charts.forEach(([el,url])=>vegaEmbed(el,url,opts).then(r=>{views[el]=r.view}).catch(console.error));
 
