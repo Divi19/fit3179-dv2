@@ -4,7 +4,7 @@
     "text": "Children who met every 24-Hour Movement Guideline (daily activity, strength activity, screen time and sleep), 2023",
     "fontSize": 14,
     "fontWeight": "normal",
-    "color": "#5b6570",
+    "color": "#94a0ab",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -70,7 +70,7 @@
       "header": {
         "labelFontSize": 13,
         "labelFontWeight": "bold",
-        "labelColor": "#1c2430",
+        "labelColor": "#efe6d6",
         "labelAnchor": "start",
         "labelPadding": 8
       }
@@ -146,8 +146,8 @@
                 "Did not"
               ],
               "range": [
-                "#0a74c4",
-                "#e3e7e6"
+                "#3f9ee8",
+                "#2c3a48"
               ]
             },
             "legend": {
@@ -190,7 +190,7 @@
           "fontSize": 21.5,
           "lineHeight": 23,
           "fontWeight": "bold",
-          "color": "#0a74c4"
+          "color": "#3f9ee8"
         },
         "encoding": {
           "x": null,
@@ -218,7 +218,7 @@
           "y": 306,
           "fontSize": 12,
           "fontWeight": "bold",
-          "color": "#8e3410",
+          "color": "#ff9b63",
           "lineHeight": 14
         },
         "encoding": {
@@ -244,11 +244,11 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#4a5560",
-      "titleColor": "#4a5560",
-      "gridColor": "#e7e9e8",
-      "domainColor": "#b8bec2",
-      "tickColor": "#b8bec2",
+      "labelColor": "#b3bcc5",
+      "titleColor": "#b3bcc5",
+      "gridColor": "#243343",
+      "domainColor": "#4b5a69",
+      "tickColor": "#4b5a69",
       "labelFontSize": 13,
       "titleFontSize": 13,
       "titleFontWeight": "normal",
@@ -257,8 +257,8 @@
       "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#4a5560",
-      "titleColor": "#1c2430",
+      "labelColor": "#b3bcc5",
+      "titleColor": "#efe6d6",
       "labelFontSize": 13,
       "titleFontSize": 13,
       "titleFontWeight": "bold",
@@ -271,9 +271,9 @@
       "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
       "fontSize": 16,
       "fontWeight": "bold",
-      "color": "#1c2430",
+      "color": "#efe6d6",
       "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-      "subtitleColor": "#46525d",
+      "subtitleColor": "#b3bcc5",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12

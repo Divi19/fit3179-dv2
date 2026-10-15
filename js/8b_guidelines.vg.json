@@ -4,7 +4,7 @@
     "text": "% of children meeting each guideline, by age, 2023 · arrow runs from ages 5–8 to 15–17",
     "fontSize": 14,
     "fontWeight": "normal",
-    "color": "#5b6570",
+    "color": "#94a0ab",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -91,7 +91,7 @@
       },
       "axis": {
         "labelFontSize": 12,
-        "labelColor": "#1c2430",
+        "labelColor": "#efe6d6",
         "labelFontWeight": "bold",
         "domain": false,
         "ticks": false,
@@ -108,7 +108,7 @@
       ],
       "mark": {
         "type": "rule",
-        "color": "#9aa3a9",
+        "color": "#94a0ab",
         "strokeWidth": 2.5
       },
       "encoding": {
@@ -154,7 +154,7 @@
         "filled": true,
         "opacity": 1,
         "size": 110,
-        "color": "#46525d",
+        "color": "#b3bcc5",
         "strokeWidth": 0
       },
       "encoding": {
@@ -203,7 +203,7 @@
         "filled": true,
         "opacity": 1,
         "size": 170,
-        "stroke": "#ffffff",
+        "stroke": "#142231",
         "strokeWidth": 1.2
       },
       "encoding": {
@@ -244,10 +244,10 @@
               "Ages 15–17"
             ],
             "range": [
-              "#b6d8f2",
+              "#2d5e8c",
               "#3f95d6",
-              "#126fb8",
-              "#0b4c86"
+              "#3b92dc",
+              "#d6ebfc"
             ]
           },
           "legend": {
@@ -367,7 +367,7 @@
         "baseline": "middle",
         "fontSize": 13,
         "fontWeight": "bold",
-        "color": "#0a74c4"
+        "color": "#3f9ee8"
       },
       "encoding": {
         "x": {
@@ -405,11 +405,11 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#4a5560",
-      "titleColor": "#4a5560",
-      "gridColor": "#e7e9e8",
-      "domainColor": "#b8bec2",
-      "tickColor": "#b8bec2",
+      "labelColor": "#b3bcc5",
+      "titleColor": "#b3bcc5",
+      "gridColor": "#243343",
+      "domainColor": "#4b5a69",
+      "tickColor": "#4b5a69",
       "labelFontSize": 13,
       "titleFontSize": 13,
       "titleFontWeight": "normal",
@@ -418,8 +418,8 @@
       "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#4a5560",
-      "titleColor": "#1c2430",
+      "labelColor": "#b3bcc5",
+      "titleColor": "#efe6d6",
       "labelFontSize": 13,
       "titleFontSize": 13,
       "titleFontWeight": "bold",
@@ -432,9 +432,9 @@
       "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
       "fontSize": 16,
       "fontWeight": "bold",
-      "color": "#1c2430",
+      "color": "#efe6d6",
       "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-      "subtitleColor": "#46525d",
+      "subtitleColor": "#b3bcc5",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
