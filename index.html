@@ -592,25 +592,54 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44 C240 14 560 20 820 40 C1060 58 1280 52 1440 30 L1440 70 L0 70 Z" fill="#d0571b"/></svg>
 </section>
 
-<!-- ============ PART B OPENER + BRIDGE ============ -->
-<section class="band white" id="bridge">
-  <div class="col">
-    <div class="part"><span class="part-tag b">Part B</span><span class="part-name">Growing up</span><span class="part-src">ABS National Nutrition and Physical Activity Survey 2023, children aged 2 to 17</span></div>
-    <div class="bridge">
-      <div class="bridge-text">
-        <p class="big">The census stops at school entry. To see what happens next, we follow a national survey of children's movement, screens, sleep and diet.</p>
-        <p class="small">Different children and different years: the two datasets are not linked, so Part B describes children in general, not the same children as Part A.</p>
-      </div>
-      <figure class="photo">
-        <img src="img/screens.jpg" alt="A child lying in bed in a dark room, looking at a glowing tablet" width="1600" height="1066">
-        <figcaption>Photo: <a href="https://unsplash.com/photos/child-watching-tablet-in-dark-room-WIVkzWafPaQ">Helena Lopes on Unsplash</a></figcaption>
-      </figure>
-    </div>
-    <div class="sub roomy">
-      <div class="intro"><h3>A day in the life, by age</h3><p class="howto"><b>How to read this:</b> each ring is one average day of 24 hours. Click a colour in the legend to highlight it across every age, and click it again to show all colours.</p></div>
-      <div class="viz scroll-x"><div id="visDay"></div></div>
-    </div>
+<!-- ============ PART B: sunset street ============ -->
+<section class="scene sunset" data-part="b" data-chap="Part B · Growing up">
+  <svg class="art" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <rect width="1440" height="760" fill="url(#duskSky)"/>
+    <circle cx="300" cy="575" r="230" fill="url(#sunGlow)"/>
+    <circle cx="300" cy="590" r="96" fill="#f6c766" opacity=".95"/>
+    <g fill="#f4ead9" opacity=".75"><circle cx="980" cy="120" r="1.4"/><circle cx="1180" cy="80" r="1.2"/><circle cx="1320" cy="160" r="1.5"/><circle cx="1080" cy="220" r="1"/><circle cx="1400" cy="60" r="1"/></g>
+    <path d="M0 560 C200 540 420 556 640 548 C880 540 1120 520 1440 540 L1440 760 L0 760 Z" fill="#3a2433"/>
+    <!-- street of houses, windows lit by screens -->
+    <g fill="#1a2232">
+      <use href="#house" x="560" y="470" width="150" height="138"/>
+      <use href="#house" x="730" y="440" width="180" height="168"/>
+      <use href="#house" x="930" y="480" width="140" height="128"/>
+      <use href="#house" x="1090" y="430" width="190" height="178"/>
+      <use href="#house" x="1300" y="470" width="150" height="138"/>
+      <use href="#house" x="380" y="500" width="130" height="108"/>
+      <rect x="0" y="600" width="1440" height="160"/>
+    </g>
+    <circle cx="810" cy="560" r="60" fill="url(#screenGlow)"/><circle cx="1170" cy="545" r="70" fill="url(#screenGlow)"/><circle cx="1360" cy="565" r="50" fill="url(#screenGlow)"/>
+    <g>
+      <rect x="790" y="540" width="32" height="34" rx="2" fill="#7cc4ff"/><rect x="842" y="540" width="32" height="34" rx="2" fill="#f2b84b" opacity=".75"/>
+      <rect x="1150" y="526" width="36" height="38" rx="2" fill="#7cc4ff"/><rect x="1206" y="526" width="36" height="38" rx="2" fill="#7cc4ff" opacity=".8"/>
+      <rect x="1346" y="548" width="28" height="30" rx="2" fill="#7cc4ff"/>
+      <rect x="610" y="548" width="26" height="30" rx="2" fill="#f2b84b" opacity=".7"/><rect x="972" y="550" width="26" height="30" rx="2" fill="#f2b84b" opacity=".5"/>
+      <rect x="422" y="560" width="24" height="26" rx="2" fill="#f2b84b" opacity=".6"/>
+    </g>
+    <path d="M0 640 C320 630 720 652 1080 640 C1240 634 1360 636 1440 640 L1440 760 L0 760 Z" fill="#1b2b3d"/>
+  </svg>
+  <div class="wrap">
+    <span class="tag b">Part B</span>
+    <h2>Growing up</h2>
+    <p>To see what happens after school starts, we follow a national survey of children's movement, screens, sleep and diet from age 2 to 17.</p>
+    <p class="src">ABS National Nutrition and Physical Activity Survey 2023. Different children from Part A: the two datasets are not linked.</p>
   </div>
+</section>
+
+<section class="band duskb dark" data-part="b" data-chap="A day in the life, by age">
+  <div class="wrap">
+    <div class="fig" style="margin-top:0">
+      <span class="kick">A day in the life</span>
+      <h3 style="margin-top:12px">Screens fill the time that sleep and activity lose</h3>
+      <p class="dek">Each ring is one average day. Follow the orange slice round from age 2 to 17.</p>
+      <div class="chart scroll"><div id="visDay"></div></div>
+      <p class="howto"><b>Try</b><span>Click a colour in the legend to pick it out at every age, and click it again to show all.</span></p>
+    </div>
+    <p class="next">If screens take the time, which healthy habits give way first?</p>
+  </div>
+  <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C300 20 640 24 920 46 C1140 62 1320 50 1440 34 L1440 70 L0 70 Z" fill="#142231"/></svg>
 </section>
 
 <!-- ============ CHAPTER 4 ============ -->
