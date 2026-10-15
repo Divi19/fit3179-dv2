@@ -92,24 +92,6 @@
   .play-btn{align-self:flex-start;font:inherit;font-size:15px;font-weight:700;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:999px;padding:5px 14px;cursor:pointer}
   .play-btn:hover{border-color:var(--rust)}
 
-  /* hero */
-  .hero{padding-block:64px 72px}
-  .byline-top{font-size:15px;color:var(--sub)}
-  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
-  .hero-text{display:flex;flex-direction:column;gap:22px}
-  .ghost{font-family:var(--f-display);font-size:clamp(150px,21vw,290px);line-height:.8;color:#f2b84b;opacity:.5;letter-spacing:-.03em;white-space:nowrap;margin-left:-.04em;pointer-events:none}
-  .hero h1{font-size:clamp(50px,7.2vw,96px);line-height:.94;margin-top:-6px}
-  .stand{font-size:clamp(17px,1.6vw,20px);line-height:1.5;max-width:40ch;color:#2c3640}
-  .hero-map{width:100%;min-width:0}
-  .etch-cap{font-size:14px;color:var(--sub);margin-top:6px}
-  .tiles{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px;margin-top:20px}
-  .tile{border-radius:8px;padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px}
-  .tile .k{font-size:14px;font-weight:700;letter-spacing:.03em}
-  .tile b{font-family:var(--f-display);font-weight:400;font-size:clamp(44px,4.6vw,58px);line-height:1;font-variant-numeric:tabular-nums}
-  .tile p{font-size:15px;line-height:1.5;color:var(--body)}
-  .tile.t1{background:var(--rust-tint)} .tile.t1 .k,.tile.t1 b{color:var(--rust-deep)}
-  .tile.t2{background:var(--rust)} .tile.t2 .k,.tile.t2 b,.tile.t2 p{color:#fff}
-  .tile.t3{background:var(--blue-tint)} .tile.t3 .k,.tile.t3 b{color:var(--blue-deep)}
 
   /* definition */
   .def{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px;align-items:stretch}
@@ -138,10 +120,10 @@
   footer h4{font-family:var(--f-display);font-weight:400;font-size:22px;margin:0 0 12px;color:var(--ink)}
   .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
   footer ul{padding-left:18px;margin:0;display:flex;flex-direction:column;gap:8px}
-  .byline{margin-top:36px;padding-top:18px;border-top:1px solid var(--rule);color:var(--sub);font-size:14px}
+  footer .byline{margin-top:36px;padding-top:18px;border-top:1px solid var(--rule);color:var(--sub);font-size:14px}
 
   @media (max-width:960px){
-    .hero-grid,.def,.pair,.bridge,.foot,.tiles{grid-template-columns:1fr}
+    .def,.pair,.bridge,.foot{grid-template-columns:1fr}
     .domains{grid-template-columns:repeat(2,minmax(0,1fr))}
     .takeaways{grid-template-columns:1fr}
     .band{padding-block:60px}
@@ -317,25 +299,122 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 
 <div class="progress" aria-hidden="true"><i id="prog"></i></div>
 
-<!-- ============ HERO ============ -->
-<header class="band white hero">
-  <div class="col">
-    <p class="byline-top">Divieleisch Ranjan, FIT3179 Data Visualisation 2, Monash University</p>
+<!-- reusable drawings -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- a child in a school bucket hat, walking right; backpack takes currentColor -->
+    <symbol id="kid" viewBox="0 0 44 104" overflow="visible">
+      <rect x="1" y="27" width="13" height="27" rx="4" fill="currentColor"/>
+      <path d="M8 9 Q22 -3 34 9 L39 11 Q22 15 4 11 Z" fill="#0b131c"/>
+      <circle cx="21" cy="15" r="8.5" fill="#0b131c"/>
+      <path d="M12 26 Q21 21 30 26 L32 60 L10 60 Z" fill="#0b131c"/>
+      <path d="M10 58 L32 58 L33 68 L9 68 Z" fill="#0b131c"/>
+      <path d="M16 66 L11 101 M27 66 L32 100" stroke="#0b131c" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+      <path d="M28 31 L36 52" stroke="#0b131c" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </symbol>
+    <symbol id="house" viewBox="0 0 120 110" overflow="visible">
+      <path d="M0 50 L60 4 L120 50 L120 110 L0 110 Z"/>
+      <rect x="86" y="10" width="12" height="26"/>
+    </symbol>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c766" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#f6c766" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dawnSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1923"/>
+      <stop offset=".45" stop-color="#1c2b3e"/>
+      <stop offset=".72" stop-color="#5a3436"/>
+      <stop offset=".86" stop-color="#b9532a"/>
+      <stop offset="1" stop-color="#e9873a"/>
+    </linearGradient>
+    <linearGradient id="duskSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d0571b"/>
+      <stop offset=".3" stop-color="#8e3410"/>
+      <stop offset=".62" stop-color="#3b2436"/>
+      <stop offset="1" stop-color="#1b2b3d"/>
+    </linearGradient>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1923"/>
+      <stop offset=".7" stop-color="#18293d"/>
+      <stop offset="1" stop-color="#24405e"/>
+    </linearGradient>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#7cc4ff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#7cc4ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+<!-- ============ HERO: dawn at the school gate ============ -->
+<header class="scene hero">
+  <svg class="art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <rect width="1440" height="900" fill="url(#dawnSky)"/>
+    <g fill="#f4ead9" opacity=".7">
+      <circle cx="140" cy="90" r="1.6"/><circle cx="320" cy="60" r="1.2"/><circle cx="520" cy="120" r="1.4"/><circle cx="700" cy="70" r="1"/>
+      <circle cx="880" cy="110" r="1.5"/><circle cx="1060" cy="50" r="1.2"/><circle cx="1240" cy="95" r="1.6"/><circle cx="1380" cy="150" r="1"/>
+      <circle cx="980" cy="190" r="1"/><circle cx="1320" cy="240" r="1.2"/><circle cx="760" cy="200" r="1"/>
+    </g>
+    <circle cx="600" cy="650" r="360" fill="url(#sunGlow)"/>
+    <circle cx="600" cy="650" r="120" fill="#f6c766"/>
+    <path d="M0 640 C180 600 330 610 470 628 C640 650 760 600 930 606 C1080 612 1250 640 1440 610 L1440 900 L0 900 Z" fill="#2a2433"/>
+    <!-- school -->
+    <g fill="#131c27">
+      <rect x="840" y="560" width="110" height="110"/>
+      <path d="M820 566 L895 520 L970 566 Z"/>
+      <rect x="950" y="500" width="330" height="170"/>
+      <path d="M930 508 L1115 420 L1300 508 Z"/>
+      <rect x="1085" y="360" width="60" height="110"/>
+      <path d="M1077 364 L1115 318 L1153 364 Z"/>
+      <rect x="1280" y="580" width="150" height="90"/>
+      <rect x="1250" y="430" width="3" height="80"/>
+    </g>
+    <path d="M1253 432 L1288 442 L1253 452 Z" fill="#d0571b"/>
+    <circle cx="1115" cy="400" r="13" fill="#f4ead9" opacity=".85"/>
+    <path d="M1115 400 L1115 392 M1115 400 L1121 403" stroke="#131c27" stroke-width="2" stroke-linecap="round"/>
+    <g fill="#f2b84b">
+      <rect x="978" y="530" width="26" height="34" rx="2" opacity=".85"/><rect x="1024" y="530" width="26" height="34" rx="2" opacity=".35"/>
+      <rect x="1180" y="530" width="26" height="34" rx="2" opacity=".85"/><rect x="1226" y="530" width="26" height="34" rx="2" opacity=".5"/>
+      <rect x="978" y="590" width="26" height="34" rx="2" opacity=".4"/><rect x="1226" y="590" width="26" height="34" rx="2" opacity=".85"/>
+      <rect x="862" y="590" width="22" height="30" rx="2" opacity=".6"/><rect x="1310" y="605" width="30" height="26" rx="2" opacity=".7"/>
+    </g>
+    <path d="M1090 670 L1090 600 Q1115 578 1140 600 L1140 670 Z" fill="#f2b84b" opacity=".9"/>
+    <!-- gum trees -->
+    <g fill="#141e29">
+      <path d="M54 672 L62 580 L70 672 Z"/>
+      <ellipse cx="36" cy="570" rx="50" ry="34"/><ellipse cx="90" cy="548" rx="52" ry="40"/><ellipse cx="62" cy="514" rx="38" ry="30"/>
+      <path d="M380 672 L386 600 L392 672 Z"/>
+      <ellipse cx="368" cy="590" rx="40" ry="28"/><ellipse cx="408" cy="572" rx="38" ry="30"/>
+    </g>
+    <!-- fence -->
+    <g fill="#18222e">
+      <rect x="0" y="652" width="1440" height="6"/>
+      <rect x="0" y="672" width="1440" height="6"/>
+    </g>
+    <g fill="#18222e" id="pickets"></g>
+    <!-- path and ground -->
+    <path d="M0 700 C300 690 600 712 900 704 C1120 698 1300 690 1440 696 L1440 900 L0 900 Z" fill="#1a2533"/>
+    <path d="M0 770 C360 752 720 790 1080 772 C1240 764 1360 768 1440 772 L1440 900 L0 900 Z" fill="#141e2a"/>
+    <!-- eight children walking to school; one carries a rust backpack -->
+    <g id="kids">
+      <use href="#kid" x="96"  y="676" width="46" height="108" color="#26313f"/>
+      <use href="#kid" x="196" y="690" width="40" height="94"  color="#26313f"/>
+      <use href="#kid" x="292" y="672" width="48" height="112" color="#26313f"/>
+      <use href="#kid" x="392" y="684" width="43" height="100" color="#ff8a4c" class="glow"/>
+      <use href="#kid" x="488" y="678" width="46" height="106" color="#26313f"/>
+      <use href="#kid" x="584" y="692" width="39" height="92"  color="#26313f"/>
+      <use href="#kid" x="676" y="674" width="47" height="110" color="#26313f"/>
+      <use href="#kid" x="774" y="686" width="42" height="98"  color="#26313f"/>
+    </g>
+    <circle cx="401" cy="728" r="26" fill="#ff8a4c" opacity=".18"/>
+  </svg>
+  <div class="wrap">
+    <p class="byline">Divieleisch Ranjan · FIT3179 Data Visualisation 2 · Monash University</p>
     <div class="hero-grid">
-      <div class="hero-text">
-        <div class="ghost" aria-hidden="true">1 in 8</div>
-        <h1>Starting behind, slowing down.</h1>
-        <p class="stand">In 2024, one in eight children started school developmentally vulnerable in two or more areas, the highest share since the census began in 2009. As they grow, the habits that support them, moving, sleeping and eating well, fade.</p>
-      </div>
+      <h1>Starting behind,<br>slowing down.</h1>
       <div>
-        <div id="visHero" class="hero-map" role="img" aria-label="Map of Australia with a circle for each council, sized by its number of developmentally vulnerable children in 2024"></div>
-        <p class="etch-cap">Each circle is one council, sized by its number of vulnerable children in 2024. Brisbane has the most, at 2,756.</p>
+        <p class="stand">In 2024, <b>one in eight</b> Australian children started school developmentally vulnerable in two or more areas, the highest share since the census began in 2009. As they grow, the habits that help them catch up fade too.</p>
+        <p class="hero-note"><i></i>Eight children walk to school. One is already behind.</p>
       </div>
-    </div>
-    <div class="tiles">
-      <div class="tile t1"><span class="k">Assessed in 2024</span><b>288,483</b><p>children in their first year of school, each scored by their teacher</p></div>
-      <div class="tile t2"><span class="k">Highest on record</span><b>12.5%</b><p>vulnerable on two or more areas, the most since 2009</p></div>
-      <div class="tile t3"><span class="k">By ages 15–17</span><b>7.6%</b><p>are active for an hour every day, down from 30.8% at ages 5–8</p></div>
     </div>
   </div>
 </header>
@@ -575,8 +654,15 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0/build/vega-lite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0/build/vega-embed.min.js"></script>
 <script>
+/* hero scene: draw the fence pickets, and on phones keep the children (and the rust backpack) in view */
+(function(){
+  const g=document.getElementById("pickets"); let h="";
+  for(let x=6;x<1440;x+=26) h+=`<path d="M${x} 690 L${x} 646 L${x+5} 640 L${x+10} 646 L${x+10} 690 Z"/>`;
+  g.innerHTML=h;
+  if(innerWidth<700) document.querySelector(".hero svg.art").setAttribute("preserveAspectRatio","xMinYMax slice");
+})();
 const opts={actions:false,renderer:"svg"};
-const charts=[["#visHero","js/hero_map.vg.json"],["#vis0","js/0_categories.vg.json"],["#vis1","js/1_choropleth.vg.json"],["#vis2","js/2_symbols.vg.json"],["#vis3","js/3_bins.vg.json"],["#vis4","js/4_boxplot.vg.json"],["#vis5","js/5_heatmap.vg.json"],["#vis6","js/6_domains.vg.json"],["#vis7","js/7_dumbbell.vg.json"],["#visDay","js/day_clock.vg.json"],["#vis8","js/8_isotype.vg.json"],["#vis8b","js/8b_guidelines.vg.json"],["#vis9","js/9_butterfly.vg.json"],["#vis10","js/10_bedroom_devices.vg.json"],["#vis10b","js/10b_sleep_quality.vg.json"],["#vis11","js/11_bullet.vg.json"]];
+const charts=[["#vis0","js/0_categories.vg.json"],["#vis1","js/1_choropleth.vg.json"],["#vis2","js/2_symbols.vg.json"],["#vis3","js/3_bins.vg.json"],["#vis4","js/4_boxplot.vg.json"],["#vis5","js/5_heatmap.vg.json"],["#vis6","js/6_domains.vg.json"],["#vis7","js/7_dumbbell.vg.json"],["#visDay","js/day_clock.vg.json"],["#vis8","js/8_isotype.vg.json"],["#vis8b","js/8b_guidelines.vg.json"],["#vis9","js/9_butterfly.vg.json"],["#vis10","js/10_bedroom_devices.vg.json"],["#vis10b","js/10b_sleep_quality.vg.json"],["#vis11","js/11_bullet.vg.json"]];
 const views={};
 charts.forEach(([el,url])=>vegaEmbed(el,url,opts).then(r=>{views[el]=r.view}).catch(console.error));
 
