@@ -707,21 +707,28 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 </section>
 
 <!-- ============ SUMMARY ============ -->
-<section class="band warm" id="summary">
-  <div class="col">
-    <div class="chap">
-      <span class="chap-no a">In summary</span>
-      <h2>Place shows where to act. Age shows when.</h2>
-      <hr class="dash">
+<section class="band nightb dark" id="summary" data-part="b" data-chap="In summary" style="padding-top:40px;padding-bottom:40px">
+  <div class="wrap">
+    <div class="chap-head">
+      <div><span class="tag g">In summary</span><h2>Place shows where to act. Age shows when.</h2></div>
+      <p>We started with eight children walking to school and a class of 24 five year olds. Here is a typical class of 24 teenagers, using the survey's rates for 15–17 year olds.</p>
     </div>
-    <div class="takeaways">
-      <div><b>Place</b><p>The share of children vulnerable on two or more areas is the highest on record at 12.5%, and the council a child lives in matters more than the state: rates run from 3.1% to over 90%.</p></div>
-      <div><b>Wealth</b><p>The gap in on-track rates between the most and least disadvantaged fifth of areas widened from 17.1 to 19.9 points between 2009 and 2024, and grew in every state.</p></div>
-      <div><b>Age</b><p>By 15–17, fewer than 1 in 100 children meet all the movement guidelines, screens take nearly four times as long as activity and saturated fat stays over the limit at every age.</p></div>
+    <div class="fig split">
+      <div class="txt">
+        <h3>Back to the class of 24, now aged 15 to 17</h3>
+        <p class="dek">Not the same children: the census and the survey are not linked. The figures show what the survey's rates mean for one ordinary class.</p>
+        <p class="howto"><b>Try</b><span>Switch between the three measures under the figures.</span></p>
+      </div>
+      <div class="chart"><div id="visClass2" style="width:100%;max-width:560px"></div></div>
     </div>
-    <p class="lead">Support that reaches families before school, and keeps teenagers active and rested, addresses both halves of the same story.</p>
+    <div class="take">
+      <div><b>Place</b><p>12.5% of children start school vulnerable on two or more areas, the highest on record. The council a child lives in matters more than the state: rates run from 3.1% to over 90%.</p></div>
+      <div><b>Wealth</b><p>The on-track gap between the most and least disadvantaged fifth of areas widened from 17.1 to 19.9 points between 2009 and 2024, and grew in every state.</p></div>
+      <div><b>Age</b><p>By 15–17, fewer than 1 in 100 children meet all the movement guidelines and screens take nearly four times as long as activity. Saturated fat stays over the limit at every age.</p></div>
+    </div>
   </div>
 </section>
+
 </main>
 
 <footer>
@@ -771,7 +778,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   if(innerWidth<700) document.querySelector(".hero svg.art").setAttribute("preserveAspectRatio","xMinYMax slice");
 })();
 const opts={actions:false,renderer:"svg"};
-const charts=[["#visClass","js/class_24.vg.json"],["#vis0","js/0_categories.vg.json"],["#vis1","js/1_choropleth.vg.json"],["#vis2","js/2_symbols.vg.json"],["#vis3","js/3_bins.vg.json"],["#vis4","js/4_boxplot.vg.json"],["#vis5","js/5_heatmap.vg.json"],["#vis6","js/6_domains.vg.json"],["#vis7","js/7_dumbbell.vg.json"],["#visDay","js/day_clock.vg.json"],["#vis8","js/8_isotype.vg.json"],["#vis8b","js/8b_guidelines.vg.json"],["#vis9","js/9_butterfly.vg.json"],["#vis10","js/10_bedroom_devices.vg.json"],["#vis10b","js/10b_sleep_quality.vg.json"],["#vis11","js/11_bullet.vg.json"]];
+const charts=[["#visClass","js/class_24.vg.json"],["#visClass2","js/class_teens.vg.json"],["#vis0","js/0_categories.vg.json"],["#vis1","js/1_choropleth.vg.json"],["#vis2","js/2_symbols.vg.json"],["#vis3","js/3_bins.vg.json"],["#vis4","js/4_boxplot.vg.json"],["#vis5","js/5_heatmap.vg.json"],["#vis6","js/6_domains.vg.json"],["#vis7","js/7_dumbbell.vg.json"],["#visDay","js/day_clock.vg.json"],["#vis8","js/8_isotype.vg.json"],["#vis8b","js/8b_guidelines.vg.json"],["#vis9","js/9_butterfly.vg.json"],["#vis10","js/10_bedroom_devices.vg.json"],["#vis10b","js/10b_sleep_quality.vg.json"],["#vis11","js/11_bullet.vg.json"]];
 const views={};
 charts.forEach(([el,url])=>vegaEmbed(el,url,opts).then(r=>{views[el]=r.view}).catch(console.error));
 
