@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A class of 24 teenagers aged 15 to 17 using ABS NNPAS 2023 rates: 20 have a smartphone in their bedroom (82.9%), 2 are active every day (7.6%), none meet every movement guideline (0.6%).",
+  "width": "container",
+  "height": 250,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "params": [
+    {
+      "name": "measure",
+      "value": "phone",
+      "bind": {
+        "input": "radio",
+        "name": "Show",
+        "options": [
+          "phone",
+          "active",
+          "all"
+        ],
+        "labels": [
+          "Phone in bedroom",
+          "Active every day",
+          "Meet every guideline"
+        ]
+      }
+    }
+  ],
+  "data": {
+    "sequence": {
+      "start": 0,
+      "stop": 24,
+      "as": "i"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.i % 8",
+      "as": "col"
+    },
+    {
+      "calculate": "floor(datum.i / 8)",
+      "as": "row"
+    },
+    {
+      "calculate": "measure == 'phone' ? 20 : measure == 'active' ? 2 : 0",
+      "as": "n"
+    },
+    {
+      "calculate": "datum.i < datum.n",
+      "as": "yes"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "shape": "M-0.3,-0.7a0.3,0.3 0 1,0 0.6,0a0.3,0.3 0 1,0 -0.6,0Z M-0.56,-0.3L0.56,-0.3L0.44,0.3L0.22,0.3L0.22,1L-0.22,1L-0.22,0.3L-0.44,0.3Z",
+        "filled": true,
+        "size": {
+          "expr": "width < 420 ? 1100 : 2200"
+        },
+        "opacity": 1,
+        "strokeWidth": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "ordinal",
+          "axis": null
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "axis": null
+        },
+        "color": {
+          "condition": {
+            "test": "datum.yes",
+            "value": {
+              "expr": "measure == 'phone' ? '#f08a24' : '#4fa8ec'"
+            }
+          },
+          "value": "#2c3a48"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 17,
+        "fontWeight": "bold",
+        "color": "#efe6d6",
+        "x": 0,
+        "y": 278
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "measure == 'phone' ? '20 of 24 have a smartphone in their bedroom (82.9%)' : measure == 'active' ? '2 of 24 are active for an hour every day (7.6%)' : 'None of the 24 meet every movement guideline (0.6%)'"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "background": null
+  }
+}

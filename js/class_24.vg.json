@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A class of 24 children starting school in 2024: 3 vulnerable in two or more areas (12.5%), 3 more in one area (23.5% on one or more), 18 not vulnerable. AEDC 2024.",
+  "width": "container",
+  "height": 260,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "data": {
+    "sequence": {
+      "start": 0,
+      "stop": 24,
+      "as": "i"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.i % 8",
+      "as": "col"
+    },
+    {
+      "calculate": "floor(datum.i / 8)",
+      "as": "row"
+    },
+    {
+      "calculate": "indexof([2,13,21], datum.i) >= 0 ? 'Vulnerable in two or more areas' : indexof([6,9,18], datum.i) >= 0 ? 'Vulnerable in one area' : 'Not vulnerable in any area'",
+      "as": "group"
+    }
+  ],
+  "mark": {
+    "type": "point",
+    "shape": "M-0.3,-0.7a0.3,0.3 0 1,0 0.6,0a0.3,0.3 0 1,0 -0.6,0Z M-0.56,-0.3L0.56,-0.3L0.44,0.3L0.22,0.3L0.22,1L-0.22,1L-0.22,0.3L-0.44,0.3Z",
+    "filled": true,
+    "size": {
+      "expr": "width < 420 ? 1100 : 2400"
+    },
+    "opacity": 1,
+    "strokeWidth": 0,
+    "cursor": "pointer"
+  },
+  "encoding": {
+    "x": {
+      "field": "col",
+      "type": "ordinal",
+      "axis": null
+    },
+    "y": {
+      "field": "row",
+      "type": "ordinal",
+      "axis": null
+    },
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Vulnerable in two or more areas",
+          "Vulnerable in one area",
+          "Not vulnerable in any area"
+        ],
+        "range": [
+          "#ff8a4c",
+          "#f5b98a",
+          "#2c3a48"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "bottom",
+        "direction": "vertical",
+        "symbolType": "M-0.3,-0.7a0.3,0.3 0 1,0 0.6,0a0.3,0.3 0 1,0 -0.6,0Z M-0.56,-0.3L0.56,-0.3L0.44,0.3L0.22,0.3L0.22,1L-0.22,1L-0.22,0.3L-0.44,0.3Z",
+        "symbolSize": 260,
+        "symbolStrokeWidth": 0,
+        "labelFontSize": 15,
+        "labelColor": "#efe6d6",
+        "labelLimit": 0,
+        "labelExpr": "datum.label == 'Vulnerable in two or more areas' ? '3 in two or more areas' : datum.label == 'Vulnerable in one area' ? '3 more in one area' : '18 not vulnerable'"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "group",
+        "title": "This child"
+      }
+    ]
+  },
+  "config": {
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "background": null
+  }
+}
