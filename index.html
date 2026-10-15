@@ -714,7 +714,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   const g=document.getElementById("pickets"); let h="";
   for(let x=6;x<1440;x+=26) h+=`<path d="M${x} 690 L${x} 646 L${x+5} 640 L${x+10} 646 L${x+10} 690 Z"/>`;
   g.innerHTML=h;
-  if(innerWidth<700) document.querySelector(".hero svg.art").setAttribute("preserveAspectRatio","xMinYMax slice");
+  if(innerWidth<700){const h=document.querySelector(".hero svg.art"); h.setAttribute("viewBox","250 0 1190 900"); h.setAttribute("preserveAspectRatio","xMinYMax slice");}
 })();
 /* closing scene: the same picket fence, at night */
 (function(){
