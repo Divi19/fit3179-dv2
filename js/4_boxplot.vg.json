@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Your council matters more than your state",
-    "subtitle": "Each dot is one council: % of its children vulnerable on 1+ domains, 2024"
+    "text": "Each dot is one council: % of its children vulnerable on 1+ domains, 2024",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 330,

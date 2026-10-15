@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Out of every 100 children, how many meet all of the guidelines?",
-    "subtitle": "Children who met every 24-Hour Movement Guideline (daily activity, strength activity, screen time and sleep), 2023"
+    "text": "Children who met every 24-Hour Movement Guideline (daily activity, strength activity, screen time and sleep), 2023",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "data": {
     "url": "data/nnpas_guidelines.csv",

@@ -1,10 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Where children start school behind",
-    "subtitle": {
+    "text": {
       "expr": "'Share of children developmentally vulnerable' + (measure == 'One or more domains' ? ' on one or more areas' : ' in ' + lower(measure)) + ', by council, 2024 · use the menu to switch areas of development'"
-    }
+    },
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "params": [
     {

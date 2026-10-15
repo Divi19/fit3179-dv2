@@ -1,9 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Screens fill the time that sleep and activity lose",
-    "subtitle": "How an average day is spent, by age, 2023 · hours of 24",
-    "offset": 26
+    "text": "How an average day is spent, by age, 2023 · hours of 24",
+    "offset": 26,
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "spacing": 10,
   "vconcat": [

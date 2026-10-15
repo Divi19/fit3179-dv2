@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "The gap between rich and poor areas widened in every state",
-    "subtitle": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)"
+    "text": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 470,

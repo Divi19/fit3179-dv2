@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Phones move into the bedroom in the early teens",
-    "subtitle": "% of children with each type of screen device in their bedroom, 2023"
+    "text": "% of children with each type of screen device in their bedroom, 2023",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": 380,
   "height": 300,

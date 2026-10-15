@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Seven of eight states slipped in 2024",
-    "subtitle": "% of children on track on all five areas, by state · colour = change since the previous collection"
+    "text": "% of children on track on all five areas, by state · colour = change since the previous collection",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 330,

@@ -1,9 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Saturated fat is over the limit at every age; sugar climbs to the limit by the teens",
-    "subtitle": "Average % of daily energy, 2023 · bars show 95% margin of error",
-    "offset": 42
+    "text": "Average % of daily energy, 2023 · bars show 95% margin of error",
+    "offset": 42,
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "data": {
     "url": "data/nnpas_nutrients.csv",

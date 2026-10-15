@@ -1,12 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Where it got worse since 2021",
-    "subtitle": [
+    "text": [
       "Change in share vulnerable on 1+ domains, 2021 → 2024 ·",
       "councils grouped into equal-sized hexagons (~100 km) ·",
       "hexes with fewer than 100 children hidden"
-    ]
+    ],
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 360,

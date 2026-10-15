@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Three of five areas hit their worst level on record in 2024",
-    "subtitle": "% of children developmentally vulnerable in each area, Australia, 2009–2024 · dashed line = 2009 level"
+    "text": "% of children developmentally vulnerable in each area, Australia, 2009–2024 · dashed line = 2009 level",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "data": {
     "url": "data/aedc_domains_national.csv",

@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "By the late teens, screens take nearly four times as long as activity",
-    "subtitle": "Average minutes per day, 2023 · ages 5–17"
+    "text": "Average minutes per day, 2023 · ages 5–17",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 270,

@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Activity and screen time are where the guidelines break",
-    "subtitle": "% of children meeting each guideline, by age, 2023 · arrow runs from ages 5–8 to 15–17"
+    "text": "% of children meeting each guideline, by age, 2023 · arrow runs from ages 5–8 to 15–17",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 260,
