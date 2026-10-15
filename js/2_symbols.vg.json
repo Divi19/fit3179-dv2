@@ -17,7 +17,7 @@
         "min": 2009,
         "max": 2024,
         "step": 3,
-        "name": "Collection year "
+        "name": "Collection year"
       }
     },
     {
@@ -33,7 +33,7 @@
           "Perth",
           "Adelaide"
         ],
-        "name": "Zoom to "
+        "name": "Zoom to"
       }
     }
   ],
