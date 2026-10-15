@@ -30,9 +30,6 @@
   .col{max-width:var(--col);margin:0 auto;display:flex;flex-direction:column;gap:32px}
   .white{background:var(--white)} .warm{background:var(--wash-warm)} .rusty{background:var(--wash-rust)} .bluey{background:var(--wash-blue)}
 
-  /* progress bar */
-  .progress{position:fixed;top:0;left:0;right:0;height:5px;z-index:20;padding-top:env(safe-area-inset-top,0px);pointer-events:none}
-  .progress i{display:block;height:5px;width:0;background:linear-gradient(to right,var(--rust) 0 var(--split,55%),var(--blue) var(--split,55%) 100%);background-repeat:no-repeat}
 
   /* type */
   h1,h2,h3{font-family:var(--f-display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em;color:var(--ink)}
@@ -172,6 +169,22 @@ svg{display:block}
 .kick{font:700 14px var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--rust-deep)}
 .dark .kick{color:var(--gold)}
 
+/* ---------- sticky growth ruler ---------- */
+.ruler-bar{position:fixed;left:0;right:0;top:0;padding-top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,18,26,.94);color:var(--text-l);border-bottom:1px solid var(--hair-l);transform:translateY(-100%);transition:transform .25s ease}
+.ruler-bar.on{transform:none}
+.ruler-in{display:flex;align-items:center;gap:24px;height:54px}
+.ruler-title{font-family:var(--serif);font-size:18px;white-space:nowrap}
+.ruler-chap{font-size:15px;color:var(--text-l3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.ruler{position:relative;width:330px;height:34px;flex:none}
+.ruler .track{position:absolute;left:0;right:0;top:12px;height:1px;background:var(--text-l2)}
+.ruler .tick{position:absolute;top:8px;width:1px;height:9px;background:var(--text-l2)}
+.ruler .tick.minor{top:10px;height:5px;background:var(--text-l3)}
+.ruler .num{position:absolute;top:18px;transform:translateX(-50%);font-size:12px;color:var(--text-l3);font-variant-numeric:tabular-nums}
+.ruler .span{position:absolute;top:9px;height:7px;border-radius:4px;transition:left .35s ease,width .35s ease,background .35s}
+.ruler-age{font-size:14px;font-weight:700;white-space:nowrap}
+@media (max-width:860px){.ruler-chap{display:none}.ruler{width:200px}}
+@media (max-width:560px){.ruler-title{display:none}.ruler-in{justify-content:space-between;gap:12px}.ruler-age{font-size:13px}.ruler{width:140px}}
+
 /* ---------- scenes ---------- */
 .scene{position:relative;overflow:hidden;color:var(--text-l)}
 .scene>svg.art{position:absolute;inset:0;width:100%;height:100%}
@@ -297,7 +310,14 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 <body>
 
 
-<div class="progress" aria-hidden="true"><i id="prog"></i></div>
+<div class="ruler-bar" id="rulerBar" aria-hidden="true">
+  <div class="wrap ruler-in">
+    <span class="ruler-title">Starting behind, slowing down</span>
+    <span class="ruler-chap" id="rulerChap"></span>
+    <span class="ruler-age" id="rulerAge"></span>
+    <div class="ruler" id="ruler"><div class="track"></div><div class="span" id="rulerSpan"></div></div>
+  </div>
+</div>
 
 <!-- reusable drawings -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -694,13 +714,24 @@ playBtn.addEventListener("click",()=>{const v=views["#vis2"]; if(!v) return; sto
   timer=setInterval(()=>{y+=3; if(y>2024){stop();return} v.signal("year",y).runAsync()},1000)});
 document.getElementById("vis2").addEventListener("input",e=>{if(e.target.type==="range") stop()});
 
-/* progress bar: rust through Part A, blue from Part B on */
-const prog=document.getElementById("prog"), bridge=document.getElementById("bridge");
-function onScroll(){const h=document.documentElement.scrollHeight-innerHeight, p=h>0?scrollY/h:0;
-  const split=Math.max(0,Math.min(100,(bridge.offsetTop-innerHeight*.5)/h*100));
-  prog.style.width=(p*100)+"%"; prog.style.backgroundSize=innerWidth+"px 5px"; prog.style.setProperty("--split",split+"%");}
-addEventListener("scroll",onScroll,{passive:true}); addEventListener("resize",onScroll); onScroll();
-
+/* growth ruler: ages 2 to 17. Part A marks age 5 in rust; Part B fills 2 to 17 in blue */
+const ruler=document.getElementById("ruler"), span=document.getElementById("rulerSpan");
+const pos=a=>((a-2)/15*100)+"%";
+for(let a=2;a<=17;a++){
+  const major=[2,5,8,11,14,17].includes(a);
+  const t=document.createElement("div"); t.className="tick"+(major?"":" minor"); t.style.left=pos(a); ruler.appendChild(t);
+  if(major){const n=document.createElement("div"); n.className="num"; n.textContent=a; n.style.left=pos(a); ruler.appendChild(n);}
+}
+const bar=document.getElementById("rulerBar"), chap=document.getElementById("rulerChap"), age=document.getElementById("rulerAge");
+function setPart(sec){
+  if(sec.dataset.part==="a"){span.style.left="calc("+pos(5)+" - 5px)"; span.style.width="10px"; span.style.background="var(--rust-glow)"; age.textContent="Age 5, first year of school"; age.style.color="var(--rust-glow)";}
+  else{span.style.left=pos(2); span.style.width="100%"; span.style.background="var(--blue-glow)"; age.textContent="Ages 2 to 17"; age.style.color="var(--blue-glow)";}
+  chap.textContent=sec.dataset.chap||"";
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting) setPart(e.target)}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("[data-part]").forEach(s=>io.observe(s));
+const heroEnd=document.querySelector(".hero");
+addEventListener("scroll",()=>bar.classList.toggle("on",heroEnd.getBoundingClientRect().bottom<0),{passive:true});
 </script>
 </body>
 </html>
