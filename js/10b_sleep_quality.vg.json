@@ -182,7 +182,7 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#ffffff"
       },
@@ -275,7 +275,7 @@
         "type": "text",
         "align": "right",
         "baseline": "top",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#d0571b"
       },
@@ -324,7 +324,7 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#126fb8"
       },
@@ -405,7 +405,7 @@
         "type": "text",
         "align": "right",
         "baseline": "top",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#126fb8",
         "dy": {
@@ -424,50 +424,53 @@
     }
   ],
   "config": {
-    "font": "Atkinson Hyperlegible",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "background": null,
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#46525d",
-      "titleColor": "#46525d",
+      "labelColor": "#4a5560",
+      "titleColor": "#4a5560",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "normal",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#46525d",
+      "labelColor": "#4a5560",
       "titleColor": "#1c2430",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "bold",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleLimit": 0
     },
     "title": {
       "anchor": "start",
-      "font": "Atkinson Hyperlegible",
-      "fontSize": 15,
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontSize": 16,
       "fontWeight": "bold",
       "color": "#1c2430",
-      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
       "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
     },
     "header": {
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif"
     },
     "text": {
-      "font": "Atkinson Hyperlegible"
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontWeight": 500
     }
   }
 }
