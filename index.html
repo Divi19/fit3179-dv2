@@ -501,41 +501,51 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 </section>
 
 <!-- ============ CHAPTER 1 ============ -->
-<section class="band white" id="where">
-  <div class="col">
-    <div class="chap">
-      <span class="chap-no a">Chapter 1</span>
-      <h2>Where children start behind</h2>
-      <hr class="dash">
-      <p class="lead">Nationally, 23.5% of children were vulnerable on at least one area in 2024. But the council a child lives in shapes the odds far more than that average suggests.</p>
+<section class="band sand" id="ch1" data-part="a" data-chap="Chapter 1 · Where children start behind">
+  <div class="wrap">
+    <div class="chap-head">
+      <div><span class="tag a">Chapter 1</span><h2>Where children start behind</h2></div>
+      <p>Nationally, 23.5% of children were vulnerable on at least one area in 2024. The council a child lives in shapes those odds far more than the national average suggests.</p>
     </div>
-    <div class="sub first">
-      <div class="intro"><h3>The rate in every council</h3><p class="small">Use the menu below the city panels to switch between the five areas. The panels zoom into the five largest cities, where most children live. Grey means the result was suppressed.</p></div>
-      <div class="viz scroll-x"><div id="vis1"></div></div>
-      <div class="interlude"><p class="big"><span class="r">3.1%</span> in Weipa. <span class="r">Over 90%</span> in the Tiwi Islands.</p><p class="small">The lowest and highest council rates in 2024.</p></div>
+    <div class="fig">
+      <h3>In much of the remote north, more than half of children start school vulnerable</h3>
+      <p class="dek">The panels zoom into the five largest cities, where most children live. Grey councils had too few children to report.</p>
+      <div class="chart scroll"><div id="vis1"></div></div>
+      <p class="howto"><b>Try</b><span>Use the menu under the city panels to switch between the five areas. Hover a council for its rate.</span></p>
     </div>
-    <div class="sub roomy">
-      <div class="intro"><h3>Two other ways to look at it</h3><p class="small">Rates hide how many children are affected, and a single year hides direction. The left map counts children; the right map shows change since 2021.</p></div>
-      <div class="pair">
-        <div>
-          <h4>How many children</h4>
-          <p class="small">Counting children rather than rates flips the picture: the largest numbers live in fast-growing outer suburbs such as Brisbane, Moreton Bay and Logan.</p>
-          <div class="viz scroll-x"><div id="vis2" class="min-520"></div></div>
-          <button type="button" class="play-btn" id="play2">▶ Play 2009–2024</button>
-        </div>
-        <div>
-          <h4>Which way it moved</h4>
-          <p class="small">83 of 125 hexagons got worse between 2021 and 2024, and they are home to 9 in 10 (89.7%) of the children assessed.</p>
-          <p class="howto a"><b>How to read this:</b> each hexagon is about 100 km across and pools every council inside it, so large empty councils no longer dominate the map.</p>
-          <div class="viz scroll-x"><div id="vis3" class="min-520"></div></div>
-        </div>
+    <div class="moments">
+      <div class="mo g"><b>3.1%</b><span>Weipa, Queensland. The lowest council rate in 2024.</span></div>
+      <div class="mo r"><b>90%+</b><span>Tiwi Islands and West Daly, Northern Territory. The highest.</span></div>
+    </div>
+    <div class="fig split">
+      <div class="txt">
+        <h3>Most of the children affected live in big, growing suburbs</h3>
+        <p class="dek">Counting children rather than rates flips the picture. Brisbane alone had 2,756 vulnerable children in 2024, followed by Moreton Bay and Logan.</p>
+        <p class="howto"><b>Try</b><span>Press play to watch 2009 to 2024, or drag the slider. Zoom to a state from the menu.</span></p>
+        <button type="button" class="play" id="play2"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg><span>Play 2009 to 2024</span></button>
       </div>
+      <div class="chart scroll"><div id="vis2" style="min-width:520px"></div></div>
     </div>
-    <div class="sub">
-      <div class="intro"><h3>The spread inside each state</h3><p class="small">Each dot is one council. The Australian Capital Territory is reported as a single council, so it is not shown.</p></div>
-      <div class="viz scroll-x"><div id="vis4" class="min-820"></div></div>
+    <div class="fig split flip">
+      <div class="txt">
+        <h3>Since 2021, 83 of 125 areas got worse</h3>
+        <p class="dek">Those areas are home to 9 in 10 (89.7%) of the children assessed.</p>
+        <p class="howto"><b>Read</b><span>Each hexagon is about 100 km across and pools every council inside it, so big empty councils no longer dominate the map.</span></p>
+      </div>
+      <div class="chart scroll"><div id="vis3" style="min-width:520px"></div></div>
     </div>
+    <div class="fig">
+      <h3>Your council matters more than your state</h3>
+      <p class="dek">Each dot is one council. Queensland alone runs from 3.1% in Weipa to 82.6% in Cherbourg. The ACT reports as a single council, so it is not shown.</p>
+      <div class="chart scroll"><div id="vis4" style="min-width:820px"></div></div>
+    </div>
+    <p class="next">Has it always been this uneven, or is it getting worse?</p>
   </div>
+  <!-- suburban rooftops lead into the dark chapter -->
+  <svg class="edge tall" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" style="height:110px">
+    <path fill="#142231" d="M0 120 L0 88 L40 88 L40 70 L70 50 L100 70 L100 88 L150 88 L150 64 L186 38 L222 64 L222 80 L232 80 L232 52 L244 52 L244 88 L300 88 L300 74 L330 56 L360 74 L360 88 L420 88 L420 60 L456 34 L492 60 L492 88 L540 88 L540 72 L572 50 L604 72 L604 88 L650 88 L650 46 L690 46 L690 30 L702 30 L702 46 L740 46 L740 88 L790 88 L790 66 L826 42 L862 66 L862 88 L910 88 L910 76 L938 58 L966 76 L966 88 L1020 88 L1020 58 L1058 32 L1096 58 L1096 88 L1150 88 L1150 70 L1180 50 L1210 70 L1210 88 L1260 88 L1260 62 L1296 40 L1332 62 L1332 88 L1380 88 L1380 72 L1410 54 L1440 72 L1440 120 Z"/>
+    <g fill="#f2b84b"><rect x="176" y="66" width="8" height="10" opacity=".8"/><rect x="446" y="62" width="8" height="10" opacity=".6"/><rect x="816" y="68" width="8" height="10" opacity=".8"/><rect x="1048" y="60" width="8" height="10" opacity=".7"/><rect x="1286" y="66" width="8" height="10" opacity=".6"/><rect x="664" y="56" width="8" height="10" opacity=".8"/></g>
+  </svg>
 </section>
 
 <!-- ============ CHAPTER 2 ============ -->
@@ -715,9 +725,9 @@ const views={};
 charts.forEach(([el,url])=>vegaEmbed(el,url,opts).then(r=>{views[el]=r.view}).catch(console.error));
 
 /* chart 2 play button */
-const playBtn=document.getElementById("play2"); let timer=null;
-const stop=()=>{clearInterval(timer);timer=null;playBtn.textContent="▶ Play 2009–2024"};
-playBtn.addEventListener("click",()=>{const v=views["#vis2"]; if(!v) return; stop(); let y=2009; v.signal("year",y).runAsync(); playBtn.textContent="■ Playing…";
+const playBtn=document.getElementById("play2"), playTxt=playBtn.querySelector("span"); let timer=null;
+const stop=()=>{clearInterval(timer);timer=null;playTxt.textContent="Play 2009 to 2024"};
+playBtn.addEventListener("click",()=>{const v=views["#vis2"]; if(!v) return; stop(); let y=2009; v.signal("year",y).runAsync(); playTxt.textContent="Playing";
   timer=setInterval(()=>{y+=3; if(y>2024){stop();return} v.signal("year",y).runAsync()},1000)});
 document.getElementById("vis2").addEventListener("input",e=>{if(e.target.type==="range") stop()});
 
