@@ -461,36 +461,43 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 </section>
 
 <main>
-<!-- ============ PART A OPENER + DEFINITION ============ -->
-<section class="band warm" id="define">
-  <div class="col">
-    <div class="part"><span class="part-tag a">Part A</span><span class="part-name">Starting school</span><span class="part-src">Australian Early Development Census, every three years from 2009 to 2024</span></div>
+<!-- ============ PART A: definition (morning) ============ -->
+<section class="band cream" data-part="a" data-chap="Part A · Starting school">
+  <div class="wrap">
     <div class="def">
-      <div class="def-text">
+      <div>
+        <span class="tag a">Part A · Starting school</span>
         <h2>What does “developmentally vulnerable” mean?</h2>
-        <p class="lead">Every three years, teachers fill in a checklist for each child in their first year of full-time school. A child is <strong>vulnerable</strong> in an area when they score in the bottom 10% band set in the first census in 2009, and <strong>at risk</strong> in the next 15%.</p>
-        <p class="lead">Because those lines are fixed, the shares can rise above or fall below 10% over time.</p>
+        <p>Every three years since 2009, teachers fill in a checklist for every child in their first year of full-time school. A child is <strong>vulnerable</strong> in an area when they score in the bottom 10% band set in 2009, and <strong>at risk</strong> in the next 15%.</p>
+        <p>The first year has a different name in every state, but the census checks all of them the same way:</p>
+        <div class="years">
+          <div><b>Kindergarten</b>NSW, ACT</div><div><b>Prep</b>Vic, Qld, Tas</div><div><b>Reception</b>SA</div><div><b>Pre-primary</b>WA</div><div><b>Transition</b>NT</div>
+        </div>
       </div>
-      <figure class="photo">
+      <figure>
         <img src="img/school.jpg" alt="Young children with backpacks and sun hats walking into school, seen from behind" width="1600" height="1250">
         <figcaption>Photo: <a href="https://unsplash.com/photos/people-walking-on-gray-concrete-road-during-daytime-hQXmjNi2baA">note thanun on Unsplash</a></figcaption>
       </figure>
     </div>
-    <div class="sub">
-      <div class="intro"><h3>The five areas teachers assess</h3></div>
-      <div class="domains">
-        <div class="dom"><h4>Physical health</h4><p>Energy, fine and gross motor skills, coming to school ready for the day.</p></div>
-        <div class="dom"><h4>Social competence</h4><p>Getting along with others, following rules, taking responsibility.</p></div>
-        <div class="dom"><h4>Emotional maturity</h4><p>Helping others, managing worry and frustration, paying attention.</p></div>
-        <div class="dom"><h4>Language and thinking</h4><p>Early reading, writing and number skills learned at school.</p></div>
-        <div class="dom"><h4>Communication</h4><p>Telling a story, understanding others, general knowledge.</p></div>
+    <div class="areas">
+      <div><span class="n">1</span><h4>Physical health</h4><p>Energy, fine and gross motor skills, coming to school ready for the day.</p></div>
+      <div><span class="n">2</span><h4>Social competence</h4><p>Getting along with others, following rules, taking responsibility.</p></div>
+      <div><span class="n">3</span><h4>Emotional maturity</h4><p>Helping others, managing worry and frustration, paying attention.</p></div>
+      <div><span class="n">4</span><h4>Language and thinking</h4><p>Early reading, writing and number skills learned at school.</p></div>
+      <div><span class="n">5</span><h4>Communication</h4><p>Telling a story, understanding others, general knowledge.</p></div>
+    </div>
+
+    <div class="fig split">
+      <div class="txt">
+        <h3>Beyond the vulnerable 1 in 10, another 1 in 7 is at risk</h3>
+        <p class="dek">Social competence has the largest vulnerable share, at 10.7%. Language and thinking has the smallest, at 7.7%.</p>
+        <p class="howto"><b>Try</b><span>Switch between 2009 and 2024 under the chart.</span></p>
       </div>
+      <div class="chart scroll"><div id="vis0" style="min-width:600px"></div></div>
     </div>
-    <div class="sub">
-      <div class="intro"><h3>How many children fall into each band</h3><p class="small">Switch between 2009 and 2024 to compare the first and latest census.</p></div>
-      <div class="viz scroll-x"><div id="vis0" class="min-820"></div></div>
-    </div>
+    <p class="next">Add them up and nearly one child in four starts school behind in at least one area. Where do they live?</p>
   </div>
+  <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C240 70 520 10 760 30 C1000 50 1240 64 1440 28 L1440 70 L0 70 Z" fill="#efdfc8"/></svg>
 </section>
 
 <!-- ============ CHAPTER 1 ============ -->
