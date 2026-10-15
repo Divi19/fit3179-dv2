@@ -844,7 +844,9 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 const opts={actions:false,renderer:"svg"};
 const charts=[["#visClass","js/class_24.vg.json"],["#visClass2","js/class_teens.vg.json"],["#vis0","js/0_categories.vg.json"],["#vis1","js/1_choropleth.vg.json"],["#vis2","js/2_symbols.vg.json"],["#vis3","js/3_bins.vg.json"],["#vis4","js/4_boxplot.vg.json"],["#vis5","js/5_heatmap.vg.json"],["#vis6","js/6_domains.vg.json"],["#vis7","js/7_dumbbell.vg.json"],["#visDay","js/day_clock.vg.json"],["#vis8","js/8_isotype.vg.json"],["#vis8b","js/8b_guidelines.vg.json"],["#vis9","js/9_butterfly.vg.json"],["#vis10","js/10_bedroom_devices.vg.json"],["#vis10b","js/10b_sleep_quality.vg.json"],["#vis11","js/11_bullet.vg.json"]];
 const views={};
-charts.forEach(([el,url])=>vegaEmbed(el,url,opts).then(r=>{views[el]=r.view}).catch(console.error));
+/* wait for the chart font so labels are measured and placed with the right widths */
+Promise.all(["400","500","700"].map(w=>document.fonts.load(`${w} 13px "Source Sans 3"`))).catch(()=>{}).then(()=>
+  charts.forEach(([el,url])=>vegaEmbed(el,url,opts).then(r=>{views[el]=r.view}).catch(console.error)));
 
 /* chart 2 play button */
 const playBtn=document.getElementById("play2"), playTxt=playBtn.querySelector("span"); let timer=null;
