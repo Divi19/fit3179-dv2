@@ -8,7 +8,7 @@
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
-  "width": 380,
+  "width": 520,
   "height": 300,
   "data": {
     "url": "data/nnpas_bedroom_devices.csv",
@@ -338,7 +338,7 @@
           "filter": "datum.pct < 40"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 3) / 49.35",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 3) / 67.53",
           "as": "lx"
         }
       ],
@@ -415,7 +415,7 @@
           "as": "t"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 67.53",
           "as": "lx"
         }
       ],
@@ -476,7 +476,7 @@
           "as": "t"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 67.53",
           "as": "lx"
         }
       ],
