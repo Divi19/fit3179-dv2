@@ -129,7 +129,10 @@ svg{display:block}
 .chart{margin-top:30px}
 .fig-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:16px 64px;align-items:end}
 .fig-head .dek{margin-top:0;max-width:none}
-@media (max-width:860px){.fig-head{grid-template-columns:minmax(0,1fr)}}
+.fig-foot{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:24px 64px;align-items:center;margin-top:28px}
+.fig-foot .howto{margin-top:0}
+.fig-foot .next{margin-top:0}
+@media (max-width:860px){.fig-head,.fig-foot{grid-template-columns:minmax(0,1fr)}}
 .scroll{overflow-x:auto;scrollbar-width:none}
 .scroll::-webkit-scrollbar{display:none}
 .fig.split{display:grid;grid-template-columns:minmax(0,3.6fr) minmax(0,8.4fr);gap:48px;align-items:start}
@@ -487,9 +490,11 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
         <p class="dek">Each ring is one average day of 24 hours. Follow the orange slice round from age 2 to 17.</p>
       </div>
       <div class="chart scroll"><div id="visDay"></div></div>
-      <p class="howto"><b>Try</b><span>Click a colour in the legend to pick it out at every age, and click it again to show all.</span></p>
+      <div class="fig-foot">
+        <p class="howto"><b>Try</b><span>Click a colour in the legend to pick it out at every age, and click it again to show all.</span></p>
+        <p class="next">If screens take the time, which healthy habits give way first?</p>
+      </div>
     </div>
-    <p class="next">If screens take the time, which healthy habits give way first?</p>
   </div>
   <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C300 20 640 24 920 46 C1140 62 1320 50 1440 34 L1440 70 L0 70 Z" fill="#142231"/></svg>
 </section>
