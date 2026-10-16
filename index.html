@@ -130,6 +130,7 @@ svg{display:block}
 .chart{margin-top:30px}
 .fig-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:16px 64px;align-items:end}
 .fig-head .dek{margin-top:0;max-width:none}
+.fig-head h3{max-width:none}
 .fig-foot{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:24px 64px;align-items:center;margin-top:28px}
 .fig-foot .howto{margin-top:0}
 .fig-foot .next{margin-top:0}
@@ -376,8 +377,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <p>Nationally, 23.5% of children were vulnerable on at least one area in 2024. The council a child lives in shapes those odds far more than the national average suggests.</p>
     </div>
     <div class="fig">
-      <h3>In much of the remote north, more than half of children start school vulnerable</h3>
-      <p class="dek">The panels zoom into the five largest cities, where most children live. Grey councils had too few children to report.</p>
+      <div class="fig-head">
+        <h3>In much of the remote north, more than half of children start school vulnerable</h3>
+        <p class="dek">The panels zoom into the five largest cities, where most children live. Grey councils had too few children to report.</p>
+      </div>
       <div class="chart scroll"><div id="vis1"></div></div>
       <p class="howto"><b>Try</b><span>Use the menu under the city panels to switch between the five areas. Hover a council for its rate.</span></p>
     </div>
@@ -403,8 +406,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <div class="chart scroll"><div id="vis3" style="min-width:520px"></div></div>
     </div>
     <div class="fig">
-      <h3>Your council matters more than your state</h3>
-      <p class="dek">Each dot is one council. Queensland alone runs from 3.1% in Weipa to 82.6% in Cherbourg. The ACT reports as a single council, so it is not shown.</p>
+      <div class="fig-head">
+        <h3>Your council matters more than your state</h3>
+        <p class="dek">Each dot is one council. Queensland alone runs from 3.1% in Weipa to 82.6% in Cherbourg. The ACT reports as a single council, so it is not shown.</p>
+      </div>
       <div class="chart scroll"><div id="vis4" style="min-width:820px"></div></div>
     </div>
     <p class="next">Has it always been this uneven, or is it getting worse?</p>
@@ -424,8 +429,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <p>The share of children on track in all five areas rose steadily to a peak in 2018, then fell. Seven of the eight states and territories went backwards in 2024.</p>
     </div>
     <div class="fig">
-      <h3>Seven of eight states slipped in 2024</h3>
-      <p class="dek">Each cell is the share of children on track in all five areas. Its colour shows the change since the previous census.</p>
+      <div class="fig-head">
+        <h3>Seven of eight states slipped in 2024</h3>
+        <p class="dek">Each cell is the share of children on track in all five areas. Its colour shows the change since the previous census.</p>
+      </div>
       <div class="chart scroll"><div id="vis5" style="min-width:680px"></div></div>
     </div>
     <div class="moments">
@@ -433,8 +440,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <div class="mo r"><b>52.9%</b><span>in 2024, back below where it was in 2012.</span></div>
     </div>
     <div class="fig">
-      <h3>Three of five areas hit their worst level on record in 2024</h3>
-      <p class="dek">The dashed line marks where each area started in 2009.</p>
+      <div class="fig-head">
+        <h3>Three of five areas hit their worst level on record in 2024</h3>
+        <p class="dek">The dashed line marks where each area started in 2009.</p>
+      </div>
       <div class="chart scroll"><div id="vis6"></div></div>
     </div>
     <p class="next">The decline reached every state. It did not reach every child equally.</p>
@@ -450,8 +459,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <p>Children in the most disadvantaged fifth of areas are about 20 points less likely to start school on track than those in the least disadvantaged fifth. The gap has widened since 2009, from 17.1 to 19.9 points.</p>
     </div>
     <div class="fig">
-      <h3>The gap between rich and poor areas widened in every state</h3>
-      <p class="dek">It is widest in the Northern Territory, at 31.1 points.</p>
+      <div class="fig-head">
+        <h3>The gap between rich and poor areas widened in every state</h3>
+        <p class="dek">It is widest in the Northern Territory, at 31.1 points.</p>
+      </div>
       <div class="chart scroll"><div id="vis7" style="min-width:820px"></div></div>
     </div>
     <p class="aside"><strong>Since 2021 the gap narrowed slightly,</strong> only because children in the least disadvantaged areas fell back (63.7% to 61.1%) faster than the most disadvantaged (42.5% to 41.2%). Nobody improved.</p>
@@ -508,8 +519,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <p>Australia's 24-Hour Movement Guidelines set targets for daily activity, strength activity, screen time and sleep. About 13 in 100 children aged 5–8 meet all of them. By 15–17, fewer than 1 in 100 do.</p>
     </div>
     <div class="fig">
-      <h3>Fewer than 1 in 100 teenagers meet every guideline</h3>
-      <p class="dek">Each figure is one child out of 100. Among girls aged 15–17, none in the sample met them all.</p>
+      <div class="fig-head">
+        <h3>Fewer than 1 in 100 teenagers meet every guideline</h3>
+        <p class="dek">Each figure is one child out of 100. Among girls aged 15–17, none in the sample met them all.</p>
+      </div>
       <div class="chart scroll"><div id="vis8"></div></div>
     </div>
     <div class="fig split">
@@ -534,13 +547,17 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
     </div>
     <div class="pair">
       <div class="fig">
-        <h3>Phones move into the bedroom in the early teens</h3>
-        <p class="dek">Fewer than 3 in 100 children aged 5–8 have a phone in their room. By 15–17, more than 8 in 10 do.</p>
+        <div class="fig-head">
+          <h3>Phones move into the bedroom in the early teens</h3>
+          <p class="dek">Fewer than 3 in 100 children aged 5–8 have a phone in their room. By 15–17, more than 8 in 10 do.</p>
+        </div>
         <div class="chart scroll"><div id="vis10"></div></div>
       </div>
       <div class="fig">
-        <h3>Teenagers sleep worse, not just less</h3>
-        <p class="dek">Nearly half of 2–5 year olds slept very well. By 15–17, about 1 in 5 did.</p>
+        <div class="fig-head">
+          <h3>Teenagers sleep worse, not just less</h3>
+          <p class="dek">Nearly half of 2–5 year olds slept very well. By 15–17, about 1 in 5 did.</p>
+        </div>
         <div class="chart scroll"><div id="vis10b" style="min-width:480px"></div></div>
       </div>
     </div>
