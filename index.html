@@ -152,6 +152,11 @@ svg{display:block}
 .dark .howto b{color:var(--gold)}
 .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-top:72px}
 .pair .fig{margin-top:0}
+.pair .fig-head{grid-template-columns:minmax(0,1fr);gap:12px}
+#bedtime .pair{margin-top:20px;grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+@media (max-width:900px){#bedtime .pair{grid-template-columns:minmax(0,1fr)}}
+.pair-end{display:flex;flex-direction:column}
+.pair-end .next{margin-top:auto;padding-top:40px}
 @media (max-width:900px){.pair{grid-template-columns:minmax(0,1fr)}}
 
 /* number moments */
@@ -553,6 +558,14 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <div class="mo bl"><b>65 min</b><span>moving, on a typical day for a 15–17 year old.</span></div>
       <div class="mo s"><b>249 min</b><span>on screens, on the same day.</span></div>
     </div>
+  </div>
+  <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44 C260 20 560 18 840 38 C1080 54 1280 52 1440 32 L1440 70 L0 70 Z" fill="#1b2b3d"/></svg>
+</section>
+
+<!-- ============ CHAPTER 4: screens at bedtime ============ -->
+<section class="band duskb dark" id="bedtime" style="padding-block:64px 80px" data-part="b" data-chap="Chapter 4 · Screens at bedtime">
+  <div class="wrap">
+    <span class="kick">Screens at bedtime</span>
     <div class="pair">
       <div class="fig">
         <div class="fig-head">
@@ -561,15 +574,15 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
         </div>
         <div class="chart scroll"><div id="vis10"></div></div>
       </div>
-      <div class="fig">
+      <div class="fig pair-end">
         <div class="fig-head">
           <h3>Teenagers sleep worse, not just less</h3>
           <p class="dek">Nearly half of 2–5 year olds slept very well. By 15–17, about 1 in 5 did.</p>
         </div>
         <div class="chart scroll"><div id="vis10b" style="min-width:480px"></div></div>
+        <p class="next">Movement and sleep slip with age. Diet tells a similar story.</p>
       </div>
     </div>
-    <p class="next">Movement and sleep slip with age. Diet tells a similar story.</p>
   </div>
   <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C220 56 520 66 820 44 C1080 26 1280 30 1440 48 L1440 70 L0 70 Z" fill="#0f1923"/></svg>
 </section>

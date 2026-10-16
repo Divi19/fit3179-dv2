@@ -8,7 +8,7 @@
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
-  "width": 380,
+  "width": 460,
   "height": 300,
   "data": {
     "url": "data/nnpas_bedroom_devices.csv",
@@ -52,7 +52,7 @@
         "domain": false,
         "ticks": false,
         "labelColor": "#efe6d6",
-        "labelFontSize": 11,
+        "labelFontSize": 12,
         "labelPadding": 8
       }
     }
@@ -127,7 +127,7 @@
             "ticks": false,
             "labelFontWeight": "bold",
             "labelColor": "#efe6d6",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "titleAnchor": "start",
             "titleX": 0
           }
@@ -199,7 +199,7 @@
             "ticks": false,
             "labelFontWeight": "bold",
             "labelColor": "#efe6d6",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "titleAnchor": "start",
             "titleX": 0
           }
@@ -240,7 +240,7 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#ffffff"
       },
@@ -271,7 +271,7 @@
             "ticks": false,
             "labelFontWeight": "bold",
             "labelColor": "#efe6d6",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "titleAnchor": "start",
             "titleX": 0
           }
@@ -291,7 +291,7 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#ff9b63"
       },
@@ -322,7 +322,7 @@
             "ticks": false,
             "labelFontWeight": "bold",
             "labelColor": "#efe6d6",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "titleAnchor": "start",
             "titleX": 0
           }
@@ -338,7 +338,7 @@
           "filter": "datum.pct < 40"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 3) / 49.35",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 3) / 59.74",
           "as": "lx"
         }
       ],
@@ -346,7 +346,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 12,
         "color": "#b3bcc5"
       },
       "encoding": {
@@ -376,7 +376,7 @@
             "ticks": false,
             "labelFontWeight": "bold",
             "labelColor": "#efe6d6",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "titleAnchor": "start",
             "titleX": 0
           }
@@ -415,7 +415,7 @@
           "as": "t"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 59.74",
           "as": "lx"
         }
       ],
@@ -423,7 +423,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 12,
+        "fontSize": 13,
         "fontWeight": "bold",
         "color": "#ff9b63",
         "lineHeight": 13,
@@ -456,7 +456,7 @@
             "ticks": false,
             "labelFontWeight": "bold",
             "labelColor": "#efe6d6",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "titleAnchor": "start",
             "titleX": 0
           }
@@ -476,7 +476,7 @@
           "as": "t"
         },
         {
-          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 49.35",
+          "calculate": "datum.age_order + (sqrt(datum.pct * 16) / 2 + 8) / 59.74",
           "as": "lx"
         }
       ],
@@ -484,7 +484,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 12,
+        "fontSize": 13,
         "fontWeight": "bold",
         "color": "#ff9b63",
         "lineHeight": 13,
@@ -517,7 +517,7 @@
             "ticks": false,
             "labelFontWeight": "bold",
             "labelColor": "#efe6d6",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "titleAnchor": "start",
             "titleX": 0
           }
