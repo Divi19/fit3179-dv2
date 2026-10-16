@@ -47,10 +47,10 @@
           }
         }
       },
-      "spacing": 24,
+      "spacing": 31,
       "spec": {
-        "width": 176,
-        "height": 194,
+        "width": 211,
+        "height": 232,
         "layer": [
           {
             "params": [
@@ -68,11 +68,11 @@
             ],
             "mark": {
               "type": "arc",
-              "innerRadius": 50,
-              "outerRadius": 74,
+              "innerRadius": 60,
+              "outerRadius": 89,
               "stroke": "#1b2b3d",
               "strokeWidth": 1.5,
-              "y": 88.0
+              "y": 106
             },
             "encoding": {
               "theta": {
@@ -179,8 +179,8 @@
               "type": "text",
               "fontSize": 9.5,
               "color": "#94a0ab",
-              "radius": 83,
-              "y": 88.0
+              "radius": 100,
+              "y": 106
             },
             "encoding": {
               "theta": {
@@ -212,8 +212,8 @@
               "fontSize": 14,
               "fontWeight": "bold",
               "color": "#efe6d6",
-              "x": 88.0,
-              "y": 89.0
+              "x": 105.5,
+              "y": 107
             },
             "encoding": {
               "text": {
@@ -238,8 +238,8 @@
               "fontSize": 11,
               "fontWeight": "bold",
               "color": "#f08a24",
-              "x": 88.0,
-              "y": 92.0
+              "x": 105.5,
+              "y": 110
             },
             "encoding": {
               "text": {
@@ -264,8 +264,8 @@
               "fontSize": 11,
               "fontStyle": "italic",
               "color": "#3f9ee8",
-              "x": 88.0,
-              "y": 194
+              "x": 105.5,
+              "y": 233
             },
             "encoding": {
               "text": {
@@ -288,7 +288,7 @@
           }
         }
       },
-      "width": 976,
+      "width": 1180,
       "height": 34,
       "transform": [
         {
