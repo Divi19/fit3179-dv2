@@ -82,7 +82,7 @@
               "expr": "measure == 'phone' ? '#f08a24' : '#4fa8ec'"
             }
           },
-          "value": "#2c3a48"
+          "value": "#56677c"
         }
       }
     },
