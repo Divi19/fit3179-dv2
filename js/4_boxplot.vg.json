@@ -565,11 +565,11 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#4a5560",
-      "titleColor": "#4a5560",
+      "labelColor": "#2f3945",
+      "titleColor": "#2f3945",
       "gridColor": "#e7e9e8",
-      "domainColor": "#b8bec2",
-      "tickColor": "#b8bec2",
+      "domainColor": "#5b6570",
+      "tickColor": "#5b6570",
       "labelFontSize": 13,
       "titleFontSize": 13,
       "titleFontWeight": "normal",
