@@ -1,7 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Quality of sleep on the night before the interview, 2023 · % of children with a known rating",
+    "text": [
+      "Quality of sleep on the night before the interview, 2023",
+      "% of children with a known rating"
+    ],
     "fontSize": 14,
     "fontWeight": "normal",
     "color": "#94a0ab",
