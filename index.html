@@ -185,7 +185,10 @@ svg{display:block}
 .areas h4{font-family:var(--sans);font-weight:700;font-size:17px;margin:10px 0 6px}
 .areas p{font-size:15.5px;color:rgba(239,230,214,.92);line-height:1.45}
 @media (max-width:900px){.def{grid-template-columns:minmax(0,1fr)}.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.aside{margin-top:30px;background:var(--navy);color:var(--text-l2);border-radius:14px;padding:22px 26px;font-size:18px;max-width:74ch}
+.aside{background:var(--navy);color:var(--text-l2);border-radius:14px;padding:22px 26px;font-size:18px}
+.after{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:24px 64px;align-items:center;margin-top:40px}
+.after .next{margin-top:0}
+@media (max-width:860px){.after{grid-template-columns:minmax(0,1fr)}}
 .aside strong{color:var(--gold)}
 
 /* summary */
@@ -468,8 +471,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       </div>
       <div class="chart scroll"><div id="vis7" style="min-width:820px"></div></div>
     </div>
-    <p class="aside"><strong>Since 2021 the gap narrowed slightly,</strong> only because children in the least disadvantaged areas fell back (63.7% to 61.1%) faster than the most disadvantaged (42.5% to 41.2%). Nobody improved.</p>
-    <p class="next">The census stops at the school gate. As the day goes on, a national survey picks up the story.</p>
+    <div class="after">
+      <p class="aside"><strong>Since 2021 the gap narrowed slightly,</strong> only because children in the least disadvantaged areas fell back (63.7% to 61.1%) faster than the most disadvantaged (42.5% to 41.2%). Nobody improved.</p>
+      <p class="next">The census stops at the school gate. As the day goes on, a national survey picks up the story.</p>
+    </div>
   </div>
   <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44 C240 14 560 20 820 40 C1060 58 1280 52 1440 30 L1440 70 L0 70 Z" fill="#d0571b"/></svg>
 </section>
