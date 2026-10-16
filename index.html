@@ -69,7 +69,7 @@ svg{display:block}
 .scene{position:relative;overflow:hidden;color:var(--text-l)}
 .scene>svg.art{position:absolute;inset:0;width:100%;height:100%}
 .scene .wrap{z-index:2}
-.hero{min-height:960px;background:#0f1923}
+.hero{min-height:900px;background:#0f1923}
 .hero .wrap{padding-block:60px 0}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 56px;align-items:start}
 .hero-grid h1{grid-column:1/-1}
@@ -272,63 +272,19 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 <header class="scene hero">
   <svg class="art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <rect width="1440" height="900" fill="url(#dawnSky)"/>
-    <g fill="#f4ead9" opacity=".7">
-      <circle cx="140" cy="90" r="1.6"/><circle cx="320" cy="60" r="1.2"/><circle cx="520" cy="120" r="1.4"/><circle cx="700" cy="70" r="1"/>
-      <circle cx="880" cy="110" r="1.5"/><circle cx="1060" cy="50" r="1.2"/><circle cx="1240" cy="95" r="1.6"/><circle cx="1380" cy="150" r="1"/>
-      <circle cx="980" cy="190" r="1"/><circle cx="1320" cy="240" r="1.2"/><circle cx="760" cy="200" r="1"/>
-    </g>
-    <circle cx="600" cy="650" r="360" fill="url(#sunGlow)"/>
-    <circle cx="600" cy="650" r="120" fill="#f6c766"/>
-    <path d="M0 640 C180 600 330 610 470 628 C640 650 760 600 930 606 C1080 612 1250 640 1440 610 L1440 900 L0 900 Z" fill="#2a2433"/>
-    <!-- school -->
-    <g fill="#131c27">
-      <rect x="840" y="560" width="110" height="110"/>
-      <path d="M820 566 L895 520 L970 566 Z"/>
-      <rect x="950" y="500" width="330" height="170"/>
-      <path d="M930 508 L1115 420 L1300 508 Z"/>
-      <rect x="1085" y="360" width="60" height="110"/>
-      <path d="M1077 364 L1115 318 L1153 364 Z"/>
-      <rect x="1280" y="580" width="150" height="90"/>
-      <rect x="1250" y="430" width="3" height="80"/>
-    </g>
-    <path d="M1253 432 L1288 442 L1253 452 Z" fill="#d0571b"/>
-    <circle cx="1115" cy="400" r="13" fill="#f4ead9" opacity=".85"/>
-    <path d="M1115 400 L1115 392 M1115 400 L1121 403" stroke="#131c27" stroke-width="2" stroke-linecap="round"/>
-    <g fill="#f2b84b">
-      <rect x="978" y="530" width="26" height="34" rx="2" opacity=".85"/><rect x="1024" y="530" width="26" height="34" rx="2" opacity=".35"/>
-      <rect x="1180" y="530" width="26" height="34" rx="2" opacity=".85"/><rect x="1226" y="530" width="26" height="34" rx="2" opacity=".5"/>
-      <rect x="978" y="590" width="26" height="34" rx="2" opacity=".4"/><rect x="1226" y="590" width="26" height="34" rx="2" opacity=".85"/>
-      <rect x="862" y="590" width="22" height="30" rx="2" opacity=".6"/><rect x="1310" y="605" width="30" height="26" rx="2" opacity=".7"/>
-    </g>
-    <path d="M1090 670 L1090 600 Q1115 578 1140 600 L1140 670 Z" fill="#f2b84b" opacity=".9"/>
-    <!-- gum trees -->
-    <g fill="#141e29">
-      <path d="M54 672 L62 580 L70 672 Z"/>
-      <ellipse cx="36" cy="570" rx="50" ry="34"/><ellipse cx="90" cy="548" rx="52" ry="40"/><ellipse cx="62" cy="514" rx="38" ry="30"/>
-      <path d="M380 672 L386 600 L392 672 Z"/>
-      <ellipse cx="368" cy="590" rx="40" ry="28"/><ellipse cx="408" cy="572" rx="38" ry="30"/>
-    </g>
-    <!-- fence -->
-    <g fill="#18222e">
-      <rect x="0" y="652" width="1440" height="6"/>
-      <rect x="0" y="672" width="1440" height="6"/>
-    </g>
-    <g fill="#18222e" id="pickets"></g>
-    <!-- path and ground -->
-    <path d="M0 700 C300 690 600 712 900 704 C1120 698 1300 690 1440 696 L1440 900 L0 900 Z" fill="#1a2533"/>
-    <path d="M0 770 C360 752 720 790 1080 772 C1240 764 1360 768 1440 772 L1440 900 L0 900 Z" fill="#141e2a"/>
+    <ellipse cx="760" cy="800" rx="620" ry="190" fill="url(#sunGlow)" opacity=".7"/>
+    <path d="M0 792 C360 778 720 802 1080 788 C1260 782 1380 786 1440 790 L1440 900 L0 900 Z" fill="#141e2a"/>
     <!-- eight children walking to school; one carries a rust backpack -->
-    <g id="kids">
-      <use href="#kid" x="96"  y="676" width="46" height="108" color="#26313f"/>
-      <use href="#kid" x="196" y="690" width="40" height="94"  color="#26313f"/>
-      <use href="#kid" x="292" y="672" width="48" height="112" color="#26313f"/>
-      <use href="#kid" x="392" y="684" width="43" height="100" color="#ff8a4c" class="glow"/>
-      <use href="#kid" x="488" y="678" width="46" height="106" color="#26313f"/>
-      <use href="#kid" x="584" y="692" width="39" height="92"  color="#26313f"/>
-      <use href="#kid" x="676" y="674" width="47" height="110" color="#26313f"/>
-      <use href="#kid" x="774" y="686" width="42" height="98"  color="#26313f"/>
+    <g>
+      <use href="#kid" x="150" y="688" width="46" height="108" color="#26313f"/>
+      <use href="#kid" x="262" y="702" width="40" height="94"  color="#26313f"/>
+      <use href="#kid" x="370" y="684" width="48" height="112" color="#26313f"/>
+      <use href="#kid" x="482" y="696" width="43" height="100" color="#ff8a4c"/>
+      <use href="#kid" x="590" y="690" width="46" height="106" color="#26313f"/>
+      <use href="#kid" x="700" y="704" width="39" height="92"  color="#26313f"/>
+      <use href="#kid" x="806" y="686" width="47" height="110" color="#26313f"/>
+      <use href="#kid" x="918" y="698" width="42" height="98"  color="#26313f"/>
     </g>
-    <circle cx="401" cy="728" r="26" fill="#ff8a4c" opacity=".18"/>
   </svg>
   <div class="wrap">
     <p class="byline">Divieleisch Ranjan · FIT3179 Data Visualisation 2 · Monash University</p>
@@ -709,13 +665,8 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0/build/vega-lite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0/build/vega-embed.min.js"></script>
 <script>
-/* hero scene: draw the fence pickets, and on phones keep the children (and the rust backpack) in view */
-(function(){
-  const g=document.getElementById("pickets"); let h="";
-  for(let x=6;x<1440;x+=26) h+=`<path d="M${x} 690 L${x} 646 L${x+5} 640 L${x+10} 646 L${x+10} 690 Z"/>`;
-  g.innerHTML=h;
-  if(innerWidth<700){const h=document.querySelector(".hero svg.art"); h.setAttribute("viewBox","250 0 1190 900"); h.setAttribute("preserveAspectRatio","xMinYMax slice");}
-})();
+/* hero scene: on phones keep the children (and the rust backpack) in view */
+if(innerWidth<700){const h=document.querySelector(".hero svg.art"); h.setAttribute("viewBox","330 0 1110 900"); h.setAttribute("preserveAspectRatio","xMinYMax slice");}
 /* closing scene: the same picket fence, at night */
 (function(){
   let h=""; for(let x=4;x<1440;x+=24) h+=`<path d="M${x} 640 L${x} 600 L${x+4} 594 L${x+8} 600 L${x+8} 640 Z"/>`;
