@@ -99,7 +99,8 @@ svg{display:block}
 .ending{background:#0b121a}
 .ending .wrap{padding-block:104px 170px}
 .ending .closing{font-family:var(--serif);font-size:clamp(32px,3.6vw,52px);line-height:1.15;max-width:22ch}
-.ending .sig{margin-top:20px;font-size:16px;color:var(--text-l3)}
+.ending .sig{margin-top:22px;font-size:18px;color:var(--text-l2);display:flex;align-items:center;gap:12px;max-width:62ch}
+.ending .sig i{flex:none;width:12px;height:20px;border-radius:3px;background:#9fd2ff;box-shadow:0 0 10px rgba(124,196,255,.55)}
 
 /* ---------- class of 24 ---------- */
 .class-sec{padding-block:8px 96px}
@@ -593,14 +594,10 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   <svg class="art" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <rect width="1440" height="700" fill="url(#nightSky)"/>
     <path d="M0 612 C300 600 640 620 980 606 C1180 598 1340 602 1440 606 L1440 700 L0 700 Z" fill="#0b121a"/>
-    <!-- one screen still on after dark -->
-    <circle cx="1120" cy="560" r="130" fill="url(#screenGlow)"/>
-    <rect x="1104" y="530" width="32" height="56" rx="6" fill="#7cc4ff"/>
-    <rect x="1108" y="536" width="24" height="42" rx="2" fill="#bfe4ff"/>
   </svg>
   <div class="wrap">
     <p class="closing">Support that reaches families before school, and keeps teenagers active and rested, works on both halves of the same story.</p>
-    <p class="sig">Long after dark, one screen is still on. More than 8 in 10 teenagers aged 15 to 17 have a smartphone in their bedroom.</p>
+    <p class="sig"><i aria-hidden="true"></i>Long after dark, one screen is still on. More than 8 in 10 teenagers aged 15 to 17 have a smartphone in their bedroom.</p>
   </div>
 </section>
 </main>
