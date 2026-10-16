@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "By the late teens, screens take nearly four times as long as activity",
-    "subtitle": "Average minutes per day, 2023 · ages 5–17"
+    "text": "Average minutes per day, 2023 · ages 5–17",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#94a0ab",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 270,
@@ -17,7 +21,7 @@
           "Boys",
           "Girls"
         ],
-        "name": "Show: "
+        "name": "Show"
       }
     }
   ],
@@ -91,7 +95,7 @@
         "domain": false,
         "ticks": false,
         "labelFontWeight": "bold",
-        "labelColor": "#1c2430",
+        "labelColor": "#efe6d6",
         "labelFontSize": 12,
         "labelPadding": 8
       }
@@ -140,7 +144,7 @@
               "Sedentary screen time"
             ],
             "range": [
-              "#0a74c4",
+              "#3f9ee8",
               "#f08a24"
             ]
           },
@@ -184,9 +188,9 @@
         "type": "text",
         "align": "right",
         "dx": -5,
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#1c2430"
+        "color": "#efe6d6"
       },
       "encoding": {
         "x": {
@@ -208,9 +212,9 @@
         "type": "text",
         "align": "left",
         "dx": 5,
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#1c2430"
+        "color": "#efe6d6"
       },
       "encoding": {
         "x": {
@@ -239,7 +243,7 @@
           4,
           3
         ],
-        "color": "#1c2430",
+        "color": "#efe6d6",
         "opacity": 0.7
       },
       "encoding": {
@@ -271,8 +275,8 @@
         "align": "right",
         "baseline": "top",
         "dx": -4,
-        "fontSize": 10,
-        "color": "#1c2430"
+        "fontSize": 11,
+        "color": "#efe6d6"
       },
       "encoding": {
         "y": {
@@ -301,8 +305,8 @@
         "align": "left",
         "baseline": "top",
         "dx": 4,
-        "fontSize": 10,
-        "color": "#1c2430"
+        "fontSize": 11,
+        "color": "#efe6d6"
       },
       "encoding": {
         "y": {
@@ -327,7 +331,7 @@
       },
       "mark": {
         "type": "rule",
-        "color": "#8f979c"
+        "color": "#94a0ab"
       },
       "encoding": {
         "x": {
@@ -357,9 +361,9 @@
         "type": "text",
         "align": "right",
         "baseline": "bottom",
-        "fontSize": 12,
+        "fontSize": 13,
         "fontWeight": "bold",
-        "color": "#0a74c4"
+        "color": "#3f9ee8"
       },
       "encoding": {
         "y": {
@@ -387,7 +391,7 @@
         "type": "text",
         "align": "left",
         "baseline": "bottom",
-        "fontSize": 12,
+        "fontSize": 13,
         "fontWeight": "bold",
         "color": "#f08a24"
       },
@@ -421,9 +425,9 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontStyle": "italic",
-        "color": "#46525d"
+        "color": "#b3bcc5"
       },
       "encoding": {
         "x": {
@@ -452,7 +456,7 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#ffffff"
       },
@@ -468,50 +472,53 @@
     }
   ],
   "config": {
-    "font": "Atkinson Hyperlegible",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "background": null,
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#46525d",
-      "titleColor": "#46525d",
-      "gridColor": "#e7e9e8",
-      "domainColor": "#b8bec2",
-      "tickColor": "#b8bec2",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#b3bcc5",
+      "gridColor": "#243343",
+      "domainColor": "#4b5a69",
+      "tickColor": "#4b5a69",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "normal",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#46525d",
-      "titleColor": "#1c2430",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#efe6d6",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "bold",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleLimit": 0
     },
     "title": {
       "anchor": "start",
-      "font": "Atkinson Hyperlegible",
-      "fontSize": 15,
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontSize": 16,
       "fontWeight": "bold",
-      "color": "#1c2430",
-      "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#46525d",
+      "color": "#efe6d6",
+      "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "subtitleColor": "#b3bcc5",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
     },
     "header": {
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif"
     },
     "text": {
-      "font": "Atkinson Hyperlegible"
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontWeight": 500
     }
   }
 }

@@ -1,9 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Screens fill the time that sleep and activity lose",
-    "subtitle": "How an average day is spent, by age, 2023 · hours of 24",
-    "offset": 26
+    "text": "How an average day is spent, by age, 2023 · hours of 24",
+    "offset": 26,
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#94a0ab",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "spacing": 10,
   "vconcat": [
@@ -43,10 +47,10 @@
           }
         }
       },
-      "spacing": 24,
+      "spacing": 31,
       "spec": {
-        "width": 176,
-        "height": 194,
+        "width": 211,
+        "height": 232,
         "layer": [
           {
             "params": [
@@ -64,11 +68,11 @@
             ],
             "mark": {
               "type": "arc",
-              "innerRadius": 50,
-              "outerRadius": 74,
-              "stroke": "#ffffff",
+              "innerRadius": 60,
+              "outerRadius": 89,
+              "stroke": "#1b2b3d",
               "strokeWidth": 1.5,
-              "y": 88.0
+              "y": 106
             },
             "encoding": {
               "theta": {
@@ -97,10 +101,10 @@
                     "Everything else"
                   ],
                   "range": [
-                    "#33415c",
-                    "#0a74c4",
+                    "#a9b9d6",
+                    "#3f9ee8",
                     "#f08a24",
-                    "#dfe3e4"
+                    "#2f3e4d"
                   ]
                 },
                 "legend": {
@@ -112,7 +116,7 @@
                   "symbolSize": 180,
                   "labelFontSize": 13,
                   "titleFontSize": 13,
-                  "labelColor": "#1c2430",
+                  "labelColor": "#efe6d6",
                   "columnPadding": 18
                 }
               },
@@ -173,10 +177,10 @@
             ],
             "mark": {
               "type": "text",
-              "fontSize": 9,
-              "color": "#8a949b",
-              "radius": 83,
-              "y": 88.0
+              "fontSize": 9.5,
+              "color": "#94a0ab",
+              "radius": 100,
+              "y": 106
             },
             "encoding": {
               "theta": {
@@ -205,11 +209,11 @@
               "type": "text",
               "align": "center",
               "baseline": "bottom",
-              "fontSize": 13,
+              "fontSize": 14,
               "fontWeight": "bold",
-              "color": "#1c2430",
-              "x": 88.0,
-              "y": 89.0
+              "color": "#efe6d6",
+              "x": 105.5,
+              "y": 107
             },
             "encoding": {
               "text": {
@@ -231,11 +235,11 @@
               "type": "text",
               "align": "center",
               "baseline": "top",
-              "fontSize": 10,
+              "fontSize": 11,
               "fontWeight": "bold",
               "color": "#f08a24",
-              "x": 88.0,
-              "y": 92.0
+              "x": 105.5,
+              "y": 110
             },
             "encoding": {
               "text": {
@@ -257,11 +261,11 @@
               "type": "text",
               "align": "center",
               "baseline": "bottom",
-              "fontSize": 10,
+              "fontSize": 11,
               "fontStyle": "italic",
-              "color": "#0a74c4",
-              "x": 88.0,
-              "y": 194
+              "color": "#3f9ee8",
+              "x": 105.5,
+              "y": 233
             },
             "encoding": {
               "text": {
@@ -284,7 +288,7 @@
           }
         }
       },
-      "width": 976,
+      "width": 1180,
       "height": 34,
       "transform": [
         {
@@ -319,9 +323,9 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "fontSize": 12,
+        "fontSize": 13,
         "fontWeight": "bold",
-        "color": "#1c2430",
+        "color": "#efe6d6",
         "lineHeight": 16,
         "x": 0,
         "y": 0
@@ -348,50 +352,53 @@
     }
   ],
   "config": {
-    "font": "Atkinson Hyperlegible",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "background": null,
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#46525d",
-      "titleColor": "#46525d",
-      "gridColor": "#e7e9e8",
-      "domainColor": "#b8bec2",
-      "tickColor": "#b8bec2",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#b3bcc5",
+      "gridColor": "#243343",
+      "domainColor": "#4b5a69",
+      "tickColor": "#4b5a69",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "normal",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#46525d",
-      "titleColor": "#1c2430",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#efe6d6",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "bold",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleLimit": 0
     },
     "title": {
       "anchor": "start",
-      "font": "Atkinson Hyperlegible",
-      "fontSize": 15,
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontSize": 16,
       "fontWeight": "bold",
-      "color": "#1c2430",
-      "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#46525d",
+      "color": "#efe6d6",
+      "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "subtitleColor": "#b3bcc5",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
     },
     "header": {
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif"
     },
     "text": {
-      "font": "Atkinson Hyperlegible"
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontWeight": 500
     }
   }
 }

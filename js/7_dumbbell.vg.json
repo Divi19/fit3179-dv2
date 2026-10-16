@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "The gap between rich and poor areas widened in every state",
-    "subtitle": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)"
+    "text": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#5b6570",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 470,
@@ -17,7 +21,7 @@
           "2024 only",
           "2009 only"
         ],
-        "name": "Show: "
+        "name": "Show"
       }
     }
   ],
@@ -158,7 +162,7 @@
       ],
       "mark": {
         "type": "rule",
-        "color": "#c4c9cc",
+        "color": "#8a949b",
         "strokeWidth": 3.5
       },
       "encoding": {
@@ -202,7 +206,7 @@
       ],
       "mark": {
         "type": "rule",
-        "color": "#9aa3a9",
+        "color": "#5b6570",
         "strokeWidth": 1.5,
         "strokeDash": [
           4,
@@ -283,7 +287,7 @@
         "color": {
           "condition": {
             "test": "datum.area == 'ACT'",
-            "value": "#9aa3a9"
+            "value": "#5b6570"
           },
           "field": "group",
           "type": "nominal",
@@ -379,7 +383,7 @@
         "color": {
           "condition": {
             "test": "datum.area == 'ACT'",
-            "value": "#9aa3a9"
+            "value": "#5b6570"
           },
           "field": "group",
           "type": "nominal",
@@ -451,7 +455,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 11
+        "fontSize": 12
       },
       "encoding": {
         "x": {
@@ -496,7 +500,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -10,
-        "fontSize": 10,
+        "fontSize": 11,
         "fontWeight": "bold",
         "color": "#46525d"
       },
@@ -565,7 +569,7 @@
         "align": "center",
         "baseline": "bottom",
         "dy": -3,
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#1c2430"
       },
@@ -637,7 +641,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 10,
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#8e3410",
         "dy": {
@@ -783,7 +787,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 12,
         "color": "#46525d"
       },
       "encoding": {
@@ -803,50 +807,53 @@
     }
   ],
   "config": {
-    "font": "Atkinson Hyperlegible",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "background": null,
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#46525d",
-      "titleColor": "#46525d",
+      "labelColor": "#4a5560",
+      "titleColor": "#4a5560",
       "gridColor": "#e7e9e8",
       "domainColor": "#b8bec2",
       "tickColor": "#b8bec2",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "normal",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#46525d",
+      "labelColor": "#4a5560",
       "titleColor": "#1c2430",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "bold",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleLimit": 0
     },
     "title": {
       "anchor": "start",
-      "font": "Atkinson Hyperlegible",
-      "fontSize": 15,
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontSize": 16,
       "fontWeight": "bold",
       "color": "#1c2430",
-      "subtitleFont": "Atkinson Hyperlegible",
+      "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
       "subtitleColor": "#46525d",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
     },
     "header": {
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif"
     },
     "text": {
-      "font": "Atkinson Hyperlegible"
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontWeight": 500
     }
   }
 }

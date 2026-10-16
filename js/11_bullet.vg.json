@@ -1,9 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Saturated fat is over the limit at every age; sugar climbs to the limit by the teens",
-    "subtitle": "Average % of daily energy, 2023 · bars show 95% margin of error",
-    "offset": 42
+    "text": "Average % of daily energy, 2023 · bars show 95% margin of error",
+    "offset": 42,
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#94a0ab",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "data": {
     "url": "data/nnpas_nutrients.csv",
@@ -24,13 +28,13 @@
       "as": "limit_label"
     }
   ],
-  "spacing": 40,
+  "spacing": 78,
   "hconcat": [
     {
       "title": {
         "text": "Saturated + trans fat",
         "subtitle": "NHMRC target: no more than 10% of energy",
-        "fontSize": 13,
+        "fontSize": 14,
         "subtitleFontSize": 11
       },
       "width": 410,
@@ -59,7 +63,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1c2430",
+            "labelColor": "#efe6d6",
             "labelFontSize": 12,
             "labelPadding": 8,
             "minExtent": 76
@@ -74,13 +78,13 @@
                 "x": 0,
                 "x2": 10,
                 "band": "Within limit",
-                "fill": "#eef0ee"
+                "fill": "#1d2b39"
               },
               {
                 "x": 10,
                 "x2": 16,
                 "band": "Over the limit",
-                "fill": "#fbe1cd"
+                "fill": "#4a2b1f"
               }
             ]
           },
@@ -145,13 +149,13 @@
                 "x": 0,
                 "x2": 10,
                 "band": "Within limit",
-                "fill": "#eef0ee"
+                "fill": "#1d2b39"
               },
               {
                 "x": 10,
                 "x2": 16,
                 "band": "Over the limit",
-                "fill": "#fbe1cd"
+                "fill": "#4a2b1f"
               }
             ]
           },
@@ -165,8 +169,8 @@
             "type": "text",
             "align": "center",
             "baseline": "top",
-            "fontSize": 10,
-            "color": "#46525d"
+            "fontSize": 11,
+            "color": "#b3bcc5"
           },
           "encoding": {
             "x": {
@@ -250,8 +254,8 @@
                   "Adults"
                 ],
                 "range": [
-                  "#d0571b",
-                  "#8a949b"
+                  "#e3652a",
+                  "#94a0ab"
                 ]
               },
               "legend": {
@@ -306,10 +310,10 @@
             "type": "errorbar",
             "ticks": {
               "size": 12,
-              "color": "#1c2430"
+              "color": "#efe6d6"
             },
             "rule": {
-              "color": "#1c2430",
+              "color": "#efe6d6",
               "strokeWidth": 1.4
             }
           },
@@ -382,7 +386,7 @@
             "align": "left",
             "baseline": "middle",
             "dx": 5,
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#ffffff"
           },
@@ -407,7 +411,7 @@
           },
           "mark": {
             "type": "rule",
-            "color": "#1c2430",
+            "color": "#efe6d6",
             "strokeWidth": 2
           },
           "encoding": {
@@ -459,9 +463,9 @@
             "type": "text",
             "align": "center",
             "baseline": "bottom",
-            "fontSize": 10,
+            "fontSize": 11,
             "fontWeight": "bold",
-            "color": "#1c2430"
+            "color": "#efe6d6"
           },
           "encoding": {
             "x": {
@@ -530,9 +534,9 @@
             "type": "text",
             "align": "center",
             "baseline": "middle",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
-            "color": "#8e3410",
+            "color": "#ff9b63",
             "lineHeight": 13
           },
           "encoding": {
@@ -554,7 +558,7 @@
       "title": {
         "text": "Free sugars",
         "subtitle": "WHO: under 10% of energy, ideally under 5%",
-        "fontSize": 13,
+        "fontSize": 14,
         "subtitleFontSize": 11
       },
       "width": 410,
@@ -583,7 +587,7 @@
             "domain": false,
             "ticks": false,
             "labelFontWeight": "bold",
-            "labelColor": "#1c2430",
+            "labelColor": "#efe6d6",
             "labelFontSize": 12,
             "labelPadding": 8,
             "minExtent": 76
@@ -598,19 +602,19 @@
                 "x": 0,
                 "x2": 5,
                 "band": "WHO ideal",
-                "fill": "#fbfbfa"
+                "fill": "#17222e"
               },
               {
                 "x": 5,
                 "x2": 10,
                 "band": "Within limit",
-                "fill": "#eef0ee"
+                "fill": "#1d2b39"
               },
               {
                 "x": 10,
                 "x2": 16,
                 "band": "Over the limit",
-                "fill": "#fbe1cd"
+                "fill": "#4a2b1f"
               }
             ]
           },
@@ -675,19 +679,19 @@
                 "x": 0,
                 "x2": 5,
                 "band": "WHO ideal",
-                "fill": "#fbfbfa"
+                "fill": "#17222e"
               },
               {
                 "x": 5,
                 "x2": 10,
                 "band": "Within limit",
-                "fill": "#eef0ee"
+                "fill": "#1d2b39"
               },
               {
                 "x": 10,
                 "x2": 16,
                 "band": "Over the limit",
-                "fill": "#fbe1cd"
+                "fill": "#4a2b1f"
               }
             ]
           },
@@ -701,8 +705,8 @@
             "type": "text",
             "align": "center",
             "baseline": "top",
-            "fontSize": 10,
-            "color": "#46525d"
+            "fontSize": 11,
+            "color": "#b3bcc5"
           },
           "encoding": {
             "x": {
@@ -786,8 +790,8 @@
                   "Adults"
                 ],
                 "range": [
-                  "#d0571b",
-                  "#8a949b"
+                  "#e3652a",
+                  "#94a0ab"
                 ]
               },
               "legend": {
@@ -842,10 +846,10 @@
             "type": "errorbar",
             "ticks": {
               "size": 12,
-              "color": "#1c2430"
+              "color": "#efe6d6"
             },
             "rule": {
-              "color": "#1c2430",
+              "color": "#efe6d6",
               "strokeWidth": 1.4
             }
           },
@@ -918,7 +922,7 @@
             "align": "left",
             "baseline": "middle",
             "dx": 5,
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#ffffff"
           },
@@ -943,7 +947,7 @@
           },
           "mark": {
             "type": "rule",
-            "color": "#1c2430",
+            "color": "#efe6d6",
             "strokeWidth": 2
           },
           "encoding": {
@@ -995,9 +999,9 @@
             "type": "text",
             "align": "center",
             "baseline": "bottom",
-            "fontSize": 10,
+            "fontSize": 11,
             "fontWeight": "bold",
-            "color": "#1c2430"
+            "color": "#efe6d6"
           },
           "encoding": {
             "x": {
@@ -1053,9 +1057,9 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
-            "color": "#8e3410",
+            "color": "#ff9b63",
             "lineHeight": 13
           },
           "encoding": {
@@ -1100,50 +1104,53 @@
     }
   },
   "config": {
-    "font": "Atkinson Hyperlegible",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "background": null,
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#46525d",
-      "titleColor": "#46525d",
-      "gridColor": "#e7e9e8",
-      "domainColor": "#b8bec2",
-      "tickColor": "#b8bec2",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#b3bcc5",
+      "gridColor": "#243343",
+      "domainColor": "#4b5a69",
+      "tickColor": "#4b5a69",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "normal",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#46525d",
-      "titleColor": "#1c2430",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#efe6d6",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "bold",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleLimit": 0
     },
     "title": {
       "anchor": "start",
-      "font": "Atkinson Hyperlegible",
-      "fontSize": 15,
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontSize": 16,
       "fontWeight": "bold",
-      "color": "#1c2430",
-      "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#46525d",
+      "color": "#efe6d6",
+      "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "subtitleColor": "#b3bcc5",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
     },
     "header": {
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif"
     },
     "text": {
-      "font": "Atkinson Hyperlegible"
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontWeight": 500
     }
   }
 }

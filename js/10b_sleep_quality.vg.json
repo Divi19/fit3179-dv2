@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Teenagers sleep worse, not just less",
-    "subtitle": "Quality of sleep on the night before the interview, 2023 · % of children with a known rating"
+    "text": "Quality of sleep on the night before the interview, 2023 · % of children with a known rating",
+    "fontSize": 14,
+    "fontWeight": "normal",
+    "color": "#94a0ab",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 18
   },
   "width": "container",
   "height": 250,
@@ -81,7 +85,7 @@
         "domain": false,
         "ticks": false,
         "labelFontWeight": "bold",
-        "labelColor": "#1c2430",
+        "labelColor": "#efe6d6",
         "labelFontSize": 12,
         "labelPadding": 8
       }
@@ -134,10 +138,10 @@
               "Very good"
             ],
             "range": [
-              "#d0571b",
+              "#e3652a",
               "#f5a25e",
               "#78b6e6",
-              "#126fb8"
+              "#3b92dc"
             ]
           },
           "legend": {
@@ -182,7 +186,7 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#ffffff"
       },
@@ -225,7 +229,7 @@
       },
       "mark": {
         "type": "rule",
-        "color": "#1c2430",
+        "color": "#efe6d6",
         "strokeWidth": 1.2
       },
       "encoding": {
@@ -275,9 +279,9 @@
         "type": "text",
         "align": "right",
         "baseline": "top",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#d0571b"
+        "color": "#e3652a"
       },
       "encoding": {
         "x": {
@@ -324,9 +328,9 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#126fb8"
+        "color": "#3b92dc"
       },
       "encoding": {
         "x": {
@@ -405,9 +409,9 @@
         "type": "text",
         "align": "right",
         "baseline": "top",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#126fb8",
+        "color": "#3b92dc",
         "dy": {
           "expr": "height / 13"
         }
@@ -424,50 +428,53 @@
     }
   ],
   "config": {
-    "font": "Atkinson Hyperlegible",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "background": null,
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#46525d",
-      "titleColor": "#46525d",
-      "gridColor": "#e7e9e8",
-      "domainColor": "#b8bec2",
-      "tickColor": "#b8bec2",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#b3bcc5",
+      "gridColor": "#243343",
+      "domainColor": "#4b5a69",
+      "tickColor": "#4b5a69",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "normal",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "labelFontWeight": 500
     },
     "legend": {
-      "labelColor": "#46525d",
-      "titleColor": "#1c2430",
-      "labelFontSize": 11,
-      "titleFontSize": 11,
+      "labelColor": "#b3bcc5",
+      "titleColor": "#efe6d6",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": "bold",
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleLimit": 0
     },
     "title": {
       "anchor": "start",
-      "font": "Atkinson Hyperlegible",
-      "fontSize": 15,
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontSize": 16,
       "fontWeight": "bold",
-      "color": "#1c2430",
-      "subtitleFont": "Atkinson Hyperlegible",
-      "subtitleColor": "#46525d",
+      "color": "#efe6d6",
+      "subtitleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "subtitleColor": "#b3bcc5",
       "subtitleFontSize": 12,
       "subtitlePadding": 4,
       "offset": 12
     },
     "header": {
-      "labelFont": "Atkinson Hyperlegible",
-      "titleFont": "Atkinson Hyperlegible"
+      "labelFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "titleFont": "\"Source Sans 3\", \"Segoe UI\", sans-serif"
     },
     "text": {
-      "font": "Atkinson Hyperlegible"
+      "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+      "fontWeight": 500
     }
   }
 }

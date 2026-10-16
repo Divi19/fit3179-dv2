@@ -10,8 +10,8 @@ movement, screen time, sleep and diet change as they grow (ABS National Nutritio
 | Path | What it is |
 |---|---|
 | `index.html` | The web page |
-| `js/*.vg.json` | One Vega-Lite specification per chart (15), plus the hero map |
-| `img/` | The two photos (Unsplash, recoloured as duotones) |
+| `js/*.vg.json` | One Vega-Lite specification per chart (15), plus the two class of 24 figures |
+| `img/` | The school photo (Unsplash, recoloured as a duotone) |
 | `data/*.csv` | Cleaned data, one file per chart group |
 | `data/aus_lga.topojson` | Council boundaries (objects: `lga`, `states`; key: `properties.LGA_CODE24`) |
 | `data/hex_grid.geojson` | ~100 km hexagons used by the bin map (key: `properties.hex_id`) |
@@ -23,11 +23,13 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 
 ## Page design
 
-The page runs as full-width colour bands: white, warm sand and a rust tint for Part A (the census), then white and pale blue for Part B (the survey). Each chapter is split into sub-sections with their own headings. Headings use DM Serif Display and everything else, charts included, uses Atkinson Hyperlegible. Rust (`#d0571b`) marks the census and worse outcomes; blue (`#0a74c4`) marks the survey and better outcomes.
+The page follows one school day as the children grow. It opens on a dawn sky where eight children walk to school and one carries a rust backpack (1 in 8), followed by a class of 24 figure. Part A (the census) runs through warm daylight bands joined by hill and rooftop edges, with chapter 2 as a night band in the middle. Part B (the survey) opens on a plain sunset gradient, and its charts are recoloured to sit straight on the night bands. The page closes on a night sky with a single lit phone screen. The banner scenes are kept deliberately sparse to avoid chartjunk; they and the band edges are inline SVG drawn for the page.
+
+Headings use Gloock and everything else, charts included, uses Source Sans 3. Rust (`#d0571b`, glowing `#ff8a4c` on dark) marks the census and worse outcomes; blue (`#0a74c4`, glowing `#4fa8ec` on dark) marks the survey and better outcomes; gold (`#f2b84b`) carries the closing line of each section on dark. A sticky ruler at the top shows the age in view: age 5 in Part A, ages 2 to 17 in Part B.
 
 ## Charts
 
-Hero. Proportional symbol map: vulnerable children per council, 2024
+Class of 24. Pictogram: the 2024 intake as one class of 24 (and again as 24 teenagers in the summary)
 0. 100% stacked bar with year toggle: vulnerable, at risk and on track in each area of development, 2009 vs 2024
 1. Choropleth map with city zoom panels and an area menu: % vulnerable by council, 2024
 2. Proportional symbol map with year slider, play button, city zoom and a linked national bar chart: number of vulnerable children, 2009–2024
