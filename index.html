@@ -127,6 +127,9 @@ svg{display:block}
 .fig .dek{font-size:18px;color:var(--ink-2);margin-top:12px;max-width:58ch}
 .dark .fig .dek{color:var(--text-l2)}
 .chart{margin-top:30px}
+.fig-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:16px 64px;align-items:end}
+.fig-head .dek{margin-top:0;max-width:none}
+@media (max-width:860px){.fig-head{grid-template-columns:minmax(0,1fr)}}
 .scroll{overflow-x:auto;scrollbar-width:none}
 .scroll::-webkit-scrollbar{display:none}
 .fig.split{display:grid;grid-template-columns:minmax(0,3.6fr) minmax(0,8.4fr);gap:48px;align-items:start}
@@ -476,12 +479,13 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   </div>
 </section>
 
-<section class="band duskb dark" data-part="b" data-chap="A day in the life, by age">
+<section class="band duskb dark" id="day" data-part="b" data-chap="A day in the life, by age" style="padding-block:24px 88px">
   <div class="wrap">
     <div class="fig" style="margin-top:0">
-      <span class="kick">A day in the life</span>
-      <h3 style="margin-top:12px">Screens fill the time that sleep and activity lose</h3>
-      <p class="dek">Each ring is one average day. Follow the orange slice round from age 2 to 17.</p>
+      <div class="fig-head">
+        <div><span class="kick">A day in the life</span><h3 style="margin-top:12px">Screens fill the time that sleep and activity lose</h3></div>
+        <p class="dek">Each ring is one average day of 24 hours. Follow the orange slice round from age 2 to 17.</p>
+      </div>
       <div class="chart scroll"><div id="visDay"></div></div>
       <p class="howto"><b>Try</b><span>Click a colour in the legend to pick it out at every age, and click it again to show all.</span></p>
     </div>
