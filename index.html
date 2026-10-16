@@ -153,7 +153,8 @@ svg{display:block}
 .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-top:72px}
 .pair .fig{margin-top:0}
 .pair .fig-head{grid-template-columns:minmax(0,1fr);gap:12px}
-#bedtime .pair{margin-top:20px}
+#bedtime .pair{margin-top:20px;grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+@media (max-width:900px){#bedtime .pair{grid-template-columns:minmax(0,1fr)}}
 .pair-end{display:flex;flex-direction:column}
 .pair-end .next{margin-top:auto;padding-top:40px}
 @media (max-width:900px){.pair{grid-template-columns:minmax(0,1fr)}}
