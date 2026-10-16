@@ -36,12 +36,12 @@ svg{display:block}
 @media (max-width:640px){.wrap{padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}}
 
 /* ---------- bands and edges ---------- */
-.band{position:relative;padding-block:96px 120px}
+.band{position:relative;padding-block:80px 104px}
 .cream{background:var(--cream)} .sand{background:var(--sand)} .peach{background:var(--peach)} .clay{background:var(--clay)}
 .navy{background:var(--navy)} .nightb{background:var(--night)} .duskb{background:var(--dusk)}
 .dark{color:var(--text-l)}
-.edge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;pointer-events:none}
-.edge.tall{height:120px}
+.edge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:56px;pointer-events:none}
+.edge.tall{height:96px}
 @media (max-width:640px){.band{padding-block:64px 96px}.edge{height:44px}.edge.tall{height:70px}}
 
 .tag{display:inline-block;font:700 13px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;padding:8px 12px;border-radius:3px}
@@ -110,10 +110,10 @@ svg{display:block}
 /* ---------- section heads and figures ---------- */
 .chap-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:20px 64px;align-items:end}
 .chap-head h2{font-size:clamp(42px,4.8vw,66px);line-height:1;margin-top:16px}
-.chap-head p{font-size:20px;line-height:1.6;color:var(--ink-2);max-width:54ch}
+.chap-head p{font-size:20px;line-height:1.6;color:var(--ink-2)}
 .dark .chap-head p{color:var(--text-l2)}
 @media (max-width:860px){.chap-head{grid-template-columns:minmax(0,1fr)}}
-.fig{margin-top:84px}
+.fig{margin-top:72px}
 .fig h3{font-size:clamp(28px,2.7vw,36px);line-height:1.1;max-width:22ch}
 .fig .dek{font-size:18px;color:var(--ink-2);margin-top:12px;max-width:58ch}
 .dark .fig .dek{color:var(--text-l2)}
@@ -130,12 +130,12 @@ svg{display:block}
 .howto b{flex:none;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--rust-deep);padding-top:3px}
 .dark .howto{color:var(--text-l2);border-color:rgba(239,230,214,.28)}
 .dark .howto b{color:var(--gold)}
-.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-top:84px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-top:72px}
 .pair .fig{margin-top:0}
 @media (max-width:900px){.pair{grid-template-columns:minmax(0,1fr)}}
 
 /* number moments */
-.moments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:84px}
+.moments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:72px}
 .mo{border-radius:14px;padding:30px 32px 28px;background:var(--navy);color:var(--text-l)}
 .mo b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(56px,7vw,96px);line-height:.95}
 .mo span{display:block;font-size:18px;margin-top:14px;max-width:34ch;color:var(--text-l2)}
@@ -145,7 +145,7 @@ svg{display:block}
 .dark .mo.s{background:rgba(240,138,36,.1);border-color:rgba(240,138,36,.4)}
 @media (max-width:640px){.moments{grid-template-columns:minmax(0,1fr)}}
 
-.next{font-family:var(--serif);font-size:clamp(26px,2.6vw,34px);line-height:1.25;max-width:30ch;margin-top:96px;color:var(--rust-deep)}
+.next{font-family:var(--serif);font-size:clamp(26px,2.6vw,34px);line-height:1.25;max-width:30ch;margin-top:72px;color:var(--rust-deep)}
 .dark .next{color:var(--gold)}
 
 /* definition */
