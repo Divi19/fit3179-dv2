@@ -99,8 +99,11 @@ svg{display:block}
 .ending{background:#0b121a}
 .ending .wrap{padding-block:104px 170px}
 .ending .closing{font-family:var(--serif);font-size:clamp(32px,3.6vw,52px);line-height:1.15;max-width:22ch}
-.ending .sig{margin-top:22px;font-size:18px;color:var(--text-l2);display:flex;align-items:center;gap:12px;max-width:62ch}
-.ending .sig i{flex:none;width:12px;height:20px;border-radius:3px;background:#9fd2ff;box-shadow:0 0 10px rgba(124,196,255,.55)}
+.end-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px 64px;align-items:center}
+.end-phone{display:flex;align-items:center;gap:26px}
+.end-phone svg{flex:none;width:96px;height:150px;overflow:visible}
+.ending .sig{font-size:18px;line-height:1.55;color:var(--text-l2)}
+@media (max-width:860px){.end-grid{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- class of 24 ---------- */
 .class-sec{padding-block:8px 96px}
@@ -613,8 +616,18 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
     <path d="M0 612 C300 600 640 620 980 606 C1180 598 1340 602 1440 606 L1440 700 L0 700 Z" fill="#0b121a"/>
   </svg>
   <div class="wrap">
+    <div class="end-grid">
     <p class="closing">Support that reaches families before school, and keeps teenagers active and rested, works on both halves of the same story.</p>
-    <p class="sig"><i aria-hidden="true"></i>Long after dark, one screen is still on. More than 8 in 10 teenagers aged 15 to 17 have a smartphone in their bedroom.</p>
+    <div class="end-phone">
+      <svg viewBox="0 0 96 150" aria-hidden="true">
+        <circle cx="48" cy="75" r="70" fill="url(#screenGlow)" opacity=".6"/>
+        <rect x="22" y="22" width="52" height="106" rx="9" fill="#5fa7dc"/>
+        <rect x="27" y="31" width="42" height="84" rx="3" fill="#9fcdf0"/>
+        <rect x="41" y="120" width="14" height="3" rx="1.5" fill="#2e5f86"/>
+      </svg>
+    <p class="sig">Long after dark, one screen is still on. More than 8 in 10 teenagers aged 15 to 17 have a smartphone in their bedroom.</p>
+    </div>
+    </div>
   </div>
 </section>
 </main>
