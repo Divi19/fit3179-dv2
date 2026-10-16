@@ -13,7 +13,7 @@
     "lineHeight": 18
   },
   "width": "container",
-  "height": 360,
+  "height": 440,
   "projection": {
     "type": "conicEqualArea",
     "parallels": [
