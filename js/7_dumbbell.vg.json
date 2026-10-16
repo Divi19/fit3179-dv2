@@ -162,7 +162,7 @@
       ],
       "mark": {
         "type": "rule",
-        "color": "#c4c9cc",
+        "color": "#8a949b",
         "strokeWidth": 3.5
       },
       "encoding": {
@@ -206,7 +206,7 @@
       ],
       "mark": {
         "type": "rule",
-        "color": "#9aa3a9",
+        "color": "#5b6570",
         "strokeWidth": 1.5,
         "strokeDash": [
           4,
@@ -287,7 +287,7 @@
         "color": {
           "condition": {
             "test": "datum.area == 'ACT'",
-            "value": "#9aa3a9"
+            "value": "#5b6570"
           },
           "field": "group",
           "type": "nominal",
@@ -383,7 +383,7 @@
         "color": {
           "condition": {
             "test": "datum.area == 'ACT'",
-            "value": "#9aa3a9"
+            "value": "#5b6570"
           },
           "field": "group",
           "type": "nominal",
