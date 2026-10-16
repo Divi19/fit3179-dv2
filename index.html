@@ -85,7 +85,13 @@ svg{display:block}
 @media (max-width:900px){.hero{min-height:0}.hero .wrap{padding-bottom:380px}.hero-grid{grid-template-columns:minmax(0,1fr)}}
 
 .sunset{background:#2a1d2c}
-.sunset .wrap{padding-block:80px 120px}
+.sunset .wrap{padding-block:80px 120px;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:32px 64px;align-items:end}
+.inb{border-top:1px solid var(--hair-l)}
+.inb .k{display:block;font:700 13px var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--text-l3);padding:14px 0 6px}
+.inb a{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--hair-l);text-decoration:none;color:var(--text-l2);font-size:17px;line-height:1.4}
+.inb a b{color:var(--gold);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.inb a:hover span{color:var(--text-l)}
+@media (max-width:900px){.sunset .wrap{grid-template-columns:minmax(0,1fr)}}
 .sunset h2{font-size:clamp(56px,7vw,104px);line-height:.95;margin:18px 0 20px}
 .sunset p{font-size:20px;line-height:1.55;max-width:40ch;color:var(--text-l2)}
 .sunset .src{font-size:15px;margin-top:16px;color:var(--text-l3)}
@@ -455,10 +461,18 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
     <path d="M0 696 C320 684 720 708 1080 694 C1240 688 1360 690 1440 694 L1440 760 L0 760 Z" fill="#1b2b3d"/>
   </svg>
   <div class="wrap">
+    <div>
     <span class="tag b">Part B</span>
     <h2>Growing up</h2>
     <p>To see what happens after school starts, we follow a national survey of children's movement, screens, sleep and diet from age 2 to 17.</p>
     <p class="src">ABS National Nutrition and Physical Activity Survey 2023. Different children from Part A: the two datasets are not linked.</p>
+    </div>
+    <nav class="inb" aria-label="In Part B">
+      <span class="k">In Part B</span>
+      <a href="#day"><b>A day</b><span>How 24 hours are split between sleep, activity and screens</span></a>
+      <a href="#ch4"><b>Chapter 4</b><span>Movement guidelines, screens in the bedroom and sleep</span></a>
+      <a href="#ch5"><b>Chapter 5</b><span>Saturated fat and free sugars against the limits</span></a>
+    </nav>
   </div>
 </section>
 
