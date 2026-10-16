@@ -152,6 +152,8 @@ svg{display:block}
 .dark .howto b{color:var(--gold)}
 .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-top:72px}
 .pair .fig{margin-top:0}
+.pair-end{display:flex;flex-direction:column}
+.pair-end .next{margin-top:auto;padding-top:40px}
 @media (max-width:900px){.pair{grid-template-columns:minmax(0,1fr)}}
 
 /* number moments */
@@ -561,15 +563,15 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
         </div>
         <div class="chart scroll"><div id="vis10"></div></div>
       </div>
-      <div class="fig">
+      <div class="fig pair-end">
         <div class="fig-head">
           <h3>Teenagers sleep worse, not just less</h3>
           <p class="dek">Nearly half of 2–5 year olds slept very well. By 15–17, about 1 in 5 did.</p>
         </div>
         <div class="chart scroll"><div id="vis10b" style="min-width:480px"></div></div>
+        <p class="next">Movement and sleep slip with age. Diet tells a similar story.</p>
       </div>
     </div>
-    <p class="next">Movement and sleep slip with age. Diet tells a similar story.</p>
   </div>
   <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C220 56 520 66 820 44 C1080 26 1280 30 1440 48 L1440 70 L0 70 Z" fill="#0f1923"/></svg>
 </section>
