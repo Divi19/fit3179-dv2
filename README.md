@@ -23,7 +23,7 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 
 ## Page design
 
-The page follows one school day as the children grow. It opens on a drawn dawn scene at the school gate, where eight children walk in and one carries a rust backpack (1 in 8), followed by a class of 24 figure. Part A (the census) runs through warm daylight bands joined by hill and rooftop edges, with chapter 2 as a night band in the middle. Part B (the survey) opens on a drawn sunset street, and its charts are recoloured to sit straight on the night bands. The page closes on the same street at night, with one bedroom window lit by a phone. Scenes and edges are inline SVG drawn for the page.
+The page follows one school day as the children grow. It opens on a dawn sky where eight children walk to school and one carries a rust backpack (1 in 8), followed by a class of 24 figure. Part A (the census) runs through warm daylight bands joined by hill and rooftop edges, with chapter 2 as a night band in the middle. Part B (the survey) opens on a plain sunset gradient, and its charts are recoloured to sit straight on the night bands. The page closes on a night sky with a single lit phone screen. The banner scenes are kept deliberately sparse to avoid chartjunk; they and the band edges are inline SVG drawn for the page.
 
 Headings use Gloock and everything else, charts included, uses Source Sans 3. Rust (`#d0571b`, glowing `#ff8a4c` on dark) marks the census and worse outcomes; blue (`#0a74c4`, glowing `#4fa8ec` on dark) marks the survey and better outcomes; gold (`#f2b84b`) carries the closing line of each section on dark. A sticky ruler at the top shows the age in view: age 5 in Part A, ages 2 to 17 in Part B.
 
