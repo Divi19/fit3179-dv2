@@ -77,7 +77,7 @@
       "Physical health",
       "Social competence",
       "Emotional maturity",
-      "Language & thinking",
+      "Language and thinking",
       "Communication"
     ],
     "title": null,
@@ -574,7 +574,7 @@
         },
         "transform": [
           {
-            "filter": "(datum.domain == 'Emotional maturity' || datum.domain == 'Language & thinking') && datum.vulnerable_pct == datum.min_pct"
+            "filter": "(datum.domain == 'Emotional maturity' || datum.domain == 'Language and thinking') && datum.vulnerable_pct == datum.min_pct"
           },
           {
             "calculate": "'Low point ' + format(datum.vulnerable_pct, '.1f') + '% (' + datum.year + ')'",
