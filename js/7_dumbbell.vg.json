@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)",
+    "text": "% on track in all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)",
     "fontSize": 14,
     "fontWeight": "normal",
     "color": "#5b6570",
@@ -169,7 +169,7 @@
         "x": {
           "field": "q1",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -217,7 +217,7 @@
         "x": {
           "field": "q1",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -265,7 +265,7 @@
         "x": {
           "field": "on_track_pct",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -361,7 +361,7 @@
         "x": {
           "field": "on_track_pct",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -508,7 +508,7 @@
         "x": {
           "field": "lx",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -652,7 +652,7 @@
         "x": {
           "field": "q1",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,

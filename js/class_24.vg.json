@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A class of 24 children starting school in 2024: 3 vulnerable in two or more areas (12.5%), 3 more in one area (23.5% on one or more), 18 not vulnerable. AEDC 2024.",
+  "description": "A class of 24 children starting school in 2024: 3 vulnerable in two or more areas (12.5%), 3 more in one area (23.5% in one or more), 18 not vulnerable. AEDC 2024.",
   "width": "container",
   "height": 260,
   "autosize": {

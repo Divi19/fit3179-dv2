@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": {
-      "expr": "'Share of children developmentally vulnerable' + (measure == 'One or more areas' ? ' on one or more areas' : ' in ' + lower(measure)) + ', by council, 2024 · use the menu to switch areas of development'"
+      "expr": "'Share of children developmentally vulnerable' + (measure == 'One or more areas' ? ' in one or more areas' : ' in ' + lower(measure)) + ', by council, 2024 · use the menu to switch areas of development'"
     },
     "fontSize": 14,
     "fontWeight": "normal",

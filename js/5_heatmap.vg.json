@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% of children on track on all five areas, by state · colour = change since the previous collection",
+    "text": "% of children on track in all five areas, by state · colour = change since the previous collection",
     "fontSize": 14,
     "fontWeight": "normal",
     "color": "#94a0ab",
@@ -199,7 +199,7 @@
           },
           {
             "field": "pct",
-            "title": "% on track on all 5",
+            "title": "% on track in all five areas",
             "format": ".1f"
           },
           {
@@ -271,7 +271,7 @@
           },
           {
             "field": "pct",
-            "title": "% on track on all 5",
+            "title": "% on track in all five areas",
             "format": ".1f"
           },
           {
