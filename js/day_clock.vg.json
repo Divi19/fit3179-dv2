@@ -47,7 +47,7 @@
           }
         }
       },
-      "spacing": 26,
+      "spacing": 20,
       "spec": {
         "width": 211,
         "height": 232,
@@ -177,7 +177,7 @@
             ],
             "mark": {
               "type": "text",
-              "fontSize": 9.5,
+              "fontSize": 12,
               "color": "#94a0ab",
               "radius": 100,
               "y": 106
@@ -235,7 +235,7 @@
               "type": "text",
               "align": "center",
               "baseline": "top",
-              "fontSize": 11,
+              "fontSize": 12,
               "fontWeight": "bold",
               "color": "#f08a24",
               "x": 105.5,
@@ -261,7 +261,7 @@
               "type": "text",
               "align": "center",
               "baseline": "bottom",
-              "fontSize": 11,
+              "fontSize": 12,
               "fontStyle": "italic",
               "color": "#3f9ee8",
               "x": 105.5,

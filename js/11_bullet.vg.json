@@ -35,7 +35,7 @@
         "text": "Saturated + trans fat",
         "subtitle": "NHMRC target: no more than 10% of energy",
         "fontSize": 14,
-        "subtitleFontSize": 11
+        "subtitleFontSize": 12
       },
       "width": 410,
       "height": 210,
@@ -169,7 +169,7 @@
             "type": "text",
             "align": "center",
             "baseline": "top",
-            "fontSize": 11,
+            "fontSize": 12,
             "color": "#b3bcc5"
           },
           "encoding": {
@@ -463,7 +463,7 @@
             "type": "text",
             "align": "center",
             "baseline": "bottom",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#efe6d6"
           },
@@ -559,7 +559,7 @@
         "text": "Free sugars",
         "subtitle": "WHO: under 10% of energy, ideally under 5%",
         "fontSize": 14,
-        "subtitleFontSize": 11
+        "subtitleFontSize": 12
       },
       "width": 410,
       "height": 210,
@@ -705,7 +705,7 @@
             "type": "text",
             "align": "center",
             "baseline": "top",
-            "fontSize": 11,
+            "fontSize": 12,
             "color": "#b3bcc5"
           },
           "encoding": {
@@ -999,7 +999,7 @@
             "type": "text",
             "align": "center",
             "baseline": "bottom",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#efe6d6"
           },

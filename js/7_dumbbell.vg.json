@@ -500,7 +500,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -10,
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#46525d"
       },

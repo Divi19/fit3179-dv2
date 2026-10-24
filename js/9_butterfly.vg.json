@@ -275,7 +275,7 @@
         "align": "right",
         "baseline": "top",
         "dx": -4,
-        "fontSize": 11,
+        "fontSize": 12,
         "color": "#efe6d6"
       },
       "encoding": {
@@ -305,7 +305,7 @@
         "align": "left",
         "baseline": "top",
         "dx": 4,
-        "fontSize": 11,
+        "fontSize": 12,
         "color": "#efe6d6"
       },
       "encoding": {
