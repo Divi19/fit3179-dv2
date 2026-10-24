@@ -2,9 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": [
-      "Change in share vulnerable on 1+ domains, 2021 → 2024 ·",
-      "councils grouped into equal-sized hexagons (~100 km) ·",
-      "hexes with fewer than 100 children hidden"
+      "Change in share vulnerable in one or more areas, 2021 to 2024 ·",
+      "councils grouped into equal-sized hexagons (about 100 km across) ·",
+      "hexagons with fewer than 100 children hidden"
     ],
     "fontSize": 14,
     "fontWeight": "normal",

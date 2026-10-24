@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": {
-      "expr": "'Share of children developmentally vulnerable' + (measure == 'One or more domains' ? ' on one or more areas' : ' in ' + lower(measure)) + ', by council, 2024 · use the menu to switch areas of development'"
+      "expr": "'Share of children developmentally vulnerable' + (measure == 'One or more areas' ? ' on one or more areas' : ' in ' + lower(measure)) + ', by council, 2024 · use the menu to switch areas of development'"
     },
     "fontSize": 14,
     "fontWeight": "normal",
@@ -13,11 +13,11 @@
   "params": [
     {
       "name": "measure",
-      "value": "One or more domains",
+      "value": "One or more areas",
       "bind": {
         "input": "select",
         "options": [
-          "One or more domains",
+          "One or more areas",
           "Physical health",
           "Social competence",
           "Emotional maturity",
@@ -92,7 +92,7 @@
               "as": "geo"
             },
             {
-              "calculate": "datum.measure == 'One or more domains' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
+              "calculate": "datum.measure == 'One or more areas' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
               "as": "class"
             },
             {
@@ -153,7 +153,7 @@
                 "symbolType": "square",
                 "symbolSize": 180,
                 "symbolStrokeWidth": 0,
-                "labelExpr": "measure == 'One or more domains' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
+                "labelExpr": "measure == 'One or more areas' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
               }
             },
             "strokeWidth": {
@@ -239,7 +239,7 @@
             "fontWeight": "bold",
             "color": "#8e3410",
             "opacity": {
-              "expr": "measure == 'One or more domains' ? 1 : 0"
+              "expr": "measure == 'One or more areas' ? 1 : 0"
             }
           },
           "encoding": {
@@ -377,7 +377,7 @@
                   "as": "geo"
                 },
                 {
-                  "calculate": "datum.measure == 'One or more domains' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
+                  "calculate": "datum.measure == 'One or more areas' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
                   "as": "class"
                 },
                 {
@@ -426,7 +426,7 @@
                     "symbolType": "square",
                     "symbolSize": 180,
                     "symbolStrokeWidth": 0,
-                    "labelExpr": "measure == 'One or more domains' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
+                    "labelExpr": "measure == 'One or more areas' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
                   }
                 },
                 "tooltip": [
@@ -566,7 +566,7 @@
                   "as": "geo"
                 },
                 {
-                  "calculate": "datum.measure == 'One or more domains' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
+                  "calculate": "datum.measure == 'One or more areas' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
                   "as": "class"
                 },
                 {
@@ -615,7 +615,7 @@
                     "symbolType": "square",
                     "symbolSize": 180,
                     "symbolStrokeWidth": 0,
-                    "labelExpr": "measure == 'One or more domains' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
+                    "labelExpr": "measure == 'One or more areas' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
                   }
                 },
                 "tooltip": [
@@ -755,7 +755,7 @@
                   "as": "geo"
                 },
                 {
-                  "calculate": "datum.measure == 'One or more domains' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
+                  "calculate": "datum.measure == 'One or more areas' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
                   "as": "class"
                 },
                 {
@@ -804,7 +804,7 @@
                     "symbolType": "square",
                     "symbolSize": 180,
                     "symbolStrokeWidth": 0,
-                    "labelExpr": "measure == 'One or more domains' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
+                    "labelExpr": "measure == 'One or more areas' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
                   }
                 },
                 "tooltip": [
@@ -1341,7 +1341,7 @@
                   "as": "geo"
                 },
                 {
-                  "calculate": "datum.measure == 'One or more domains' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
+                  "calculate": "datum.measure == 'One or more areas' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
                   "as": "class"
                 },
                 {
@@ -1390,7 +1390,7 @@
                     "symbolType": "square",
                     "symbolSize": 180,
                     "symbolStrokeWidth": 0,
-                    "labelExpr": "measure == 'One or more domains' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
+                    "labelExpr": "measure == 'One or more areas' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
                   }
                 },
                 "tooltip": [
@@ -1530,7 +1530,7 @@
                   "as": "geo"
                 },
                 {
-                  "calculate": "datum.measure == 'One or more domains' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
+                  "calculate": "datum.measure == 'One or more areas' ? (datum.vulnerable_pct < 15 ? 0 : datum.vulnerable_pct < 20 ? 1 : datum.vulnerable_pct < 25 ? 2 : datum.vulnerable_pct < 30 ? 3 : datum.vulnerable_pct < 40 ? 4 : 5) : (datum.vulnerable_pct < 6 ? 0 : datum.vulnerable_pct < 9 ? 1 : datum.vulnerable_pct < 12 ? 2 : datum.vulnerable_pct < 15 ? 3 : datum.vulnerable_pct < 20 ? 4 : 5)",
                   "as": "class"
                 },
                 {
@@ -1579,7 +1579,7 @@
                     "symbolType": "square",
                     "symbolSize": 180,
                     "symbolStrokeWidth": 0,
-                    "labelExpr": "measure == 'One or more domains' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
+                    "labelExpr": "measure == 'One or more areas' ? ['Under 15%', '15–20%', '20–25%', '25–30%', '30–40%', '40% or more'][datum.value] : ['Under 6%', '6–9%', '9–12%', '12–15%', '15–20%', '20% or more'][datum.value]"
                   }
                 },
                 "tooltip": [

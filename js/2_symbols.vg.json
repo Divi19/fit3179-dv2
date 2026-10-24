@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Number of children vulnerable on 1+ domains, by council · use the slider or press play",
+    "text": "Number of children vulnerable in one or more areas, by council · use the slider or press play",
     "fontSize": 14,
     "fontWeight": "normal",
     "color": "#5b6570",

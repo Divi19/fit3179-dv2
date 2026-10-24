@@ -74,7 +74,7 @@ print("aedc_lga.csv", len(out), "rows,", len({o['lga_code'] for o in out}), "cou
 
 # ---------- 2. AEDC by council, 2024, vulnerable per domain (chart 1 dropdown) ----------
 # One or more: n = r[19], % = r[20]. Domain sheets: vulnerable pairs start at r[33], so 2024 is r[43], r[44].
-MEASURES=[('One or more domains','LGA One or more',19),('Physical health','LGA Health',43),
+MEASURES=[('One or more areas','LGA One or more',19),('Physical health','LGA Health',43),
           ('Social competence','LGA Social',43),('Emotional maturity','LGA Emotional',43),
           ('Language & thinking','LGA Language',43),('Communication','LGA Communication',43)]
 lgadom=[]
@@ -95,8 +95,8 @@ with open(OUT+"aedc_lga_domains.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(lgadom[0])); w.writeheader(); w.writerows(lgadom)
 chk={(d['lga_name'],d['measure']):d['vulnerable_pct'] for d in lgadom}
 print("aedc_lga_domains.csv", len(lgadom), "rows; check Albury DV1/Health, Brisbane DV1/Language:",
-      chk[('Albury','One or more domains')], chk[('Albury','Physical health')],
-      chk[('Brisbane','One or more domains')], chk[('Brisbane','Language & thinking')])
+      chk[('Albury','One or more areas')], chk[('Albury','Physical health')],
+      chk[('Brisbane','One or more areas')], chk[('Brisbane','Language & thinking')])
 
 # ---------- 3. State trends: summary indicators (chart 5) + national domains (chart 6) ----------
 wb=openpyxl.load_workbook(SRC+"state-and-territory-trends-(2009-2024).xlsx", data_only=True, read_only=True)

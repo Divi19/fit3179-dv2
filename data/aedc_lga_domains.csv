@@ -1,550 +1,550 @@
 lga_code,lga_name,state,measure,children_assessed,vulnerable_n,vulnerable_pct
-10050,Albury,NSW,One or more domains,640,151,23.6
-10180,Armidale,NSW,One or more domains,287,110,38.3
-10250,Ballina,NSW,One or more domains,406,76,18.7
-10300,Balranald,NSW,One or more domains,27,10,37.0
-10470,Bathurst,NSW,One or more domains,498,118,23.7
-10500,Bayside (NSW),NSW,One or more domains,1495,304,20.3
-10550,Bega Valley,NSW,One or more domains,288,81,28.1
-10600,Bellingen,NSW,One or more domains,92,20,21.7
-10650,Berrigan,NSW,One or more domains,72,14,19.4
-10750,Blacktown,NSW,One or more domains,5478,1454,26.5
-10800,Bland,NSW,One or more domains,66,12,18.2
-10850,Blayney,NSW,One or more domains,97,25,25.8
-10900,Blue Mountains,NSW,One or more domains,663,102,15.4
-10950,Bogan,NSW,One or more domains,41,4,9.8
-11150,Bourke,NSW,One or more domains,31,14,45.2
-11200,Brewarrina,NSW,One or more domains,21,12,57.1
-11250,Broken Hill,NSW,One or more domains,179,54,30.2
-11300,Burwood,NSW,One or more domains,274,61,22.3
-11350,Byron,NSW,One or more domains,322,57,17.7
-11400,Cabonne,NSW,One or more domains,161,35,21.7
-11450,Camden,NSW,One or more domains,2112,427,20.2
-11500,Campbelltown (NSW),NSW,One or more domains,2347,609,25.9
-11520,Canada Bay,NSW,One or more domains,744,142,19.1
-11570,Canterbury-Bankstown,NSW,One or more domains,4225,980,23.2
-11600,Carrathool,NSW,One or more domains,38,4,10.5
-11650,Central Coast (NSW),NSW,One or more domains,3647,743,20.4
-11700,Central Darling,NSW,One or more domains,21,9,42.9
-11720,Cessnock,NSW,One or more domains,780,218,27.9
-11730,Clarence Valley,NSW,One or more domains,553,117,21.2
-11750,Cobar,NSW,One or more domains,51,19,37.3
-11800,Coffs Harbour,NSW,One or more domains,729,192,26.3
-12000,Coolamon,NSW,One or more domains,64,12,18.8
-12150,Coonamble,NSW,One or more domains,68,28,41.2
-12160,Cootamundra-Gundagai,NSW,One or more domains,108,18,16.7
-12350,Cowra,NSW,One or more domains,126,36,28.6
-12380,Cumberland,NSW,One or more domains,2964,793,26.8
-12390,Dubbo,NSW,One or more domains,611,147,24.1
-12700,Dungog,NSW,One or more domains,106,30,28.3
-12730,Edward River,NSW,One or more domains,94,21,22.3
-12750,Eurobodalla,NSW,One or more domains,301,78,25.9
-12850,Fairfield,NSW,One or more domains,1997,618,30.9
-12870,Federation,NSW,One or more domains,121,38,31.4
-12900,Forbes,NSW,One or more domains,111,26,23.4
-12930,Georges River,NSW,One or more domains,1323,271,20.5
-12950,Gilgandra,NSW,One or more domains,46,12,26.1
-13010,Glen Innes Severn,NSW,One or more domains,65,22,33.8
-13310,Goulburn Mulwaree,NSW,One or more domains,341,70,20.5
-13340,Greater Hume,NSW,One or more domains,103,31,30.1
-13450,Griffith,NSW,One or more domains,303,86,28.4
-13550,Gunnedah,NSW,One or more domains,142,36,25.4
-13660,Gwydir,NSW,One or more domains,43,25,58.1
-13800,Hawkesbury,NSW,One or more domains,714,115,16.1
-13850,Hay,NSW,One or more domains,23,11,47.8
-13910,Hilltops,NSW,One or more domains,192,41,21.4
-14000,Hornsby,NSW,One or more domains,1554,290,18.7
-14100,Hunters Hill,NSW,One or more domains,127,15,11.8
-14170,Inner West,NSW,One or more domains,1431,220,15.4
-14220,Inverell,NSW,One or more domains,178,52,29.2
-14300,Junee,NSW,One or more domains,52,13,25
-14350,Kempsey,NSW,One or more domains,262,78,29.8
-14400,Kiama,NSW,One or more domains,215,23,10.7
-14500,Ku-ring-gai,NSW,One or more domains,1141,209,18.3
-14550,Kyogle,NSW,One or more domains,99,33,33.3
-14600,Lachlan,NSW,One or more domains,74,20,27.0
-14650,Lake Macquarie,NSW,One or more domains,2148,426,19.8
-14700,Lane Cove,NSW,One or more domains,418,64,15.3
-14750,Leeton,NSW,One or more domains,137,33,24.1
-14850,Lismore,NSW,One or more domains,348,82,23.6
-14870,Lithgow,NSW,One or more domains,160,35,21.9
-14900,Liverpool,NSW,One or more domains,3103,809,26.1
-14920,Liverpool Plains,NSW,One or more domains,65,20,30.8
-14950,Lockhart,NSW,One or more domains,37,4,10.8
-15050,Maitland,NSW,One or more domains,1144,264,23.1
-15240,Mid-Coast,NSW,One or more domains,785,180,22.9
-15270,Mid-Western,NSW,One or more domains,314,93,29.6
-15300,Moree Plains,NSW,One or more domains,127,42,33.1
-15350,Mosman,NSW,One or more domains,216,19,8.8
-15520,Murray River,NSW,One or more domains,126,18,14.3
-15560,Murrumbidgee,NSW,One or more domains,26,11,42.3
-15650,Muswellbrook,NSW,One or more domains,183,60,32.8
-15700,Nambucca Valley,NSW,One or more domains,175,61,34.9
-15750,Narrabri,NSW,One or more domains,137,27,19.7
-15800,Narrandera,NSW,One or more domains,76,21,27.6
-15850,Narromine,NSW,One or more domains,57,9,15.8
-15900,Newcastle,NSW,One or more domains,1609,320,19.9
-15950,North Sydney,NSW,One or more domains,478,81,16.9
-15990,Northern Beaches,NSW,One or more domains,2564,332,12.9
-16100,Oberon,NSW,One or more domains,50,13,26
-16150,Orange,NSW,One or more domains,471,123,26.1
-16200,Parkes,NSW,One or more domains,181,45,24.9
-16260,Parramatta,NSW,One or more domains,2800,606,21.6
-16350,Penrith,NSW,One or more domains,2618,638,24.4
-16380,Port Macquarie-Hastings,NSW,One or more domains,747,180,24.1
-16400,Port Stephens,NSW,One or more domains,678,162,23.9
-16490,Queanbeyan-Palerang,NSW,One or more domains,746,175,23.5
-16550,Randwick,NSW,One or more domains,1065,181,17.0
-16610,Richmond Valley,NSW,One or more domains,214,37,17.3
-16700,Ryde,NSW,One or more domains,1274,251,19.7
-16900,Shellharbour,NSW,One or more domains,909,221,24.3
-16950,Shoalhaven,NSW,One or more domains,1091,268,24.6
-17000,Singleton,NSW,One or more domains,261,58,22.2
-17040,Snowy Monaro,NSW,One or more domains,192,41,21.4
-17080,Snowy Valleys,NSW,One or more domains,162,47,29.0
-17100,Strathfield,NSW,One or more domains,350,79,22.6
-17150,Sutherland,NSW,One or more domains,2527,351,13.9
-17200,Sydney,NSW,One or more domains,856,130,15.2
-17310,Tamworth,NSW,One or more domains,744,212,28.5
-17350,Temora,NSW,One or more domains,54,10,18.5
-17400,Tenterfield,NSW,One or more domains,63,16,25.4
-17420,The Hills,NSW,One or more domains,2333,363,15.6
-17550,Tweed,NSW,One or more domains,973,162,16.6
-17620,Upper Hunter,NSW,One or more domains,146,29,19.9
-17640,Upper Lachlan,NSW,One or more domains,77,16,20.8
-17650,Uralla,NSW,One or more domains,63,25,39.7
-17750,Wagga Wagga,NSW,One or more domains,768,206,26.8
-17850,Walcha,NSW,One or more domains,39,6,15.4
-17900,Walgett,NSW,One or more domains,81,33,40.7
-17950,Warren,NSW,One or more domains,25,1,4
-18020,Warrumbungle,NSW,One or more domains,109,28,25.7
-18050,Waverley,NSW,One or more domains,551,43,7.8
-18100,Weddin,NSW,One or more domains,36,2,5.6
-18200,Wentworth,NSW,One or more domains,92,18,19.6
-18250,Willoughby,NSW,One or more domains,737,116,15.7
-18350,Wingecarribee,NSW,One or more domains,487,67,13.8
-18400,Wollondilly,NSW,One or more domains,709,126,17.8
-18450,Wollongong,NSW,One or more domains,2210,472,21.4
-18500,Woollahra,NSW,One or more domains,405,38,9.4
-18710,Yass Valley,NSW,One or more domains,133,25,18.8
-19399,Unincorporated NSW,NSW,One or more domains,,,
-20110,Alpine,VIC,One or more domains,114,20,17.5
-20260,Ararat,VIC,One or more domains,107,41,38.3
-20570,Ballarat,VIC,One or more domains,1119,303,27.1
-20660,Banyule,VIC,One or more domains,1152,190,16.5
-20740,Bass Coast,VIC,One or more domains,300,72,24
-20830,Baw Baw,VIC,One or more domains,644,164,25.5
-20910,Bayside (Vic.),VIC,One or more domains,776,78,10.1
-21010,Benalla,VIC,One or more domains,126,38,30.2
-21110,Boroondara,VIC,One or more domains,1074,182,16.9
-21180,Brimbank,VIC,One or more domains,1771,493,27.8
-21270,Buloke,VIC,One or more domains,48,18,37.5
-21370,Campaspe,VIC,One or more domains,320,73,22.8
-21450,Cardinia,VIC,One or more domains,1607,376,23.4
-21610,Casey,VIC,One or more domains,5268,1336,25.4
-21670,Central Goldfields,VIC,One or more domains,82,33,40.2
-21750,Colac Otway,VIC,One or more domains,183,66,36.1
-21830,Corangamite,VIC,One or more domains,119,21,17.6
-21890,Darebin,VIC,One or more domains,1153,182,15.8
-22110,East Gippsland,VIC,One or more domains,285,85,29.8
-22170,Frankston,VIC,One or more domains,1212,284,23.4
-22250,Gannawarra,VIC,One or more domains,104,25,24.0
-22310,Glen Eira,VIC,One or more domains,1163,218,18.7
-22410,Glenelg,VIC,One or more domains,146,34,23.3
-22490,Golden Plains,VIC,One or more domains,268,75,28.0
-22620,Greater Bendigo,VIC,One or more domains,1318,326,24.7
-22670,Greater Dandenong,VIC,One or more domains,1526,440,28.8
-22750,Greater Geelong,VIC,One or more domains,2543,569,22.4
-22830,Greater Shepparton,VIC,One or more domains,740,256,34.6
-22910,Hepburn,VIC,One or more domains,131,26,19.8
-22980,Hindmarsh,VIC,One or more domains,41,7,17.1
-23110,Hobsons Bay,VIC,One or more domains,721,153,21.2
-23190,Horsham,VIC,One or more domains,198,54,27.3
-23270,Hume,VIC,One or more domains,3070,943,30.7
-23350,Indigo,VIC,One or more domains,143,36,25.2
-23430,Kingston (Vic.),VIC,One or more domains,1432,234,16.3
-23670,Knox,VIC,One or more domains,1244,221,17.8
-23810,Latrobe (Vic.),VIC,One or more domains,698,202,28.9
-23940,Loddon,VIC,One or more domains,69,17,24.6
-24130,Macedon Ranges,VIC,One or more domains,523,53,10.1
-24210,Manningham,VIC,One or more domains,1103,171,15.5
-24250,Mansfield,VIC,One or more domains,68,11,16.2
-24330,Maribyrnong,VIC,One or more domains,767,169,22.0
-24410,Maroondah,VIC,One or more domains,1123,164,14.6
-24600,Melbourne,VIC,One or more domains,615,147,23.9
-24650,Melton,VIC,One or more domains,2470,727,29.4
-24780,Mildura,VIC,One or more domains,419,117,27.9
-24850,Mitchell,VIC,One or more domains,583,140,24.0
-24900,Moira,VIC,One or more domains,285,70,24.6
-24970,Monash,VIC,One or more domains,1553,276,17.8
-25060,Moonee Valley,VIC,One or more domains,855,125,14.6
-25150,Moorabool,VIC,One or more domains,406,86,21.2
-24700,Moreland,VIC,One or more domains,1396,268,19.2
-25340,Mornington Peninsula,VIC,One or more domains,1355,216,15.9
-25430,Mount Alexander,VIC,One or more domains,151,34,22.5
-25490,Moyne,VIC,One or more domains,178,33,18.5
-25620,Murrindindi,VIC,One or more domains,122,22,18.0
-25710,Nillumbik,VIC,One or more domains,630,83,13.2
-25810,Northern Grampians,VIC,One or more domains,81,22,27.2
-25900,Port Phillip,VIC,One or more domains,526,90,17.1
-25990,Pyrenees,VIC,One or more domains,46,6,13.0
-26080,Queenscliffe,VIC,One or more domains,22,,
-26170,South Gippsland,VIC,One or more domains,267,76,28.5
-26260,Southern Grampians,VIC,One or more domains,146,35,24.0
-26350,Stonnington,VIC,One or more domains,509,64,12.6
-26430,Strathbogie,VIC,One or more domains,81,15,18.5
-26490,Surf Coast,VIC,One or more domains,356,26,7.3
-26610,Swan Hill,VIC,One or more domains,211,45,21.3
-26670,Towong,VIC,One or more domains,55,13,23.6
-26700,Wangaratta,VIC,One or more domains,241,34,14.1
-26730,Warrnambool,VIC,One or more domains,365,80,21.9
-26810,Wellington,VIC,One or more domains,429,116,27.0
-26890,West Wimmera,VIC,One or more domains,43,3,7.0
-26980,Whitehorse,VIC,One or more domains,1423,212,14.9
-27070,Whittlesea,VIC,One or more domains,2583,549,21.3
-27170,Wodonga,VIC,One or more domains,505,139,27.5
-27260,Wyndham,VIC,One or more domains,4470,1133,25.3
-27350,Yarra,VIC,One or more domains,558,98,17.6
-27450,Yarra Ranges,VIC,One or more domains,1543,285,18.5
-27630,Yarriambiack,VIC,One or more domains,44,11,25
-29399,Unincorporated Vic,VIC,One or more domains,0,,
-30250,Aurukun,QLD,One or more domains,12,,
-30300,Balonne,QLD,One or more domains,62,21,33.9
-30370,Banana,QLD,One or more domains,171,45,26.3
-30410,Barcaldine,QLD,One or more domains,29,11,37.9
-30450,Barcoo,QLD,One or more domains,6,,
-30760,Blackall Tambo,QLD,One or more domains,22,7,31.8
-30900,Boulia,QLD,One or more domains,4,,
-31000,Brisbane,QLD,One or more domains,12887,2756,21.4
-31750,Bulloo,QLD,One or more domains,4,,
-31820,Bundaberg,QLD,One or more domains,966,289,29.9
-31900,Burdekin,QLD,One or more domains,200,65,32.5
-31950,Burke,QLD,One or more domains,,,
-32080,Cairns,QLD,One or more domains,1814,455,25.1
-32250,Carpentaria,QLD,One or more domains,24,17,70.8
-32260,Cassowary Coast,QLD,One or more domains,344,134,39.0
-32270,Central Highlands (Qld),QLD,One or more domains,406,121,29.8
-32310,Charters Towers,QLD,One or more domains,111,33,29.7
-32330,Cherbourg,QLD,One or more domains,23,19,82.6
-32450,Cloncurry,QLD,One or more domains,46,11,23.9
-32500,Cook,QLD,One or more domains,45,13,28.9
-32600,Croydon,QLD,One or more domains,,,
-32750,Diamantina,QLD,One or more domains,,,
-32770,Doomadgee,QLD,One or more domains,30,19,63.3
-32810,Douglas,QLD,One or more domains,103,19,18.4
-33100,Etheridge,QLD,One or more domains,13,,
-33200,Flinders (Qld),QLD,One or more domains,23,6,26.1
-33220,Fraser Coast,QLD,One or more domains,972,311,32.0
-33360,Gladstone,QLD,One or more domains,857,247,28.8
-33430,Gold Coast,QLD,One or more domains,6166,1285,20.8
-33610,Goondiwindi,QLD,One or more domains,133,37,27.8
-33620,Gympie,QLD,One or more domains,524,121,23.1
-33800,Hinchinbrook,QLD,One or more domains,95,21,22.1
-33830,Hope Vale,QLD,One or more domains,18,9,50
-33960,Ipswich,QLD,One or more domains,3634,1025,28.2
-33980,Isaac,QLD,One or more domains,306,77,25.2
-34420,Kowanyama,QLD,One or more domains,10,,
-34530,Livingstone,QLD,One or more domains,405,100,24.7
-34570,Lockhart River,QLD,One or more domains,8,,
-34580,Lockyer Valley,QLD,One or more domains,467,122,26.1
-34590,Logan,QLD,One or more domains,5039,1465,29.1
-34710,Longreach,QLD,One or more domains,39,4,10.3
-34770,Mackay,QLD,One or more domains,1557,442,28.4
-34800,McKinlay,QLD,One or more domains,6,,
-34830,Mapoon,QLD,One or more domains,7,,
-34860,Maranoa,QLD,One or more domains,155,45,29.0
-34880,Mareeba,QLD,One or more domains,216,60,27.8
-35010,Moreton Bay,QLD,One or more domains,5672,1587,28.0
-35250,Mornington,QLD,One or more domains,18,,
-35300,Mount Isa,QLD,One or more domains,292,103,35.3
-35600,Murweh,QLD,One or more domains,40,18,45
-35670,Napranum,QLD,One or more domains,16,10,62.5
-35740,Noosa,QLD,One or more domains,411,60,14.6
-35760,North Burnett,QLD,One or more domains,96,34,35.4
-35780,Northern Peninsula Area,QLD,One or more domains,55,19,34.5
-35790,Palm Island,QLD,One or more domains,31,14,45.2
-35800,Paroo,QLD,One or more domains,28,18,64.3
-36070,Pormpuraaw,QLD,One or more domains,9,,
-36150,Quilpie,QLD,One or more domains,14,,
-36250,Redland,QLD,One or more domains,1632,333,20.4
-36300,Richmond,QLD,One or more domains,11,,
-36370,Rockhampton,QLD,One or more domains,972,302,31.1
-36510,Scenic Rim,QLD,One or more domains,410,96,23.4
-36580,Somerset,QLD,One or more domains,284,81,28.5
-36630,South Burnett,QLD,One or more domains,312,96,30.8
-36660,Southern Downs,QLD,One or more domains,360,110,30.6
-36720,Sunshine Coast,QLD,One or more domains,3607,703,19.5
-36820,Tablelands,QLD,One or more domains,263,68,25.9
-36910,Toowoomba,QLD,One or more domains,2021,600,29.7
-36950,Torres,QLD,One or more domains,55,17,30.9
-36960,Torres Strait Island,QLD,One or more domains,90,44,48.9
-37010,Townsville,QLD,One or more domains,2214,635,28.7
-37300,Weipa,QLD,One or more domains,65,2,3.1
-37310,Western Downs,QLD,One or more domains,470,124,26.4
-37340,Whitsunday,QLD,One or more domains,370,85,23.0
-37400,Winton,QLD,One or more domains,5,,
-37550,Woorabinda,QLD,One or more domains,23,15,65.2
-37570,Wujal Wujal,QLD,One or more domains,4,,
-37600,Yarrabah,QLD,One or more domains,46,23,50
-40070,Adelaide,SA,One or more domains,66,13,19.7
-40120,Adelaide Hills,SA,One or more domains,389,68,17.5
-40150,Adelaide Plains,SA,One or more domains,105,29,27.6
-40220,Alexandrina,SA,One or more domains,212,37,17.5
-40250,Anangu Pitjantjatjara Yunkunyt,SA,One or more domains,29,25,86.2
-40310,Barossa,SA,One or more domains,230,45,19.6
-40430,Barunga West,SA,One or more domains,24,5,20.8
-40520,Berri Barmera,SA,One or more domains,89,24,27.0
-40700,Burnside,SA,One or more domains,421,68,16.2
-40910,Campbelltown (SA),SA,One or more domains,522,111,21.3
-41010,Ceduna,SA,One or more domains,54,22,40.7
-41060,Charles Sturt,SA,One or more domains,1063,235,22.1
-41140,Clare and Gilbert Valleys,SA,One or more domains,79,23,29.1
-41190,Cleve,SA,One or more domains,22,5,22.7
-41330,Coober Pedy,SA,One or more domains,6,,
-41560,Copper Coast,SA,One or more domains,128,38,29.7
-41750,Elliston,SA,One or more domains,10,,
-41830,Flinders Ranges,SA,One or more domains,17,7,41.2
-41960,Franklin Harbour,SA,One or more domains,,,
-42030,Gawler,SA,One or more domains,250,52,20.8
-42110,Goyder,SA,One or more domains,20,8,40
-42250,Grant,SA,One or more domains,72,8,11.1
-42600,Holdfast Bay,SA,One or more domains,273,41,15.0
-42750,Kangaroo Island,SA,One or more domains,47,7,14.9
-43080,Karoonda East Murray,SA,One or more domains,15,4,26.7
-43220,Kimba,SA,One or more domains,11,,
-43360,Kingston (SA),SA,One or more domains,12,,
-43650,Light,SA,One or more domains,185,41,22.2
-43710,Lower Eyre Peninsula,SA,One or more domains,66,16,24.2
-43790,Loxton Waikerie,SA,One or more domains,117,33,28.2
-44000,Maralinga Tjarutja,SA,One or more domains,,,
-44060,Marion,SA,One or more domains,971,193,19.9
-44210,Mid Murray,SA,One or more domains,68,15,22.1
-44340,Mitcham,SA,One or more domains,706,104,14.7
-44550,Mount Barker,SA,One or more domains,472,102,21.6
-44620,Mount Gambier,SA,One or more domains,281,63,22.4
-44830,Mount Remarkable,SA,One or more domains,25,7,28
-45040,Murray Bridge,SA,One or more domains,173,78,45.1
-45090,Naracoorte Lucindale,SA,One or more domains,102,28,27.5
-45120,Northern Areas,SA,One or more domains,43,9,20.9
-45290,Norwood Payneham and St Peters,SA,One or more domains,314,55,17.5
-45340,Onkaparinga,SA,One or more domains,1782,490,27.5
-45400,Orroroo Carrieton,SA,One or more domains,14,,
-45540,Peterborough,SA,One or more domains,10,,
-45680,Playford,SA,One or more domains,1469,530,36.1
-45890,Port Adelaide Enfield,SA,One or more domains,1317,294,22.3
-46090,Port Augusta,SA,One or more domains,163,66,40.5
-46300,Port Lincoln,SA,One or more domains,154,30,19.5
-46450,Port Pirie,SA,One or more domains,190,68,35.8
-46510,Prospect,SA,One or more domains,221,28,12.7
-46670,Renmark Paringa,SA,One or more domains,104,22,21.2
-46860,Robe,SA,One or more domains,13,,
-46970,Roxby Downs,SA,One or more domains,57,15,26.3
-47140,Salisbury,SA,One or more domains,1623,497,30.6
-47290,Southern Mallee,SA,One or more domains,19,3,15.8
-47490,Streaky Bay,SA,One or more domains,21,3,14.3
-47630,Tatiara,SA,One or more domains,57,6,10.5
-47700,Tea Tree Gully,SA,One or more domains,981,219,22.3
-47800,Coorong,SA,One or more domains,54,14,25.9
-47910,Tumby Bay,SA,One or more domains,34,7,20.6
-47980,Unley,SA,One or more domains,334,51,15.3
-48050,Victor Harbor,SA,One or more domains,80,30,37.5
-48130,Wakefield,SA,One or more domains,75,21,28
-48260,Walkerville,SA,One or more domains,63,6,9.5
-48340,Wattle Range,SA,One or more domains,115,33,28.7
-48410,West Torrens,SA,One or more domains,529,107,20.2
-48540,Whyalla,SA,One or more domains,224,80,35.7
-48640,Wudinna,SA,One or more domains,11,,
-48750,Yankalilla,SA,One or more domains,52,13,25
-48830,Yorke Peninsula,SA,One or more domains,93,16,17.2
-49399,Unincorporated SA,SA,One or more domains,29,12,41.4
-50080,Albany,WA,One or more domains,415,106,25.5
-50210,Armadale,WA,One or more domains,1601,494,30.9
-50250,Ashburton,WA,One or more domains,117,34,29.1
-50280,Augusta Margaret River,WA,One or more domains,226,52,23.0
-50350,Bassendean,WA,One or more domains,179,44,24.6
-50420,Bayswater,WA,One or more domains,706,146,20.7
-50490,Belmont,WA,One or more domains,413,99,24.0
-50560,Beverley,WA,One or more domains,14,,
-50630,Boddington,WA,One or more domains,17,,
-50770,Boyup Brook,WA,One or more domains,23,9,39.1
-50840,Bridgetown-Greenbushes,WA,One or more domains,48,6,12.5
-50910,Brookton,WA,One or more domains,11,,
-50980,Broome,WA,One or more domains,199,61,30.7
-51080,Broomehill-Tambellup,WA,One or more domains,20,5,25
-51120,Bruce Rock,WA,One or more domains,15,2,13.3
-51190,Bunbury,WA,One or more domains,317,72,22.7
-51260,Busselton,WA,One or more domains,498,66,13.3
-51310,Cambridge,WA,One or more domains,290,41,14.1
-51330,Canning,WA,One or more domains,1047,224,21.4
-51400,Capel,WA,One or more domains,242,57,23.6
-51470,Carnamah,WA,One or more domains,8,,
-51540,Carnarvon,WA,One or more domains,63,28,44.4
-51610,Chapman Valley,WA,One or more domains,12,,
-51680,Chittering,WA,One or more domains,73,12,16.4
-51710,Christmas Island,WA,One or more domains,20,,
-51750,Claremont,WA,One or more domains,135,17,12.6
-51820,Cockburn,WA,One or more domains,1479,308,20.8
-51860,Cocos Islands,WA,One or more domains,11,,
-51890,Collie,WA,One or more domains,115,30,26.1
-51960,Coolgardie,WA,One or more domains,44,15,34.1
-52030,Coorow,WA,One or more domains,9,,
-52100,Corrigin,WA,One or more domains,10,,
-52170,Cottesloe,WA,One or more domains,82,11,13.4
-52240,Cranbrook,WA,One or more domains,9,,
-52310,Cuballing,WA,One or more domains,,,
-52380,Cue,WA,One or more domains,,,
-52450,Cunderdin,WA,One or more domains,14,,
-52520,Dalwallinu,WA,One or more domains,19,3,15.8
-52590,Dandaragan,WA,One or more domains,32,4,12.5
-52660,Dardanup,WA,One or more domains,202,43,21.3
-52730,Denmark,WA,One or more domains,64,10,15.6
-52800,Derby-West Kimberley,WA,One or more domains,96,53,55.2
-52870,Donnybrook-Balingup,WA,One or more domains,73,17,23.3
-52940,Dowerin,WA,One or more domains,11,,
-53010,Dumbleyung,WA,One or more domains,8,,
-53080,Dundas,WA,One or more domains,6,,
-53150,East Fremantle,WA,One or more domains,73,15,20.5
-53220,East Pilbara,WA,One or more domains,82,19,23.2
-53290,Esperance,WA,One or more domains,176,42,23.9
-53360,Exmouth,WA,One or more domains,40,4,10
-53430,Fremantle,WA,One or more domains,314,57,18.2
-53570,Gingin,WA,One or more domains,54,6,11.1
-53640,Gnowangerup,WA,One or more domains,21,1,4.8
-53710,Goomalling,WA,One or more domains,12,,
-53780,Gosnells,WA,One or more domains,1679,575,34.2
-53800,Greater Geraldton,WA,One or more domains,508,177,34.8
-53920,Halls Creek,WA,One or more domains,35,22,62.9
-53990,Harvey,WA,One or more domains,358,90,25.1
-54060,Irwin,WA,One or more domains,25,4,16
-54130,Jerramungup,WA,One or more domains,12,,
-54170,Joondalup,WA,One or more domains,1769,297,16.8
-54200,Kalamunda,WA,One or more domains,706,166,23.5
-54280,Kalgoorlie-Boulder,WA,One or more domains,452,101,22.3
-54310,Karratha,WA,One or more domains,389,80,20.6
-54340,Katanning,WA,One or more domains,58,8,13.8
-54410,Kellerberrin,WA,One or more domains,14,,
-54480,Kent,WA,One or more domains,6,,
-54550,Kojonup,WA,One or more domains,22,5,22.7
-54620,Kondinin,WA,One or more domains,8,,
-54690,Koorda,WA,One or more domains,,,
-54760,Kulin,WA,One or more domains,9,,
-54830,Kwinana,WA,One or more domains,767,208,27.1
-54900,Lake Grace,WA,One or more domains,17,5,29.4
-54970,Laverton,WA,One or more domains,7,,
-55040,Leonora,WA,One or more domains,28,13,46.4
-55110,Mandurah,WA,One or more domains,996,274,27.5
-55180,Manjimup,WA,One or more domains,99,21,21.2
-55250,Meekatharra,WA,One or more domains,12,,
-55320,Melville,WA,One or more domains,1081,153,14.2
-55390,Menzies,WA,One or more domains,6,,
-55460,Merredin,WA,One or more domains,34,8,23.5
-55530,Mingenew,WA,One or more domains,5,,
-55600,Moora,WA,One or more domains,36,6,16.7
-55670,Morawa,WA,One or more domains,7,,
-55740,Mosman Park,WA,One or more domains,87,13,14.9
-55810,Mount Magnet,WA,One or more domains,10,,
-55880,Mount Marshall,WA,One or more domains,6,,
-55950,Mukinbudin,WA,One or more domains,8,,
-56090,Mundaring,WA,One or more domains,449,96,21.4
-56160,Murchison,WA,One or more domains,,,
-56230,Murray,WA,One or more domains,224,65,29.0
-56300,Nannup,WA,One or more domains,6,,
-56370,Narembeen,WA,One or more domains,15,,
-56460,Narrogin,WA,One or more domains,46,13,28.3
-56580,Nedlands,WA,One or more domains,214,30,14.0
-56620,Ngaanyatjarraku,WA,One or more domains,,,
-56730,Northam,WA,One or more domains,107,30,28.0
-56790,Northampton,WA,One or more domains,25,4,16
-56860,Nungarin,WA,One or more domains,4,,
-56930,Peppermint Grove,WA,One or more domains,9,,
-57000,Perenjori,WA,One or more domains,,,
-57080,Perth,WA,One or more domains,162,36,22.2
-57140,Pingelly,WA,One or more domains,19,3,15.8
-57210,Plantagenet,WA,One or more domains,41,15,36.6
-57280,Port Hedland,WA,One or more domains,226,53,23.5
-57350,Quairading,WA,One or more domains,16,,
-57420,Ravensthorpe,WA,One or more domains,21,8,38.1
-57490,Rockingham,WA,One or more domains,1832,470,25.7
-57630,Sandstone,WA,One or more domains,0,,
-57700,Serpentine-Jarrahdale,WA,One or more domains,589,165,28.0
-57770,Shark Bay,WA,One or more domains,6,,
-57840,South Perth,WA,One or more domains,388,90,23.2
-57910,Stirling,WA,One or more domains,2453,530,21.6
-57980,Subiaco,WA,One or more domains,138,14,10.1
-58050,Swan,WA,One or more domains,2266,632,27.9
-58190,Tammin,WA,One or more domains,,,
-58260,Three Springs,WA,One or more domains,12,,
-58330,Toodyay,WA,One or more domains,29,8,27.6
-58400,Trayning,WA,One or more domains,,,
-58470,Upper Gascoyne,WA,One or more domains,5,,
-58510,Victoria Park,WA,One or more domains,368,81,22.0
-58540,Victoria Plains,WA,One or more domains,7,,
-58570,Vincent,WA,One or more domains,356,45,12.6
-58610,Wagin,WA,One or more domains,12,,
-58680,Wandering,WA,One or more domains,,,
-58760,Wanneroo,WA,One or more domains,3044,758,24.9
-58820,Waroona,WA,One or more domains,38,6,15.8
-58890,West Arthur,WA,One or more domains,5,,
-59030,Westonia,WA,One or more domains,0,,
-59100,Wickepin,WA,One or more domains,5,,
-59170,Williams,WA,One or more domains,18,4,22.2
-59250,Wiluna,WA,One or more domains,5,,
-59310,Wongan-Ballidu,WA,One or more domains,12,,
-59320,Woodanilling,WA,One or more domains,6,,
-59330,Wyalkatchem,WA,One or more domains,4,,
-59340,Wyndham-East Kimberley,WA,One or more domains,117,63,53.8
-59350,Yalgoo,WA,One or more domains,,,
-59360,Yilgarn,WA,One or more domains,14,,
-59370,York,WA,One or more domains,28,3,10.7
-60210,Break O'Day,TAS,One or more domains,32,12,37.5
-60410,Brighton,TAS,One or more domains,252,86,34.1
-60610,Burnie,TAS,One or more domains,201,67,33.3
-60810,Central Coast (Tas.),TAS,One or more domains,194,60,30.9
-61010,Central Highlands (Tas.),TAS,One or more domains,27,8,29.6
-61210,Circular Head,TAS,One or more domains,81,14,17.3
-61410,Clarence,TAS,One or more domains,623,128,20.5
-61510,Derwent Valley,TAS,One or more domains,121,49,40.5
-61610,Devonport,TAS,One or more domains,225,55,24.4
-61810,Dorset,TAS,One or more domains,52,9,17.3
-62010,Flinders (Tas.),TAS,One or more domains,6,,
-62210,George Town,TAS,One or more domains,60,19,31.7
-62410,Glamorgan-Spring Bay,TAS,One or more domains,31,13,41.9
-62610,Glenorchy,TAS,One or more domains,433,156,36.0
-62810,Hobart,TAS,One or more domains,404,66,16.3
-63010,Huon Valley,TAS,One or more domains,171,35,20.5
-63210,Kentish,TAS,One or more domains,59,14,23.7
-63410,King Island,TAS,One or more domains,16,,
-63610,Kingborough,TAS,One or more domains,408,71,17.4
-63810,Latrobe (Tas.),TAS,One or more domains,118,18,15.3
-64010,Launceston,TAS,One or more domains,714,192,26.9
-64210,Meander Valley,TAS,One or more domains,197,54,27.4
-64610,Northern Midlands,TAS,One or more domains,148,28,18.9
-64810,Sorell,TAS,One or more domains,178,72,40.4
-65010,Southern Midlands,TAS,One or more domains,71,23,32.4
-65210,Tasman,TAS,One or more domains,12,,
-65410,Waratah-Wynyard,TAS,One or more domains,149,21,14.1
-65610,West Coast,TAS,One or more domains,37,16,43.2
-65810,West Tamar,TAS,One or more domains,214,62,29.0
-70200,Alice Springs,NT,One or more domains,309,112,36.2
-70420,Barkly,NT,One or more domains,69,42,60.9
-70540,Belyuen,NT,One or more domains,,,
-70620,Central Desert,NT,One or more domains,72,60,83.3
-70700,Coomalie,NT,One or more domains,16,7,43.8
-71000,Darwin,NT,One or more domains,856,271,31.7
-71150,Darwin Waterfront Precinct,NT,One or more domains,,,
-71300,East Arnhem,NT,One or more domains,97,64,66.0
-72200,Katherine,NT,One or more domains,134,68,50.7
-72300,Litchfield,NT,One or more domains,238,80,33.6
-72330,MacDonnell,NT,One or more domains,62,48,77.4
-72800,Palmerston,NT,One or more domains,530,161,30.4
-73600,Roper Gulf,NT,One or more domains,73,48,65.8
-74050,Tiwi Islands,NT,One or more domains,22,20,90.0
-74550,Victoria Daly,NT,One or more domains,34,20,58.8
-74560,Wagait,NT,One or more domains,4,,
-74660,West Arnhem,NT,One or more domains,53,37,69.8
-74680,West Daly,NT,One or more domains,21,19,90.0
-79399,Unincorporated NT,NT,One or more domains,88,31,35.2
-89399,Unincorporated ACT,ACT,One or more domains,4876,1368,28.1
+10050,Albury,NSW,One or more areas,640,151,23.6
+10180,Armidale,NSW,One or more areas,287,110,38.3
+10250,Ballina,NSW,One or more areas,406,76,18.7
+10300,Balranald,NSW,One or more areas,27,10,37.0
+10470,Bathurst,NSW,One or more areas,498,118,23.7
+10500,Bayside (NSW),NSW,One or more areas,1495,304,20.3
+10550,Bega Valley,NSW,One or more areas,288,81,28.1
+10600,Bellingen,NSW,One or more areas,92,20,21.7
+10650,Berrigan,NSW,One or more areas,72,14,19.4
+10750,Blacktown,NSW,One or more areas,5478,1454,26.5
+10800,Bland,NSW,One or more areas,66,12,18.2
+10850,Blayney,NSW,One or more areas,97,25,25.8
+10900,Blue Mountains,NSW,One or more areas,663,102,15.4
+10950,Bogan,NSW,One or more areas,41,4,9.8
+11150,Bourke,NSW,One or more areas,31,14,45.2
+11200,Brewarrina,NSW,One or more areas,21,12,57.1
+11250,Broken Hill,NSW,One or more areas,179,54,30.2
+11300,Burwood,NSW,One or more areas,274,61,22.3
+11350,Byron,NSW,One or more areas,322,57,17.7
+11400,Cabonne,NSW,One or more areas,161,35,21.7
+11450,Camden,NSW,One or more areas,2112,427,20.2
+11500,Campbelltown (NSW),NSW,One or more areas,2347,609,25.9
+11520,Canada Bay,NSW,One or more areas,744,142,19.1
+11570,Canterbury-Bankstown,NSW,One or more areas,4225,980,23.2
+11600,Carrathool,NSW,One or more areas,38,4,10.5
+11650,Central Coast (NSW),NSW,One or more areas,3647,743,20.4
+11700,Central Darling,NSW,One or more areas,21,9,42.9
+11720,Cessnock,NSW,One or more areas,780,218,27.9
+11730,Clarence Valley,NSW,One or more areas,553,117,21.2
+11750,Cobar,NSW,One or more areas,51,19,37.3
+11800,Coffs Harbour,NSW,One or more areas,729,192,26.3
+12000,Coolamon,NSW,One or more areas,64,12,18.8
+12150,Coonamble,NSW,One or more areas,68,28,41.2
+12160,Cootamundra-Gundagai,NSW,One or more areas,108,18,16.7
+12350,Cowra,NSW,One or more areas,126,36,28.6
+12380,Cumberland,NSW,One or more areas,2964,793,26.8
+12390,Dubbo,NSW,One or more areas,611,147,24.1
+12700,Dungog,NSW,One or more areas,106,30,28.3
+12730,Edward River,NSW,One or more areas,94,21,22.3
+12750,Eurobodalla,NSW,One or more areas,301,78,25.9
+12850,Fairfield,NSW,One or more areas,1997,618,30.9
+12870,Federation,NSW,One or more areas,121,38,31.4
+12900,Forbes,NSW,One or more areas,111,26,23.4
+12930,Georges River,NSW,One or more areas,1323,271,20.5
+12950,Gilgandra,NSW,One or more areas,46,12,26.1
+13010,Glen Innes Severn,NSW,One or more areas,65,22,33.8
+13310,Goulburn Mulwaree,NSW,One or more areas,341,70,20.5
+13340,Greater Hume,NSW,One or more areas,103,31,30.1
+13450,Griffith,NSW,One or more areas,303,86,28.4
+13550,Gunnedah,NSW,One or more areas,142,36,25.4
+13660,Gwydir,NSW,One or more areas,43,25,58.1
+13800,Hawkesbury,NSW,One or more areas,714,115,16.1
+13850,Hay,NSW,One or more areas,23,11,47.8
+13910,Hilltops,NSW,One or more areas,192,41,21.4
+14000,Hornsby,NSW,One or more areas,1554,290,18.7
+14100,Hunters Hill,NSW,One or more areas,127,15,11.8
+14170,Inner West,NSW,One or more areas,1431,220,15.4
+14220,Inverell,NSW,One or more areas,178,52,29.2
+14300,Junee,NSW,One or more areas,52,13,25
+14350,Kempsey,NSW,One or more areas,262,78,29.8
+14400,Kiama,NSW,One or more areas,215,23,10.7
+14500,Ku-ring-gai,NSW,One or more areas,1141,209,18.3
+14550,Kyogle,NSW,One or more areas,99,33,33.3
+14600,Lachlan,NSW,One or more areas,74,20,27.0
+14650,Lake Macquarie,NSW,One or more areas,2148,426,19.8
+14700,Lane Cove,NSW,One or more areas,418,64,15.3
+14750,Leeton,NSW,One or more areas,137,33,24.1
+14850,Lismore,NSW,One or more areas,348,82,23.6
+14870,Lithgow,NSW,One or more areas,160,35,21.9
+14900,Liverpool,NSW,One or more areas,3103,809,26.1
+14920,Liverpool Plains,NSW,One or more areas,65,20,30.8
+14950,Lockhart,NSW,One or more areas,37,4,10.8
+15050,Maitland,NSW,One or more areas,1144,264,23.1
+15240,Mid-Coast,NSW,One or more areas,785,180,22.9
+15270,Mid-Western,NSW,One or more areas,314,93,29.6
+15300,Moree Plains,NSW,One or more areas,127,42,33.1
+15350,Mosman,NSW,One or more areas,216,19,8.8
+15520,Murray River,NSW,One or more areas,126,18,14.3
+15560,Murrumbidgee,NSW,One or more areas,26,11,42.3
+15650,Muswellbrook,NSW,One or more areas,183,60,32.8
+15700,Nambucca Valley,NSW,One or more areas,175,61,34.9
+15750,Narrabri,NSW,One or more areas,137,27,19.7
+15800,Narrandera,NSW,One or more areas,76,21,27.6
+15850,Narromine,NSW,One or more areas,57,9,15.8
+15900,Newcastle,NSW,One or more areas,1609,320,19.9
+15950,North Sydney,NSW,One or more areas,478,81,16.9
+15990,Northern Beaches,NSW,One or more areas,2564,332,12.9
+16100,Oberon,NSW,One or more areas,50,13,26
+16150,Orange,NSW,One or more areas,471,123,26.1
+16200,Parkes,NSW,One or more areas,181,45,24.9
+16260,Parramatta,NSW,One or more areas,2800,606,21.6
+16350,Penrith,NSW,One or more areas,2618,638,24.4
+16380,Port Macquarie-Hastings,NSW,One or more areas,747,180,24.1
+16400,Port Stephens,NSW,One or more areas,678,162,23.9
+16490,Queanbeyan-Palerang,NSW,One or more areas,746,175,23.5
+16550,Randwick,NSW,One or more areas,1065,181,17.0
+16610,Richmond Valley,NSW,One or more areas,214,37,17.3
+16700,Ryde,NSW,One or more areas,1274,251,19.7
+16900,Shellharbour,NSW,One or more areas,909,221,24.3
+16950,Shoalhaven,NSW,One or more areas,1091,268,24.6
+17000,Singleton,NSW,One or more areas,261,58,22.2
+17040,Snowy Monaro,NSW,One or more areas,192,41,21.4
+17080,Snowy Valleys,NSW,One or more areas,162,47,29.0
+17100,Strathfield,NSW,One or more areas,350,79,22.6
+17150,Sutherland,NSW,One or more areas,2527,351,13.9
+17200,Sydney,NSW,One or more areas,856,130,15.2
+17310,Tamworth,NSW,One or more areas,744,212,28.5
+17350,Temora,NSW,One or more areas,54,10,18.5
+17400,Tenterfield,NSW,One or more areas,63,16,25.4
+17420,The Hills,NSW,One or more areas,2333,363,15.6
+17550,Tweed,NSW,One or more areas,973,162,16.6
+17620,Upper Hunter,NSW,One or more areas,146,29,19.9
+17640,Upper Lachlan,NSW,One or more areas,77,16,20.8
+17650,Uralla,NSW,One or more areas,63,25,39.7
+17750,Wagga Wagga,NSW,One or more areas,768,206,26.8
+17850,Walcha,NSW,One or more areas,39,6,15.4
+17900,Walgett,NSW,One or more areas,81,33,40.7
+17950,Warren,NSW,One or more areas,25,1,4
+18020,Warrumbungle,NSW,One or more areas,109,28,25.7
+18050,Waverley,NSW,One or more areas,551,43,7.8
+18100,Weddin,NSW,One or more areas,36,2,5.6
+18200,Wentworth,NSW,One or more areas,92,18,19.6
+18250,Willoughby,NSW,One or more areas,737,116,15.7
+18350,Wingecarribee,NSW,One or more areas,487,67,13.8
+18400,Wollondilly,NSW,One or more areas,709,126,17.8
+18450,Wollongong,NSW,One or more areas,2210,472,21.4
+18500,Woollahra,NSW,One or more areas,405,38,9.4
+18710,Yass Valley,NSW,One or more areas,133,25,18.8
+19399,Unincorporated NSW,NSW,One or more areas,,,
+20110,Alpine,VIC,One or more areas,114,20,17.5
+20260,Ararat,VIC,One or more areas,107,41,38.3
+20570,Ballarat,VIC,One or more areas,1119,303,27.1
+20660,Banyule,VIC,One or more areas,1152,190,16.5
+20740,Bass Coast,VIC,One or more areas,300,72,24
+20830,Baw Baw,VIC,One or more areas,644,164,25.5
+20910,Bayside (Vic.),VIC,One or more areas,776,78,10.1
+21010,Benalla,VIC,One or more areas,126,38,30.2
+21110,Boroondara,VIC,One or more areas,1074,182,16.9
+21180,Brimbank,VIC,One or more areas,1771,493,27.8
+21270,Buloke,VIC,One or more areas,48,18,37.5
+21370,Campaspe,VIC,One or more areas,320,73,22.8
+21450,Cardinia,VIC,One or more areas,1607,376,23.4
+21610,Casey,VIC,One or more areas,5268,1336,25.4
+21670,Central Goldfields,VIC,One or more areas,82,33,40.2
+21750,Colac Otway,VIC,One or more areas,183,66,36.1
+21830,Corangamite,VIC,One or more areas,119,21,17.6
+21890,Darebin,VIC,One or more areas,1153,182,15.8
+22110,East Gippsland,VIC,One or more areas,285,85,29.8
+22170,Frankston,VIC,One or more areas,1212,284,23.4
+22250,Gannawarra,VIC,One or more areas,104,25,24.0
+22310,Glen Eira,VIC,One or more areas,1163,218,18.7
+22410,Glenelg,VIC,One or more areas,146,34,23.3
+22490,Golden Plains,VIC,One or more areas,268,75,28.0
+22620,Greater Bendigo,VIC,One or more areas,1318,326,24.7
+22670,Greater Dandenong,VIC,One or more areas,1526,440,28.8
+22750,Greater Geelong,VIC,One or more areas,2543,569,22.4
+22830,Greater Shepparton,VIC,One or more areas,740,256,34.6
+22910,Hepburn,VIC,One or more areas,131,26,19.8
+22980,Hindmarsh,VIC,One or more areas,41,7,17.1
+23110,Hobsons Bay,VIC,One or more areas,721,153,21.2
+23190,Horsham,VIC,One or more areas,198,54,27.3
+23270,Hume,VIC,One or more areas,3070,943,30.7
+23350,Indigo,VIC,One or more areas,143,36,25.2
+23430,Kingston (Vic.),VIC,One or more areas,1432,234,16.3
+23670,Knox,VIC,One or more areas,1244,221,17.8
+23810,Latrobe (Vic.),VIC,One or more areas,698,202,28.9
+23940,Loddon,VIC,One or more areas,69,17,24.6
+24130,Macedon Ranges,VIC,One or more areas,523,53,10.1
+24210,Manningham,VIC,One or more areas,1103,171,15.5
+24250,Mansfield,VIC,One or more areas,68,11,16.2
+24330,Maribyrnong,VIC,One or more areas,767,169,22.0
+24410,Maroondah,VIC,One or more areas,1123,164,14.6
+24600,Melbourne,VIC,One or more areas,615,147,23.9
+24650,Melton,VIC,One or more areas,2470,727,29.4
+24780,Mildura,VIC,One or more areas,419,117,27.9
+24850,Mitchell,VIC,One or more areas,583,140,24.0
+24900,Moira,VIC,One or more areas,285,70,24.6
+24970,Monash,VIC,One or more areas,1553,276,17.8
+25060,Moonee Valley,VIC,One or more areas,855,125,14.6
+25150,Moorabool,VIC,One or more areas,406,86,21.2
+24700,Moreland,VIC,One or more areas,1396,268,19.2
+25340,Mornington Peninsula,VIC,One or more areas,1355,216,15.9
+25430,Mount Alexander,VIC,One or more areas,151,34,22.5
+25490,Moyne,VIC,One or more areas,178,33,18.5
+25620,Murrindindi,VIC,One or more areas,122,22,18.0
+25710,Nillumbik,VIC,One or more areas,630,83,13.2
+25810,Northern Grampians,VIC,One or more areas,81,22,27.2
+25900,Port Phillip,VIC,One or more areas,526,90,17.1
+25990,Pyrenees,VIC,One or more areas,46,6,13.0
+26080,Queenscliffe,VIC,One or more areas,22,,
+26170,South Gippsland,VIC,One or more areas,267,76,28.5
+26260,Southern Grampians,VIC,One or more areas,146,35,24.0
+26350,Stonnington,VIC,One or more areas,509,64,12.6
+26430,Strathbogie,VIC,One or more areas,81,15,18.5
+26490,Surf Coast,VIC,One or more areas,356,26,7.3
+26610,Swan Hill,VIC,One or more areas,211,45,21.3
+26670,Towong,VIC,One or more areas,55,13,23.6
+26700,Wangaratta,VIC,One or more areas,241,34,14.1
+26730,Warrnambool,VIC,One or more areas,365,80,21.9
+26810,Wellington,VIC,One or more areas,429,116,27.0
+26890,West Wimmera,VIC,One or more areas,43,3,7.0
+26980,Whitehorse,VIC,One or more areas,1423,212,14.9
+27070,Whittlesea,VIC,One or more areas,2583,549,21.3
+27170,Wodonga,VIC,One or more areas,505,139,27.5
+27260,Wyndham,VIC,One or more areas,4470,1133,25.3
+27350,Yarra,VIC,One or more areas,558,98,17.6
+27450,Yarra Ranges,VIC,One or more areas,1543,285,18.5
+27630,Yarriambiack,VIC,One or more areas,44,11,25
+29399,Unincorporated Vic,VIC,One or more areas,0,,
+30250,Aurukun,QLD,One or more areas,12,,
+30300,Balonne,QLD,One or more areas,62,21,33.9
+30370,Banana,QLD,One or more areas,171,45,26.3
+30410,Barcaldine,QLD,One or more areas,29,11,37.9
+30450,Barcoo,QLD,One or more areas,6,,
+30760,Blackall Tambo,QLD,One or more areas,22,7,31.8
+30900,Boulia,QLD,One or more areas,4,,
+31000,Brisbane,QLD,One or more areas,12887,2756,21.4
+31750,Bulloo,QLD,One or more areas,4,,
+31820,Bundaberg,QLD,One or more areas,966,289,29.9
+31900,Burdekin,QLD,One or more areas,200,65,32.5
+31950,Burke,QLD,One or more areas,,,
+32080,Cairns,QLD,One or more areas,1814,455,25.1
+32250,Carpentaria,QLD,One or more areas,24,17,70.8
+32260,Cassowary Coast,QLD,One or more areas,344,134,39.0
+32270,Central Highlands (Qld),QLD,One or more areas,406,121,29.8
+32310,Charters Towers,QLD,One or more areas,111,33,29.7
+32330,Cherbourg,QLD,One or more areas,23,19,82.6
+32450,Cloncurry,QLD,One or more areas,46,11,23.9
+32500,Cook,QLD,One or more areas,45,13,28.9
+32600,Croydon,QLD,One or more areas,,,
+32750,Diamantina,QLD,One or more areas,,,
+32770,Doomadgee,QLD,One or more areas,30,19,63.3
+32810,Douglas,QLD,One or more areas,103,19,18.4
+33100,Etheridge,QLD,One or more areas,13,,
+33200,Flinders (Qld),QLD,One or more areas,23,6,26.1
+33220,Fraser Coast,QLD,One or more areas,972,311,32.0
+33360,Gladstone,QLD,One or more areas,857,247,28.8
+33430,Gold Coast,QLD,One or more areas,6166,1285,20.8
+33610,Goondiwindi,QLD,One or more areas,133,37,27.8
+33620,Gympie,QLD,One or more areas,524,121,23.1
+33800,Hinchinbrook,QLD,One or more areas,95,21,22.1
+33830,Hope Vale,QLD,One or more areas,18,9,50
+33960,Ipswich,QLD,One or more areas,3634,1025,28.2
+33980,Isaac,QLD,One or more areas,306,77,25.2
+34420,Kowanyama,QLD,One or more areas,10,,
+34530,Livingstone,QLD,One or more areas,405,100,24.7
+34570,Lockhart River,QLD,One or more areas,8,,
+34580,Lockyer Valley,QLD,One or more areas,467,122,26.1
+34590,Logan,QLD,One or more areas,5039,1465,29.1
+34710,Longreach,QLD,One or more areas,39,4,10.3
+34770,Mackay,QLD,One or more areas,1557,442,28.4
+34800,McKinlay,QLD,One or more areas,6,,
+34830,Mapoon,QLD,One or more areas,7,,
+34860,Maranoa,QLD,One or more areas,155,45,29.0
+34880,Mareeba,QLD,One or more areas,216,60,27.8
+35010,Moreton Bay,QLD,One or more areas,5672,1587,28.0
+35250,Mornington,QLD,One or more areas,18,,
+35300,Mount Isa,QLD,One or more areas,292,103,35.3
+35600,Murweh,QLD,One or more areas,40,18,45
+35670,Napranum,QLD,One or more areas,16,10,62.5
+35740,Noosa,QLD,One or more areas,411,60,14.6
+35760,North Burnett,QLD,One or more areas,96,34,35.4
+35780,Northern Peninsula Area,QLD,One or more areas,55,19,34.5
+35790,Palm Island,QLD,One or more areas,31,14,45.2
+35800,Paroo,QLD,One or more areas,28,18,64.3
+36070,Pormpuraaw,QLD,One or more areas,9,,
+36150,Quilpie,QLD,One or more areas,14,,
+36250,Redland,QLD,One or more areas,1632,333,20.4
+36300,Richmond,QLD,One or more areas,11,,
+36370,Rockhampton,QLD,One or more areas,972,302,31.1
+36510,Scenic Rim,QLD,One or more areas,410,96,23.4
+36580,Somerset,QLD,One or more areas,284,81,28.5
+36630,South Burnett,QLD,One or more areas,312,96,30.8
+36660,Southern Downs,QLD,One or more areas,360,110,30.6
+36720,Sunshine Coast,QLD,One or more areas,3607,703,19.5
+36820,Tablelands,QLD,One or more areas,263,68,25.9
+36910,Toowoomba,QLD,One or more areas,2021,600,29.7
+36950,Torres,QLD,One or more areas,55,17,30.9
+36960,Torres Strait Island,QLD,One or more areas,90,44,48.9
+37010,Townsville,QLD,One or more areas,2214,635,28.7
+37300,Weipa,QLD,One or more areas,65,2,3.1
+37310,Western Downs,QLD,One or more areas,470,124,26.4
+37340,Whitsunday,QLD,One or more areas,370,85,23.0
+37400,Winton,QLD,One or more areas,5,,
+37550,Woorabinda,QLD,One or more areas,23,15,65.2
+37570,Wujal Wujal,QLD,One or more areas,4,,
+37600,Yarrabah,QLD,One or more areas,46,23,50
+40070,Adelaide,SA,One or more areas,66,13,19.7
+40120,Adelaide Hills,SA,One or more areas,389,68,17.5
+40150,Adelaide Plains,SA,One or more areas,105,29,27.6
+40220,Alexandrina,SA,One or more areas,212,37,17.5
+40250,Anangu Pitjantjatjara Yunkunyt,SA,One or more areas,29,25,86.2
+40310,Barossa,SA,One or more areas,230,45,19.6
+40430,Barunga West,SA,One or more areas,24,5,20.8
+40520,Berri Barmera,SA,One or more areas,89,24,27.0
+40700,Burnside,SA,One or more areas,421,68,16.2
+40910,Campbelltown (SA),SA,One or more areas,522,111,21.3
+41010,Ceduna,SA,One or more areas,54,22,40.7
+41060,Charles Sturt,SA,One or more areas,1063,235,22.1
+41140,Clare and Gilbert Valleys,SA,One or more areas,79,23,29.1
+41190,Cleve,SA,One or more areas,22,5,22.7
+41330,Coober Pedy,SA,One or more areas,6,,
+41560,Copper Coast,SA,One or more areas,128,38,29.7
+41750,Elliston,SA,One or more areas,10,,
+41830,Flinders Ranges,SA,One or more areas,17,7,41.2
+41960,Franklin Harbour,SA,One or more areas,,,
+42030,Gawler,SA,One or more areas,250,52,20.8
+42110,Goyder,SA,One or more areas,20,8,40
+42250,Grant,SA,One or more areas,72,8,11.1
+42600,Holdfast Bay,SA,One or more areas,273,41,15.0
+42750,Kangaroo Island,SA,One or more areas,47,7,14.9
+43080,Karoonda East Murray,SA,One or more areas,15,4,26.7
+43220,Kimba,SA,One or more areas,11,,
+43360,Kingston (SA),SA,One or more areas,12,,
+43650,Light,SA,One or more areas,185,41,22.2
+43710,Lower Eyre Peninsula,SA,One or more areas,66,16,24.2
+43790,Loxton Waikerie,SA,One or more areas,117,33,28.2
+44000,Maralinga Tjarutja,SA,One or more areas,,,
+44060,Marion,SA,One or more areas,971,193,19.9
+44210,Mid Murray,SA,One or more areas,68,15,22.1
+44340,Mitcham,SA,One or more areas,706,104,14.7
+44550,Mount Barker,SA,One or more areas,472,102,21.6
+44620,Mount Gambier,SA,One or more areas,281,63,22.4
+44830,Mount Remarkable,SA,One or more areas,25,7,28
+45040,Murray Bridge,SA,One or more areas,173,78,45.1
+45090,Naracoorte Lucindale,SA,One or more areas,102,28,27.5
+45120,Northern Areas,SA,One or more areas,43,9,20.9
+45290,Norwood Payneham and St Peters,SA,One or more areas,314,55,17.5
+45340,Onkaparinga,SA,One or more areas,1782,490,27.5
+45400,Orroroo Carrieton,SA,One or more areas,14,,
+45540,Peterborough,SA,One or more areas,10,,
+45680,Playford,SA,One or more areas,1469,530,36.1
+45890,Port Adelaide Enfield,SA,One or more areas,1317,294,22.3
+46090,Port Augusta,SA,One or more areas,163,66,40.5
+46300,Port Lincoln,SA,One or more areas,154,30,19.5
+46450,Port Pirie,SA,One or more areas,190,68,35.8
+46510,Prospect,SA,One or more areas,221,28,12.7
+46670,Renmark Paringa,SA,One or more areas,104,22,21.2
+46860,Robe,SA,One or more areas,13,,
+46970,Roxby Downs,SA,One or more areas,57,15,26.3
+47140,Salisbury,SA,One or more areas,1623,497,30.6
+47290,Southern Mallee,SA,One or more areas,19,3,15.8
+47490,Streaky Bay,SA,One or more areas,21,3,14.3
+47630,Tatiara,SA,One or more areas,57,6,10.5
+47700,Tea Tree Gully,SA,One or more areas,981,219,22.3
+47800,Coorong,SA,One or more areas,54,14,25.9
+47910,Tumby Bay,SA,One or more areas,34,7,20.6
+47980,Unley,SA,One or more areas,334,51,15.3
+48050,Victor Harbor,SA,One or more areas,80,30,37.5
+48130,Wakefield,SA,One or more areas,75,21,28
+48260,Walkerville,SA,One or more areas,63,6,9.5
+48340,Wattle Range,SA,One or more areas,115,33,28.7
+48410,West Torrens,SA,One or more areas,529,107,20.2
+48540,Whyalla,SA,One or more areas,224,80,35.7
+48640,Wudinna,SA,One or more areas,11,,
+48750,Yankalilla,SA,One or more areas,52,13,25
+48830,Yorke Peninsula,SA,One or more areas,93,16,17.2
+49399,Unincorporated SA,SA,One or more areas,29,12,41.4
+50080,Albany,WA,One or more areas,415,106,25.5
+50210,Armadale,WA,One or more areas,1601,494,30.9
+50250,Ashburton,WA,One or more areas,117,34,29.1
+50280,Augusta Margaret River,WA,One or more areas,226,52,23.0
+50350,Bassendean,WA,One or more areas,179,44,24.6
+50420,Bayswater,WA,One or more areas,706,146,20.7
+50490,Belmont,WA,One or more areas,413,99,24.0
+50560,Beverley,WA,One or more areas,14,,
+50630,Boddington,WA,One or more areas,17,,
+50770,Boyup Brook,WA,One or more areas,23,9,39.1
+50840,Bridgetown-Greenbushes,WA,One or more areas,48,6,12.5
+50910,Brookton,WA,One or more areas,11,,
+50980,Broome,WA,One or more areas,199,61,30.7
+51080,Broomehill-Tambellup,WA,One or more areas,20,5,25
+51120,Bruce Rock,WA,One or more areas,15,2,13.3
+51190,Bunbury,WA,One or more areas,317,72,22.7
+51260,Busselton,WA,One or more areas,498,66,13.3
+51310,Cambridge,WA,One or more areas,290,41,14.1
+51330,Canning,WA,One or more areas,1047,224,21.4
+51400,Capel,WA,One or more areas,242,57,23.6
+51470,Carnamah,WA,One or more areas,8,,
+51540,Carnarvon,WA,One or more areas,63,28,44.4
+51610,Chapman Valley,WA,One or more areas,12,,
+51680,Chittering,WA,One or more areas,73,12,16.4
+51710,Christmas Island,WA,One or more areas,20,,
+51750,Claremont,WA,One or more areas,135,17,12.6
+51820,Cockburn,WA,One or more areas,1479,308,20.8
+51860,Cocos Islands,WA,One or more areas,11,,
+51890,Collie,WA,One or more areas,115,30,26.1
+51960,Coolgardie,WA,One or more areas,44,15,34.1
+52030,Coorow,WA,One or more areas,9,,
+52100,Corrigin,WA,One or more areas,10,,
+52170,Cottesloe,WA,One or more areas,82,11,13.4
+52240,Cranbrook,WA,One or more areas,9,,
+52310,Cuballing,WA,One or more areas,,,
+52380,Cue,WA,One or more areas,,,
+52450,Cunderdin,WA,One or more areas,14,,
+52520,Dalwallinu,WA,One or more areas,19,3,15.8
+52590,Dandaragan,WA,One or more areas,32,4,12.5
+52660,Dardanup,WA,One or more areas,202,43,21.3
+52730,Denmark,WA,One or more areas,64,10,15.6
+52800,Derby-West Kimberley,WA,One or more areas,96,53,55.2
+52870,Donnybrook-Balingup,WA,One or more areas,73,17,23.3
+52940,Dowerin,WA,One or more areas,11,,
+53010,Dumbleyung,WA,One or more areas,8,,
+53080,Dundas,WA,One or more areas,6,,
+53150,East Fremantle,WA,One or more areas,73,15,20.5
+53220,East Pilbara,WA,One or more areas,82,19,23.2
+53290,Esperance,WA,One or more areas,176,42,23.9
+53360,Exmouth,WA,One or more areas,40,4,10
+53430,Fremantle,WA,One or more areas,314,57,18.2
+53570,Gingin,WA,One or more areas,54,6,11.1
+53640,Gnowangerup,WA,One or more areas,21,1,4.8
+53710,Goomalling,WA,One or more areas,12,,
+53780,Gosnells,WA,One or more areas,1679,575,34.2
+53800,Greater Geraldton,WA,One or more areas,508,177,34.8
+53920,Halls Creek,WA,One or more areas,35,22,62.9
+53990,Harvey,WA,One or more areas,358,90,25.1
+54060,Irwin,WA,One or more areas,25,4,16
+54130,Jerramungup,WA,One or more areas,12,,
+54170,Joondalup,WA,One or more areas,1769,297,16.8
+54200,Kalamunda,WA,One or more areas,706,166,23.5
+54280,Kalgoorlie-Boulder,WA,One or more areas,452,101,22.3
+54310,Karratha,WA,One or more areas,389,80,20.6
+54340,Katanning,WA,One or more areas,58,8,13.8
+54410,Kellerberrin,WA,One or more areas,14,,
+54480,Kent,WA,One or more areas,6,,
+54550,Kojonup,WA,One or more areas,22,5,22.7
+54620,Kondinin,WA,One or more areas,8,,
+54690,Koorda,WA,One or more areas,,,
+54760,Kulin,WA,One or more areas,9,,
+54830,Kwinana,WA,One or more areas,767,208,27.1
+54900,Lake Grace,WA,One or more areas,17,5,29.4
+54970,Laverton,WA,One or more areas,7,,
+55040,Leonora,WA,One or more areas,28,13,46.4
+55110,Mandurah,WA,One or more areas,996,274,27.5
+55180,Manjimup,WA,One or more areas,99,21,21.2
+55250,Meekatharra,WA,One or more areas,12,,
+55320,Melville,WA,One or more areas,1081,153,14.2
+55390,Menzies,WA,One or more areas,6,,
+55460,Merredin,WA,One or more areas,34,8,23.5
+55530,Mingenew,WA,One or more areas,5,,
+55600,Moora,WA,One or more areas,36,6,16.7
+55670,Morawa,WA,One or more areas,7,,
+55740,Mosman Park,WA,One or more areas,87,13,14.9
+55810,Mount Magnet,WA,One or more areas,10,,
+55880,Mount Marshall,WA,One or more areas,6,,
+55950,Mukinbudin,WA,One or more areas,8,,
+56090,Mundaring,WA,One or more areas,449,96,21.4
+56160,Murchison,WA,One or more areas,,,
+56230,Murray,WA,One or more areas,224,65,29.0
+56300,Nannup,WA,One or more areas,6,,
+56370,Narembeen,WA,One or more areas,15,,
+56460,Narrogin,WA,One or more areas,46,13,28.3
+56580,Nedlands,WA,One or more areas,214,30,14.0
+56620,Ngaanyatjarraku,WA,One or more areas,,,
+56730,Northam,WA,One or more areas,107,30,28.0
+56790,Northampton,WA,One or more areas,25,4,16
+56860,Nungarin,WA,One or more areas,4,,
+56930,Peppermint Grove,WA,One or more areas,9,,
+57000,Perenjori,WA,One or more areas,,,
+57080,Perth,WA,One or more areas,162,36,22.2
+57140,Pingelly,WA,One or more areas,19,3,15.8
+57210,Plantagenet,WA,One or more areas,41,15,36.6
+57280,Port Hedland,WA,One or more areas,226,53,23.5
+57350,Quairading,WA,One or more areas,16,,
+57420,Ravensthorpe,WA,One or more areas,21,8,38.1
+57490,Rockingham,WA,One or more areas,1832,470,25.7
+57630,Sandstone,WA,One or more areas,0,,
+57700,Serpentine-Jarrahdale,WA,One or more areas,589,165,28.0
+57770,Shark Bay,WA,One or more areas,6,,
+57840,South Perth,WA,One or more areas,388,90,23.2
+57910,Stirling,WA,One or more areas,2453,530,21.6
+57980,Subiaco,WA,One or more areas,138,14,10.1
+58050,Swan,WA,One or more areas,2266,632,27.9
+58190,Tammin,WA,One or more areas,,,
+58260,Three Springs,WA,One or more areas,12,,
+58330,Toodyay,WA,One or more areas,29,8,27.6
+58400,Trayning,WA,One or more areas,,,
+58470,Upper Gascoyne,WA,One or more areas,5,,
+58510,Victoria Park,WA,One or more areas,368,81,22.0
+58540,Victoria Plains,WA,One or more areas,7,,
+58570,Vincent,WA,One or more areas,356,45,12.6
+58610,Wagin,WA,One or more areas,12,,
+58680,Wandering,WA,One or more areas,,,
+58760,Wanneroo,WA,One or more areas,3044,758,24.9
+58820,Waroona,WA,One or more areas,38,6,15.8
+58890,West Arthur,WA,One or more areas,5,,
+59030,Westonia,WA,One or more areas,0,,
+59100,Wickepin,WA,One or more areas,5,,
+59170,Williams,WA,One or more areas,18,4,22.2
+59250,Wiluna,WA,One or more areas,5,,
+59310,Wongan-Ballidu,WA,One or more areas,12,,
+59320,Woodanilling,WA,One or more areas,6,,
+59330,Wyalkatchem,WA,One or more areas,4,,
+59340,Wyndham-East Kimberley,WA,One or more areas,117,63,53.8
+59350,Yalgoo,WA,One or more areas,,,
+59360,Yilgarn,WA,One or more areas,14,,
+59370,York,WA,One or more areas,28,3,10.7
+60210,Break O'Day,TAS,One or more areas,32,12,37.5
+60410,Brighton,TAS,One or more areas,252,86,34.1
+60610,Burnie,TAS,One or more areas,201,67,33.3
+60810,Central Coast (Tas.),TAS,One or more areas,194,60,30.9
+61010,Central Highlands (Tas.),TAS,One or more areas,27,8,29.6
+61210,Circular Head,TAS,One or more areas,81,14,17.3
+61410,Clarence,TAS,One or more areas,623,128,20.5
+61510,Derwent Valley,TAS,One or more areas,121,49,40.5
+61610,Devonport,TAS,One or more areas,225,55,24.4
+61810,Dorset,TAS,One or more areas,52,9,17.3
+62010,Flinders (Tas.),TAS,One or more areas,6,,
+62210,George Town,TAS,One or more areas,60,19,31.7
+62410,Glamorgan-Spring Bay,TAS,One or more areas,31,13,41.9
+62610,Glenorchy,TAS,One or more areas,433,156,36.0
+62810,Hobart,TAS,One or more areas,404,66,16.3
+63010,Huon Valley,TAS,One or more areas,171,35,20.5
+63210,Kentish,TAS,One or more areas,59,14,23.7
+63410,King Island,TAS,One or more areas,16,,
+63610,Kingborough,TAS,One or more areas,408,71,17.4
+63810,Latrobe (Tas.),TAS,One or more areas,118,18,15.3
+64010,Launceston,TAS,One or more areas,714,192,26.9
+64210,Meander Valley,TAS,One or more areas,197,54,27.4
+64610,Northern Midlands,TAS,One or more areas,148,28,18.9
+64810,Sorell,TAS,One or more areas,178,72,40.4
+65010,Southern Midlands,TAS,One or more areas,71,23,32.4
+65210,Tasman,TAS,One or more areas,12,,
+65410,Waratah-Wynyard,TAS,One or more areas,149,21,14.1
+65610,West Coast,TAS,One or more areas,37,16,43.2
+65810,West Tamar,TAS,One or more areas,214,62,29.0
+70200,Alice Springs,NT,One or more areas,309,112,36.2
+70420,Barkly,NT,One or more areas,69,42,60.9
+70540,Belyuen,NT,One or more areas,,,
+70620,Central Desert,NT,One or more areas,72,60,83.3
+70700,Coomalie,NT,One or more areas,16,7,43.8
+71000,Darwin,NT,One or more areas,856,271,31.7
+71150,Darwin Waterfront Precinct,NT,One or more areas,,,
+71300,East Arnhem,NT,One or more areas,97,64,66.0
+72200,Katherine,NT,One or more areas,134,68,50.7
+72300,Litchfield,NT,One or more areas,238,80,33.6
+72330,MacDonnell,NT,One or more areas,62,48,77.4
+72800,Palmerston,NT,One or more areas,530,161,30.4
+73600,Roper Gulf,NT,One or more areas,73,48,65.8
+74050,Tiwi Islands,NT,One or more areas,22,20,90.0
+74550,Victoria Daly,NT,One or more areas,34,20,58.8
+74560,Wagait,NT,One or more areas,4,,
+74660,West Arnhem,NT,One or more areas,53,37,69.8
+74680,West Daly,NT,One or more areas,21,19,90.0
+79399,Unincorporated NT,NT,One or more areas,88,31,35.2
+89399,Unincorporated ACT,ACT,One or more areas,4876,1368,28.1
 10050,Albury,NSW,Physical health,643,80,12.4
 10180,Armidale,NSW,Physical health,288,57,19.8
 10250,Ballina,NSW,Physical health,408,25,6.1

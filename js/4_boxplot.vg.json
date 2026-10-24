@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Each dot is one council: % of its children vulnerable on 1+ domains, 2024",
+    "text": "Each dot is one council: % of its children vulnerable in one or more areas, 2024",
     "fontSize": 14,
     "fontWeight": "normal",
     "color": "#5b6570",
@@ -87,7 +87,7 @@
         "x": {
           "field": "vulnerable_pct",
           "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
+          "title": "% of children vulnerable in one or more areas",
           "scale": {
             "domain": [
               0,
@@ -108,7 +108,7 @@
         "x": {
           "field": "vulnerable_pct",
           "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
+          "title": "% of children vulnerable in one or more areas",
           "scale": {
             "domain": [
               0,
@@ -137,7 +137,7 @@
           },
           {
             "field": "pct_label",
-            "title": "Vulnerable on 1+ domains"
+            "title": "Vulnerable in one or more areas"
           },
           {
             "field": "children_assessed",
@@ -169,7 +169,7 @@
         "x": {
           "field": "vulnerable_pct",
           "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
+          "title": "% of children vulnerable in one or more areas",
           "scale": {
             "domain": [
               0,
@@ -198,7 +198,7 @@
           },
           {
             "field": "pct_label",
-            "title": "Vulnerable on 1+ domains"
+            "title": "Vulnerable in one or more areas"
           },
           {
             "field": "children_assessed",
@@ -247,7 +247,7 @@
         "x": {
           "field": "vulnerable_pct",
           "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
+          "title": "% of children vulnerable in one or more areas",
           "scale": {
             "domain": [
               0,
@@ -302,7 +302,7 @@
         "x": {
           "field": "vulnerable_pct",
           "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
+          "title": "% of children vulnerable in one or more areas",
           "scale": {
             "domain": [
               0,
@@ -345,7 +345,7 @@
         "x": {
           "field": "x",
           "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
+          "title": "% of children vulnerable in one or more areas",
           "scale": {
             "domain": [
               0,
@@ -384,7 +384,7 @@
         "x": {
           "field": "x",
           "type": "quantitative",
-          "title": "% of children vulnerable on 1+ domains",
+          "title": "% of children vulnerable in one or more areas",
           "scale": {
             "domain": [
               0,
