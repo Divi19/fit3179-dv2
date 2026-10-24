@@ -47,7 +47,7 @@
           }
         }
       },
-      "spacing": 31,
+      "spacing": 26,
       "spec": {
         "width": 211,
         "height": 232,
@@ -288,7 +288,7 @@
           }
         }
       },
-      "width": 1180,
+      "width": 1140,
       "height": 34,
       "transform": [
         {
