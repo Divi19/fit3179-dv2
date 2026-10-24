@@ -447,7 +447,7 @@
           "filter": "datum.group == 'Most disadvantaged'"
         },
         {
-          "calculate": "(show == '2024 vs 2009' ? datum.year + ': ' : '') + format(datum.gap, '.1f') + ' pts'",
+          "calculate": "(show == '2024 vs 2009' ? datum.year + ': ' : '') + format(datum.gap, '.1f') + ' points'",
           "as": "t"
         }
       ],

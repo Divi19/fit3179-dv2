@@ -48,11 +48,11 @@
       "as": "change"
     },
     {
-      "calculate": "!isValid(datum.change) ? '2009: starting point' : datum.change <= -2 ? 'Down 2+ pts' : datum.change < -0.5 ? 'Down 0.5–2' : datum.change <= 0.5 ? 'Little change' : datum.change < 2 ? 'Up 0.5–2' : 'Up 2+ pts'",
+      "calculate": "!isValid(datum.change) ? '2009: starting point' : datum.change <= -2 ? 'Down 2+ points' : datum.change < -0.5 ? 'Down 0.5–2' : datum.change <= 0.5 ? 'Little change' : datum.change < 2 ? 'Up 0.5–2' : 'Up 2+ points'",
       "as": "class"
     },
     {
-      "calculate": "isValid(datum.change) ? (datum.change > 0 ? '+' : datum.change < 0 ? '−' : '±') + format(abs(datum.change), '.1f') + ' pts' : 'first collection'",
+      "calculate": "isValid(datum.change) ? (datum.change > 0 ? '+' : datum.change < 0 ? '−' : '±') + format(abs(datum.change), '.1f') + ' points' : 'first collection'",
       "as": "change_label"
     },
     {
@@ -161,11 +161,11 @@
           "scale": {
             "domain": [
               "2009: starting point",
-              "Down 2+ pts",
+              "Down 2+ points",
               "Down 0.5–2",
               "Little change",
               "Up 0.5–2",
-              "Up 2+ pts"
+              "Up 2+ points"
             ],
             "range": [
               "#26333f",
@@ -233,11 +233,11 @@
           "scale": {
             "domain": [
               "2009: starting point",
-              "Down 2+ pts",
+              "Down 2+ points",
               "Down 0.5–2",
               "Little change",
               "Up 0.5–2",
-              "Up 2+ pts"
+              "Up 2+ points"
             ],
             "range": [
               "#26333f",
@@ -313,7 +313,7 @@
               "value": "#b3bcc5"
             },
             {
-              "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
+              "test": "datum.class == 'Down 2+ points' || datum.class == 'Up 2+ points'",
               "value": "#ffffff"
             }
           ],
@@ -349,7 +349,7 @@
               "value": "#b3bcc5"
             },
             {
-              "test": "datum.class == 'Down 2+ pts' || datum.class == 'Up 2+ pts'",
+              "test": "datum.class == 'Down 2+ points' || datum.class == 'Up 2+ points'",
               "value": "#ffffff"
             }
           ],

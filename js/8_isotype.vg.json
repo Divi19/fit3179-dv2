@@ -33,7 +33,7 @@
       "as": "big"
     },
     {
-      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' pts' : 'margin not published'",
+      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' points' : 'margin not published'",
       "as": "moe_label"
     },
     {
