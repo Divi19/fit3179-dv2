@@ -73,7 +73,7 @@
       "as": "rse"
     },
     {
-      "calculate": "isValid(datum.rse) ? 'RSE ' + format(datum.rse, '.1f') + '%' : 'not published'",
+      "calculate": "isValid(datum.rse) ? (datum.rse < 25 ? 'Reliable' : datum.rse < 50 ? 'Use with care' : 'Unreliable') : 'not published'",
       "as": "rse_label"
     }
   ],
@@ -173,7 +173,7 @@
           },
           {
             "field": "rse_label",
-            "title": "Relative standard error"
+            "title": "How reliable"
           }
         ]
       }

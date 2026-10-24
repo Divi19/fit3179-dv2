@@ -36,7 +36,7 @@
       "as": "label"
     },
     {
-      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' points' : 'margin not published'",
+      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' points' : 'range not published'",
       "as": "moe_label"
     }
   ],
@@ -153,7 +153,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }
@@ -225,7 +225,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }
@@ -400,7 +400,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }

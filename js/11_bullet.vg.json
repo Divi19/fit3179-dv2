@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average % of daily energy, 2023 · bars show 95% margin of error",
+    "text": "Average % of daily energy, 2023 · small bars show the likely range",
     "offset": 42,
     "fontSize": 14,
     "fontWeight": "normal",
@@ -285,7 +285,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -364,7 +364,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -821,7 +821,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -900,7 +900,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -1049,7 +1049,7 @@
               "as": "lx"
             },
             {
-              "calculate": "['Teens reach the limit', '(' + format(datum.pct_energy, '.1f') + '% ± ' + format(datum.moe, '.1f') + ')']",
+              "calculate": "['Teens reach the limit', '(' + format(datum.pct_energy, '.1f') + '%, likely', format(datum.pct_energy - datum.moe, '.1f') + '–' + format(datum.pct_energy + datum.moe, '.1f') + '%)']",
               "as": "t"
             }
           ],

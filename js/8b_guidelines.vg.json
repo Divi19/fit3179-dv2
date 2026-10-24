@@ -272,7 +272,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }
