@@ -7,8 +7,8 @@
       "hexagons with fewer than 100 children hidden"
     ],
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#5b6570",
+    "fontWeight": 500,
+    "color": "#4a5560",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },

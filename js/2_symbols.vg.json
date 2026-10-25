@@ -3,8 +3,8 @@
   "title": {
     "text": "Number of children vulnerable in one or more areas, by council · use the slider or press play",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#5b6570",
+    "fontWeight": 500,
+    "color": "#4a5560",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },

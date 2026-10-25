@@ -3,8 +3,8 @@
   "title": {
     "text": "% on track in all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · states sorted by 2024 gap · ACT faded (very small numbers)",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#5b6570",
+    "fontWeight": 500,
+    "color": "#4a5560",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },

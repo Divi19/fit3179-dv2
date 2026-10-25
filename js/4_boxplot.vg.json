@@ -3,8 +3,8 @@
   "title": {
     "text": "Each dot is one council: % of its children vulnerable in one or more areas, 2024 · states sorted by middle council",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#5b6570",
+    "fontWeight": 500,
+    "color": "#4a5560",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },

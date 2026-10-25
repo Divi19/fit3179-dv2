@@ -3,8 +3,8 @@
   "title": {
     "text": "% of children developmentally vulnerable in each area, Australia, 2009–2024 · dashed line = 2009 level",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#94a0ab",
+    "fontWeight": 500,
+    "color": "#b3bcc5",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },

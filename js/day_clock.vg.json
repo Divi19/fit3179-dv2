@@ -4,8 +4,8 @@
     "text": "How an average day is spent, by age, 2023 · hours of 24",
     "offset": 26,
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#94a0ab",
+    "fontWeight": 500,
+    "color": "#b3bcc5",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
