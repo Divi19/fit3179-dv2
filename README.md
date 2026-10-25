@@ -23,7 +23,7 @@ To rebuild the data, run `python3 scripts/build_data.py` from the repo root with
 
 ## Page design
 
-The page follows one school day as the children grow. It opens on a dawn sky where eight children walk to school and one carries a rust backpack (1 in 8), followed by a class of 24 figure. Part A (the census) runs through warm daylight bands joined by hill and rooftop edges, with chapter 2 as a night band in the middle. Part B (the survey) opens on a plain sunset gradient, and its charts are recoloured to sit straight on the night bands. The page closes on a night sky with a single lit phone screen. The banner scenes are kept deliberately sparse to avoid chartjunk; they and the band edges are inline SVG drawn for the page.
+The page follows one school day as the children grow. It opens on a dawn sky where eight children walk to school and one carries a rust backpack (1 in 8), followed by a class of 24 figure. Part A (the census) runs through warm daylight bands joined by hill and rooftop edges, with chapter 2 as a night band in the middle. Part B (the survey) opens on a plain sunset gradient, and its charts are recoloured to sit straight on the night bands. Chapter 4 splits in two: movement on navy, then a lighter dusk band, "Screens at bedtime", for the bedroom devices and sleep charts. The page closes on a night sky with a single lit phone screen. The banner scenes are kept deliberately sparse to avoid chartjunk; they and the band edges are inline SVG drawn for the page.
 
 Headings use Gloock and everything else, charts included, uses Source Sans 3. Rust (`#d0571b`, glowing `#ff8a4c` on dark) marks the census and worse outcomes; blue (`#0a74c4`, glowing `#4fa8ec` on dark) marks the survey and better outcomes; gold (`#f2b84b`) carries the closing line of each section on dark. A sticky ruler at the top shows the age in view: age 5 in Part A, ages 2 to 17 in Part B.
 
@@ -35,7 +35,7 @@ Class of 24. Pictogram: the 2024 intake as one class of 24 (and again as 24 teen
 2. Proportional symbol map with year slider, play button, city zoom and a linked national bar chart: number of vulnerable children, 2009–2024
 3. Hexagon bin map: change in % vulnerable 2021 → 2024, ~100 km hexagons
 4. Box plot with council dots and named councils: spread within each state, 2024
-5. Heatmap coloured by change since the previous collection (significance in tooltips): % on track on all five domains, state × year
+5. Heatmap coloured by change since the previous collection (significance in tooltips): % on track in all five areas, state × year
 6. Small multiples (line charts): % vulnerable in each area of development, 2009–2024
 7. Dumbbell chart with stacked 2009 and 2024 lanes and a year switch: most vs least disadvantaged areas, by state, 2009 and 2024
 Bridge. Donut rings (small multiples) with legend highlight: how a 24-hour day is split, by age
