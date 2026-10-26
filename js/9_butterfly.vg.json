@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average minutes per day, 2023 · ages 5–17",
+    "text": "Figure 13. Average minutes per day, 2023 · ages 5–17",
     "fontSize": 16,
     "fontWeight": 500,
     "color": "#d0d6dc",

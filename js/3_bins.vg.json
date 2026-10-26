@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": [
-      "Change in share vulnerable in one or more areas, 2021 to 2024 ·",
+      "Figure 5. Change in share vulnerable in one or more areas, 2021 to 2024 ·",
       "councils grouped into equal-sized hexagons (about 100 km across) ·",
       "hexagons with fewer than 100 children hidden"
     ],

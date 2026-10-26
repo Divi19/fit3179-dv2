@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% of children meeting each guideline, by age, 2023 · arrow runs from ages 5–8 to 15–17",
+    "text": "Figure 12. % of children meeting each guideline, by age, 2023 · arrow runs from ages 5–8 to 15–17",
     "fontSize": 16,
     "fontWeight": 500,
     "color": "#d0d6dc",

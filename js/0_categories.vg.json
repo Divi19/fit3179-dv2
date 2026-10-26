@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% of children starting school in each category, by area of development, Australia",
+    "text": "Figure 2. % of children starting school in each category, by area of development, Australia",
     "fontSize": 16,
     "fontWeight": 500,
     "color": "#2f3945",

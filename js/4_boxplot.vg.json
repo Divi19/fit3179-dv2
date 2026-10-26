@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Each dot is one council: % of its children vulnerable in one or more areas, 2024 · states sorted by middle council",
+    "text": "Figure 6. Each dot is one council: % of its children vulnerable in one or more areas, 2024 · states sorted by middle council",
     "fontSize": 16,
     "fontWeight": 500,
     "color": "#2f3945",

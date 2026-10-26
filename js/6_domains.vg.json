@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% of children developmentally vulnerable in each area, Australia, 2009–2024 · dashed line = 2009 level",
+    "text": "Figure 8. % of children developmentally vulnerable in each area, Australia, 2009–2024 · dashed line = 2009 level",
     "fontSize": 16,
     "fontWeight": 500,
     "color": "#d0d6dc",

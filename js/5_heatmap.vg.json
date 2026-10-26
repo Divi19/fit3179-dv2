@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% of children on track in all five areas, by state, sorted by 2024 value · colour = change since the previous collection",
+    "text": "Figure 7. % of children on track in all five areas, by state, sorted by 2024 value · colour = change since the previous collection",
     "fontSize": 16,
     "fontWeight": 500,
     "color": "#d0d6dc",

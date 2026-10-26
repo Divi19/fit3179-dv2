@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average % of daily energy, 2023 · small bars show the likely range",
+    "text": "Figure 16. Average % of daily energy, 2023 · small bars show the likely range",
     "offset": 42,
     "fontSize": 16,
     "fontWeight": 500,
