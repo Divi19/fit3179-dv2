@@ -74,9 +74,9 @@ print("aedc_lga.csv", len(out), "rows,", len({o['lga_code'] for o in out}), "cou
 
 # ---------- 2. AEDC by council, 2024, vulnerable per domain (chart 1 dropdown) ----------
 # One or more: n = r[19], % = r[20]. Domain sheets: vulnerable pairs start at r[33], so 2024 is r[43], r[44].
-MEASURES=[('One or more domains','LGA One or more',19),('Physical health','LGA Health',43),
+MEASURES=[('One or more areas','LGA One or more',19),('Physical health','LGA Health',43),
           ('Social competence','LGA Social',43),('Emotional maturity','LGA Emotional',43),
-          ('Language & thinking','LGA Language',43),('Communication','LGA Communication',43)]
+          ('Language and thinking','LGA Language',43),('Communication','LGA Communication',43)]
 lgadom=[]
 for measure,sheet,ci in MEASURES:
     state=None
@@ -95,8 +95,8 @@ with open(OUT+"aedc_lga_domains.csv","w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(lgadom[0])); w.writeheader(); w.writerows(lgadom)
 chk={(d['lga_name'],d['measure']):d['vulnerable_pct'] for d in lgadom}
 print("aedc_lga_domains.csv", len(lgadom), "rows; check Albury DV1/Health, Brisbane DV1/Language:",
-      chk[('Albury','One or more domains')], chk[('Albury','Physical health')],
-      chk[('Brisbane','One or more domains')], chk[('Brisbane','Language & thinking')])
+      chk[('Albury','One or more areas')], chk[('Albury','Physical health')],
+      chk[('Brisbane','One or more areas')], chk[('Brisbane','Language and thinking')])
 
 # ---------- 3. State trends: summary indicators (chart 5) + national domains (chart 6) ----------
 wb=openpyxl.load_workbook(SRC+"state-and-territory-trends-(2009-2024).xlsx", data_only=True, read_only=True)
@@ -129,7 +129,7 @@ print("  Australia on track 5, by year:", sorted((y,s['pct']) for s in summ for 
 print("  Australia vulnerable 1+ n, by year:", sorted((s['year'],s['n']) for s in summ if s['state']=='Australia' and s['indicator']=='Vulnerable on 1+ domains'))
 print("  on track 5 significance 2024 (2009 vs 2024 / 2021 vs 2024):", [(s['state'],s['sig_2009_2024'],s['sig_2021_2024']) for s in summ if s['year']==2024 and s['indicator']=='On track on all 5 domains' and s['state']!='Australia'])
 DSHORT={'Physical health and wellbeing':'Physical health','Social competence':'Social competence',
-        'Emotional maturity':'Emotional maturity','Language and cognitive skills (school-based)':'Language & thinking',
+        'Emotional maturity':'Emotional maturity','Language and cognitive skills (school-based)':'Language and thinking',
         'Communication skills and general knowledge':'Communication'}
 domrows=[dict(domain=DSHORT[l],domain_full=l,year=y,vulnerable_pct=round(100*n/t,1)) for (l,y),(n,t) in sorted(dom.items())]
 with open(OUT+"aedc_domains_national.csv","w",newline="") as f:
@@ -147,7 +147,7 @@ for sn in wb.sheetnames[1:]:
         if r[0] not in (None,''): label=r[0]
         if r[1] in (2009,2024) and all(isinstance(r[i],(int,float)) for i in (2,4,6,8)):
             for j,i in enumerate((6,4,2,8)): cat[(label,r[1])][j]+=r[i]
-DORDER=['Physical health','Social competence','Emotional maturity','Language & thinking','Communication']
+DORDER=['Physical health','Social competence','Emotional maturity','Language and thinking','Communication']
 CATS=['Vulnerable','At risk','On track']
 catrows=[]
 for (l,y),(v,ar,ot,t) in sorted(cat.items(),key=lambda kv:(DORDER.index(DSHORT[kv[0][0]]),kv[0][1])):

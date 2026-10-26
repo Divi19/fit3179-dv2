@@ -3,8 +3,8 @@
   "title": {
     "text": "% of children with each type of screen device in their bedroom, 2023",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#94a0ab",
+    "fontWeight": 500,
+    "color": "#b3bcc5",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -36,7 +36,7 @@
       "as": "label"
     },
     {
-      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' pts' : 'margin not published'",
+      "calculate": "isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' points' : 'range not published'",
       "as": "moe_label"
     }
   ],
@@ -153,7 +153,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }
@@ -225,7 +225,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }
@@ -400,7 +400,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }

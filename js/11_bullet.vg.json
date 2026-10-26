@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average % of daily energy, 2023 · bars show 95% margin of error",
+    "text": "Average % of daily energy, 2023 · small bars show the likely range",
     "offset": 42,
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#94a0ab",
+    "fontWeight": 500,
+    "color": "#b3bcc5",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -33,9 +33,9 @@
     {
       "title": {
         "text": "Saturated + trans fat",
-        "subtitle": "NHMRC target: no more than 10% of energy",
+        "subtitle": "National Health and Medical Research Council target: no more than 10%",
         "fontSize": 14,
-        "subtitleFontSize": 11
+        "subtitleFontSize": 12
       },
       "width": 410,
       "height": 210,
@@ -169,7 +169,7 @@
             "type": "text",
             "align": "center",
             "baseline": "top",
-            "fontSize": 11,
+            "fontSize": 12,
             "color": "#b3bcc5"
           },
           "encoding": {
@@ -285,7 +285,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -364,7 +364,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -463,7 +463,7 @@
             "type": "text",
             "align": "center",
             "baseline": "bottom",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#efe6d6"
           },
@@ -559,7 +559,7 @@
         "text": "Free sugars",
         "subtitle": "WHO: under 10% of energy, ideally under 5%",
         "fontSize": 14,
-        "subtitleFontSize": 11
+        "subtitleFontSize": 12
       },
       "width": 410,
       "height": 210,
@@ -705,7 +705,7 @@
             "type": "text",
             "align": "center",
             "baseline": "top",
-            "fontSize": 11,
+            "fontSize": 12,
             "color": "#b3bcc5"
           },
           "encoding": {
@@ -821,7 +821,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -900,7 +900,7 @@
               },
               {
                 "field": "moe",
-                "title": "95% margin of error (±)",
+                "title": "Likely range (±)",
                 "format": ".1f"
               },
               {
@@ -999,7 +999,7 @@
             "type": "text",
             "align": "center",
             "baseline": "bottom",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#efe6d6"
           },
@@ -1049,7 +1049,7 @@
               "as": "lx"
             },
             {
-              "calculate": "['Teens reach the limit', '(' + format(datum.pct_energy, '.1f') + '% ± ' + format(datum.moe, '.1f') + ')']",
+              "calculate": "['Teens reach the limit', '(' + format(datum.pct_energy, '.1f') + '%, likely', format(datum.pct_energy - datum.moe, '.1f') + '–' + format(datum.pct_energy + datum.moe, '.1f') + '%)']",
               "as": "t"
             }
           ],

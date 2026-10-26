@@ -16,7 +16,7 @@
   color-scheme:dark;
   --night:#0f1923; --navy:#142231; --dusk:#1b2b3d; --deep:#0b121a;
   --cream:#f4ead9; --sand:#efdfc8; --peach:#f6dccb; --clay:#efcab0;
-  --text-l:#efe6d6; --text-l2:rgba(239,230,214,.76); --text-l3:rgba(239,230,214,.52); --hair-l:rgba(239,230,214,.16);
+  --text-l:#efe6d6; --text-l2:rgba(239,230,214,.76); --text-l3:rgba(239,230,214,.7); --hair-l:rgba(239,230,214,.16);
   --ink:#1c2430; --ink-2:#2f3945; --muted:#5b6570; --hair:rgba(28,36,48,.16);
   --rust:#d0571b; --rust-deep:#8e3410; --rust-glow:#ff8a4c;
   --gold:#f2b84b; --blue:#0a74c4; --blue-glow:#4fa8ec; --screen:#f08a24;
@@ -94,7 +94,7 @@ svg{display:block}
 @media (max-width:900px){.sunset .wrap{grid-template-columns:minmax(0,1fr)}}
 .sunset h2{font-size:clamp(56px,7vw,104px);line-height:.95;margin:18px 0 20px}
 .sunset p{font-size:20px;line-height:1.55;max-width:40ch;color:var(--text-l2)}
-.sunset .src{font-size:15px;margin-top:16px;color:var(--text-l3)}
+.sunset .src{font-size:15px;margin-top:16px;color:rgba(239,230,214,.78)}
 
 .ending{background:#0b121a}
 .ending .wrap{padding-block:104px 170px}
@@ -322,7 +322,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
         <h2>If every child who started school in 2024 sat in one class of 24</h2>
         <p class="sub">Hover a figure to see what it stands for.</p>
         <div id="visClass" style="width:100%"></div>
-        <p class="class-note">AEDC 2024: 12.5% vulnerable on two or more areas, 23.5% on one or more. Rounded to whole children.</p>
+        <p class="class-note">Australian Early Development Census 2024: 12.5% vulnerable in two or more areas, 23.5% in one or more. Rounded to whole children.</p>
       </div>
     </div>
   </div>
@@ -333,7 +333,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   <div class="wrap">
     <div class="stats">
       <div class="stat s1"><span class="k">Assessed in 2024</span><b>288,483</b><p>children in their first year of school, each scored by their teacher</p></div>
-      <div class="stat s2"><span class="k">Highest on record</span><b>12.5%</b><p>vulnerable on two or more areas, the most since 2009</p></div>
+      <div class="stat s2"><span class="k">Highest on record</span><b>12.5%</b><p>vulnerable in two or more areas, the most since 2009</p></div>
       <div class="stat s3"><span class="k">By ages 15–17</span><b>7.6%</b><p>are active for an hour every day, down from 30.8% at ages 5–8</p></div>
     </div>
   </div>
@@ -375,7 +375,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       </div>
       <div class="chart scroll"><div id="vis0" style="min-width:600px"></div></div>
     </div>
-    <p class="next">Add them up and nearly one child in four starts school behind in at least one area. Where do they live?</p>
+    <p class="next">Counting each child once, nearly one in four starts school behind in at least one area. Where do they live?</p>
   </div>
   <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C240 70 520 10 760 30 C1000 50 1240 64 1440 28 L1440 70 L0 70 Z" fill="#efdfc8"/></svg>
 </section>
@@ -385,7 +385,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
   <div class="wrap">
     <div class="chap-head">
       <div><span class="tag a">Chapter 1</span><h2>Where children start behind</h2></div>
-      <p>Nationally, 23.5% of children were vulnerable on at least one area in 2024. The council a child lives in shapes those odds far more than the national average suggests.</p>
+      <p>Nationally, 23.5% of children were vulnerable in at least one area in 2024. The council a child lives in shapes those odds far more than the national average suggests.</p>
     </div>
     <div class="fig">
       <div class="fig-head">
@@ -410,8 +410,8 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
     </div>
     <div class="fig split flip">
       <div class="txt">
-        <h3>Since 2021, 83 of 125 areas got worse</h3>
-        <p class="dek">Those areas are home to 9 in 10 (89.7%) of the children assessed.</p>
+        <h3>Since 2021, 68 of 125 areas got worse by a point or more</h3>
+        <p class="dek">Another 15 edged up by less than a point. Counting every rise, areas home to 9 in 10 children (89.7%) went backwards.</p>
         <p class="howto"><b>Read</b><span>Each hexagon is about 100 km across and pools every council inside it, so big empty councils no longer dominate the map.</span></p>
       </div>
       <div class="chart scroll"><div id="vis3" style="min-width:520px"></div></div>
@@ -425,11 +425,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
     </div>
     <p class="next">Has it always been this uneven, or is it getting worse?</p>
   </div>
-  <!-- suburban rooftops lead into the dark chapter -->
-  <svg class="edge tall" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" style="height:110px">
-    <path fill="#142231" d="M0 120 L0 88 L40 88 L40 70 L70 50 L100 70 L100 88 L150 88 L150 64 L186 38 L222 64 L222 80 L232 80 L232 52 L244 52 L244 88 L300 88 L300 74 L330 56 L360 74 L360 88 L420 88 L420 60 L456 34 L492 60 L492 88 L540 88 L540 72 L572 50 L604 72 L604 88 L650 88 L650 46 L690 46 L690 30 L702 30 L702 46 L740 46 L740 88 L790 88 L790 66 L826 42 L862 66 L862 88 L910 88 L910 76 L938 58 L966 76 L966 88 L1020 88 L1020 58 L1058 32 L1096 58 L1096 88 L1150 88 L1150 70 L1180 50 L1210 70 L1210 88 L1260 88 L1260 62 L1296 40 L1332 62 L1332 88 L1380 88 L1380 72 L1410 54 L1440 72 L1440 120 Z"/>
-    <g fill="#f2b84b"><rect x="176" y="66" width="8" height="10" opacity=".8"/><rect x="446" y="62" width="8" height="10" opacity=".6"/><rect x="816" y="68" width="8" height="10" opacity=".8"/><rect x="1048" y="60" width="8" height="10" opacity=".7"/><rect x="1286" y="66" width="8" height="10" opacity=".6"/><rect x="664" y="56" width="8" height="10" opacity=".8"/></g>
-  </svg>
+  <svg class="edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 36 C260 62 540 64 800 40 C1060 18 1280 26 1440 46 L1440 70 L0 70 Z" fill="#142231"/></svg>
 </section>
 
 <!-- ============ CHAPTER 2 (dark) ============ -->
@@ -597,7 +593,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
     <div class="fig" style="margin-top:56px">
       <div class="fig-head">
         <h3>Saturated fat is over the limit at every age. Sugar reaches it by the teens.</h3>
-        <p class="dek">The shaded zones show where each nutrient goes over its limit. Bars show the 95% margin of error around each survey estimate.</p>
+        <p class="dek">The shaded zones show where each nutrient goes over its limit. The small bars show the range the true value probably falls in: a survey only asks some children, so each figure is an estimate.</p>
       </div>
       <div class="chart scroll"><div id="vis11" style="min-width:820px"></div></div>
     </div>
@@ -620,7 +616,7 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <div class="chart" style="display:flex;justify-content:flex-end"><div id="visClass2" style="width:100%;max-width:560px"></div></div>
     </div>
     <div class="take">
-      <div><b>Place</b><p>12.5% of children start school vulnerable on two or more areas, the highest on record. The council a child lives in matters more than the state: rates run from 3.1% to over 90%.</p></div>
+      <div><b>Place</b><p>12.5% of children start school vulnerable in two or more areas, the highest on record. The council a child lives in matters more than the state: rates run from 3.1% to over 90%.</p></div>
       <div><b>Wealth</b><p>The on-track gap between the most and least disadvantaged fifth of areas widened from 17.1 to 19.9 points between 2009 and 2024, and grew in every state.</p></div>
       <div><b>Age</b><p>By 15–17, fewer than 1 in 100 children meet all the movement guidelines and screens take nearly four times as long as activity. Saturated fat stays over the limit at every age.</p></div>
     </div>
@@ -656,17 +652,17 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
       <div>
         <h4>About the data</h4>
         <ul>
-          <li><strong>Australian Early Development Census 2009–2024</strong>, Department of Education. Time series by council, socio-economic quintile and state. <a href="https://www.aedc.gov.au/data-hub/public-data/additional-data">aedc.gov.au</a></li>
-          <li><strong>National Nutrition and Physical Activity Survey 2023</strong>, Australian Bureau of Statistics. <a href="https://www.abs.gov.au/statistics/health/food-and-nutrition/national-nutrition-and-physical-activity-survey/latest-release">abs.gov.au</a></li>
-          <li><strong>Dietary limits</strong>: NHMRC Nutrient Reference Values; WHO Guideline: Sugars intake for adults and children, 2015.</li>
-          <li><strong>Boundaries</strong>: ABS Local Government Areas 2024, ASGS Edition 3, simplified with mapshaper.</li>
+          <li><strong>Australian Early Development Census 2009–2024</strong>, Department of Education. Files: LGA time series 2009–2024, SEIFA time series 2009–2024 and State and territory trends 2009–2024. <a href="https://www.aedc.gov.au/data-hub/public-data/additional-data">aedc.gov.au</a>, accessed 9 October 2026.</li>
+          <li><strong>National Nutrition and Physical Activity Survey 2023</strong>, Australian Bureau of Statistics. Data cubes: physical activity and sedentary behaviour (Tables 2.3–2.4, 4.1, 5.1–5.2, 12.3–12.4) and nutrition (Tables 2.1–2.2). <a href="https://www.abs.gov.au/statistics/health/food-and-nutrition/national-nutrition-and-physical-activity-survey/latest-release">abs.gov.au</a>, accessed 9 October 2026.</li>
+          <li><strong>Dietary limits</strong>: National Health and Medical Research Council, Nutrient Reference Values, <a href="https://www.eatforhealth.gov.au/nutrient-reference-values/chronic-disease/macronutrient-balance">eatforhealth.gov.au</a>; World Health Organization, Guideline: Sugars intake for adults and children, 2015, <a href="https://www.who.int/publications/i/item/9789241549028">who.int</a>.</li>
+          <li><strong>Boundaries</strong>: ABS Local Government Areas 2024, ASGS Edition 3, simplified with mapshaper. <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files">abs.gov.au</a></li>
         </ul>
       </div>
       <div>
         <h4>Notes</h4>
         <ul>
           <li>AEDC results are suppressed where fewer than 15 children were assessed; these councils appear grey. "90% or more" is shown at 90%.</li>
-          <li>ABS figures are survey estimates; tooltips show the margin of error or relative standard error.</li>
+          <li>ABS figures are survey estimates from a sample of children. Tooltips show the likely range (the 95% margin of error) or how reliable each estimate is.</li>
           <li>The two datasets are not linked. Very remote areas are excluded from the ABS survey.</li>
           <li>Data licensed CC BY 4.0 by the original publishers.</li>
         </ul>
@@ -675,11 +671,11 @@ footer{background:var(--deep);color:var(--text-l2);padding-block:56px 56px}
         <h4>Images</h4>
         <ul>
           <li>Children walking to school: <a href="https://unsplash.com/photos/people-walking-on-gray-concrete-road-during-daytime-hQXmjNi2baA">note thanun</a>, Unsplash License, recoloured as a duotone.</li>
-          <li>The children and sky scenes are drawn for this page as SVG.</li>
+          <li>The children, sky scenes and phone are SVG drawings made for this page with AI assistance (Claude, Anthropic).</li>
         </ul>
       </div>
     </div>
-    <p class="foot-by">Divieleisch Ranjan · 35213949 · FIT3179 Data Visualisation 2 · Monash University · October 2026. Built with Vega-Lite. AI acknowledgement: Claude (Anthropic) was used to find and assess datasets, clean the AEDC and ABS spreadsheets into CSV files, write the Vega-Lite chart specifications and page code and draft the page text. I reviewed all outputs and checked every figure against the published sources.</p>
+    <p class="foot-by">Divieleisch Ranjan · 35213949 · FIT3179 Data Visualisation 2 · Monash University · Published 25 October 2026. Built with Vega-Lite. AI acknowledgement: Claude (Anthropic) was used to find and assess datasets, clean the AEDC and ABS spreadsheets into CSV files, write the Vega-Lite chart specifications and page code, draft the page text, and help design the layout and draw the SVG scenes and figures. I reviewed all outputs and checked every figure against the published sources.</p>
   </div>
 </footer>
 

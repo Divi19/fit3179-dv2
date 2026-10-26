@@ -3,8 +3,8 @@
   "title": {
     "text": "Average minutes per day, 2023 · ages 5–17",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#94a0ab",
+    "fontWeight": 500,
+    "color": "#b3bcc5",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -73,7 +73,7 @@
       "as": "rse"
     },
     {
-      "calculate": "isValid(datum.rse) ? 'RSE ' + format(datum.rse, '.1f') + '%' : 'not published'",
+      "calculate": "isValid(datum.rse) ? (datum.rse < 25 ? 'Reliable' : datum.rse < 50 ? 'Use with care' : 'Unreliable') : 'not published'",
       "as": "rse_label"
     }
   ],
@@ -173,7 +173,7 @@
           },
           {
             "field": "rse_label",
-            "title": "Relative standard error"
+            "title": "How reliable"
           }
         ]
       }
@@ -275,7 +275,7 @@
         "align": "right",
         "baseline": "top",
         "dx": -4,
-        "fontSize": 11,
+        "fontSize": 12,
         "color": "#efe6d6"
       },
       "encoding": {
@@ -305,7 +305,7 @@
         "align": "left",
         "baseline": "top",
         "dx": 4,
-        "fontSize": 11,
+        "fontSize": 12,
         "color": "#efe6d6"
       },
       "encoding": {

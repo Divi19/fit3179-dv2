@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% on track on all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · ACT faded (very small numbers)",
+    "text": "% on track in all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · states sorted by 2024 gap · ACT faded (very small numbers)",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#5b6570",
+    "fontWeight": 500,
+    "color": "#4a5560",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -169,7 +169,7 @@
         "x": {
           "field": "q1",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -217,7 +217,7 @@
         "x": {
           "field": "q1",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -265,7 +265,7 @@
         "x": {
           "field": "on_track_pct",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -361,7 +361,7 @@
         "x": {
           "field": "on_track_pct",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -447,7 +447,7 @@
           "filter": "datum.group == 'Most disadvantaged'"
         },
         {
-          "calculate": "(show == '2024 vs 2009' ? datum.year + ': ' : '') + format(datum.gap, '.1f') + ' pts'",
+          "calculate": "(show == '2024 vs 2009' ? datum.year + ': ' : '') + format(datum.gap, '.1f') + ' points'",
           "as": "t"
         }
       ],
@@ -500,7 +500,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -10,
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#46525d"
       },
@@ -508,7 +508,7 @@
         "x": {
           "field": "lx",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,
@@ -652,7 +652,7 @@
         "x": {
           "field": "q1",
           "type": "quantitative",
-          "title": "% on track on all five areas",
+          "title": "% on track in all five areas",
           "scale": {
             "domain": [
               10,

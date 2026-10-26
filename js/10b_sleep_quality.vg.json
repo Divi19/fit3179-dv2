@@ -6,8 +6,8 @@
       "% of children with a known rating"
     ],
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#94a0ab",
+    "fontWeight": 500,
+    "color": "#b3bcc5",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -65,7 +65,7 @@
       "as": "mid"
     },
     {
-      "calculate": "format(datum.pct_raw, '.1f') + '% ' + (isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' pts' : '(margin not published)')",
+      "calculate": "format(datum.pct_raw, '.1f') + '% ' + (isValid(datum.moe) ? '± ' + format(datum.moe, '.1f') + ' points' : '(range not published)')",
       "as": "raw_label"
     }
   ],

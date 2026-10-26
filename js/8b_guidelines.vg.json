@@ -3,8 +3,8 @@
   "title": {
     "text": "% of children meeting each guideline, by age, 2023 · arrow runs from ages 5–8 to 15–17",
     "fontSize": 14,
-    "fontWeight": "normal",
-    "color": "#94a0ab",
+    "fontWeight": 500,
+    "color": "#b3bcc5",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
     "lineHeight": 18
   },
@@ -244,10 +244,10 @@
               "Ages 15–17"
             ],
             "range": [
-              "#5a8cc0",
-              "#3f95d6",
-              "#3b92dc",
-              "#d6ebfc"
+              "#3d7fbf",
+              "#5aa5e6",
+              "#9ccaee",
+              "#e6f2fc"
             ]
           },
           "legend": {
@@ -272,7 +272,7 @@
           },
           {
             "field": "moe_label",
-            "title": "95% margin of error"
+            "title": "Likely range (±)"
           }
         ]
       }
