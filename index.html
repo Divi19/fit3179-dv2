@@ -16,7 +16,7 @@
   color-scheme:dark;
   --night:#0f1923; --navy:#142231; --dusk:#1b2b3d; --deep:#0b121a;
   --cream:#f4ead9; --sand:#efdfc8; --peach:#f6dccb; --clay:#efcab0;
-  --text-l:#efe6d6; --text-l2:rgba(239,230,214,.76); --text-l3:rgba(239,230,214,.7); --hair-l:rgba(239,230,214,.16);
+  --text-l:#efe6d6; --text-l2:rgba(239,230,214,.88); --text-l3:rgba(239,230,214,.7); --hair-l:rgba(239,230,214,.16);
   --ink:#1c2430; --ink-2:#2f3945; --muted:#5b6570; --hair:rgba(28,36,48,.16);
   --rust:#d0571b; --rust-deep:#8e3410; --rust-glow:#ff8a4c;
   --gold:#f2b84b; --blue:#0a74c4; --blue-glow:#4fa8ec; --screen:#f08a24;
@@ -123,12 +123,12 @@ svg{display:block}
 /* ---------- section heads and figures ---------- */
 .chap-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:20px 64px;align-items:end}
 .chap-head h2{font-size:clamp(42px,4.8vw,66px);line-height:1;margin-top:16px}
-.chap-head p{font-size:20px;line-height:1.6;color:var(--ink-2)}
+.chap-head p{font-size:20px;line-height:1.6;color:var(--ink)}
 .dark .chap-head p{color:var(--text-l2)}
 @media (max-width:860px){.chap-head{grid-template-columns:minmax(0,1fr)}}
 .fig{margin-top:72px}
 .fig h3{font-size:clamp(28px,2.7vw,36px);line-height:1.1;max-width:22ch}
-.fig .dek{font-size:18px;color:var(--ink-2);margin-top:12px;max-width:58ch}
+.fig .dek{font-size:18px;color:var(--ink);margin-top:12px;max-width:58ch}
 .dark .fig .dek{color:var(--text-l2)}
 .chart{margin-top:30px}
 .fig-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:16px 64px;align-items:end}
@@ -176,7 +176,7 @@ svg{display:block}
 /* definition */
 .def{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
 .def h2{font-size:clamp(38px,4vw,54px);line-height:1.04;margin:16px 0 20px}
-.def p{font-size:19px;color:var(--ink-2)} .def p+p{margin-top:14px}
+.def p{font-size:19px;color:var(--ink)} .def p+p{margin-top:14px}
 .def strong{color:var(--rust-deep)}
 .def figure{margin:0}
 .def img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
