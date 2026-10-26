@@ -4,11 +4,11 @@
     "text": {
       "expr": "'Share of children developmentally vulnerable' + (measure == 'One or more areas' ? ' in one or more areas' : ' in ' + lower(measure)) + ', by council, 2024 · use the menu to switch areas of development'"
     },
-    "fontSize": 14,
+    "fontSize": 16,
     "fontWeight": 500,
-    "color": "#4a5560",
+    "color": "#2f3945",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-    "lineHeight": 18
+    "lineHeight": 20
   },
   "params": [
     {

@@ -2,11 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "% of children with each type of screen device in their bedroom, 2023",
-    "fontSize": 14,
+    "fontSize": 16,
     "fontWeight": 500,
-    "color": "#b3bcc5",
+    "color": "#d0d6dc",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-    "lineHeight": 18
+    "lineHeight": 20
   },
   "width": 460,
   "height": 300,

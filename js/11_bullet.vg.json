@@ -3,11 +3,11 @@
   "title": {
     "text": "Average % of daily energy, 2023 · small bars show the likely range",
     "offset": 42,
-    "fontSize": 14,
+    "fontSize": 16,
     "fontWeight": 500,
-    "color": "#b3bcc5",
+    "color": "#d0d6dc",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-    "lineHeight": 18
+    "lineHeight": 20
   },
   "data": {
     "url": "data/nnpas_nutrients.csv",
