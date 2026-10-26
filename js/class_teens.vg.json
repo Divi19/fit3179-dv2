@@ -117,5 +117,15 @@
       "stroke": null
     },
     "background": null
+  },
+  "title": {
+    "text": "Figure 17. One class of 24 teenagers, using the survey's rates for 15–17 year olds",
+    "anchor": "start",
+    "fontSize": 16,
+    "fontWeight": 500,
+    "color": "#d0d6dc",
+    "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
+    "lineHeight": 20,
+    "offset": 14
   }
 }

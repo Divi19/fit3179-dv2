@@ -2,15 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": [
-      "Change in share vulnerable in one or more areas, 2021 to 2024 ·",
+      "Figure 5. Change in share vulnerable in one or more areas, 2021 to 2024 ·",
       "councils grouped into equal-sized hexagons (about 100 km across) ·",
       "hexagons with fewer than 100 children hidden"
     ],
-    "fontSize": 14,
+    "fontSize": 16,
     "fontWeight": 500,
-    "color": "#4a5560",
+    "color": "#2f3945",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-    "lineHeight": 18
+    "lineHeight": 20
   },
   "width": "container",
   "height": 440,

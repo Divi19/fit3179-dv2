@@ -2,14 +2,14 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": [
-      "Quality of sleep on the night before the interview, 2023",
+      "Figure 15. Quality of sleep on the night before the interview, 2023",
       "% of children with a known rating"
     ],
-    "fontSize": 14,
+    "fontSize": 16,
     "fontWeight": 500,
-    "color": "#b3bcc5",
+    "color": "#d0d6dc",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-    "lineHeight": 18
+    "lineHeight": 20
   },
   "width": "container",
   "height": 250,

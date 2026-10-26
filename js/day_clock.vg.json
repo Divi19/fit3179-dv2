@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "How an average day is spent, by age, 2023 · hours of 24",
+    "text": "Figure 10. How an average day is spent, by age, 2023 · hours of 24",
     "offset": 26,
-    "fontSize": 14,
+    "fontSize": 16,
     "fontWeight": 500,
-    "color": "#b3bcc5",
+    "color": "#d0d6dc",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-    "lineHeight": 18
+    "lineHeight": 20
   },
   "spacing": 10,
   "vconcat": [

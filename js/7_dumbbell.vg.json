@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "% on track in all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · states sorted by 2024 gap · ACT faded (very small numbers)",
-    "fontSize": 14,
+    "text": "Figure 9. % on track in all five areas: most vs least disadvantaged fifth of areas, 2009 and 2024 · states sorted by 2024 gap · ACT faded (very small numbers)",
+    "fontSize": 16,
     "fontWeight": 500,
-    "color": "#4a5560",
+    "color": "#2f3945",
     "font": "\"Source Sans 3\", \"Segoe UI\", sans-serif",
-    "lineHeight": 18
+    "lineHeight": 20
   },
   "width": "container",
   "height": 470,
@@ -468,14 +468,14 @@
         "color": {
           "condition": {
             "test": "datum.hollow",
-            "value": "#8a949b"
+            "value": "#5b6570"
           },
-          "value": "#46525d"
+          "value": "#1c2430"
         },
         "opacity": {
           "condition": {
             "test": "datum.area == 'ACT'",
-            "value": 0.6
+            "value": 0.75
           },
           "value": 1
         }
