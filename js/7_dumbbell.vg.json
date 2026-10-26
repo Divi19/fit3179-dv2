@@ -468,14 +468,14 @@
         "color": {
           "condition": {
             "test": "datum.hollow",
-            "value": "#8a949b"
+            "value": "#5b6570"
           },
-          "value": "#46525d"
+          "value": "#1c2430"
         },
         "opacity": {
           "condition": {
             "test": "datum.area == 'ACT'",
-            "value": 0.6
+            "value": 0.75
           },
           "value": 1
         }
